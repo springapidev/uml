@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="author" content="Kirill Fakhroutdinov">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="distribution" content="Global">
+<link rel="stylesheet" type="text/css" media="only screen and (min-width: 768px)" href="online_files/style_1024.css">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 767px)" href="online_files/style_767_160929.css">
+<link rel="stylesheet" type="text/css" media="only print" href="online_files/style_print_160717.css">
+<link rel="shortcut icon" href="https://www.uml-diagrams.org/favicon.ico">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="online_files/ca-pub-5002105358288202.js"></script><script src="online_files/cbgapi.loaded_1" async=""></script><script src="online_files/cbgapi.loaded_0" async=""></script><script id="facebook-jssdk" src="online_files/sdk.js"></script><script id="twitter-wjs" src="online_files/widgets.js"></script><script src="online_files/ca-pub-5002105358288202.js"></script><script type="text/javascript" async="" src="online_files/analytics.js"></script><script async="" src="online_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-15407117-3');
+</script>
+<!-- end google -->
+<script>
+/*
+ Mobile menu - when the user clicks on the button, 
+ toggle between hiding and showing the dropdown
+*/
+var menuVisible = false;
+
+function mobile_menu()
+{
+  if (menuVisible)
+  {
+	document.getElementById("navigation_btn").innerHTML = "Menu \u25BA";
+    document.getElementById("navigation_dsk").style.display = "none";
+    menuVisible = false;
+  }
+  else
+  {
+	document.getElementById("navigation_btn").innerHTML = "Menu \u25BC";
+    document.getElementById("navigation_dsk").style.display = "block";
+    document.getElementById("navigation_list").style.display = "block";
+    menuVisible = true;
+  }
+}
+</script>
+<meta name="description" content="UML use case diagram examples for online shopping of web customer actor. Top level use cases are View Items, Make Purchase and Client Register. Customer Authentication use case is included in View Recommended Items and Add to Wish List. Checkout use case includes Payment use case.">
+<meta name="keywords" content="UML, UML 2, UML 2.5, example, Online Shopping, use case diagram.">
+<title>UML use case diagram examples for online shopping of web customer
+ actor with top level use cases View Items, Make Purchase and Client 
+Register, other use cases are Customer Authentication, View Recommended 
+Items, Add to Wish List, Checkout, Payment use case.</title>
+<style>
+@media only screen and (max-width: 767px)
+{
+img { max-width:100%; height:auto; display:block }
+}
+</style>
+<link rel="preload" href="online_files/integrator.js" as="script"><script type="text/javascript" src="online_files/integrator.js"></script><link rel="preload" href="online_files/integrator_002.js" as="script"><script type="text/javascript" src="online_files/integrator_002.js"></script><script src="online_files/embed.js" data-timestamp="1512361855628"></script><script type="text/javascript" charset="utf-8" async="" src="online_files/button.js"></script><link rel="prefetch" as="style" href="online_files/a_data_002/lounge.css"><link rel="prefetch" as="script" href="online_files/a_data_002/common.js"><link rel="prefetch" as="script" href="online_files/a_data_002/lounge.js"><link rel="prefetch" as="script" href="online_files/a_data_002/config.js"><script src="online_files/alfalfa.js" async="" charset="UTF-8"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style></head>
+<body>
+<header>
+
+<div>
+<div class="adsense">
+<script async="" src="online_files/adsbygoogle.js"></script>
+<!-- Responsive Ad -->
+<ins class="adsbygoogle responsive_ad" style="display: block; height: 90px;" data-ad-client="ca-pub-5002105358288202" data-ad-slot="7631821835" data-ad-format="horizontal" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:728px;height:90px;" width="728" height="90" frameborder="0"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="hosting-box">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5002105358288202";
+/* Half Banner 234 x 60 */
+google_ad_slot = "0061943500";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="online_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:234px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:234px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:234px;height:60px;" width="234" height="60" frameborder="0"></iframe></ins></ins>
+</div>
+
+<div class="search-box">
+<form action="https://www.uml-diagrams.org/search-results.html" id="cse-search-box">
+ <div>
+  <input name="cx" value="partner-pub-5002105358288202:d0i84p-o4pn" type="hidden">
+  <input name="cof" value="FORID:10" type="hidden">
+  <input name="ie" value="UTF-8" type="hidden">
+  <input name="q" size="25" style="background: rgb(255, 255, 255) url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) no-repeat scroll left center; text-indent: 48px;" placeholder="Custom Search" type="text">
+  <input class="search-box-image" src="online_files/search-button.png" alt="Search" type="image">    
+ </div>    
+<script type="text/javascript" src="online_files/brand"></script><input name="siteurl" value="www.uml-diagrams.org/examples/online-shopping-use-case-diagram-example.html?context=uc-examples" type="hidden"><input name="ref" value="www.uml-diagrams.org/use-case-diagrams-examples.html" type="hidden"><input name="ss" type="hidden">
+</form>
+</div>
+
+<div style="clear:both;">
+</div>
+
+</div><div class="mainmenu">
+<button id="navigation_btn" class="box-shadow-menu" onclick="mobile_menu()">Menu&nbsp;►</button>
+<nav id="navigation_dsk">
+<ul id="navigation_list" class="navig_items">
+<li>
+  <a href="https://www.uml-diagrams.org/" title="UML graphical notation overview, examples, and reference.">UML diagrams</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/use-case-diagrams.html" title="UML Use Case diagrams overview of graphical notation">Use case diagrams</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/use-case-diagrams-examples.html" title="UML Use Case diagrams examples">Examples</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/airport-checkin-uml-use-case-diagram-example.html" title="Airport check-in and security screening UML diagram example">Airport check-In</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/restaurant-uml-use-case-diagram-example.html" title="Restaurant business use cases UML diagram examples">Restaurant</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/ticket-vending-machine-use-case-diagram-example.html?context=uc-examples" title="Ticket vending machine UML use case diagram example">Ticket vending machine</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/bank-atm-uml-use-case-diagram-example.html?context=uc-examples" title="Bank ATM UML use case diagram example">Bank ATM</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/examples/point-of-sales-uml-use-case-diagram-example.html" title="Point of Sales Terminal UML use case diagram example">POS terminal</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/online-library-uml-use-case-diagram-example.html" title="e-Library OPAC UML use case diagram example">E-Library</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/examples/online-shopping-use-case-diagram-example.html?context=uc-examples" title="Retail website UML use case diagram example" class="active-nav">Online shopping</a>
+</li>
+<li>
+  <a href="https://www.uml-diagrams.org/examples/online-shopping-credit-cards-use-cases-example.html?context=uc-examples" title="Credit Card Processing System UML use case diagram example">Credit card processing</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/examples/website-admin-use-case-diagrams-example.html?context=uc-examples" title="Website management UML use case diagrams example">Website administration</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/examples/hospital-management-use-case-diagram-example.html?context=uc-examples" title="Hospital Management UML use case diagrams example">Hospital management</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/radiology-diagnostic-report-uml-use-case-diagram-example.html?context=uc-examples" title="Radiology diagnostic reporting UML use case diagrams example">Radiology reports</a>
+</li>
+<li>
+  <a href="https://www.uml-diagrams.org/examples/software-license-use-case-diagram-example.html?context=uc-examples" title="Software protection and licensing UML use case diagram example">Software licensing</a>
+</li>
+<li>
+  <a href="https://www.uml-diagrams.org/index-examples.html" title="Index of examples of UML diagrams.">All UML examples</a>
+</li>
+<li>
+ <a href="https://www.uml-diagrams.org/index-references.html" title="Index of UML Elements">UML index</a>
+</li>
+</ul> 
+</nav>
+</div>
+</header>
+<main>
+<article id="mainContent">
+<h1 class="subtitle">Online Shopping</h1>
+<h2 class="subtitle">UML Use Case Diagram Example</h2>
+
+<p>
+<strong>Web Customer</strong> <a href="https://www.uml-diagrams.org/use-case-actor.html" class="ref-link">actor</a>
+uses some web site to make purchases online.
+Top level <a href="https://www.uml-diagrams.org/use-case.html" class="ref-link">use cases</a>
+ are <strong>View Items</strong>, <strong>Make Purchase</strong> and <strong>Client Register</strong>.
+View Items use case could be used by customer as top level use case if customer only wants to find and 
+see some products. This use case could also be used as a part of Make Purchase use case.
+Client Register use case allows customer to register on the web site, for example to get some coupons
+ or be invited to private sales.
+Note, that <strong>Checkout</strong> use case is
+<a href="https://www.uml-diagrams.org/use-case-include.html" class="ref-link">included use case</a>
+not available by itself - checkout is part of making purchase.
+</p>
+
+<p>
+Except for the <strong>Web Customer</strong> actor there are several other actors which will be described
+ below with detailed use cases.
+</p>
+
+<div class="figure-left-80" itemscope="" itemtype="http://schema.org/ImageObject">
+<img src="online_files/use-case-example-online-shopping.png" alt="Online shopping UML use case diagram example - top level use cases." title="Online shopping UML use case diagram example - top level use cases." itemprop="contentURL" width="640" height="476">
+<p class="figure-text" itemprop="description">
+Online shopping UML use case diagram example - top level use cases.
+</p>
+<meta itemprop="author" content="Kirill Fakhroutdinov">
+<meta itemprop="copyrightHolder" content="uml-diagrams.org">
+<meta itemprop="representativeOfPage" content="true">
+<meta itemprop="datePublished" content="2010-01-01">
+<meta itemprop="dateModified" content="2016-08-24">
+</div>
+
+<p>
+<strong>View Items</strong> use case is
+ <a href="https://www.uml-diagrams.org/use-case-extend.html" class="ref-link">extended</a>
+by several optional use cases - customer may search for items, browse catalog, view items recommended for him/her,
+add items to shopping cart or wish list. All these use cases are extending use cases because they provide
+some optional functions allowing customer to find item.
+</p>
+
+<p>
+<strong>Customer Authentication</strong> use case is
+ <a href="https://www.uml-diagrams.org/use-case-include.html" class="ref-link">included</a>
+ in <strong>View Recommended Items</strong> and <strong>Add to Wish List</strong> because both
+ require the customer to be authenticated. At the same time, item could be added to the shopping cart
+ without user authentication.
+</p>
+
+<div class="figure-left-80" itemscope="" itemtype="http://schema.org/ImageObject">
+<img src="online_files/use-case-example-online-shopping-view.png" alt="Online shopping UML use case diagram example - view items use case." title="Online shopping UML use case diagram example - view items use case." itemprop="contentURL" width="540" height="390">
+<p class="figure-text" itemprop="description">
+Online shopping UML use case diagram example - view items use case.
+</p>
+<meta itemprop="author" content="Kirill Fakhroutdinov">
+<meta itemprop="copyrightHolder" content="uml-diagrams.org">
+<meta itemprop="datePublished" content="2010-01-01">
+<meta itemprop="dateModified" content="2016-08-24">
+</div>
+
+<p>
+<strong>Checkout</strong> use case includes several required uses cases.
+ Web customer should be authenticated. It could be done through user login page, 
+ user authentication cookie ("Remember me") or Single Sign-On (SSO).
+Web site authentication service is used in all these use cases, while SSO also requires 
+participation of external identity provider.
+</p>
+
+<p>
+<strong>Checkout</strong> use case also includes <strong>Payment</strong> use case which could be done
+either by using credit card and external credit payment service or with PayPal.
+</p>
+
+<div class="figure-left-20" itemscope="" itemtype="http://schema.org/ImageObject">
+<img src="online_files/use-case-example-online-shopping-checkout.png" alt="Online shopping UML use case diagram example - checkout, authentication and payment use cases." title="Online shopping UML use case diagram example - checkout, authentication and payment use cases." itemprop="contentURL" width="680" height="601">
+<p class="figure-text" itemprop="description">
+Online shopping UML use case diagram example - checkout, authentication and payment use cases.
+</p>
+<meta itemprop="author" content="Kirill Fakhroutdinov">
+<meta itemprop="copyrightHolder" content="uml-diagrams.org">
+<meta itemprop="datePublished" content="2010-01-01">
+<meta itemprop="dateModified" content="2016-08-24">
+</div>
+
+<p>
+<img src="online_files/arrow-next.png" alt="Next" title="Next" width="40" height="37" align="middle">&nbsp;
+ <a href="https://www.uml-diagrams.org/use-case-diagrams-examples.html#use-cases-credit-cards-processing" title="Credit Card Processing System use cases">Credit card processing</a></p>
+
+</article>
+</main>
+<footer>
+<script type="text/javascript" src="online_files/orphus.js"></script>
+<p class="footer-author">
+Noticed a spelling error? Select the text using the mouse and press Ctrl + Enter.
+</p>
+<div id="footer">
+
+<iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 147px; height: 20px;" title="Twitter Follow Button" src="online_files/follow_button.htm" data-screen-name="uml_diagrams" frameborder="0"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<span id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="online_files/lY4eZXm_YWu.htm" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></span>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<span class="fb-like fb_iframe_widget" data-href="http://www.facebook.com/pages/uml-diagramsorg/159692074079895" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fuml-diagramsorg%2F159692074079895&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 120px; height: 20px;"><iframe name="f3249b2ed7e2638" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 120px; height: 20px;" src="online_files/like.htm" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></span>
+
+<a rel="publisher" href="https://plus.google.com/u/0/100310735326224144303" title="www.uml-diagrams.org">
+<img src="online_files/gprofile_button-44.png" style="border-style:none;" width="44" height="44"></a>
+
+&nbsp;
+
+<script type="text/javascript" src="online_files/plusone.js" gapi_processed="true"></script>
+<div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 24px;" id="___plusone_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" id="I0_1512361855700" name="I0_1512361855700" src="online_files/fastbutton.htm" data-gapiattached="true" title="G+" width="100%" frameborder="0"></iframe></div>
+
+&nbsp;
+
+<a href="https://plus.google.com/100310735326224144303" rel="author" title="Kirill Fakhroutdinov">
+<img src="online_files/gprofile_button-44.png" style="border-style:none;" width="44" height="44"></a>
+
+&nbsp;
+
+<a href="http://orphus.ru/" id="orphus" target="_blank" title="undefined">
+<img alt="Orphus system" src="online_files/orphus.png" width="52" height="32" border="0"></a>
+
+&nbsp;
+
+<a href="https://www.ipage.com/green-certified/" onclick="MyWindow=window.open('http://www.ipage.com/green-certified/uml-diagrams.org','greenCertified','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=550,height=700,left=50,top=50'); return false;">
+<img src="online_files/hosting-badge-1.png" alt="Powered by 100% wind energy" title="Powered by 100% wind energy" border="0"></a>
+
+&nbsp;
+
+<img src="online_files/www.png" id="sl_shield_image" style="border-style:none;cursor:pointer;">
+<script id="sl_shield" src="online_files/sitelock.js" language="javascript"></script>
+
+&nbsp;
+
+by <a href="https://plus.google.com/100310735326224144303?rel=author" title="Articles by Kirill Fakhroutdinov">Kirill Fakhroutdinov</a>
+
+<p>&nbsp;</p>
+
+<p>
+This document describes <strong>UML 2.5</strong> and is based on
+ <strong>OMG™ Unified Modeling Language™ (OMG UML®) 2.5</strong> specification 
+ <a href="https://www.uml-diagrams.org/references.html#ref-uml-25-b1" class="external-ref" title="UML 2.5 Specification FTF Beta 1">[UML 2.5 FTF - Beta 1]</a>.
+</p>
+
+<p>
+All UML diagrams were created in <strong>Microsoft Visio</strong> 2007-2016 using 
+<a href="http://softwarestencils.com/uml/index.html" class="external-ref" title="Visio Stencil and Template for UML 2.2">UML 2.2 stencils</a>.
+ You can send your comments and suggestions to <a href="mailto:webmaster@uml-diagrams.org">webmaster</a>
+ at <strong>webmaster@uml-diagrams.org</strong>.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+<em>Copyright © 2009-2017 uml-diagrams.org. All rights reserved.</em>
+</p>
+
+</div><div id="disqus_thread"><iframe id="dsq-app9497" name="dsq-app9497" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 586px !important;" src="//disqusads.com/ads-iframe/prebid/?serverbid=0&amp;experiment=network_default&amp;safetylevel=20&amp;variant=fallthrough&amp;aol=1&amp;thumbnails_allowed=1&amp;display_only=0&amp;forum_pk=459502&amp;position=top&amp;shortname=umldiagrams&amp;appnexus=0&amp;category=tech&amp;display_bidding_enabled=1&amp;stories_allowed=1&amp;service=dynamic&amp;forum_shortname=umldiagrams&amp;display_allowed=1&amp;video_allowed=0&amp;provider=prebid&amp;adx=1&amp;t=1512361816&amp;rubicon=0&amp;sandbox_display=1&amp;links_allowed=1&amp;doublewide_allowed=1&amp;criteo=0&amp;openx=1&amp;anchorColor=%230000ff&amp;colorScheme=light&amp;sourceUrl=https%3A%2F%2Fwww.uml-diagrams.org%2Fexamples%2Fonline-shopping-use-case-diagram-example.html%3Fcontext%3Duc-examples&amp;typeface=serif&amp;disqus_version=eaa6633" width="100%" frameborder="0"></iframe><iframe id="dsq-app9494" name="dsq-app9494" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 1318px !important;" src="online_files/a_002.htm" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe><iframe id="dsq-app9499" name="dsq-app9499" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 0px !important;" src="online_files/a_003.htm" width="100%" frameborder="0"></iframe></div>
+<script>
+var disqus_config = function () {
+ this.page.identifier = 'examples/online-shopping-use-case-diagram-example.html';
+ this.page.url = 'https://www.uml-diagrams.org/examples/online-shopping-use-case-diagram-example.html';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//umldiagrams.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="<a class="vglnk" href="https://disqus.com/?ref_noscript=umldiagrams" rel="nofollow"><span>https</span><span>://</span><span>disqus</span><span>.</span><span>com</span><span>/?</span><span>ref</span><span>_</span><span>noscript</span><span>=</span><span>umldiagrams</span></a>" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="online_files/count.js" async=""></script>
+</footer>
+
+<iframe name="oauth2relay563262758" id="oauth2relay563262758" src="online_files/postmessageRelay.htm" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><iframe style="display: none;"></iframe></body></html>

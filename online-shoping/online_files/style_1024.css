@@ -1,0 +1,983 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.4;
+  background: transparent;
+  color: black
+}
+
+body {
+  width: 1024px; 
+  font-size: 90%;
+  font-family: Georgia, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0 auto; /* center page on screen */
+  background: white /* screen background */;
+}
+
+.adsense
+{
+  float:left;
+  width: 728px;
+  height: 92px	
+}
+
+.hosting-box
+{
+  float:left;
+  width:290px;
+  height:62px;
+  padding-left:4px;
+  padding-top:2px
+}
+
+.search-box
+{
+ float:left;
+ padding-left: 4px;
+ padding-top: 1px;
+ height: 12px
+}
+
+.search-box-image
+{
+ padding-left: 2px;
+ vertical-align: middle
+}
+
+
+/*** HEADINGS ***/
+
+h1, h2, h3, h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  /*margin-bottom: 0.5em;*/
+  margin-top: 0
+}
+
+h1 {
+  font-family: Tahoma, Georgia;
+  font-size: 2.8em;
+  margin-top: 5px;
+  padding-top: 5px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  color: black;
+  text-align: center
+}
+
+h1.subtitle {
+  margin-bottom: 1px;
+  padding-bottom: 1px;
+}
+
+h2 {
+  font-family: Georgia;
+  font-size: 2.5em /*38px*/;
+  font-style: italic;
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 16px;
+  color: #0B615E;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  background: #E8E8E8
+}
+
+h2.subtitle {
+  margin-top: 1px;
+  padding-top: 1px;
+  font-size: 1.8em;
+  text-align: center;
+  border-style: none;
+  background: white
+}
+
+h3 {
+  font-family: Georgia;
+  font-size: 2.1em;
+  padding-top: 24px;
+  padding-left: 36px;
+  padding-bottom: 18px;
+  color: #0404B4
+}
+
+h4 {
+  font-size: 1.5em;
+  font-style: italic;
+  padding-top: 20px;
+  padding-left: 56px;
+  padding-bottom: 14px;
+}
+
+h5 {
+  font-size: 1.1em;
+  padding-top: 8px;
+  padding-left: 26px;
+  padding-bottom: 6px;
+}
+
+
+.bold {
+  font-weight: bold
+}
+
+.italic {
+  font-style: italic
+}
+
+.highlit {
+    color: #FF4500;
+    font-weight: bold   
+}
+
+.citation {
+  font-style: italic;
+  color: #800000 /*#0B615E*/;
+}
+
+p.citation {
+  padding-top: 6px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 6px;
+}
+
+.definition {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  color: #003366;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 42px;
+  margin-right: 86px;
+  padding: 6px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #DC143C;
+}
+
+.code-example {
+  font-family: "Courier New", monospace;
+  font-size: 1.07em;
+  font-style: normal;
+  color: #003366;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 42px;
+  margin-right: 240px;
+  padding: 6px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #0000CD;
+}
+
+.question {
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  color: #8B008B;
+}
+
+.answer {
+  font-size: 1em;
+  padding-top: 4px;
+  padding-left: 26px;
+  padding-bottom: 4px;
+}
+
+	
+/*
+ ------------
+    Links
+ ------------
+*/
+
+a {
+  text-decoration:underline;
+}
+
+a:link { /* unvisited */
+  color: blue
+}
+
+a:visited {
+  color: green
+}
+
+a:hover {
+  color: red
+}
+
+a:active {
+  color: #A52A2A /*brown*/
+}
+
+.external-ref {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.external-ref span {
+  padding-left: 36px;
+  color: black;
+}
+
+.external-ref a:link {
+  font-weight: normal;
+} 
+
+.ref-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: blue;
+}
+
+
+/*
+ ---------------
+  main content
+ ---------------
+*/
+
+#mainContent {
+   border: solid 1px #006699;
+   padding: 2px;
+}
+
+#mainContent p {
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+
+#mainContent ul {
+  list-style-type: circle;
+  list-style: inside;
+}
+
+.figure-left-240 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 240px;
+  text-align: left;
+}
+
+.figure-left-240 img {
+  border-style: none;
+}
+
+.figure-left-120 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 120px;
+  text-align: left;
+}
+
+.figure-left-120 img {
+  border-style: none;
+}
+
+.figure-left-80 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 80px;
+  text-align: left;
+}
+
+.figure-left-80 img {
+  border-style: none;
+}
+
+.figure-left-20 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.figure-left-20 img {
+  border-style: none;
+}
+
+.figure-text {
+  margin-top: 10px;
+  padding-left: 12px;
+  padding-bottom: 4px;
+  text-align: left;
+  font-size: 0.92em;
+  font-style: italic;
+  color: #000066;
+}
+
+
+/*
+ ----------------
+   syntax rules
+ ----------------
+ */
+ 
+.syntax-rule {
+  font-family: Arial, sans-serif; 
+  padding-left: 36px;
+  padding-top: 12px;
+}	
+
+.nonterm {
+  font-weight: bold;
+  font-style: italic;
+  color: #006600;
+}
+
+
+/*
+ ----------------------------
+  2 columns reference table
+ ----------------------------
+ */
+ 
+table.reference2  {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: fixed;
+}
+
+table.reference2 caption {
+  caption-side: top;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: black
+}
+
+table.reference2 th {
+    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+
+table.reference2 tr {
+    font-size: 0.92em;
+    border: 1px solid black;
+}
+
+table.reference2 td {
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+}
+
+table.reference2 .node-type {
+  /*width: 100%;*/
+}
+
+table.reference2 td.node-type {
+  padding-top: 4px;
+  padding-left: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  vertical-align: top;
+  background-color: #F1F1B1;
+}
+
+table.reference2 .notation {
+  width: 36%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+table.reference2 td.notation {
+  padding-top: 4px;
+  padding-bottom: 6px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+table.reference2 .descr {
+  /* width: 60%; */
+}
+
+table.reference2 td.descr {
+  padding: 4px;
+  font-size: 0.92em;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+/*
+ ----------------
+   UML Versions
+ ----------------
+ */
+ 
+table.uml-versions {
+  width: 88%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  table-layout: fixed;
+  margin-left: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+}
+
+table.uml-versions caption {
+  caption-side: top;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black
+}
+
+table.uml-versions th {
+    border: 1px solid black;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+
+table.uml-versions tr {
+    font-size: 0.94em;
+    border: 1px solid black;
+}
+
+table.uml-versions td {
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+}
+
+/* th and td */
+
+table.uml-versions .version {
+  width: 10%;
+}
+
+table.uml-versions td.version {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.86em /*12px*/;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.uml-versions .date {
+  width: 10%;
+  vertical-align: top;
+  text-align: center;
+}
+
+table.uml-versions td.date {
+  padding-top: 4px;
+  padding-bottom: 6px;
+  vertical-align: top;
+  text-align: center;
+}
+
+table.uml-versions .descr {
+  width: 80%;
+}
+
+table.uml-versions td.descr {
+  padding: 4px;
+  font-size: 0.86em /*12px*/;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+/*
+ -------------------
+   Index Reference
+ -------------------
+ */
+ 
+table.index-ref {
+  width: 94%;
+  border-collapse: collapse;
+  border: 0px;
+  table-layout: fixed;
+  margin-left: 26px;
+}
+
+table.index-ref tr {
+    font-size: 0.92em;
+    border: 0px;
+}
+
+table.index-ref td {
+    padding: 6px;
+    border: 0px;
+    color: black;
+}
+
+/* th and td */
+
+table.index-ref .ref-col {
+  width: 25%;
+}
+
+table.index-ref td.ref-col {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.92em;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ref-letters {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 2px 4px 2px 92px;
+}
+
+.ref-letter {
+  width: 22%;
+  display: inline;
+  float:left;
+  padding: 8px 4px 8px 12px;
+  text-align: left;
+}
+
+.ref-letter a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.92em;
+  color: blue;
+}
+
+
+/*
+ --------------------------
+    small 2 column tables
+ --------------------------
+ */
+ 
+table.small-table  {
+ /*width: 480px;*/
+ border-collapse: collapse;
+ border: 1px solid black;
+ table-layout: fixed;
+ margin-left: 42px; 
+ margin-top: 12px; 
+ margin-bottom: 12px;
+}
+
+table.small-table caption {
+ caption-side: top;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ text-align: center;
+ font-size: 1.2em;
+ font-weight: bold;
+ color: black
+}
+
+table.small-table th {
+    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+
+table.small-table tr {
+    font-size: 0.96em;
+    border: 1px solid black;
+}
+
+table.small-table td {
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+}
+
+/* th and td */
+
+table.small-table .item {
+  width: 90px;
+}
+
+table.small-table td.item {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.96em;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.small-table .wide-item {
+  width: 200px;
+}
+
+table.small-table td.wide-item {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.96em;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.small-table .descr {
+  width: 390px;
+}
+
+table.small-table td.descr {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.small-table .wide-descr {
+  width: 560px;
+}
+
+table.small-table td.wide-descr {
+  padding: 6px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.small-table .stereotype-item {
+  width: 150px;
+}
+
+table.small-table td.stereotype-item {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.96em;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.small-table .stereotype-descr {
+  width: 700px;
+}
+
+table.small-table td.stereotype-descr {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+/*
+ --------------------------
+     Large 3 column table
+ --------------------------
+ */
+ 
+table.large-3-table  {
+    width: 960px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: fixed;
+    margin-left: 24px; 
+    margin-top: 12px; 
+    margin-bottom: 12px;
+}
+
+table.large-3-table caption {
+  caption-side: top;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black
+}
+
+table.large-3-table th {
+    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+
+table.large-3-table tr {
+    font-size: 0.96em;
+    border: 1px solid black;
+}
+
+table.large-3-table td {
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+}
+
+/* th and td */
+
+table.large-3-table .first {
+  width: 320px;
+}
+
+table.large-3-table td.first {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.large-3-table .second {
+  width: 320px;
+}
+
+table.large-3-table td.second {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.large-3-table .third {
+  width: 320px;
+}
+
+table.large-3-table td.third {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+
+/*
+ --------------------------
+    diagrams table
+ --------------------------
+ */
+ 
+table.diagrams-table  {
+    width: 960px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: fixed;
+    margin-left: 24px; 
+    margin-top: 12px; 
+    margin-bottom: 12px;
+}
+
+table.diagrams-table caption {
+  caption-side: top;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black
+}
+
+table.diagrams-table th {
+    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+
+table.diagrams-table tr {
+    font-size: 0.96em;
+    border: 1px solid black;
+}
+
+table.diagrams-table td {
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+}
+
+/* th and td */
+
+table.diagrams-table .diagram {
+  width: 160px;
+}
+
+table.diagrams-table td.diagram {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.diagrams-table .purpose {
+  width: 580px;
+}
+
+table.diagrams-table td.purpose {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.diagrams-table .elements {
+  width: 220px;
+}
+
+table.diagrams-table td.elements {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+/*
+ -----------------
+   Collections
+ -----------------
+ */
+
+table.collections {
+    width: 480px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: fixed;
+    margin-left: 64px; 
+    margin-top: 12px; 
+    margin-bottom: 12px;
+}
+table.collections th {
+    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    vertical-align: middle;
+}
+table.collections tr {
+    font-size: 0.96em;
+    border: 1px solid black;
+}
+table.collections td {
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+}
+table.collections .item {
+  width: 140px;
+}
+table.collections td.item {
+  padding-top: 4px;
+  padding-left: 4px;
+  font-size: 0.96em;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+table.collections .option {
+  width: 60px;
+}
+table.collections td.option {
+  padding: 4px;
+  font-size: 0.96em;
+  text-align: left;
+  vertical-align: top;
+}
+
+/*
+ -----------------
+      Footer
+ -----------------
+ */
+ 
+#footer {
+  padding-top: 16px;
+  padding-bottom: 12px;
+  font-size: 0.92em;
+  color: #000066
+}
+
+.footer-author {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 0.92em;
+  font-style: italic;
+  color: #333399
+}
+
+#navigation_dsk
+{
+  height: 36px;
+  border: solid 1px #006699;
+  padding: 3px;
+  background: #F5F5DC;
+  font-size: 14px; /* fixed size to fit nav bar */
+}
+
+#navigation_dsk li
+{
+  width: 36px;
+  padding: 5px;
+  display: inline;
+}
+
+#navigation_dsk a
+{
+  font-weight: normal;
+  text-decoration: none;
+  color: #336688;
+}
+
+#navigation_dsk a.active-nav
+{
+ color:#400000;
+ font-weight: bold;
+ background-color:#D7FFEE;
+ border-style:solid;
+ border-width:2px;
+ border-color:#EEFFFF;
+}
+
+#navigation_dsk a:hover
+{
+  text-decoration: none;
+  background-color: #2F4F4F;
+  color: #FFFFFF;
+}
+
+#navigation_btn,
+#navigation_mbl
+{
+  display: none;
+}
+
+
+
