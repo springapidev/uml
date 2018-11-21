@@ -1,0 +1,22 @@
+/*
+Show TLC in Activity diagram
+*/
+/*
+Show TLC with possible iteration in Activity diagram
+*/
+/*
+Show IDB-BISEW scholaship training program activities in a diagram
+*/
+
+/*
+Show mailing activities in a popular web-based mail system.
+*/
+/*
+	In a ATM booth a client inserts Debit card.
+	The TM asks for the PIN if the card is activated.
+	If PIN is valid, The TM presents the client with a set of options.
+	The client selects appropriate action and do the transaction.
+	The client removes the card.
+
+	Show the activities in a UML diagram.
+*/

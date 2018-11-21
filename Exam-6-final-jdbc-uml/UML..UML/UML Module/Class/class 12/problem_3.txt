@@ -1,0 +1,9 @@
+Show in design of the fpllowing class Association
+===============================
+A color shade is made of 3 primary color
+
+Sunlight contains 7 color light
+
+A community center hosts many parties
+
+ A club is formed by members

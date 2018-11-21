@@ -1,0 +1,3245 @@
+CHAPTER-1
+------------------
+
+1. [CHAPTER-1-1] Which of the following is not a primary concern in the academic field of information systems?
+
+a) How to establish the business requirements for a new system.
+b) What effects a new system will have on the organization.
+c) How to configure the hardware of a new system for greatest efficiency.
+
+Answer: c
+
+2. [CHAPTER-1-2] Which of the following is least likely to serve as information from the perspective of your teacher?
+
+a) Your score for this multiple choice test.
+b) Your height on your 10th birthday.
+c) Which class you belong to.
+
+Answer: b
+
+3. [CHAPTER-1-3] Which of the following is a good reason for considering a railway signalman as an information worker?
+
+a) His job depends on knowledge and communication.
+b) His job could be easily automated.
+c) His job affects the safety of people he doesn’t know.
+
+Answer: a
+
+4. [CHAPTER-1-4] Which of the following is a characteristic of all systems?
+
+ 
+A)	A limitation.
+B)	A boundary.
+C)	A threshold.
+
+Answer: B
+
+5. [CHAPTER-1-5] Which of the following statements is not true?
+
+ 
+A)	No useful information system could exist without modern information technology.
+B)	Many information systems existed in a different form before the invention of modern information technology.
+C)	Some information systems are only possible because of modern information technology.
+
+Answer: A
+
+6. [CHAPTER-1-6] Which of the following is the best description of emergent properties?
+  
+A)	Properties that emerge over time as a system matures, but are not there at the beginning.
+B)	Properties that emerge as soon as a system is switched on, but are not there when it is switched off.
+C)	Properties that are shown only by the system as a whole, but are not shown by its parts.
+
+Answer: C
+
+
+7. [CHAPTER-1-7] Which of the following is an example of positive feedback?
+  
+A)	Rewarding a student for passing an assignment.
+B)	Telling a student how to pass an assignment.
+C)	Punishing a student for failing an assignment.
+
+Answer: A
+
+
+8. [CHAPTER-1-8] Which of the following statements best describes negative feedback?
+  
+A)	Control signals that act to maintain a pre-determined level of output.
+B)	Control signals that act to reduce overall output.
+C)	Control signals that act to oppose hostile forces in the environment.
+
+Answer: A
+
+
+9. [CHAPTER-1-9] Which of the following is a reasonable definition of ‘subsystem’?
+  
+A)	Something that is controlled by another system.
+B)	Something that provides an input to a system.
+C)	A part of a system that can be regarded as a system in its own right.
+
+Answer: C
+
+
+
+10. [CHAPTER-1-10] Which of these diagrams illustrates a feedback control loop?
+
+A)  <img src="./OOSAD/Ch1F10a.JPG" />
+B)  <img src="./OOSAD/Ch1F10a.JPG" />
+C)  <img src="./OOSAD/Ch1F10a.JPG" />
+
+Answer: B
+
+
+11. [CHAPTER-1-11] Which of the following statements gives the best general description of the purpose of control subsystems?
+  
+A)	To switch a system on or off so that a constant level of output is achieved.
+B)	To adjust the functioning of a system so that it produces the maximum possible quantity of output.
+C)	To adjust the functioning of a system so as to keep some measurement of its performance or of its outputs within a predetermined range.
+
+Answer: C
+
+12. [CHAPTER-1-12] Systems analysis often begins by defining the boundary of the system that is under investigation. This is so that:
+  
+A)	The analyst does not waste time or effort on matters that are not relevant to the present study.
+B)	The analyst does not get into fights with the managers of other departments.
+C)	The analyst does not get out of his or her depth by studying things that are too hard to understand.
+
+Answer: A
+
+
+
+13. [CHAPTER-1-13] Which of the following best describes the views of Peter Checkland?
+  
+A)	Systems are a mental construct and do not exist in the real world.
+B)	Regardless of whether or not a system is real, it is often useful to think about a problem situation as if it were a system.
+C)	Systems are out there in the real world waiting to be discovered.
+
+Answer: B
+
+
+
+14. [CHAPTER-1-14] Which of the following statements best describes an interface in General Systems Theory?
+  
+A)	A screen that allows users to perform functions and to access the data within a system.
+B)	An electronic connection between two systems that are located in different places.
+C)	Any form of communication between different systems or subsystems.
+
+Answer: C
+
+15. [CHAPTER-1-15] Which of the following is not an example of purposeful control in a system?
+  
+A)	An alteration in the Bank of England base lending (interest) rate.
+B)	A sudden change in the weather that damages a crop just before it becomes ready for harvest.
+C)	A change in the tactics of a football team when a successful goal takes them into the lead.
+
+Answer: B
+
+
+
+16. [CHAPTER-1-16] Which of the following statements correctly distinguishes information from data?
+  
+A)	Information is directly relevant to an action or decision in some situation, whereas data has no specific must first be organised in some way to make it useful.
+B)	Information is quite rare whereas there is always a lot of data available.
+C)	Information is sorted into alphanumerical sequence whereas data is random.
+
+Answer: A
+
+
+
+17. [CHAPTER-1-17] What is the main purpose of an operational system?
+  
+A)	To assist a surgeon in carrying out an operation such as keyhole surgery.
+B)	To help tactical managers to make decisions about current operations.
+C)	To automate the routine tasks and activities in an organization.
+
+Answer: C
+
+
+
+18. [CHAPTER-1-18] Which of the following best describes the primary purpose of a management support system?
+  
+A)	To relieve managers of work.
+B)	To replace managers.
+C)	To help managers to do their work.
+
+Answer: C
+
+
+
+19. [CHAPTER-1-19] Which of the following statements best agrees with the approach taken by the authors of this book?
+  
+A)	Managers should always make sure that their organization has information systems that make the best use of the very latest in information technology.
+B)	Managers should only install information technology that is needed to implement information systems that their organization really needs.
+C)	Managers should make sure that the information systems and information technology in their organization are always at the leading edge of their industry.
+
+
+Answer: B
+
+
+
+20. [CHAPTER-1-20] Which of the following statements best describes business strategy?
+  
+A)	A business strategy identifies the long-term business goals and the main steps that will help to achieve them.
+B)	A business strategy identifies the strengths and weaknesses of the business and what can be done about them.
+C)	A business strategy identifies the steps that add value to the business and how to carry them out most profitably.
+
+
+Answer: A
+
+
+21. [CHAPTER-1-21] Which of the following does not describe a legitimate concern in the relationship between business and information strategies?
+  
+A)	A clear business strategy identifies how much the organization can afford to spend on software and IT.
+B)	A clear business strategy helps IS managers to persuade business managers to support leading edge IT projects.
+C)	A clear business strategy helps managers to understand what kinds of IS and IT will help the business to fulfil its goals.
+
+Answer: C
+
+
+CHAPTER: 2
+========================================
+
+
+22. [CHAPTER-2-1] Approximately what proportion of information systems projects in the US were said to have failed by the 1995 Standish Group report?
+  
+A)	A fifth.
+B)	A third.
+C)	A quarter.
+
+Answer: B
+
+
+23. [CHAPTER-2-2]Which of the following correctly describes vapourware?
+  
+A)	Software that is talked about but never released.
+B)	Software that doesn't work correctly when it is used.
+C)	Software that users don't want.
+
+
+Answer: A
+
+24. [CHAPTER-2-3]Which of the following is not an end user role?
+  
+A)	A manager who uses a printed report output from a system in carrying out a task.
+B)	A clerk who manually enters data into a computer system.
+C)	A sales assistant who records data on a printed form to be input into a computer system.
+
+Answer: C
+
+
+25. [CHAPTER-2-4]Which of the following problems is not concerned with the usability of the system in question?
+  
+A)	A computerized till system that requires shop assistants to enter a fictitious price for items that are actually free.
+B)	A system where the same function key performs different actions on different screens.
+C)	An error message that is meaningless to the typical user.
+
+Answer: A
+
+
+
+26. [CHAPTER-2-5] Which of the following is not concerned with the functionality of the system in question?
+  
+A)	A library catalogue system that can only check the availability of a book if the user enters the full, correctly spelled name of the author.
+B)	A library catalogue system that frequently crashes.
+C)	A library catalogue system that takes an average of 45 seconds to respond to book searches.
+
+Answer: C
+
+
+27. [CHAPTER-2-6] The first attempt to computerize the London Ambulance Service emergency despatch system was abandoned in 1992 for which of the following reasons?
+  
+A)	The emergency despatch operators did not like working with the new computerized map displays.
+B)	The new system proved slower to despatch ambulances to emergencies than the previous manual method of operation.
+C)	The new system was not delivered in time.
+
+Answer: B
+
+
+28. [CHAPTER-2-7] Which of the following is not a characteristic of the client role in relation to a development project?
+  
+A)	A client has influence over whether a project is allowed to start.
+B)	A client has the right to sack members of the project team for poor performance.
+C)	A client has the power to stop a project after it has started.
+
+Answer: B
+
+
+29. [CHAPTER-2-8] Which of the following would not reasonably be considered a time-critical project?
+  
+A)	A project that must be completed on time to meet legislative requirements.
+B)	A project that must be completed quickly to give a business a competitive edge over its business rivals.
+C)	A project whose schedule is running very late.
+
+
+Answer: C
+
+
+30. [CHAPTER-2-9] Which of the following best describes requirements drift?
+  
+A)	Incremental changes to the requirements for the new system that occur as the project progresses.
+B)	The demand from users for new functions to be added to a software system after delivery.
+C)	A tendency for different members of a project team to interpret any given requirement in a different way.
+
+Answer: A
+
+
+31. [CHAPTER-2-10] Which of the following is not a cause of requirements drift?
+  
+A)	Users may ask for more features to be included in the software as they learn more about what is available.
+B)	Business needs can change during the course of the project due to external events.
+C)	The systems developers may not be skilled in the particular techniques or programming languages that are being used to develop the software.
+
+Answer: C
+
+
+32. [CHAPTER-2-11] Which of the following best describes the need to maintain adequate documentation of the models produced during software development?
+  
+A)	Other developers may need to understand the details of a piece of software, either in order to modify it, or to modify another part of the system that depends on it in some way.
+B)	A project manager may need to assess the work output of developers so that the progress of the project can be monitored.
+C)	A project manager may need to identify the developer who was responsible for designing or coding a part of the system so that he or she can be held accountable for any bugs or errors.
+
+Answer: A
+
+33. [CHAPTER-2-12] Which of the following is not a quality problem in software development?
+  
+A)	User requirements are not identified correctly.
+B)	Business needs change before the software can be delivered.
+C)	There is no clear business reason to undertake the project.
+
+Answer: B
+
+
+
+
+34. [CHAPTER-2-13] Which of the following is not a productivity problem in software development?
+  
+A)	The project is behind schedule and over-budget, but the software is still not complete.
+B)	During the implementation stage, it proves difficult to integrate the different software components.
+C)	The project is cancelled due to internal politics in the organization.
+
+Answer: C
+
+
+35. [CHAPTER-2-14] Which of the following is least likely to have a damaging impact on the usability of an information system?
+  
+A)	The designers are working under considerable pressure and, to save time, decide that they will not demonstrate the prototype screens to users, as originally planned.
+B)	The programmers are running behind schedule and, to save time, decide to reduce the amount of documentation that they will write within their code.
+C)	The analysts believe that, since they have previously worked on a similar system for another company, there is no need to spend time on observing the way that users carry out their tasks.
+
+Answer: B
+
+
+
+36. [CHAPTER-2-15] Which of the following is not an important consideration when a company is trying to decide whether it should begin to do business on the Internet?
+  
+A)	The design of the website.
+B)	The possible need for internal reorganization.
+C)	The business aims that will be met.
+
+
+Answer: A
+
+
+37. [CHAPTER-2-16] Which of the following would be the most appropriate strategy when a project is stalled by an escalating workload of dealing with changes to the system requested by users?
+  
+A)	Increase the number of staff employed on the project.
+B)	Increase the project budget.
+C)	Limit the number of changes.
+
+Answer: C
+
+
+38. [CHAPTER-2-17] Which of the following best describes the reason for the crash of the online clothes retailer Boo.com in 2000?
+  
+A)	Potential customers in the UK were not yet comfortable with shopping online.
+B)	At the time, too few customers had confidence in the security measures for online payment transactions.
+C)	The website software crashed on most PCs and images were slow to download, with the result that too few customers bought from the company.
+
+
+Answer: C
+
+
+39. [CHAPTER-2-18] Which of the following best describes a stakeholder in relation to an information systems development project?
+  
+A)	Someone who is likely to be affected in some way by the system or by the process of its development.
+B)	Someone who stands to gain financially from the system.
+C)	Someone whose job will change as a result of the introduction of the system.
+
+Answer: A
+
+
+40. [CHAPTER-2-19] Which of the following is not relevant legislation for information systems developers in the United Kingdom?
+  
+A)	The Computer Misuse Act (1990).
+B)	The Freedom of Information Act (1997).
+C)	The Data Protection Act (1998).
+
+Answer: B
+
+
+41. [CHAPTER-2-20] Which of the following is the best definition of ethics?
+  
+A)	A set of rules that apply to members of a professional association and give instruction on how to behave in certain circumstances.
+B)	A branch of philosophy that deals with the rightness or wrongness of human character and conduct.
+C)	A collection of parables that illustrate the various dilemmas that can occur in daily life.
+
+Answer: B
+
+42. [CHAPTER-2-21] Which of the following is least likely to be considered as an ethical consequence of information systems development?
+  
+A)	Some staff may lose their jobs due to the automation of certain tasks.
+B)	A new operating system may make it easier for users to customize the appearance of their computer screen.
+C)	A new computer system may make it possible to gather and store more detailed personal information about individuals.
+
+
+Answer: C
+
+
+Chapter- 3
+=====================================
+
+43. [CHAPTER-3-1] Some of the tasks in the general problem-solving model are listed below. Which of the following list 
+   these tasks in the correct sequence? 
+ 
+   A) Problem definition, Finding solutions, Problem redefinition. 
+   B) Data gathering, Finding solutions, Finding ideas. 
+   C) Problem definition, Data gathering, Problem redefinition. 
+  
+ Answer: C 
+ 
+ 
+44.  [CHAPTER-3-2] Which of the following is a consequence of subdividing the development process? 
+ 
+   A) It makes it more difficult to manage a project. 
+   B) It allows teams of developers with specialist skills to be allocated to a particular phase. 
+   C) It helps identify smaller tasks that can be completely finished. 
+ 
+ Answer: B 
+  
+  
+45.  [CHAPTER-3-3] Which of the following best describes the term life cycle model? 
+ 
+   A) It describes the way requirements for an application change at different stages in the life of the organization. 
+   B) It describes how a computerized information system is used during its lifetime. 
+   C) It describes the phases through which a development project passes from the inception of the idea to completion of the product and its eventual decommissioning. 
+ 
+  Answer: C
+  
+  
+46. [CHAPTER-3-4] Which of the following is a true statement regarding a systems development project? 
+ 
+   A) A systems development project is only concerned with developing a software system. 
+   B) A systems development project is only concerned with developing systems for controlling devices or machines. 
+   C) A systems development project may not involve software development. 
+ 
+  Answer: C
+
+ 
+47.  [CHAPTER-3-5] Which of following describes Strategic Information Systems Planning? 
+ 
+   A) It is concerned with planning the implementation of information systems. 
+   B) It is concerned with planning information systems development within the context of the organizational strategy. 
+   C) It is concerned with how information systems can support strategic planning in an organization. 
+ 
+ Answer: B
+ 
+ 
+ 
+48.  [CHAPTER-3-6] Some of the phases of the Traditional Life Cycle are listed below. Which of the following lists is in the correct sequence? 
+ 
+   A) Construction, Installation and Testing. 
+   B) Requirements analysis, Systems engineering, Design 
+   C) Systems engineering, Requirements analysis, Design 
+ 
+ Answer: C 
+  
+  
+49. [CHAPTER-3-7] CORRECT  Which of the following in true about system requirements? 
+ 
+   A) They can be used to develop user acceptance tests. 
+   B) They are mainly identified during systems engineering. 
+   C) They change from one phase to another. 
+ 
+  Answer: A
+  
+ 
+ 50. [CHAPTER-3-8] Which of following is true about the criteria for acceptance tests? 
+ 
+   A) They are best identified at the end of the design phase. 
+   B) They are best identified at the end of requirements analysis. 
+   C) They are best identified at the beginning of the testing phase. 
+ 
+  Answer: B
+  
+51. [CHAPTER-3-9]  Which of the following statements is true about adaptive maintenance? 
+ 
+   A) It is concerned with changing the system when requirements change. 
+   B) It is concerned with ensuring the system data is adapted to suit changes in the organization. 
+   C) It is concerned with maintaining the system so that it can adapt automatically to changes in the organization. 
+ 
+  Answer: A
+  
+52. [CHAPTER-3-10] One of the major challenges during system installation is which of the following? 
+ 
+   A) Ensuring that the new software is correctly installed to use the computer effectively. 
+   B) Avoiding unnecessary disruption and minimising the attendant risk of change. 
+   C) Ensuring that both old and new systems run in parallel. 
+ 
+ Answer: B 
+  
+  
+53. [CHAPTER-3-11] Which of following is true about software construction in the traditional life cycle? 
+ 
+   A) Only one programming language could be used. 
+   B) Relational database management systems are not used. 
+   C) The design is used to develop program code. 
+  
+  Answer: C
+ 
+ 
+ 
+54. [CHAPTER-3-12] Which of the following is a disadvantage of the traditional life cycle? 
+ 
+   A) It does not allow the use of object-oriented technology. 
+   B) Requirements change during development after the main system requirements have been agreed. 
+   C) It separates requirements analysis and design. 
+  
+  Answer: B 
+ 
+  
+55. [CHAPTER-3-13] Iteration is problematic during the traditional life cycle for which of the following reasons? 
+ 
+   A) Architectural decisions are difficult to change. 
+   B) Ad hoc coding solutions may be used to address changes in requirements. 
+   C) Requirements will change during the project. 
+ 
+  Answer: B
+  
+  
+56. [CHAPTER-3-14] Which of the following statements is true about a prototype system? 
+ 
+   A) A prototype system is always discarded before the final production system is built. 
+   B) Rapid development tools are only used to build prototype systems. 
+   C) A prototype system is incomplete or lacks the resilient construction of the final production system. 
+  
+  Answer: C 
+  
+ 
+57. [CHAPTER-3-15]    Which of the following is not an advantage of prototyping? 
+ 
+   A) Prototyping is easy to manage. 
+   B) Prototypes may be used to reduce misunderstandings about requirements. 
+   C) Prototyping requires no analysis or design. 
+  
+  Answer: C 
+  
+ 
+58. [CHAPTER-3-16] Which of the following is not a workflow in the Unified Software Development Process? 
+ 
+   A) Construction. 
+   B) Implementation 
+   C) Test 
+ 
+  Answer: A
+  
+ 
+59. [CHAPTER-3-17] User involvement in software development is important for which of the following reasons? 
+ 
+   A) It is cheaper to have users as part of the project team rather than professional software developers. 
+   B) Users understand why the requirements cannot be met. 
+   C) Users can influence the way a project proceeds by identifying the most acceptable course of action from various alternatives. 
+ 
+  Answer: C 
+ 
+ 
+60. [CHAPTER-3-18] Consider the following statements about CASE tools. 
+
+Current CASE tools can perform semantic checks on a set of diagrams modelling an information system.
+Current CASE tools can perform syntactic and consistency checks on a set of diagrams modelling information system.
+Current CASE tools can perform syntactic checks on a set of diagrams modelling information system.
+
+Which of the following is true? 
+ 
+   A) Statements A, Band C are true. 
+   B) Statements A and C are true. 
+   C) Statements B and C are true. 
+ 
+ Answer: C  
+ 
+ 
+61.  [CHAPTER-3-19] Which of the following is an example of a systems development methodology? 
+ 
+   A) The traditional life cycle 
+   B) The Unified Modelling Language 
+   C) The Unified Software Development Process. 
+ 
+ Answer: C
+
+
+CHAPTER-4
+=============================================
+
+62. [CHAPTER-4-1] Which of the following best describes an object?
+	 
+A) Part of a software system that is entirely unique.
+B) A concept, abstraction or thing in an application domain.
+C) A program that represents something tangible in the problem domain.
+
+Answer: B 
+
+63. [CHAPTER-4-2] Which of the following best describes abstraction?
+
+A) A representation of something tangible.
+B) A representation that can be stored in a software system.
+C) A representation that contains only relevant details
+
+Answer: C
+
+64. [CHAPTER-4-3] Which of the following is not a reason for modelling objects?
+
+A) To produce a design for part of a software system.
+B) To understand an aspect of the application domain.
+C) To separate data from process
+
+Answer: C
+
+65. [CHAPTER-4-4] What do all objects have?
+
+A) State, behaviour and identity.
+B) Behaviour, data and identity.
+C) Instances, structure and similarity.
+
+Answer: A 
+
+66. [CHAPTER-4-5] Which of the following best describes object state?
+
+A. The particular condition that an object is in at a given moment, 
+   determining its possible behaviours.
+
+B. Which class the object belongs to.
+
+C. The semantics of the object
+
+Answer:A
+
+67. [CHAPTER-4-6] Which of the following best describes object behaviour?
+
+A) What the object is able to do to other objects.
+B) What the object is able to do for other objects.
+C) What the object is able to do to itself.
+
+Answer: B
+
+68. [CHAPTER-4-7] Which of the following is a useful set of questions 
+   to ask when modelling an object, according to Rebecca Wirfs-Brock?
+
+A) Who am I, what can I do and what do I know?
+B) Where am I, what am I and who do I know?
+C) What do I have, what can I get and what can I do?
+
+Answer: A
+
+69. [CHAPTER-4-8] Which of the following is not a description of a class?
+
+A) A set of objects that share the same behaviour, attributes, relationships and semantics.
+B) An abstract descriptor for a set of instances with certain logical similarities 
+   to each other.
+C) A set of objects that collaborate together to achieve some common objective.
+
+Answer: C
+
+70. [CHAPTER-4-9] Which of the following best describes the relationship 
+   between an object and its class?
+
+A) The structure and permitted behaviours of an object are defined by its class.
+B) A class is a container that holds a collection of similar objects.
+C) An object is an implementation of a class.
+
+Answer: A
+
+71. [CHAPTER-4-10] What is generalization?
+
+A) A process of broadening the scope of an object, such that it becomes more 
+   gen12ally useful.
+B) A kind of relationship between a more general element and a more specific element.
+C) A process of collecting together objects into their respective classes.
+
+Answer: B
+
+72. [CHAPTER-4-11] Which of the following best describes a type?
+
+A) A description of a set of objects with similar behaviours.
+B) A superclass in a generalization hierarchy.
+C) A class with a characteristic that distinguishes it from all other classes.
+
+Answer: A
+
+73. [CHAPTER-4-12] Which of the following is not an advantage of using generalization?
+
+A) Generalization helps to organize a model so that the degree of similarity 
+   between classes is made more explicit.
+B) A generalization hierarchy is easy to extend to fit a changing picture.
+C) Generalization helps to encapsulate classes and subsystems so that their 
+   implementation is hidden from other parts of the system.
+
+Answer: C
+
+74. [CHAPTER-4-13] How does generalization differ from inheritance?
+
+A) It doesn't - they are the same thing.
+B) Inheritance is a mechanism by which some OO languages implement generalization.
+C) With generalization each class has only one superclass, whereas with inheritance 
+   each class has two or more superclasses.
+
+Answer: B
+
+75. [CHAPTER-4-14] Which of the following is not a characteristic of a subclass?
+
+A) A subclass can only have superclasses, it cannot have subclasses of its own.
+B) A subclass inherits all the characteristics of its superclass.
+C) A subclass includes at least one detail that is not shared by its superclass.
+
+Answer: A
+
+76. [CHAPTER-4-15] What is meant by 'transitive operation' in the context of generalization and inheritance?
+
+A) An operation in a superclass may be overwritten by a different operation in a subclass.
+B) An operation in a superclass may not be overwritten by a different operation in a 
+   subclass.
+C) A subclass inherits characteristics from all its superclasses at all levels.
+
+Answer: C
+
+77. [CHAPTER-4-16] What is the significance of message-passing in an OO system?
+
+A) Messages represent input from users that tells the software system what to do.
+B) Objects exchange messages in order to communicate with each other.
+C) Messages represent output to users that show the results of processing.
+
+Answer: B
+
+78. [CHAPTER-4-17] What is a message protocol or signature?
+
+A) A message protocol is a valid sequence of keystrokes by a user.
+B) A message protocol is a valid sequence of operations in a series of different objects.
+C) A message protocol is the interface to an operation.
+
+Answer: C
+
+79. [CHAPTER-4-18] What is meant by multiple inheritance?
+
+A) Multiple inheritance signifies that a class simultaneously belongs to more than one generalization hierarchy.
+B) Multiple inheritance signifies that a class has more than one superclass.
+C) Multiple inheritance signifies that a class can have different superclasses at different times.
+
+Answer: A
+
+80.  [CHAPTER-4-19] Which of the following best describes encapsulation?
+
+A) The implementation of an object can only be changed by its original programmer.
+B) Data within an object can only be accessed by passing a valid message to one of its own operations.
+C) Data within an object can only be accessed by passing a valid message to its class.
+
+Answer: B
+
+81.  [CHAPTER-4-20] Which of the following best describes an object's interface?
+
+A) The view that an object presents to users of the system.
+B) The links that an object has with other objects.
+C) The complete set of signatures for all the object's operations.
+
+Answer: C
+
+82.  [CHAPTER-4-21] Which of the following best describes polymorphism?
+
+A) The capacity of an object to behave in different ways at different times according to its current state.
+B) The capacity of different objects to respond to a similar message in appropriate but different ways.
+C) The capacity of an object to send different messages to different objects according to their class.
+
+Answer: B
+
+83. [CHAPTER-4-22] Which of the following is a valid reason why it is difficult to design event-driven software in a procedural manner?
+
+A) It is difficult to anticipate and design for all possible sequences of use.
+B) Procedurally designed programs are not capable of responding quickly to events.
+C) Procedural programs are only suitable for record-based data structures.
+
+Answer: A
+
+84. [CHAPTER-4-23] Which of the following is not an advantage of modular software design?
+
+A) Modular systems are typically more reliable in use.
+B) Modular systems can be implemented in small, manageable chunks.
+C) Modular systems are independent of the operating system that they run on.
+
+Answer: C
+
+CHAPTER-5
+=============================================
+
+85. [CHAPTER-5-1] Which of the following is not a reason for using a model?
+
+A) A model is quicker and easier to build than the real thing
+B) We can use a model in simulations to test our ideas
+C) We can use a model instead of building the real thing
+
+Answer: C
+
+86. [CHAPTER-5-2] Which of the following is not a model?
+ A) Concorde
+B) A scale model of Concorde to use in a wind tunnel
+C) An engineer’s drawing of a cross-section through the fuselage of Concorde
+ 
+Answer: A
+
+87. [CHAPTER-5-3] Analysts and designers use models that consist of which of the following?
+
+A) Diagrams and text
+B) Only diagrams
+C) Only text
+
+Answer: A
+
+88. [CHAPTER-5-4] Which of the following do analysts and designers use diagrams for?
+
+A) To communicate ideas
+B) To understand structures and relationships
+C) Both 1 and 2
+
+Answer: C
+
+89. [CHAPTER-5-5] Which of the following do analysts and designers use diagrams for?
+
+A) To ensure that users don’t understand the specification for a system
+B) To communicate ideas to users and other analysts and designers
+C) Neither A nor B
+
+Answer: B
+
+90. [CHAPTER-5-6] Why are systems analysis and design diagram standards important?
+
+A) They promote communication between team members
+B) They provide work for international standards committees
+C) They prevent systems analysts’ clothes from shrinking in the wash
+
+Answer: A
+
+91. [CHAPTER-5-7] Which of the following are the rules that modelling techniques should enforce?
+
+A) Simplicity of representation, external consistency, completeness and network representation
+B) Simplicity of representation, internal consistency, completeness and hierarchical representation
+C) Simplicity, internal consistency, completeness and hierarchical symbols
+
+Answer: B
+
+92. [CHAPTER-5-8] Which of the following is not an element of UML diagram notation?
+
+A) Icon
+B) Vertex
+C) String
+
+Answer: B
+
+93. [CHAPTER-5-9] Which of the following is true?
+
+A) Icons can contain two-dimensional symbols
+B) 2. Two-dimensional symbols can contain icons
+C) An icon contains at least one vertex and one string
+
+Answer: B
+
+94. [CHAPTER-5-10] Which of the following is true?
+
+A) A model consists of one and only one diagram
+B) A diagram contains at least one model
+C) A model contains diagrams
+
+Answer: C
+
+95.  [CHAPTER-5-11] Which of the following is the UML notation for a model?
+
+A)  <img src="./OOSAD/Ch5F11a.JPG" />
+B)  <img src="./OOSAD/Ch5F11b.JPG" />
+C)  <img src="./OOSAD/Ch5F11c.JPG" />
+Answer: C
+
+96. [CHAPTER-5-12] Which of the following does the Figure below show?
+    <br/><img src="./OOSAD/Ch1F10a.JPG" /> 
+A) A model.
+B) A sub-system
+C) A package
+
+Answer: C
+
+97. [CHAPTER-5-13] As a model is developed it, which of the following does it become?
+
+A) More abstract
+B) More detailed
+C) Less formal
+
+Answer: B
+
+98. [CHAPTER-5-14] Which of the following is not a purpose for using activity diagrams?
+
+A) To show the sub-systems that make up a system
+B) To model a task
+C) To describe the logic of an operation
+
+Answer: A
+
+CHAPTER-6
+=============================================
+
+99. [CHAPTER-6-1] Which of the following is not a reason for analysing the current system (if it exists)?
+
+A)	The analyst needs to know about problems with and defects in the current system.
+B)	The analyst must not lose sight of his or her objectives.
+C)	Much of the functionality of the existing system will be required in the new system.
+
+Answer: B
+
+100. [CHAPTER-6-2] Which of the following is not an example of a functional requirement?
+
+A)	Security considerations.
+B)	Details of data that must be held in the system.
+C)	Descriptions of the processing that the system will be required to carry out.
+
+Answer: A
+
+101. [CHAPTER-6-3] Which of the following describes a functional requirement.
+
+A)	The system must be capable of responding to all queries within 5 seconds.
+B)	Users of the system will make 50% fewer errors than with the existing system.
+C)	The system must allow users to enter details of advertising campaigns.
+
+Answer: C
+
+102. [CHAPTER-6-4] Which of the following is not an example of a non-functional requirement?
+
+A)	Volume of data.
+B)	Performance requirements.
+C)	The content of printed reports required from the system.
+
+Answer: C
+
+103. [CHAPTER-6-5] Which of the following describes a non-functional requirement?
+
+A)	The system must be capable of holding 500Mb of data initially, growing by 100Mb per year.
+B)	The system must produce a report of all advertising campaigns for a particular client.
+C)	The system must allow users to enter details of clients.
+
+Answer: A
+
+104. [CHAPTER-6-6] Which of the following is not the kind of information gathered to understand usability requirements?
+
+A)	The characteristics of the users of the system.
+B)	The context in which the system will be used.
+C)	The volume of data in the existing system.
+
+Answer: C
+
+105. [CHAPTER-6-7] Which of the following lists only contains systems analysis fact-finding techniques?
+
+A)	Sampling, questionnaires, interviewing, reading and observation.
+B)	Use case modelling, interviewing, class diagramming, observation and knowledge acquisition.
+C)	Sampling, background reading, interviewing, use case modelling and activity diagramming.
+
+Answer: A
+
+106. [CHAPTER-6-8] Which fact-finding technique is most suitable to be used in the initial stages of fact-finding and particularly where the analyst is not familiar with the organization that is being studied?
+
+A)	Background reading.
+B)	Interviewing.
+C)	Questionnaires.
+
+Answer: A
+
+107. [CHAPTER-6-9] Which of the following is a valid reason for using interviewing as a fact-finding technique?
+
+A)	The interviewer can gather statistical data about documents.
+B)	The interviewer can respond flexibly to the interviewee’s responses.
+C)	Interviews take very little time.
+
+Answer: B
+
+108. [CHAPTER-6-10] In which of the following circumstances is it not appropriate to use questionnaires?
+
+A)	The views and knowledge of a large number of people must be obtained.
+B)	The people who work for the organization are geographically dispersed.
+C)	There is a need to check how people actually carry out their work.
+
+Answer: C
+
+109. [CHAPTER-6-11] Which of the following categories of people are not likely to be involved in a steering committee?
+
+A)	Senior managers.
+B)	System testers.
+C)	Representatives of users.
+
+Answer: B
+
+110. [CHAPTER-6-12] Which of the following does the figure below show?
+    <br/> <img src="./OOSAD/Ch6F12.JPG" />
+
+A)	An actor.
+B)	A use case
+C)	An activity
+
+Answer: B
+
+111. [CHAPTER-6-13] Which of the following does the figure below show?
+    <br/><img src="./OOSAD/Ch6F13.JPG" />
+
+A)	An actor.
+B)	A use case.
+C)	A user.
+
+Answer: A
+
+112. [CHAPTER-6-14] Which of the following is not a purpose for using use cases?
+
+A)	To document the scope of the system.
+B)	To provide a high-level view of system functionality from the users’ perspective.
+C)	To describe the logic of operations.
+
+Answer: C
+
+113. [CHAPTER-6-15] Which of the following pairs lists valid dependencies to show on a use case diagram?
+
+A)	«extend» and «include».
+B)	«extend» and «retract».
+C)	«exclude» and «include».
+
+Answer: A
+
+114. [CHAPTER-6-16] Which of the following is the correct name for the symbols placed round stereotyped names such as «extend»?
+
+A)	Guillemots.
+B)	Parakeets.
+C)	Guillemets.
+
+Answer: C
+
+115. [CHAPTER-6-17] Which of the following describes the figure below?
+    <br/> <img src="./OOSAD/Ch6F17.JPG" />
+A)	Check campaign budget extends Print campaign summary.
+B)	Check campaign budget includes Print campaign summary.
+C)	Print campaign summary extends Check campaign budget.
+
+Answer: C
+
+116. [CHAPTER-6-18] Which of the following statements is true?
+
+A)	Actors are linked to use cases by inheritance.
+B)	Actors are linked to use cases by communication associations.
+C)	Actors are linked to use cases by «uses» dependencies.
+
+Answer: B
+
+117. [CHAPTER-6-19] Which of the following is shown in a use case diagram by a rectangle surrounding a group of use cases?
+
+A)	The class that implements the use cases.
+B)	The system or sub-system that the use cases belong to.
+C)	The package that contains the use cases.
+
+Answer: B
+
+118. [CHAPTER-6-20] Which of the following is the best definition of an actor?
+
+A)	An actor represents a user of the system.
+B)	An actor represents a role played by a user of the system.
+C)	An actor represents a role played by a user of the system or by an external system.
+
+Answer: C
+
+119. [CHAPTER-6-21] Which of the following is true?
+
+A)	An Extend dependency means that the functionality of one use case optionally extends the functionality of another at a particular point or points in its execution.
+B)	An Extend dependency means that the functionality of one use case always extends the functionality of another at a particular point or points in its execution.
+C)	An Extend dependency means that the functionality of one use case inherits the functionality of another at a particular point or points in its execution.
+
+Answer: A
+
+120. [CHAPTER-6-22] Which of the following is true?
+
+A)	An Include dependency means that the functionality of one use case optionally includes the functionality of another at a particular point or points in its execution.
+B)	An Include dependency means that the functionality of one use case always includes the functionality of another at a particular point or points in its execution.
+C)	An Include dependency means that the functionality of one use case inherits the functionality of another at a particular point or points in its execution.
+
+Answer: B
+
+121. [CHAPTER-6-23] What is shown in the following diagram?
+    <br/><img src="./OOSAD/Ch6F23.JPG" />
+
+A)	A data flow from one actor to another.
+B)	An inheritance relationship between two actors.
+C)	An Extend dependency between two actors.
+
+Answer: B
+
+122. [CHAPTER-6-24] Which of the following is true based on the diagram below?
+    <br/><img src="./OOSAD/Ch6F24.JPG" />
+
+A)	Campaign Manager can use the same use cases as a Campaign Staff and one or more additional ones.
+B)	Campaign Staff can use the same use cases as a Campaign Manager and one or more additional ones.
+C)	Only Campaign Manager actors exist, as Campaign Staff is an abstract actor.
+
+Answer: A
+
+123. [CHAPTER-6-25] Which of the following is the term for a textual description of a use case?
+
+A)	Behaviour description.
+B)	Use case activity.
+C)	Use case description.
+
+Answer: C
+
+124. [CHAPTER-6-26] Which of the following is not a reason for using prototyping during use case development?
+
+A)	To clarify requirements.
+B)	To test the architecture of architecturally significant use cases.
+C)	To get the user interface development started before the class diagramming is begun.
+
+Answer: C
+
+125. [CHAPTER-6-27] Which of the following is true?
+
+A)	Business use cases are shown in grey.
+B)	Business use cases show actors outside the organization interacting with the organization.
+C)	Business use cases are always produced after ordinary use cases have been produced.
+
+Answer: B
+
+
+CHAPTER-7
+=============================================
+
+126. [CHAPTER-7-1] Which of the following is not a good reason for constructing a requirements model?
+
+A)	It can show the business situation in enough detail to check that the requirements have been captured fully and correctly.
+B)	It can demonstrate that all the use cases have been drawn using the correct notation.
+C)	It can be organized in such a way that it will be useful later for designing the software.
+
+Answer: B
+
+127. [CHAPTER-7-2] Which of the following statements best describes what a class diagram can include?
+
+A)	Only classes.
+B)	Only classes and their relationships.
+C)	Classes, instances and their relationships.
+
+Answer: C
+
+128. [CHAPTER-7-3] Which is the correct name for "a possible set of classes, together with an understanding of how those classes might interact to deliver the functionality of a use case"?
+
+A)	A use case class diagram.
+B)	A realization.
+C)	A collaboration.
+
+Answer: C
+
+129.  [CHAPTER-7-4] What is the significance of the dependency arrow in this diagram? 
+  <br/><img src="./OOSAD/Ch7F4.JPG" />
+A)	It shows that elements within the collaboration (the dotted ellipse) may reference elements within the use case (the solid ellipse).
+B)	It shows that the collaboration (the dotted ellipse) cannot be implemented until the use case (the solid ellipse) has been implemented.
+C)	It shows the direction of the flow of control when the software executes.
+
+Answer: A
+
+130. [CHAPTER-7-5] One of the following is not a difference between a class diagram and a collaboration diagram. Which one?
+
+A)	A collaboration diagram shows object interaction, while a class diagram ignores this.
+B)	A class diagram shows more of the structural details than the collaboration diagram.
+C)	A class diagram shows the names of the classes, while the collaboration ignores these.
+
+Answer: C
+
+131. [CHAPTER-7-6] Which of these figures is a collaboration diagram?
+
+A)  <img src="./OOSAD/Ch7F6a.JPG" />
+B)  <img src="./OOSAD/Ch7F6b.JPG" />
+C)  <img src="./OOSAD/Ch7F6c.JPG" />
+Answer: B
+
+132. [CHAPTER-7-7] Which of these is the correct set of analysis class stereotypes in standard UML?
+
+A) Interface, control and entity.
+B) Boundary, control and entity.
+C) Interface, sequence and entity.
+
+Answer: B
+
+133. [CHAPTER-7-8] One of the following is not an advantage of stereotyping analysis classes. Which one?
+
+A) The resulting packages can form a basis for the system's architecture.
+B) It can be useful to differentiate classes that have broad similarities in the way that they behave.
+C) Once a class is stereotyped, its behaviour is likely to become more predictable.
+
+Answer: C
+
+134. [CHAPTER-7-9] What do boundary classes represent?
+
+A) Customers and suppliers of the business.
+B) People who will use the system.
+C) Interaction between the system and its actors.
+
+Answer: C
+
+135. [CHAPTER-7-10] What is the significance of the double colon in the class name: User Interface::AddAdvertUI?
+
+A) The class called AddAdvertUI is in the package called User Interface.
+B) User Interface is the stereotype of a class called AddAdvertUI.
+C) User Interface and AddAdvertUI are two alternative names for the same class.
+
+Answer: A
+
+136. [CHAPTER-7-11] Which one of these is not a permitted symbol for a boundary class?
+
+A) <img src="./OOSAD/Ch7F11a.JPG" />
+B) <img src="./OOSAD/Ch7F11b.JPG" />
+C) <img src="./OOSAD/Ch7F11c.JPG" /> 
+Answer: A
+
+137. [CHAPTER-7-12] What are entity classes?
+
+A)	Classes that contain data.
+B)	Classes that contain persistent data.
+C)	Classes that represent something or some concept in the application domain.
+
+Answer: C
+
+138. [CHAPTER-7-13] One of these is not a permitted symbol for an entity class. Which one?
+
+A)  <img src="./OOSAD/Ch7F13a.JPG" />
+B)  <img src="./OOSAD/Ch7F13b.JPG" />
+C)  <img src="./OOSAD/Ch7F13c.JPG" />
+Answer: B
+
+139. [CHAPTER-7-14] What do control classes represent?
+
+A)	The calculation and scheduling aspects of the logic of the use case.
+B)	Classes that interact with the users of the system.
+C)	Classes that control the storage of persistent data.
+
+Answer: A
+
+140. [CHAPTER-7-15] One of the following cannot directly affect the state of an object. Which one?
+
+A)	A change in the value of one of its attributes.
+B)	The creation or destruction of another object of the same class.
+C)	The creation or destruction of a link with another object.
+
+Answer: B
+
+141. [CHAPTER-7-16] What is the difference between a link and an association?
+
+A)	A link connects two instances, while an association connects two classes.
+B)	A link is a transient association.
+C)	A link is an association between two entity classes.
+
+Answer: A
+
+142. [CHAPTER-7-17] What is the significance of the directional arrow indicated on this diagram? 
+  <br/><img src="./OOSAD/Ch7F17.JPG" />
+A)	It shows the direction in which you should read the name of the association.
+B)	It shows the direction in which messages can be sent along the association.
+C)	It shows the order in which the objects will be connected when a link is created.
+
+Answer: C
+
+143. [CHAPTER-7-18] What is the significance of the multiplicity of an association?
+
+A)	It denotes the number of different classes that can be linked together.
+B)	It constrains the number of objects of one participating class that can be linked to an object of the other class.
+C)	It constrains the number of times that an object of one participating class can be linked during its lifetime.
+
+Answer: B
+
+144. [CHAPTER-7-19] Which of the following answers is the correct interpretation of the association multiplicities shown on this diagram? 
+  <br/><img src="./OOSAD/Ch7F19.JPG" /> 
+
+A)	A staff member need not be associated with any grades, or it can be associated with an indeterminate number of grades; a grade must be associated with one or more staff members.
+B)	A grade cannot be associated with a staff member but a staff member can be associated with a grade.
+C)	A grade need not be associated with any staff members, or it can be associated with an indeterminate number of staff members; a staff member must be associated with one or more grades.
+
+Answer: C
+
+145. [CHAPTER-7-20] How do operations differ from methods?
+
+A)	A method is a particular implementation of an operation.
+B)	An operation is a particular implementation of a method.
+C)	Some object-oriented programming languages have methods, while other have operations.
+
+Answer: A
+
+146. [CHAPTER-7-21] When do we not need to represent the whole system as a class in the analysis model?
+
+A)	When the users have not stated that this is a requirement.
+B)	When the system does not need to interact directly with other systems.
+C)	When the system does not need to encapsulate data or behaviour that applies only to the system as a whole.
+
+Answer: C
+
+147. [CHAPTER-7-22] What is a domain class model?
+
+A)	A class model that does not include either boundary or control classes.
+B)	An analysis class model that is independent of any particular use cases.
+C)	A class model that has been implemented in a particular domain.
+
+Answer: B
+
+148. [CHAPTER-7-23] One of the following is a bad guideline for deciding the class where an operation should be located. Which one?
+
+A)	The operation represents a service that objects of that class should provide to objects of other classes.
+B)	The operation needs to access or update data that is stored in another class that has an association with that class.
+C)	The operation needs to access or update data that is stored in an attribute of that class.
+
+Answer: B
+
+149. [CHAPTER-7-24] What is the main purpose of the Class-Responsibility-Collaboration technique?
+
+A)	To decide which team members will be responsible for developing each part of the software.
+B)	To decide which classes of the system should be responsible for each use case.
+C)	To decide how responsibilities should be distributed among the classes of the system.
+
+Answer: A (NS)
+
+150. [CHAPTER-7-25] Why is it often difficult to determine the most appropriate choice of responsibilities for each class?
+
+A)	Because there may be several alternatives that appear equally justified.
+B)	Because the developers may not know enough about how the users want the system to be designed.
+C)	Because members of the development team are often lazy and avoid responsibility as much as they can.
+
+Answer: A
+
+151. [CHAPTER-7-26] The requirements of different use cases may suggest different operations for the same class. How do we resolve this?
+
+A)	We split the class so that there is one for each use case, and model each class with the particular operations required for its use case.
+B)	We include in the class all the operations that are suggested by all the use cases.
+C)	We model the class with only that subset of operations that applies to all use cases.
+
+Answer: B
+
+152. [CHAPTER-7-27] Which of the following is an advantage of the use of a control class in realizing a use case?
+
+A)	A control class prevents users from being able to change the way that the entity classes work.
+B)	A control class reduces the need for entity classes to know anything about other entity classes unless this is directly relevant to their own responsibilities.
+C)	A control class allows the system to communicate with other systems on different networks.
+
+Answer: B
+
+CHAPTER-8
+=============================================
+
+153. [CHAPTER-8-1] Which of the following best describes the advantages of using software components, assuming that suitable components are available?
+
+A)	The users are more likely to get what they want.
+B)	The project is more likely to be completed in less time and at a lower cost.
+C)	The software is more likely to be capable of running on different hardware platforms.
+
+Answer: B
+
+154. [CHAPTER-8-2] What is meant by the NIH syndrome?
+
+A)	Some software developers are not inclined to trust software that was written elsewhere.
+B)	Some project managers are not inclined to trust programmers who were trained elsewhere.
+C)	Many users are not inclined to trust software that was written elsewhere.
+
+Answer: A
+
+155. [CHAPTER-8-3] One of the following is not a reason why object-oriented approaches support software reuse. Which one?
+
+A)	Object-oriented development encourages the encapsulation of the internal details of components.
+B)	Object-oriented models are organized in a way that makes it easier to find suitable components.
+C)	Object-oriented development encourages developers to share ideas with developers in other teams.
+
+Answer: C
+
+156. [CHAPTER-8-4] Which of the following best describes composition?
+
+A)	A package of model elements.	 
+B)	A set of realizations for a single use case.
+C)	A relationship between a whole and its parts.
+
+Answer: C
+
+157. [CHAPTER-8-5] Which of the following best describes how composition differs from aggregation?
+
+A)	A part cannot be removed from a composition, whereas a part can be removed from an aggregation.
+B)	A part can belong to only one composition, whereas a part can belong to more than one aggregation.
+C)	A part that belongs to a composition cannot have associations with any other classes, whereas a part that belongs to an aggregation can have associations with other classes.
+
+Answer: B
+
+158. [CHAPTER-8-6] How does generalization increase the opportunities for software reuse?
+
+A)	A generalization hierarchy can be extended to include new subclasses with minimal effort.
+B)	Generalization aids the encapsulation of software components.
+C)	Generalization allows a group of software components to be treated as a single whole.
+
+Answer: A
+
+159. [CHAPTER-8-7] What does it mean to say that an operation has been redefined?
+
+A)	The definition of the operation in a subclass overrides the superclass definition of the same operation.
+B)	The definition of the operation has been changed because users have changed their minds about the requirements.
+C)	The method that implements the operation does not follow the original definition of the operation.
+
+Answer: A
+
+160. [CHAPTER-8-8] How do abstract and concrete classes differ from each other?
+
+A)	Abstract classes represent intangible concepts in the application domain, whereas concrete classes represent physical things.
+B)	Abstract classes are superclasses, whereas concrete classes are subclasses.
+C)	Abstract classes have no instances, whereas concrete classes have instances.
+
+Answer: C
+
+161. [CHAPTER-8-9] Which of the following best describes multiple inheritance?
+
+A)	Multiple inheritance occurs when a subclass is removed from one generalization hierarchy and added to another.
+B)	Multiple inheritance occurs when a subclass inherits from more than one generalization hierarchy.
+C)	Multiple inheritance occurs when a subclass inherits characteristics from more than one level of superclass.
+
+Answer: B
+
+162. [CHAPTER-8-10] Which of the following is the best description of a software development pattern?
+
+A)	The way that a particular software developer tends to solve problems.
+B)	The core of a solution to a software development problem that occurs over and over again.
+C)	A particular approach to software development, such as the object-oriented approach or the structured approach.
+
+Answer: B
+
+163. [CHAPTER-8-11] What is the role of encapsulation in reuse?
+
+A)	Encapsulation means that it is not necessary for other developers to know how a software component works internally.
+B)	Encapsulation means that software components can work more efficiently.
+C)	Encapsulation means that there is no need for software developers to document their work.
+
+Answer: A
+
+164. [CHAPTER-8-12] How does composition support software reuse?
+
+A)	A composite structure is capable of performing more than one task, and thus it is useful in more than one context.
+B)	Composition structures are easy to extend with minimal effort.
+C)	Composite structures encapsulate their sub-components, making it easy to treat the composite as a single whole.
+
+Answer: C
+
+
+CHAPTER-9
+=============================================
+
+165. [CHAPTER-9-1] Which of the following is true?
+
+A)	Identifying what messages are passed between objects is a straightforward process.B)	Message passing is a metaphor used to describe object interaction.
+C)	Message passing is only concerned with query operations.
+
+Answer: B
+
+166. [CHAPTER-9-2] Which of the following is true about boundary objects?
+
+A)	The identification and specification of boundary objects is purely a design activity.
+B)	The identification and specification of boundary objects is part of requirements specification.
+C)	The identification and specification of boundary objects is considered in both analysis and design but in different ways. 
+Answer: C
+
+167. [CHAPTER-9-3] Which is the correct UML definition of a collaboration?
+
+A)	A collaboration describes the messages between objects.
+B)	A collaboration describes objects that share functionality.
+C)	A collaboration describes the structure of instances playing roles in a behaviour and their relationships.
+
+Answer: C
+
+168. [CHAPTER-9-4] An interaction sequence diagram drawn during analysis differs from one drawn during design which of the following ways?
+
+A)	It normally does not include design objects or detailed specifications of message signatures.
+B)	It does not include boundary objects.
+C)	It does not include control objects.
+
+Answer: A
+
+169. [CHAPTER-9-5] On the following figure which symbol represents a process activation on a sequence diagram? 
+  <br/><img src="./OOSAD/Ch9F5.JPG" />
+A)	1
+B)	2
+C)	3
+
+Answer: B
+
+170. [CHAPTER-9-6] Which of the labelled symbols in the following diagram represents a synchronous message? 
+  <br/><img src="./OOSAD/Ch9F6.JPG" />
+A)	1
+B)	2
+C)	3
+
+Answer: A
+
+171. [CHAPTER-9-7] What is meant by the term ‘thread of control’ in the context of concurrent behaviour?
+
+A)	A thread of control is a weak part of the control system.
+B)	A thread of control is the mechanism that controls concurrent behaviour.
+C)	A thread of control is an execution pathway that may occur simultaneously with other execution pathways.
+
+Answer: C
+
+172. [CHAPTER-9-8] Which of the following is an appropriate way of managing complex behaviour on an interaction sequence diagram?
+
+A)	A group of objects can be represented by a single lifeline.
+B)	Some messages are omitted to reduce the complexity.
+C)	Some objects are omitted from the diagram to reduce the complexity.
+
+Answer: A
+
+173. [CHAPTER-9-9] Collaboration diagrams differ from interaction sequence diagrams in the following way?
+
+A)	Collaboration diagrams cannot show the design detail that can be shown on a sequence diagram.
+B)	Collaboration diagrams only show the collaboration and not the sequence in which the messages are sent.
+C)	Collaboration diagrams show the links between the objects.
+
+Answer: C
+
+174. [CHAPTER-9-10] In a collaboration diagram one message has the sequence number 5.1.1. Which of the following sequence numbers indicates the message that must be the immediate successor?
+
+A)	A message with the sequence number 5.1.2.
+B)	A message with the sequence number 5.1.1.1.
+C)	A message with the sequence number 5.2.1.
+
+Answer: B
+
+175. [CHAPTER-9-11] Which of the following is a disadvantage of collaboration diagrams?
+
+A)	A collaboration diagram can only be used during analysis.
+B)	A collaboration diagram cannot include guard conditions.
+C)	A collaboration diagram is difficult to read if there are many messages between two objects.
+
+Answer: C
+
+176. [CHAPTER-9-12] An interaction diagram should be consistent with the associated class diagram in various ways. Which of the following statements is true?
+
+A)	It is always correct to show a message between two objects if there is an association between their classes.
+B)	The sending object must have the object reference of the receiving object before sending an object-scope message.
+C)	A message should not be shown between two objects if there is no association between their classes.
+
+Answer: B
+
+
+CHAPTER-10
+============================================= 
+177. [CHAPTER-10-1] What is the advantage of using contracts in operation specification?
+
+A)	A contract cannot be broken and thus the software will be more reliable in operation.
+B)	A contract encourages encapsulation by concentrating on the service that an object will provide to other objects and by ignoring the way that the service is to be achieved.
+C)	A contract encourages better design and testing by specifying exactly how an object will achieve a service that it is to provide to other objects.
+
+Answer: B
+
+178. [CHAPTER-10-2] One of the following would not normally be included in a contract. Which one?
+
+A)	The operation signature.
+B)	Events that the operation will transmit to other objects.
+C)	The object identifiers of other objects to which events will be transmitted.
+
+Answer: C
+
+179. [CHAPTER-10-3] How does an algorithmic technique differ from a non-algorithmic technique?
+
+A)	Algorithmic techniques describe the internal logic of an operation, while non-algorithmic techniques do not.
+B)	Algorithmic techniques describe only the external interface of an operation, whereas non-algorithmic techniques also describe the internal details.
+C)	Algorithmic techniques are used to describe algorithmically complex operations, while non-algorithmic techniques are used to describe only simple operations.
+
+Answer: A
+
+180. [CHAPTER-10-4] Only one of the following is an algorithmic technique. Which one is it?
+
+A)	Decision table.
+B)	Activity diagram.
+C)	Pre- and post-condition pair.
+
+Answer: B
+
+181. [CHAPTER-10-5] Only one of the following is a non-algorithmic technique. Which one is it?
+
+A)	Activity diagram.
+B)	Structured English.
+C)	Decision table.
+
+Answer: C
+
+182. [CHAPTER-10-6] One of the following is not a control structure in Structured English. Which one?
+
+A)	GoTo.
+B)	Iteration.
+C)	Selection.
+
+Answer: A
+
+183. [CHAPTER-10-7] How does pseudo-code differ from Structured English?
+
+A)	The syntax and vocabulary of Structured English resemble those of a specific programming language, while pseudo-code is language-neutral.
+B)	The syntax and vocabulary of pseudo-code resemble those of a specific programming language, while Structured English is language-neutral.
+C)	Pseudo-code is useful only for procedural programming languages, such as C, while Structured English is useful for any programming language, including object-oriented languages.
+
+Answer: B
+
+184. [CHAPTER-10-8] Which is the best description of the meaning of the following example of Structured English? 
+<br/><img src="./OOSAD/Ch10F8.JPG" />
+A)	Get all the advert costs and apply the overhead rate to each in turn, then work out the total cost of the campaign by adding these together, compare to the campaign budget and produce a warning if the budget has been exceeded.
+B)	For each advert in turn, get the cost, apply the overhead rate, compare to the budget and produce a warning if the budget has been exceeded, then do the same for the next advert.
+C)	Work out the total cost of the campaign by accumulating the cost of each advert in turn, apply the overhead rate to the total, compare this to the campaign budget and produce a warning if the budget has been exceeded.
+
+Answer: C
+
+185. [CHAPTER-10-9] Which of the following best describes the main use of OCL?
+
+A)	OCL is used to describe the interaction between objects in more detail than is shown graphically in an interaction sequence diagram.
+B)	OCL is used specifically to document operation specifications.
+C)	OCL is used to give precise definition to any constraints in a UML model that cannot be expressed clearly and unambiguously in a graphical notation.
+
+Answer: C
+
+186. [CHAPTER-10-10] What do OCL statements generally contain?
+
+A)	A context, a property of the context and an operation on that property.
+B)	Sequence, selection and iteration structures.
+C)	Operation intent, operation signature and logic description.
+
+Answer: A
+
+
+
+CHAPTER-11
+=============================================
+187. [CHAPTER-11-1] Which of the following is true?
+
+A)	A state is never transitory, it always lasts for an interval of time.
+B)	A state is a condition during the life of an object or an interaction during which it satisfies some condition.
+C)	An object always has more than one potential state.
+
+Answer: B
+
+188. [CHAPTER-11-2] The transition from one state to another is triggered by an event. One type of event is a change event. Which of the following statements is true?
+
+A)	A change event occurs when a condition becomes true.
+B)	A change event occurs when a condition changes.
+C)	A change event occurs when an attribute value changes in an object.
+
+Answer: A
+
+189. [CHAPTER-11-3] Which of the following statements is true about statecharts in general?
+
+A)	A statechart must have a final state.
+B)	A statechart must have at least one initial state.
+C)	A statechart must have one initial and one final state.
+
+Answer: B
+
+190. [CHAPTER-11-4] A guard condition may be associated with a transition. Which of the following statements best applies to guard conditions?
+
+A)	A guard condition may only involve attributes of the object that owns the statechart.
+B)	A guard condition may involve attributes and links of the object that owns the statechart.
+C)	A guard condition may only involve parameters from the triggering event.
+
+Answer: B
+
+191. [CHAPTER-11-5] On the following figure which symbol represents the final state in the statechart? 
+  <br/><img src="./OOSAD/Ch11F5.JPG" />
+A)	1
+B)	2
+C)	3
+
+Answer: A
+
+192. [CHAPTER-11-6] Which of the following statements is true about actions and activities?
+
+A)	An activity may be tied to a transition.
+B)	An action may only be tied to transitions.
+C)	Both actions and activities may be tied to a state.
+
+Answer: C
+
+193. [CHAPTER-11-7] When an internal transition occurs within a state which of the following is true?
+
+A)	The entry and exit actions, if present, are triggered.
+B)	The entry and exit actions are not triggered.
+C)	The entry and exit actions if present and the action tied to the internal transition are all triggered.
+
+Answer: B
+
+194. [CHAPTER-11-8] A statechart may have states that include substates. Which of following is true?
+
+A)	An object may occupy more multiple concurrent substates simultaneously.
+B)	An object may occupy only two concurrent substates simultaneously.
+C)	An object may only occupy one substate at a time.
+
+Answer: A
+
+195. [CHAPTER-11-9] When an object exits a composite state which of the following is true.
+
+A)	Each of the submachines in the composite state must enter their final state.
+B)	At least one of the submachines in the composite state must enter its final state.
+C)	Whatever combination of substates the composite is in, all those substates are exited.
+
+Answer: C
+
+196. [CHAPTER-11-10] The behavioural approach to constructing statecharts involves which of the following?
+
+A)	All interaction sequence diagrams should be analysed first.
+B)	All interaction sequence diagrams involving classes that have heavy messaging should be analysed.
+C)	One interaction sequence diagram for each class must be analysed.
+
+Answer: B
+
+197. [CHAPTER-11-11] The lifecycle approach to constructing statecharts is so called for which of the following reasons.
+
+A)	The statecharts are constructed throughout the development lifecycle.
+B)	Collaboration diagrams rather than sequence diagrams are used to analyse behaviour.
+C)	It attempts to identify the lifecycle of a class from use cases and other requirements documents.
+
+Answer: C
+
+198. [CHAPTER-11-12] When a statechart is checked for consistency with other models of the system which of the following is true?
+
+A)	Every operation in a class must appear as an event on a statechart.
+B)	Every action should correspond to the execution of an operation on the appropriate class.
+C)	Every event must appear on a sequence diagram.
+
+Answer: B
+
+
+
+CHAPTER-12
+=============================================
+
+199. [CHAPTER-12-1] Which of the following is the best description of a design model?
+ A)	It shows what the system will do.
+B)	It shows how the system will work.
+C)	It shows why the system is required.
+
+Answer: B
+
+200. [CHAPTER-12-2] Which of the following is an example of design?
+
+A)	There will be a class called Client in the Agate system.
+B)	The Client class has an attribute called companyName.
+C)	The maximum length of the companyName attribute when printed will be 40 characters.
+
+Answer: C
+
+201. [CHAPTER-12-3] Which statement is true?
+
+A)	Iterative processes such as the Unified Process give phases different names from activities to confuse students.
+B)	Iterative processes such as the Unified Process give phases different names from activities because they share the same namespace and must be unique.
+C)	Iterative processes such as the Unified Process give phases different names from activities to allow the same activities to take place in different phases.
+
+Answer: C
+
+202. [CHAPTER-12-4] Which of the following is not a reason for separating the analysis stage from the design stage?
+
+A)	Analysts and designers may be people with different skills and knowledge.
+B)	It is not possible to begin design until all the analysis has been completed.
+C)	Clients will want clear decision points at which they can agree that the project should progress to the next stage and incur further costs.
+
+Answer: B
+
+203. [CHAPTER-12-5] Which of the following is claimed as an advantage of iterative development processes?
+
+A)	Risk mitigation—by identifying technical problems early on.
+B)	Logical design—by producing a design that is not tied to the physical implementation.
+C)	Diagram separation—by making it possible to use different kinds of diagrams in analysis from those used in design.
+
+Answer: A
+
+204. [CHAPTER-12-6] Which of the following is a description of logical design?
+
+A)	Design of aspects of the system without having to consider how they will physically be implemented.
+B)	Design of the logic used in operations, based on decision trees, decision tables or Object Constraint Language.
+C)	Design of the logic gates used in the implementation of the processor chips used in the system.
+
+Answer: A
+
+205. [CHAPTER-12-7] Which statement is an example of logical design?
+
+A)	Communication between the Agate system and the company accounts system will be by passing messages.
+B)	There will be a message sent to the accounts system called NewInvoice, which will be formatted in XML, and each invoice will have a six-digit invoice number allocated by the accounts system.
+C)	Communication between the Agate system and the company accounts system will use the OpenJMS Java message server with persistent storage of messages provided by the MySQL database.
+
+Answer: A
+
+206. [CHAPTER-12-8] Which combination of cohesion and coupling is desirable in a design?
+
+A)	High cohesion and low coupling.
+B)	High cohesion and high coupling.
+C)	Low cohesion and high coupling.
+
+Answer: A
+
+207. [CHAPTER-12-9] What is system design?
+
+A)	Designing the architecture of the system and setting standards, for example for user interface design.
+B)	Designing the inputs and outputs of the system, processes and data storage.
+C)	Designing classes that will implement the system in an object-oriented language.
+
+Answer: A
+
+208. [CHAPTER-12-10] Which of the following is not part of detailed design?
+
+A)	Screen and window layouts in the form of user interface classes.
+B)	Allocation of sub-systems to processors.
+C)	Allocation of responsibilities to classes.
+
+Answer: B
+
+209. [CHAPTER-12-11] Which of the following is a list of characteristics of good analysis?
+
+A)	Completeness, consistency, correct scope and correct content.
+B)	Consistency, security, reliability and completeness.
+C)	Consistency, efficiency, effectiveness and correct scope.
+
+Answer: A
+
+210. [CHAPTER-12-12] Which of the following is a list of characteristics of good design?
+
+A)	Consistency, efficiency, effectiveness and correct scope.
+B)	Efficiency, reliability, security and flexibility.
+C)	Efficiency, redundancy, functionality and usability.
+
+Answer: B
+
+211. [CHAPTER-12-13] What is meant by an economical design?
+
+A)	The design itself was produced at a low cost.
+B)	The fixed costs and running costs of the system will be low.
+C)	The system will use inexpensive disks.
+
+Answer: B
+
+212. [CHAPTER-12-14] What is meant by a secure design?
+
+A)	The design is held in encrypted format in a CASE tool repository.
+B)	The models are backed up nightly and the back-up stored off-site.
+C)	The design includes measures to protect the system from deliberate or inadvertent damage.
+
+Answer: C
+
+213. [CHAPTER-12-15] Which of the following is not a characteristic of a maintainable design?
+
+A)	The developed program code and the design model are kept in sync.
+B)	The design and program code are well documented.
+C)	The code is designed to require maintenance work equivalent to 60% of all staff time.
+
+Answer: C
+
+214. [CHAPTER-12-16] Which of the following might provide a measure of the usability of a system?
+
+A)	The number of errors made by programmers.
+B)	The number of errors made by users.
+C)	The number of bugs found by system testers.
+
+Answer: B
+
+215. [CHAPTER-12-17] What is meant by reusability in design?
+
+A)	Design of classes that can be reused in other systems.
+B)	Reuse of legacy systems.
+C)	Buying rather than building software.
+
+Answer: A
+
+216. [CHAPTER-12-18] What is meant by design trade-offs?
+
+A)	A way of resolving conflicts between requirements and design constraints.
+B)	A way of achieving measurable objectives in design.
+C)	A way of producing reusable code.
+Answer: A
+
+217. [CHAPTER-12-19] What is meant by the term ‘measurable objectives’?
+
+A)	Aims of the system that are vague and difficult to assess.
+B)	Objectives that can be quantified and have a specific numeric target.
+C)	Strategic aims of the organisation that is getting a new system.
+
+Answer: B
+
+218. [CHAPTER-12-20] Which of the following is not a measurable objective?
+
+A)	To reduce errors made by users by 50%.
+B)	To cut response times by an average of 5 seconds.
+C)	To process more invoices.
+
+Answer: C
+
+219. [CHAPTER-12-21] Which of the following is a measurable objective?
+
+A)	To despatch all orders received before 11.00 am on the same day.
+B)	To despatch orders more quickly.
+C)	To improve customer satisfaction.
+
+Answer: A
+
+
+CHAPTER-13
+=============================================
+220. [CHAPTER-13-1] Which of the following is considered to be a major element of system design?
+
+A)	Class diagrams are mapped onto tables in a relational database management system.
+B)	Data management classes are identified.
+C)	Standards for code development and human computer interaction are determined.
+
+Answer: C
+
+221. [CHAPTER-13-2] Which of the following is consistent with Buschmann’s definition of a software architecture (Buschmann et al., 1996)?
+
+A)	The software architecture only determines the software sub-systems.
+B)	Software architecture describes the relationships between the components of the system.
+C)	Software architecture determines the look and feel of an application.
+
+Answer: B
+
+222. [CHAPTER-13-3] The sub-division of an information system into sub-systems brings which of the following benefits?
+
+A)	The constructed system will be smaller and hence easier to maintain.
+B)	It improves the performance of the system.
+C)	It makes the system easier to maintain.
+
+Answer: C
+
+223. [CHAPTER-13-4] Which of the following statements is true about a client–server architecture?
+
+A)	The client interface must be specified first.
+B)	The server only provides the functionality required by the client.
+C)	The client requests services from the server.
+
+Answer: C
+
+224. [CHAPTER-13-5] Which of the following is true about a closed layered architecture?
+
+A)	Dependencies between the layers are minimized.
+B)	The architecture is less open to change.
+C)	A layer may only communicate with any of the layers beneath it.
+
+Answer: A
+
+225. [CHAPTER-13-6] Which of the following is true about an open layered architecture?
+
+A)	System performance may be reduced.
+B)	It is more open to change.
+C)	It is less easy to maintain.
+
+Answer: C
+
+226. [CHAPTER-13-7] When constructing a layered architecture which of following is not a specific consideration?
+
+A)	Maintaining the interfaces for each layer.
+B)	Maintaining a consistent level of granularity for sub-systems.
+C)	The further sub-division of complex layers.
+
+Answer: B
+
+227. [CHAPTER-13-8] In the Model–View–Controller architecture which of the following best describes the role of the Model?
+
+A)	It informs each view when model data has changed.
+B)	It ensures that the view updates its presentation of data.
+C)	It accepts user input in the form of events, and triggers the execution of operations.
+
+Answer: A
+
+228. [CHAPTER-13-9] The advantages of the Model–View–Controller architecture include which of the following?
+
+A)	It is best suited to process control applications.
+B)	It places complex functionality in the controller components.
+C)	It supports diverse styles of view and controller.
+
+Answer: C
+
+229. [CHAPTER-13-10] Which of the following is a property of a broker architecture?
+
+A)	It improves performance while providing a client component with services.
+B)	It hides the server components from the client components.
+C)	It acts a server component.
+
+Answer: B
+
+230. [CHAPTER-13-11] A scheduler provides which of the following facilities?
+
+A)	It is useful for allocating computer-processing resources when time constraints are not tight.
+B)	It determines which parts of the system execute in a pre-determined sequence.
+C)	It can be used to ensure that each thread of control operates within the constraints on its response time.
+
+Answer: C
+
+231. [CHAPTER-13-12] The allocation of a system to multiple processors involves which of the following?
+
+A)	Concurrency requirements for each sub-system should be identified.
+B)	Each processor must use local data only.
+C)	Each processor must be able to operate independently.
+
+Answer: A
+ 
+CHAPTER-14
+=============================================
+
+232. [CHAPTER-14-1] When objects are being designed in detail the signature of each operation has to be specified. Which of the following statements is consistent with the term operation signature?
+
+A)	Each operation in a class has the same signature.
+B)	The operation name and the number of parameters are part of the operation signature.
+C)	A class may not have two operations with the same name.
+
+Answer: B
+
+233. [CHAPTER-14-2] Which of the following best describes when primary operations should be shown on class diagrams?
+
+A)	All primary operations are shown on class diagrams in design.
+B)	Primary operations are shown in class diagrams only if they modify attribute values.
+C)	Primary operations are shown on design class diagrams if they are part of the public interface of the class.
+
+Answer: C
+
+234. [CHAPTER-14-3] Encapsulation is best enforced by which of the following decisions regarding object visibility?
+
+A)	All attributes and operations are private.
+B)	All attributes are private and all operations are public.
+C)	All attributes are private and public operations are kept to a minimum.
+
+Answer: C
+
+235. [CHAPTER-14-4] When is a UML interface used?
+
+A)	It describes boundary classes.
+B)	It describes an interface that a class may offer to another class.
+C)	It describes the human-computer interface.
+
+Answer: B
+
+236. [CHAPTER-14-5] Good coupling is best characterised by which of the following?
+
+A)	Keeping the number of message types between objects to a minimum.
+B)	Ensuring that sub-classes are not strongly linked to their superclass.
+C)	Ensuring that operations in the same class are linked.
+
+Answer: A
+
+237. [CHAPTER-14-6] Which of the following is a beneficial consequence of good cohesion in a class?
+
+A)	The attributes in the class will only be accessed by the operations of that class.
+B)	The class will exhibit high levels of encapsulation.
+C)	The operations in the class will be easier to maintain.
+
+Answer: C
+
+238. [CHAPTER-14-7] The Liskov Substitution Principle is best described by which of the following?
+
+A)	A derived object may be treated as if it is the base object.
+B)	A derived object should be replaced by its base object.
+C)	Derived objects should be used instead of base objects.
+
+Answer: A
+
+239. [CHAPTER-14-8] Which of the following statements best describes what is involved in the task of designing associations?
+
+A)	It is concerned with how links between objects should be implemented.
+B)	Its main focus is determining the multiplicity of the associations.
+C)	It is concerned with specifying operations that may use the links between objects.
+
+Answer: A
+
+240. [CHAPTER-14-9] How many collection classes could sensibly be used to implement a two-way many-to-many association?
+
+A)	Two or more.
+B)	Two.
+C)	One.
+
+Answer: B
+
+241. [CHAPTER-14-10] If there is a dependency constraint between two or more attributes which of the following statements applies?
+
+A)	The value of none of the attributes should be changed.
+B)	If the value of one of the attributes is changed then all the others must be updated by one or more synchronizing operations.
+C)	Any change to the value of any of the attributes may require the other dependent attributes to be updated by one or more synchronizing operations.
+
+Answer: C
+
+242. [CHAPTER-14-11] Which of the following statements best describe the application of referential integrity during object design?
+
+A)	An object may only refer to another object if they share a link.
+B)	When an object is deleted all objects to which it refers must be deleted.
+C)	Referential integrity only applies for one-to-one associations.
+
+Answer: A
+
+
+CHAPTER-15
+=============================================
+
+243. [CHAPTER-15-1] Which of the following statements best describes the relationship between patterns and frameworks?
+ A)	A framework may involve many patterns.
+B)	A framework is more abstract than a pattern.
+C)	A pattern may incorporate one or more frameworks.
+
+Answer: A
+
+244. [CHAPTER-15-2] Several key principles underlie the use of patterns. Which of the following is not a key principle involved in the use of patterns?
+
+A)	Abstraction.
+B)	Separation of concerns.
+C)	Conformance testing.
+
+Answer: C
+
+245. [CHAPTER-15-3] A pattern is normally described in the format of a pattern template. Which of the following statements best describes the forces of a pattern?
+
+A)	The forces embody the constraints that must be addressed by the solution.
+B)	The forces describe why it is important to find a solution to the problem
+C)	The forces are the constraints that solution is unable to resolve.
+
+Answer: A
+
+246. [CHAPTER-15-4] Which of the following is not one of the categories defined for the GOF patterns?
+
+A)	Creational.
+B)	Static.
+C)	Behavioural.
+
+Answer: B
+
+247. [CHAPTER-15-5] Which of the following best describes an advantage of the Singleton pattern?
+
+A)	The pattern can be used to ensure that no more than a fixed number of instances of the Singleton class are created.
+B)	Using the pattern always makes a system easier to maintain.
+C)	When the pattern is used global data can be accessed more quickly.
+
+Answer: A
+
+248. [CHAPTER-15-6] Which of the following statements is true about the Composite pattern?
+
+A)	The pattern must be used in conjunction with the Singleton pattern.
+B)	The pattern makes it easier to add new leaf subclasses.
+C)	The pattern makes it easier to add new operations to each of the leaf subclasses.
+
+Answer: B
+
+249. [CHAPTER-15-7] Which of the following best describes when to use the State pattern?
+
+A)	The pattern may be used when a class has many states.
+B)	The pattern may be used when a class has many operations.
+C)	The pattern may be used when an object appears to change class at run-time.
+
+Answer: A
+
+250. [CHAPTER-15-8] Which of the following is not an advantage of the State pattern?
+
+A)	State behaviour is localized.
+B)	The Singleton pattern may be used with the State pattern.
+C)	State transitions are made explicit.
+
+Answer: B
+
+251. [CHAPTER-15-9] Which of the following is not an issue that should be considered before using a pattern?
+
+A)	If a simpler solution exists it should be used in preference to the pattern.
+B)	It is preferable to use patterns by themselves.
+C)	It is important that the context of the problem is consistent with the context of the pattern.
+
+Answer: B
+
+252. [CHAPTER-15-10] Which of the following statements is most appropriate when using a pattern during information systems development?
+
+A)	The pattern must be used without any changes to its overall structure.
+B)	The pattern should be implemented with names that are meaningful in the context of the application.
+C)	The names of the classes in the pattern should be given the general names from the pattern so that their roles are unambiguous.
+
+Answer: B
+
+
+CHAPTER-16
+=============================================
+
+253. [CHAPTER-16-1] Which of the following is not a task that will be carried out by a user of a system through its interface?
+
+A)	Issuing commands to the system to indicate what the user wants to do.
+B)	Responding to and correcting errors.
+C)	Storing data in a database
+
+Answer: C
+
+254. [CHAPTER-16-2] Which of the following is the best definition of a metaphor?
+
+A)	A term that is used figuratively to describe something but is not applied literally.
+B)	A term that is used to describe something as being like something else
+C)	A narrative technique describing one thing in the guise of another.
+
+Answer: A
+
+255. [CHAPTER-16-3] Which of the following is not a metaphor for the way that users interact with the user interface?
+
+A)	Direct manipulation.
+B)	Scenario.
+C)	Dialogue.
+
+Answer: B
+
+256. [CHAPTER-16-4] Which kind of message is both an input message and an output message?
+
+A)	Prompt.
+B)	Data.
+C)	Help.
+
+Answer: B
+
+257. [CHAPTER-16-5] Which kind of message is provided by a system when it displays a request for the user to enter data?
+
+A)	Status.
+B)	Help.
+C)	Prompt.
+
+Answer: C
+
+258. [CHAPTER-16-6] Why is the design of direct manipulation GUI interfaces more complicated than text-based dialogues?
+
+A)	They are event-driven, and the user can create events, such as button clicks, in any order.
+B)	There is no way of representing GUI interfaces in UML.
+C)	They can only be implemented using Visual Basic or Java.
+
+Answer: A
+
+259. [CHAPTER-16-7] Which of the following is not a characteristic of good user-interface dialogues?
+
+A)	Appropriate user support.
+B)	Minimal user input.
+C)	Minimal feedback from the system.
+
+Answer: C
+
+260. [CHAPTER-16-8] A system provides hypertext help and tooltips, which display information about buttons in the toolbar when the mouse cursor moves over them. Which of the following characteristics of good dialogues is this an example of?
+
+A)	Appropriate user support.
+B)	Consistency.
+C)	Minimal user input.
+
+Answer: A
+
+261. [CHAPTER-16-9] Which of the following is an example of consistency?
+
+A)	All dialogue boxes have an ‘OK’ button and a ‘Cancel’ button centred at the bottom of the dialogue box.
+B)	When a shareware package starts, if it has not been licensed, the user has to click a button labelled ‘I agree’, which appears in different positions in the start-up dialogue box on different occasions.
+C)	When entering a value, the user can sometimes type it in and sometimes select it from a list
+
+Answer: A
+
+262. [CHAPTER-16-10] Which of the following is not an example of minimal user input?
+
+A)	The user can enter abbreviations.
+B)	The user has to re-enter values in full when he or she has made an error.
+C)	The user can use control key combinations as shortcuts to menu items.
+
+Answer: B
+
+263. [CHAPTER-16-11] Some organisations set standards for user interface design. What are these standards called?
+
+A)	Ethnographic standards
+B)	GUIdes (short for ‘GUI design’).
+C)	Style guides.
+
+Answer: C
+
+264. [CHAPTER-16-12] Which of the following is not a list of factors that affect the design of the user interface?
+
+A)	The nature of the task that the user is carrying out, the type of user, the amount of training the user will have undertaken, the frequency of use and the hardware and software architecture.
+B)	The nature of the task that the user is carrying out, the type of user, the amount of training the user will have undertaken, the frequency of use and the database architecture.
+C)	The nature of the task that the user is carrying out, the type of user, the choice of requirements gathering techniques, the frequency of use and the hardware and software architecture.
+
+Answer: B
+
+265. [CHAPTER-16-13] Which of the following is a list of approaches to user interface design?
+
+A)	Structured, ethnographic and scenario-based.
+B)	Consistent, adequate and minimal.
+C)	Requirements, design and evaluation.
+
+Answer: A
+
+266. [CHAPTER-16-14] Which of the following is not a characteristic of structured approaches to user-interface design?
+
+A)	They are based on a life cycle broken down into stages, steps and tasks.
+B)	They require the designer to participate in the day-to-day work of users.
+C)	They define specific techniques and lay down which techniques to use in each step or task.
+
+Answer: B
+
+267. [CHAPTER-16-15] Which of the following is not a characteristic of ethnographic approaches to user interface design?
+
+A)	They require the designer to participate in the day-to-day work of the users.
+B)	They use quantitative methods based on statistical analysis.
+C)	They recognise that different users have different subjective experiences of using systems.
+
+Answer: B
+
+268. [CHAPTER-16-16] Which of the following is used as a criticism of laboratory testing of user interface designs?
+
+A)	The tests lack ecological validity.
+B)	The tests take too long.
+C)	There is not evidence that the tests improve usability.
+
+Answer: A
+
+269. [CHAPTER-16-17] Which of the following is not a characteristic of scenario-based approaches to user interface design?
+
+A)	They use checklists, such as the contextual analysis questionnaire.
+B)	They use text or storyboards to describe interaction with the system step by step.
+C)	They can be used to visualise how users will interact with a new system.
+
+Answer: A
+
+270. [CHAPTER-16-18] Which kind of user interface design approach is closest to use case analysis?
+
+A)	Structured.
+B)	Ethnographic.
+C)	Scenario-based.
+
+Answer: C
+
+271. [CHAPTER-16-19] What is meant by the term ‘design claims’ in scenario-based design?
+
+A)	Expense claims from designers who participate in the day-to-day work of users.
+B)	Supporting documentation that justifies the design decisions embodied in scenarios.
+C)	Document management support for the use of scenarios.
+
+Answer: B
+
+272. [CHAPTER-16-20] Which of the following is a list of criteria for measuring usability?
+
+A)	Learnability, efficiency, flexibility and reusability.
+B)	User-friendliness, throughput, consistency and attitude.
+C)	Learnability, throughput, flexibility and attitude.
+
+Answer: C
+
+273. [CHAPTER-16-21] Which of the following organizations has laid down standards for the ergonomics of visual display terminals?
+
+A)	International Standards Organization (ISO).
+B)	Object Management Group (OMG).
+C)	Unified Modelling Group (UMG).
+
+Answer: A
+
+274. [CHAPTER-16-22] Which of the following is not a requirement on employers under the UK’s Health and Safety Regulations for Display Screen Equipment?
+
+A)	The employer must analyse workstations to assess and reduce risks.
+B)	The employer must provide training on health and safety relevant to workstations.
+C)	The employer must monitor employees’ use of workstations electronically.
+
+Answer: C
+
+CHAPTER-17
+=============================================
+
+275. [CHAPTER-17-1] Which of the following types of class stereotype is always found in the presentation layer?
+
+A)	Boundary.
+B)	Control.
+C)	Entity.
+
+Answer: A
+
+276. [CHAPTER-17-2] Which of the following elements of the Model–View–Controller architecture is essentially part of the presentation layer?
+
+A)	Model.
+B)	View.
+C)	Controller.
+
+Answer: B
+
+277. [CHAPTER-17-3] Which of the following is not a reason for separating the display of instances of business classes from the business classes themselves?
+
+A)	For classes to be reusable they should not be tied to a particular way of displaying the attribute values of instances.
+B)	The state behaviour of the interface is different from the state behaviour of the business objects.
+C)	There is no one standard layout for the attributes of business objects, so the display is better handled by separate classes.
+
+Answer: B
+
+278. [CHAPTER-17-4] What is the presentation layer concerned with?
+
+A)	Presenting the attribute values of objects to the user and other systems.
+B)	Storing the data represented by the attribute values of objects.
+C)	Acting as an interface between the tiers of the three-tier architecture.
+
+Answer: A
+
+279. [CHAPTER-17-5] Which of the following is not a kind of prototype?
+
+A)	Horizontal.
+B)	Vertical.
+C)	Lateral.
+
+Answer: C
+
+280. [CHAPTER-17-6] Which of the following best describes a horizontal prototype?
+
+A)	A horizontal prototype deals only with the user interface.
+B)	A horizontal prototype deals with a single layer of a layered architecture.
+C)	A horizontal prototype takes one sub-system and develops it across all the layers.
+
+Answer: B
+
+281. [CHAPTER-17-7] Which of the following best describes a vertical prototype?
+
+A)	A vertical prototype is discarded after it has been used to test out some aspect of the design.
+B)	A vertical prototype deals with a single layer of a layered architecture.
+C)	A vertical prototype takes one sub-system and develops it across all the layers.
+
+Answer: C
+
+282. [CHAPTER-17-8] Which of the following best describes a throwaway prototype?
+
+A)	A throwaway prototype is discarded after it has been used to test out some aspect of the design.
+B)	A throwaway prototype takes one sub-system and develops it across all the layers.
+C)	A throwaway prototype is used to test the design of object deletion mechanisms.
+
+Answer: A
+
+283. [CHAPTER-17-9] Which of the following is not a reason for using prototyping in the design of the user interface?
+
+A)	Alternative approaches to the interface of a use case can be tried out.
+B)	Guidelines for the design of the interface can be tested.
+C)	Visual development environments can be used to blur the distinction between the interface and the business logic.
+
+Answer: C
+
+284. [CHAPTER-17-10] Which of the following is the stereotype for a boundary class?
+
+A)  <img src="./OOSAD/Ch17F10a.JPG" />
+B)  <img src="./OOSAD/Ch17F10b.JPG" />
+C)  <img src="./OOSAD/Ch17F10c.JPG" />
+Answer: A
+
+285. [CHAPTER-17-11] Boundary classes will usually have a dependency on classes in some kind of 
+    user interface package, such as the Java Abstract Windowing Toolkit or the Microsoft Foundation Classes. 
+    What kind of dependency is this likely to be?
+
+A)	«realize»
+B)	«import»
+C)	«include»
+
+Answer: B
+
+286. [CHAPTER-17-12] What notation is used in a sequence diagram to show that an object instance is created by a message?
+
+A)	The arrow head of the message points at the object at the top of the lifeline.
+B)	The arrow head of the message is open.
+C)	A large ‘C’ for ‘Constructor’ is shown on the object lifeline.
+
+Answer: A
+
+287. [CHAPTER-17-13] What notation is used in a sequence diagram to show that an object instance is destroyed as a result of receiving a message?
+
+A)	A large ‘X’ is shown on the lifeline.
+B)	The arrow head of the message is open.
+C)	A large ‘D’ for ‘Destructor’ is shown on the lifeline.
+
+Answer: A
+
+288. [CHAPTER-17-14] Which of the following statements best describes the excerpt from a class diagram shown below?
+  <br/><img src="./OOSAD/Ch17F14.JPG" />
+A)	CheckCampaignBudgetUI inherits its behaviour from ClientLister. ListClients contains one or more ClientListers.
+B)	ListClients inherits its behaviour from ClientLister. CheckCampaignBudgetUI is a user interface class because of its relationship with ClientLister.
+C)	CheckCampaignBudgetUI implements the ClientLister interface. ListClients uses the operations of the interface when sending messages to CheckCampaignBudgetUI.
+
+Answer: C
+
+289. [CHAPTER-17-15] Which of the following is meant by the large rectangle in the diagram below?
+  <br/><img src="./OOSAD/Ch17F15.JPG" />
+A)	The messages within the rectangle result in the destruction of the :ListClients object.
+B)	The messages in the rectangle are repeated.
+C)	The messages in the rectangle are all sent by the same object.
+
+Answer: B
+
+290. [CHAPTER-17-16] Which of the objects in the diagram below would need to implement the ItemListener interface in order to respond to the itemStateChanged(evt) message?
+  <br/><img src="./OOSAD/Ch17F16.JPG" />
+A)	clientChoice:Choice.
+B)	CheckCampaignBudgetUI.
+C)	CheckCampaignBudget.
+
+Answer: B
+
+291. [CHAPTER-17-17] Which three patterns do Gamma et al. use to describe the Model–View–Controller architecture?
+
+A)	Model, View and Controller.
+B)	Façade, ItemListener and Controller.
+C)	Observer, Composite and Strategy.
+
+Answer: C
+
+292. [CHAPTER-17-18] Why are statecharts used to model the user interface?
+
+A)	To model the permitted states of the user interface and the events that cause the user interface to change state.
+B)	To model the lifetime of all the user interface classes beyond the existence of a particular instance of the interface.
+C)	To show the sequential view of the user working through the user interface from top to bottom.
+
+Answer: A
+
+293. [CHAPTER-17-19] Which of the following can be achieved by modelling the state of the user interface?
+
+A)	Passing responsibility for all validation to the controller class.
+B)	Constraining the behaviour of the interface to prevent users making errors.
+C)	Describing the high-level requirements and main user tasks.
+
+Answer: B
+
+294. [CHAPTER-17-20] What is the purpose of the history indicator in a statechart?
+
+A)	It shows that the state nested within another state will be recorded, and if a transition is made back to the history indicator, then the object will return to the recorded state.
+B)	When a transition enters the nested state it will restart at the start state.
+C)	If a transition is made to the history indicator then the object will return to the immediately preceding state, as if the transition had never happened.
+
+Answer: A
+
+295. [CHAPTER-17-21] Which of the following is the notation for the deep history indicator?
+
+A)	H in a circle.
+B)	H* in a circle.
+C)	«history» in a round-cornered rectangle.
+
+Answer: B
+
+296. [CHAPTER-17-22] What is recorded in an event–action table?
+
+A)	The actions that objects can carry out and the events that take place as a result of those actions.
+B)	Events that objects can respond to and the actions that take place in response to those events.
+C)	Current states, events that can occur in each state, the actions associated with the combination of state and event, and the next states after the actions have taken place.
+
+Answer: C
+
+
+
+CHAPTER-18
+=============================================
+
+297. [CHAPTER-18-1] Which of the following statements best describes what is meant by persistent data?
+
+A)	Data that only exists while a program is running.
+B)	Data in objects that keep trying to save themselves to disk storage.
+C)	Data that must be stored after a program stops running and be available to other users.
+
+Answer: C
+
+298. [CHAPTER-18-2] Which of the following kinds of objects are used in an object-oriented system?
+
+A)	Persistent objects only.
+B)	Transient objects only.
+C)	Both persistent and transient objects.
+
+Answer: C
+
+299. [CHAPTER-18-3] Which of the following is an example of a persistent object?
+
+A)	A Client object in the Agate system.
+B)	A ClientBroker object in the Agate system.
+C)	A ClientProxy object in the Agate system.
+
+Answer: A
+
+300. [CHAPTER-18-4] Which of the following statements best describes how a database stores data?
+
+A)	Relational databases store data in tables, and each table is a file.
+B)	Databases provide a layer of abstraction between the way that data is presented to the user and the way that it is stored in files.
+C)	Object databases store data in objects, and each object is a file.
+
+Answer: B
+
+301. [CHAPTER-18-5] Why might an object-oriented system use a relational DBMS?
+
+A)	Many organizations have existing relational databases containing existing business data.
+B)	Object databases are too complicated to use.
+C)	Relational databases are inherently better than object databases for business applications.
+
+Answer: A
+
+302. [CHAPTER-18-6] Which of the following types of record structure is used in an XML file?
+
+A)	Fixed length.
+B)	Tagged.
+C)	Header and detail.
+
+Answer: B
+
+303. [CHAPTER-18-7] Which of the following best describes a variable length record structure?
+
+A)	Each record is made up of a number of fields, each of which has a fixed length in bytes. If the data in a field does not fill that many bytes, it is padded with a special character, usually null or space.
+B)	Each record is made up of a number of fields, each of which may have a maximum length but has a minimum length of zero bytes. Either fields are separated by special delimiter characters or the length of each field is held in the record structure.
+C)	Each record is tagged with a name in special characters. The end of the field is usually marked as well. Fields can contain other fields in complex nested structures.
+
+Answer: B
+
+304. [CHAPTER-18-8] Which of the following best describes a throwaway prototype?
+
+A)	A throwaway prototype is discarded after it has been used to test out some aspect of the design.
+B)	A throwaway prototype takes one sub-system and develops it across all the layers.
+C)	A throwaway prototype is used to test the design of object deletion mechanisms.
+
+Answer: A
+
+305. [CHAPTER-18-9] Which of the following is a valid list of types of file organization?
+
+A)	Tagged, serial and variable length.
+B)	Hashed, index-sequential and serial.
+C)	Serial, sequential and random.
+
+Answer: C
+
+306. [CHAPTER-18-10] Which of the following best describes serial file organization?
+
+A)	Each record is written onto the end of the file. If a record is to be deleted, the file must be copied from the start to the deleted record, which is skipped, and written back to disk.
+B)	Each record is written to file in a predetermined order, usually based on a key field. Records must be added in the right place in the file.
+C)	Each record is located in the file by means of an algorithm that converts a key field into a position in the file.
+
+Answer: A
+
+307. [CHAPTER-18-11] Which of the following is a valid list of file access methods?
+
+A)	Serial, index-sequential and direct.
+B)	Serial, sequential and random.
+C)	Tagged, serial and inverted.
+
+Answer: A
+
+308. [CHAPTER-18-12] Which of the following best describes index-sequential file access?
+
+A)	Records are stored in blocks. The key of the record is used to calculate which block to store the data in, either using relative addressing or using a hashing algorithm.
+B)	Records are stored in blocks. The key of the record is used to determine which block to store a record in. A block index is maintained, which lists the keys of the last record in each block.
+C)	Records are stored in blocks. records are written into blocks in the order in which they are created. If there are too many records for the number of blocks, then the excess records are held in overflow blocks.
+
+Answer: B
+
+309. [CHAPTER-18-13] What is a hashing algorithm?
+
+A)	1. A way of padding data in fixed length fields with the ASCII hash character ‘#’
+B)	A way of separating fields in records using the ASCII has character ‘#’ as a delimiter.
+C)	A way of converting record keys into numeric block addresses in a range of values.
+
+Answer: C
+
+310. [CHAPTER-18-14] Which of the following kinds of file would be used to store system settings?
+
+A)	Parameter file.
+B)	Temporary file.
+C)	Master file.
+
+Answer: A
+
+311. [CHAPTER-18-15] Which of the following is not a disadvantage of using files to store data?
+
+A)	As the number of applications grows, the number of files grows, and the same data may be held in different files, creating data integrity problems.
+B)	Combining data from different applications to meet new business requirements is difficult, as data in different files may be accessed in different ways.
+C)	Files can be used to hold prompts and labels in order to localize an application for use in different countries.
+
+Answer: C
+
+312. [CHAPTER-18-16] Which of the following is not a list of features of a database management system?
+
+A)	DDL, DML, concurrency, tuning of storage.
+B)	Integrity constraints, transaction management, security.
+C)	DBA, DML, conceptual schema, security.
+
+Answer: C
+
+313.  [CHAPTER-18-17] Which of the following is not an advantage of using a database management system?
+
+A)	The use of a conceptual schema can eliminate unnecessary duplication of data.
+B)	A database administrator must be employed to manage the system.
+C)	The performance of the database can be tuned to optimise access to the data.
+
+Answer: B
+
+314. [CHAPTER-18-18] Which of the following statements is not true?
+
+A)	Relational databases automatically convert objects into tables consisting of rows and columns.
+B)	Relational databases hold data in two-dimensional tables that consist of rows and columns.
+C)	Object databases hold objects as complex nested structures if necessary.
+
+Answer: A
+
+315. [CHAPTER-18-19] What is meant by normalization?
+
+A)	Converting complex data structures into tables that meet clearly defined criteria.
+B)	Removing dependencies from data in tables.
+C)	Converting class diagrams into entity-relationship diagrams.
+
+Answer: A
+
+316. [CHAPTER-18-20] Which of the following is not a valid guideline for mapping classes to tables?
+
+A)	Classes with simple data structures become tables.
+B)	One-to-one associations are implemented using foreign key attributes.
+C)	Collection classes are implemented using foreign key attributes.
+
+Answer: C
+
+317. [CHAPTER-18-21] Which of the following approaches is the best way of implementing inheritance in situations where it is known that the superclass is abstract?
+
+A)	Only implement the superclass as a table.
+B)	Only implement the subclasses as tables.
+C)	Implement all the classes (superclasses and subclasses) as tables.
+
+Answer: B
+
+318. [CHAPTER-18-22] Which of the following statements best describes the use of object databases?
+
+A)	Object databases store objects transparently. Compared to using a relational database, designing for an object database will have a minimal impact on the design of the system.
+B)	Object databases store objects in relational database tables. The designer has to specify a set of rules for how the objects are to be mapped to the tables.
+C)	Object databases provide the seamlessness claimed for object-oriented development by storing the operations of objects in the database, while the data is mapped to relational tables.
+
+Answer: A
+
+319. [CHAPTER-18-23] What is CORBA?
+
+A)	A standard for passing messages between objects running on different machines.
+B)	A standard for object-oriented databases.
+C)	A misspelling of COBRA, the most popular beer among Indian software developers.
+
+Answer: A
+
+320. [CHAPTER-18-24] Which of the following statements best describes the use of the PersistentObject approach to designing the data storage layer?
+
+A)	All objects in the system implement the PersistentObject interface. This interface acts as a broker between objects and the database.
+B)	All the operations that are concerned with storing and retrieving objects from the database are implemented as class-scope operations.
+C)	All classes in the system that represent persistent objects must inherit from an abstract superclass called PersistentObject that provides operations to store, delete and update objects in the database.
+
+Answer: C
+
+321. [CHAPTER-18-25] In the diagram below which operation is a class-scope operation?
+  <br/><img src="./OOSAD/Ch18F25.JPG" />
+A)	numberOfCampaigns().
+B)	findByLocationCode().
+C)	Location().
+
+Answer: B
+
+322. [CHAPTER-18-26] Which of the following statements best describes the use of the broker framework?
+
+A)	For each persistent class there is a broker class that is responsible for materializing instances of that class from the database and dematerialising them back into the database.
+B)	Every persistent class inherits from the abstract RelationalBroker class, which provides the mechanisms for storing and retrieving object instances.
+C)	For every persistent object there is a broker object that is responsible for materializing the object from the database and dematerialising it back into the database.
+
+Answer: A
+
+323. [CHAPTER-18-27] Why might six caches be used in a persistence framework?
+
+A)	Six caches are better than one.
+B)	To distinguish between the different states of objects (new/old and clean/dirty/deleted).
+C)	The magic number seven plus or minus two.
+
+Answer: B
+
+324. [CHAPTER-18-28] In the diagram below, what is the purpose of the IntCampaignProxy class?
+  <br/><img src="./OOSAD/Ch18F28.JPG" />
+A)	The IntCampaignProxy contains the IntCampaignBroker object.
+B)	The IntCampaignProxy decouples the IntCampaign from the cache.
+C)	The IntCampaignProxy acts as a placeholder for the actual IntCampaign. The IntCampaign is only materialized from the database when required.
+
+Answer: C
+
+
+CHAPTER-19
+=============================================
+
+325. [CHAPTER-19-1] Which of the following statements best describes what is meant by a CASE tool?
+
+A)	A software tool for drawing diagrams.
+B)	A software package that maintains graphical models and other data about systems, and may generate program code.
+C)	A software package that enables a developer to produce a graphical user interface by dragging and dropping components onto forms.
+
+Answer: B
+
+326. [CHAPTER-19-2] Which of the following statements best describes what is meant by a configuration management tool?
+
+A)	A software package that keeps track of the dependencies between components and the versions of source code and resource files used to produce a particular release of software.
+B)	A software package that enables a developer to produce a graphical user interface by dragging and dropping components onto forms.
+C)	A software package that builds archives or zip files that can be used with an installation tool to install software onto a computer.
+
+Answer: A
+
+327. [CHAPTER-19-3] Which of the following statements best describes what is meant by an integrated development environment?
+ A)	A software package that builds archives or zip files that can be used with an installation tool to install software onto a computer.
+B)	A software package that contains a multi-window editor, mechanisms for managing the source files in a project, and links to the compiler and debugger so that they can be run from within the environment.
+C)	A software package that enables a developer to produce a graphical user interface by dragging and dropping components onto forms.
+
+Answer: B
+
+328. [CHAPTER-19-4] Which of the following examples conforms to the standard for class names used in the book and generally in Java programming?
+ 
+A)	Sales_Order_Proxy.
+B)	salesOrderProxy.
+C)	SalesOrderProxy.
+
+Answer: C
+
+329. [CHAPTER-19-5] Which of the following examples conforms to the standard for attribute names used in the book and generally in Java programming?
+ 
+A)	budgetTextField.
+B)	budgetTextField().
+C)	BudgetTextField.
+
+Answer: A
+
+330. [CHAPTER-19-6] Which of the following examples conforms to Hungarian notation?
+ 
+A)	iLength.
+B)	length.
+C)	LengthInt.
+
+Answer: A
+
+331. [CHAPTER-19-7] Which of the following is not a reason for documenting your code?
+ 
+A)	Someone else may be maintaining the code that you have written.
+B)	However good your use of naming conventions, you can always provide extra help to readers of your code (including yourself when you come back to it in a few months’ time).
+C)	End-users will need to read your program code to understand how to use the system.
+
+Answer: C
+332. [CHAPTER-19-8] What is shown in a component diagram?
+ 
+A)	1. Software components in the system and the dependencies between them.
+B)	Hardware components in the system and the software that runs on them.
+C)	Classes and the messages that are passed between them in the live system.
+
+Answer: A
+
+333. [CHAPTER-19-9] Which of the following is true of the diagram below? 
+  <br/><img src="./OOSAD/Ch19F9.JPG" /> 
+
+A) The component Production scheduler has a dependency on the component Staff planner.
+B) The component Staff planner has a dependency on the component Production scheduler.
+C) The software component Staff planner runs on the hardware component Production scheduler.
+ 
+Answer: B
+ 
+334. [CHAPTER-19-10] Which of the following can component diagrams be used for?
+ 
+A)	To show the dependency of compiled components on other compiled components.
+B)	To show the dependency of compiled components on the source code files used to produce them.
+C)	Both 1 and 2.
+
+Answer: C
+
+335. [CHAPTER-19-11] Based on the dependencies in the diagram below, which of the following statements is true? 
+  <br/><img src="./OOSAD/Ch19F11.JPG" /> 
+
+A)	If SalesOrder.cpp changes it will not affect any other components.
+B)	If SalesOrder.cpp changes it will affect the SalesOrder.h component.
+C)	If SalesOrder.cpp changes it will affect the SalesOrder.o and PrintOrder.exe components.
+
+Answer: C
+336. [CHAPTER-19-12] Which of the following statements best describes what is shown in a deployment diagram?
+ 
+A)	The configuration of run-time processing elements and the software components and processes that are located on them.
+B)	The actors who will be involved in the deployment of software in the finished system and the communication between them and the system hardware.
+C)	Software components and the dependencies between them.
+
+Answer: A
+337. [CHAPTER-19-13] Which of the following is the notation for a node in a deployment diagram? 
+  <br/><img src="./OOSAD/Ch19F13.JPG" /> 
+
+A)	1
+B)	2
+C)	3
+
+Answer: A
+338. [CHAPTER-19-14] Which of the following items are shown as well as the processor nodes in the deployment diagram below? 
+  <br/><img src="./OOSAD/Ch19F14.JPG" />
+ 
+A)	Software components, a class and a stereotyped dependency.
+B)	Software components, an active object and a communication association.
+C)	Hardware components, an active object and a message.
+
+Answer: B
+
+339. [CHAPTER-19-15] Which of the following best describes black box testing?
+ 
+A)	It tests the internal workings of the software and whether the software works as specified.
+B)	It tests whether the software produces the correct outputs for specific inputs.
+C)	It tests whether the software can be used ‘out of the box’ by end-users.
+
+Answer: B
+
+340. [CHAPTER-19-16] Which of the following best describes white box testing?
+ 
+A)	It tests the internal workings of the software and whether the software works as specified.
+B)	It tests whether the software produces the correct outputs for specific inputs.
+C)	It tests whether the software can be used ‘out of the box’ by end-users.
+
+Answer: A
+
+341. [CHAPTER-19-17] Which of the following is the likely order in which these five kinds of testing will be carried out?
+ 
+A)	Unit testing, integration testing, sub-system testing, system testing, user-acceptance testing.
+B)	Unit testing, user-acceptance testing, sub-system testing, integration testing, system testing.
+C)	User-acceptance testing, unit testing, sub-system testing, system testing, integration testing.
+
+Answer: A
+
+342. [CHAPTER-19-18] Which of the following statements best describes beta testing?
+ 
+A)	Testing individual classes and then the interaction between instances of those classes in programs.
+B)	Testing software applications in a simulated environment.
+C)	Testing software applications in a live environment.
+
+Answer: C
+
+343. [CHAPTER-19-19] Why are test plans with test data and expected results created?
+
+A)	So that programmers can make sure that testers only test their code with values that they know will work.
+B)	So that testing is carried out thoroughly with a wide range of values, and the outcome according to the specification can be checked.
+C)	To save time for testers, so that they don’t have to think about the results.
+
+Answer: B
+
+344. [CHAPTER-19-20] Which of the following best describes the activity of data conversion?
+ 
+A)	Making sure that all the data to be used in the system is converted into a modern format like XML as soon as possible.
+B)	Testing that data from Windows systems can correctly be loaded into Unix applications.
+C)	Collating manually held data from different sources for entry into the new system, and converting data from existing computerised systems into a format for import into the new system.
+
+Answer: C
+
+345. [CHAPTER-19-21] When should user training take place?
+ 
+A)	Months before the implementation of the new system.
+B)	As soon as possible before the implementation of the new system.
+C)	A few weeks after the implementation of the new system.
+
+Answer: B
+
+346. [CHAPTER-19-22] Who should write user manuals?
+ 
+A)	Technical authors.
+B)	Programmers.
+C)	Users’ managers.
+
+Answer: A
+
+347. [CHAPTER-19-23] Which changeover strategy is most suitable for systems where there is a high level of risk and the system is central to the operation of the business?
+ 
+A)	Direct changeover.
+B)	Phased changeover.
+C)	Parallel running.
+
+Answer: C
+
+348. [CHAPTER-19-24] Which of the following is an advantage of the direct changeover approach?
+ 
+A)	The new system will immediately bring business benefits and will start paying for itself.
+B)	The outputs of the old and new systems can be compared as a form of validation.
+C)	Thorough testing of each stage or sub-system can be carried out as it is introduced.
+
+Answer: A
+
+349. [CHAPTER-19-25] In the diagram below which part represents parallel running schematically? 
+  <br/><img src="./OOSAD/Ch19F25.JPG" /> 
+
+A)	1
+B)	2
+C)	3
+ 
+Answer: B
+
+350. [CHAPTER-19-26] Which of the following is not a good reason for a post-implementation evaluation?
+ 
+A)	The project can be assessed to establish how well it has met the functional and non-functional requirements, and if any functional requirements were left out a decision can be made about implementing them in a future project.
+B)	Problems with the software can be identified and the developers responsible for those parts of the system can be identified and demoted or sacked.
+C)	The experience can be used to learn useful things, for example, the actual time spent on each part of the project can be compared with the estimates and used to improve the estimation process in future projects.
+
+Answer: B
+
+351. [CHAPTER-19-27] Which of the following is not likely to be a section in a post-implementation report?
+ 
+A)	Candidate components for reuse.
+B)	Positive experiences.
+C)	Test plan.
+
+Answer: B
+
+352. [CHAPTER-19-28] Why should maintenance of an application be controlled?
+ 
+A)	In order to assess the cost of changes and the impact of changes on the rest of the system.
+B)	To maintain a steady income for the software company that developed the application.
+C)	To avoid maintenance activities interfering with work on developing new systems.
+
+Answer: A
+
+
+ CHAPTER-20
+=============================================
+
+353. [CHAPTER-20-1] Which of the following is not an argument for reuse?
+ 
+A)	If some of the requirements of a project can be met by existing components then the time spent developing those components can be saved.
+B)	If components that have been used and tested in another application can be reused then the time spent testing and quality assuring the components can be saved.
+C)	Reusing components allows developers to maintain their high salaries by claiming to have developed software that has in fact been developed by someone else.
+Answer: C
+
+354. [CHAPTER-20-2] Which of the following is cited as a reason for the failure of object-oriented systems to have achieved the expected levels of reuse?
+ 
+A)	Organizations plan for reuse too late. The architecture of a system needs to be designed to support reuse and the organization needs to be structured to support reuse.
+B)	Reuse does not actually work. There are no systems that are enough like others to benefit from the reuse of components.
+C)	Reuse only works for languages like C and Fortran in which libraries of reusable functions and procedures can be developed.
+
+Answer: A
+
+355. [CHAPTER-20-3] Which of the following is not a standard that helps to support reusable components?
+ 
+A)	SOAP (Simple Object Access Protocol).
+B)	CORBA (Common Object Request Broker Architecture).
+C)	ORCA (Object Reusable Component Architecture).
+
+Answer: C
+356. [CHAPTER-20-4] Which of the following kinds of organization is likely to benefit from developing a reuse-driven software development process, according to Jacobson et al.?
+ 
+A)	Organizations producing hardware products with embedded software.
+B)	Small software companies producing one-off products.
+C)	Government departments developing software in-house.
+
+Answer: A
+
+357. [CHAPTER-20-5] Jacobson et al. suggest there are six stages that organizations go through in developing a culture of reuse. Which of the following is their list of stages?
+ 
+A)	Business; user; data; solution; component; repository.
+B)	None; informal code reuse; black-box code reuse; managed workproduct reuse; architected reuse; domain-specific reuse-driven organization.
+C)	Heroic individual reuse; informal code reuse; organized group code reuse; architecture-driven reuse; component-driven reuse; repository-based reuse.
+
+Answer: B
+
+358. [CHAPTER-20-6] What do Allen and Frost regard as central to their model for the development of reusable code components?
+ 
+A)	Java.
+B)	The Façade pattern.
+C)	A repository.
+
+Answer: C
+
+359. [CHAPTER-20-7] Which of the following is a good definition of a reusable component?
+ 
+A)	A type class or other workproduct that has been specifically engineered to be reusable.
+B)	Anything that appears in a component diagram.
+C)	A class or abstract superclass designed to be reused through inheritance.
+
+Answer: A
+
+360. [CHAPTER-20-8] Why are classes an inappropriate level at which to try to achieve reuse?
+ 
+A)	Attributes and associations of classes often couple them to other classes.
+B)	Objects not classes are suitable for reuse, as they are the things that are used in real systems.
+C)	Interfaces rather than classes should be reused, and then classes developed to implement them.
+
+Answer: A
+
+361. [CHAPTER-20-9] Which of the following is not a process in the Select Perpective?
+ 
+A)	The solution process.
+B)	The component process.
+C)	the repository process.
+
+Answer: C
+
+362. [CHAPTER-20-10] Which of the following analogies is used by Allen and Frost?
+ 
+A)	Hiding reusable components behind a façade..
+B)	Sowing and harvesting reusable components.
+C)	Cloning reusable components from existing systems.
+
+Answer: B
+
+363. [CHAPTER-20-11] What do Jacobson et al. recommend in their description of a Reuse-driven Software Engineering Business?
+ 
+A)	Designing an architecture to support reuse from the start.
+B)	Setting up a department to check newly developed software for reusable components.
+C)	50% of all elements of a system should be reused.
+
+Answer: A
+
+364. [CHAPTER-20-12] Which of the following statements best describes commercially available componentware?
+ 
+A)	A pipedream.
+B)	Any software developed in Java.
+C)	Off the shelf components using standard protocols and clearly defined interfaces.
+
+Answer: C
+
+365. [CHAPTER-20-13] Which of the following best describes the Façade Pattern?
+ 
+A)	A design pattern to hide poorly implemented software behind a solid façade.
+B)	A design pattern to provide a simple unified interface to a complex sub-system.
+C)	A design pattern to wrap legacy software in a Java interface using java.lang.Facade.
+
+Answer: B
+
+
+CHAPTER-21
+=============================================
+
+1. [CHAPTER-21-1] Which of the following statements best describes how critical path analysis finds the critical path?
+
+A)	It aims to identify those milestones where the earliest start time is equal to the latest start time.
+B)	It aims to identify those milestones where the earliest start time is less than the latest start time.
+C)	It aims to identify those milestones where the earliest start time is greater than the latest start time.
+
+Answer: A
+
+2. [CHAPTER-21-2] Which of the following statements describes how Gantt charts can be used in conjunction with a staffing bar chart?
+
+A)	The Gantt chart can be used to show the total resource requirement at a given time.
+B)	The Gantt chart can be used to highlight resource conflicts.
+C)	The Gantt chart can be used as an aid to resource smoothing.
+
+Answer: C
+
+3. [CHAPTER-21-3] Which of the following statements best explains what is meant by slack time in Critical Path Analysis?
+
+A)	The slack time is the difference between an activity’s earliest start time and its latest start time.
+B)	Time when no activity is occurring in the project is known as slack time.
+C)	Slack time is the time remaining when a project finishes earlier than scheduled.
+
+Answer: A
+
+4. [CHAPTER-21-4] Which of the following is not one of the underlying principles in DSDM?
+
+A)	DSDM teams are empowered to make decisions.
+B)	DSDM teams can lengthen a time-box if the project is behind schedule.
+C)	All changes during development are reversible.
+
+Answer: B
+ 
+5. [CHAPTER-21-5] Which of the following is not a legitimate maintainability objective in DSDM?
+ 
+A)	Maintainable from initial operation.
+B)	Only after the first year of operation.
+C)	Not subject to maintenance at all.
+
+Answer: B
+ 
+6. [CHAPTER-21-6] Extreme programming relies heavily on which of the following?
+ 
+A)	All program code must be developed as quickly as possible.
+B)	2. Group ownership of program code.
+C)	Program code can only be modified by its author to avoid errors.
+
+Answer: B
+ 
+7. [CHAPTER-21-7] Which of the following statements best describes refactoring?
+ 
+A)	Refactoring is a key step in object-oriented design.
+B)	Refactoring ensures that any changes in requirements are included in design.
+C)	Refactoring is essentially restructuring and simplifying code to improve flexibility.
+
+Answer: C
+ 
+8. [CHAPTER-21-8] Which of the following statements accurately describes predictor metrics?
+ 
+A)	Predictor metrics should be evaluated before the project starts.
+B)	Predictor metrics estimate how satisfied the user will be.
+C)	Predictor metrics can used to predict various aspects of a project including the level of reuse possible.
+
+Answer: C
+ 
+9. [CHAPTER-21-9] The effective use of metrics is most limited by which of the following factors?
+ 
+A)	The need to collect historical data to calibrate the metrics.
+B)	The availability of suitable CASE tools.
+C)	The length of time it takes to apply metrics.
+
+Answer: A
+ 
+10. [CHAPTER-21-10] Which of the following statements is most appropriate when introducing object-oriented information systems development?
+ 
+A)	All staff should start using object-orientation at the same time.
+B)	Expertise should be developed on pilot projects.
+C)	All systems should be redeveloped using the object-oriented approach.
+
+Answer: B
+ 
+
+CHAPTER-22
+=============================================
+
+1. [CHAPTER-22-1] How does Peter Checkland describe the difference between a method and a methodology?
+ 
+A)	There is no difference; the words mean the same thing.
+B)	Methodologies are more complex than methods, and are therefore more likely to be used in large organizations or where there is a government-imposed rule.
+C)	A particular project follows a method, while a methodology is a more general set of principles that can guide a range of projects.
+
+Answer: C
+ 
+2. [CHAPTER-22-2] Which three logical views of a system are proposed in this chapter?
+ 
+A)	Logical, physical and detailed.
+B)	Data, process and time.
+C)	Current, future and proposed.
+
+Answer: B
+ 
+3. [CHAPTER-22-3] What was the main aim of structured methodologies?
+ 
+A)	To specify clearly all functions, data storage and interfaces for a proposed system.
+B)	To document all activities undertaken within the project.
+C)	To ensure that the project follows a waterfall lifecycle.
+
+Answer: A
+ 
+4. [CHAPTER-22-4] Which one of the following is a phase in the USDP?
+ 
+A)	Construction.
+B)	Testing.
+C)	Design.
+
+Answer: A
+ 
+5. [CHAPTER-22-5] Which one of the following is a workflow in the USDP?
+ 
+A)	Inception.
+B)	Requirements.
+C)	Elaboration.
+
+Answer: B
+ 
+6. [CHAPTER-22-6] One of the following is not a similarity between participative design and object-oriented approaches. Which one?
+ 
+A)	The active participation of users in the development activity.
+B)	An iterative and experimental approach to requirements definition and design.
+C)	The use of UML notation for models.
+
+Answer: C
+ 
+7. [CHAPTER-22-7] Which of the following statements best describes the difference between hard and soft methodologies?
+ 
+A)	Hard methodologies are particularly useful for the development of complex systems, whereas soft methodologies are more appropriate for the development of simple systems.
+B)	Hard methodologies are particularly useful when there is little uncertainty about the system requirements, whereas soft methodologies are more appropriate where there is uncertainty about the system requirements.
+C)	Hard methodologies are particularly useful for developing systems that will be used by scientists and engineers, whereas soft methodologies are more appropriate for developing systems that will be used by business people.
+
+Answer: B
+ 
+8. [CHAPTER-22-8] What is Flynn’s contingency framework used for?
+ 
+A)	To determine whether a project should proceed or should be cancelled.
+B)	To determine which type of methodology would be most appropriate for a project.
+C)	To determine how much overall float or slack should be incorporated into the project plan.
+
+Answer: B
+ 
+9. [CHAPTER-22-9] What is meant by ‘process uncertainty’?
+ 
+A)	Doubt regarding the reliability of a proposed software system.
+B)	Doubt about whether a project will be completed on time or within budget.
+C)	Doubt regarding the best way to build a proposed software system.
+
+Answer: C
+ 
+10. [CHAPTER-22-10] What is the main focus of the Elaboration phase in the USDP?
+ 
+A)	The team concentrates on developing a small subset of the system in order to assess the overall viability of the project.
+B)	The team concentrates on producing a design for the whole system that demonstrates how it can be built within an acceptable timescale and at an acceptable cost.
+C)	The team concentrates on building a system that is capable of satisfactory operation in its target environment.
+
+Answer: B
+  
+

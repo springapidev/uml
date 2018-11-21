@@ -1,0 +1,19 @@
+/*
+	An online pulishing house posts articles of authors worlwide on economical and political topics.
+	Pre-registered authors upload articles and gets an article identification code for each article.
+	
+	After uploads, a panel of reviewers review each article 
+	
+	Reviewers recommend some modifications, more clarifications and some content
+	deletion as fears of policical conflicts.
+
+	Reviews' recommendations are sent to authors by mail. 
+	Author then uploads corrected article with identication number.
+
+	Reviewers then, if satisfied,  pass the article for post. If not satisfied it is discarded.
+
+	Site administration fixes a date for the publication and author is notified.
+
+	Article is posted online on the fixed date.
+	
+*/

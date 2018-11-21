@@ -1,0 +1,23 @@
+/*
+An order is created when an order is requested and the order is in pending state.
+When good is delived and proof of delovery is recieved, order is in Delivered state.
+When payement is recieved order is closed.
+
+Show the Order object's lisfe cycle in a statechart.
+*/
+/*
+An emplyee is in probetionary state when first employed.
+After two years employee becomes permanent.
+Show the emolyee state in a statechart.
+*/
+
+/*
+An student apply for schlarship in a university and he is applicant list.
+When he is granted scholarship and he is notifed with scholarship offer.
+If the student is statisfied and send neccessary papers and becomes scholarship achiever of the university.
+
+Show the student state in a statechart
+*/
+
+
+

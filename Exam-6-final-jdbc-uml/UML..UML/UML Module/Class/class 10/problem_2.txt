@@ -1,0 +1,9 @@
+An car rent center gives car for rent.
+During analysis the following requirements are found:
+Customers enquires abouts rents
+Customer Desk attendants supports customers inquiry
+Customers hire car for a specific period
+Rent officers handle renting and register renting for dipo officers
+Dipo officers takes returns and check and charges for any damage found
+
+Develop a USE CASE model

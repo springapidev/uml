@@ -1,0 +1,62 @@
+create table Product(
+
+productId int primary key,
+productName varchar(20),
+brand varchar(20),
+price float(12,2)
+
+
+);
+
+
+create table Stock(
+stockId int primary key,
+productId int references Product(productId),
+stock int,
+stocklevel int
+
+);
+
+create table Client_Type(
+clientTypeId varchar(12) primary key,
+clientTitle varchar(20)
+
+);
+
+create table Client(
+clientId varchar(20) primary key,
+clientTypeId varchar(12) references Client_Type(clientTypeId),
+clientName varchar(20),
+address varchar(20)
+);
+
+create table Oreder(
+
+orderId int primary key,
+orderDate date,
+clientId varchar(20)references Client(clientId),
+totalAmount float(15,2),
+commission float(10,2),
+tax float(10,2)
+
+);
+
+
+create table Order_Type(
+
+orderTypeId varchar(12) primary key,
+orderTypeTitle varchar(20)
+
+);
+
+
+
+create table order_line(
+
+orderlineid int primary key,
+orderId int references Oreder(orderId),
+stockId int references Stock(StockId),
+rate float(15,2),
+total float(12,2)
+
+);

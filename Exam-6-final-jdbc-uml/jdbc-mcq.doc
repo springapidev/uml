@@ -1,0 +1,227 @@
+jdbc
+
+1  Suppose that your program accesses MySQL or Oracle database. Which of the following statements are true?
+A. If the driver for MySQL and Oracle are not in the classpath, the program will have a runtime error, indicating that the driver class cannot be loaded. 
+B. If the database is not available, the program will have a runtime error, when attempting to create a Connection object. 
+C. If the database is not available, the program will have a syntax error. 
+D. If the driver for MySQL and Oracle are not in the classpath, the program will have a syntax error. 
+
+Ans. a b
+
+2  Analyze the following code:
+     ResultSet resultSet = statement.executeQuery
+       ("select firstName, mi, lastName from Student where lastName "
+         + " = 'Smith'");
+     System.out.println(resultSet.getString(1));
+A. If the SQL SELECT statement returns no result, resultSet is null. 
+B. resultSet.getString(1) returns the firstName field in the result set. 
+C. resultSet.getString(1) returns the mi field in the result set. 
+D. The program will have a runtime error, because the cursor in resultSet does not point to a row. You must use resultSet.next() to move the cursor to the first row in the result set. Subsequently, resultSet.next() moves the cursor to the next row in the result set. 
+
+Ans. b d
+
+3  Which of the following statements are true?
+A. PreparedStatement is a subinterface of Statement 
+B. The parameters in a prepared statement is denoted using the ? sign. 
+C. PreparedStatement is for SQL query statements only. You cannot create a PreparedStatement for SQL update statements. 
+D. PreparedStatement is efficient for repeated executions. 
+Ans. a b d
+
+4  In a relational data model, ________ provides the means for accessing and manipulating data. 
+A. SQL 
+B. Language 
+C. Structure 
+D. Integrity 
+Ans. a b
+
+5  What information may be obtained from a ResultSetMetaData object?
+A. number of columns in the result set 
+B. number of rows in the result set 
+C. database URL and product name 
+D. JDBC driver name and version 
+Ans. a
+
+6  Which of the following statements are true?
+A. You may load multiple JDBC drivers in a program. 
+B. You may create multiple connections to a database. 
+C. You can send queries and update statements through a Statement object. 
+D. You may create multiple statements from one connection. 
+Ans. a b c d
+
+7  Which of the following are interfaces?
+A. DriverManager 
+B. Connection 
+C. Statement 
+D. ResultSet 
+Ans. b c d
+
+8  To connect to a local MySQL database named test, use 
+A. Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/test"); 
+B. Connection connection = DriverManager.getConnection("mysql:jdbc://localhost/test"); 
+C. Connection connection = DriverManager.connect("jdbc:mysql://localhost/test"); 
+D. Connection connection = DriverManager.getConnection(jdbc:mysql://localhost/test); 
+Ans. a
+
+9  To execute a SELECT statement "select * from Address" on a Statement object stmt, use
+A. stmt.execute("select * from Address"); 
+B. stmt.query("select * from Address"); 
+C. stmt.executeQuery("select * from Address"); 
+D. stmt.executeUpdate("select * from Address");
+
+Ans. c
+ 
+10  Database meta data are retrieved through ____________.
+A. a ResultSet Object 
+B. a PreparedStatement object 
+C. a Connection object 
+D. a Statement object 
+Ans. c
+
+11  SQL ________ statements may change the contents of a database.
+A. DELETE 
+B. UPDATE 
+C. SELECT 
+D. INSERT 
+Ans. a b d
+
+12  Where is com.mysql.jdbc.Driver located?
+A. in the standard Java library bundled with JDK 
+B. in a JAR file classes12.jar 
+C. in a JAR file mysqljdbc.jar 
+Ans. c
+13  Result set meta data are retrieved through ____________.
+A. a PreparedStatement object 
+B. a ResultSet Object 
+C. a Connection object 
+D. a Statement object 
+Ans b
+
+14  Which of the following statements loads the JDBC-ODBC driver?
+A. Class.loadClass("sun.jdbc.odbc.JdbcOdbcDriver") 
+B. Class.loadClass(sun.jdbc.odbc.JdbcOdbcDriver) 
+C. Class.forName("sun.jdbc.odbc.JdbcOdbcDriver") 
+D. Class.forName(sun.jdbc.odbc.JdbcOdbcDriver) 
+Ans. c
+
+15  ________ are known as intra-relational constraints, meaning that a constraint involves only one relation. 
+A. Domain constraints 
+B. Primary key constraints 
+C. Foreign key constraints 
+Ans. a b
+
+16  ________ is an attribute or a set of attributes that uniquely identifies the relation.
+A. A key 
+B. A superkey 
+C. A primary key 
+D. A candidate key 
+Ans. b
+
+17  What is the return value from 
+      stmt.executeUpdate("insert into T values (100, 'Smith')")
+A. an int value indicating how many rows are effected from the invocation 
+B. void 
+C. an object that contains the status of the execution 
+D. a value indicating whether the SQL statement has been executed successfully 
+Ans. a
+
+18  A database URL for a MySQL database named test on host panda.armstrong.edu is ________.
+A. jdbc:mysql:/panda.armstrong.edu/test 
+B. jdbc:mysql://panda.armstrong.edu/test 
+C. jdbc.mysql.//panda.armstrong.edu/test 
+D. jdbc.mysql://panda.armstrong.edu/test 
+Ans. b
+
+19  To create a statement on a Connection object conn, use
+A. Statement statement = Connection.createStatement(); 
+B. Statement statement = conn.createStatement(); 
+C. Statement statement = connection.create(); 
+D. Statement statement = conn.statement(); 
+Ans. b
+
+20  In a relational data model, _________ imposes constraints on the data. 
+A. Language 
+B. Structure 
+C. SQL 
+D. Integrity 
+Ans. d
+
+21  A database URL for an access database source test is ________.
+A. sun.jdbc:odbc:test 
+B. test 
+C. jdbcodbc:test 
+D. jdbc:odbc:test 
+Ans. d
+
+22  Invoking Class.forName method may throw ___________.
+A. ClassNotFoundException 
+B. RuntimeException 
+C. SQLException 
+D. IOException 
+Ans. a
+
+23  You may create a RowSet using __________.
+A. new JdbcRowSetImpl() 
+B. new JdbcRowSet() 
+C. new CachedRowSetImpl() 
+D. new CachedRowSet() 
+E. new RowSet() 
+Ans. a c
+
+24  You can use a RowSet to __________.
+A. set a database password 
+B. set a SQL query statement 
+C. set a database URL 
+D. set a database username 
+Ans. a b c d
+
+25  
+To add the SQL statement "insert into T values (100, 'Smith')" into the batch into a Statement stmt, use 
+A. stmt.addBatch("insert into T values (100, 'Smith')"); 
+B. stmt.add("insert into T values (100, 'Smith')"); 
+C. stmt.add('insert into T values (100, 'Smith')'); 
+D. stmt.addBatch('insert into T values (100, 'Smith')'); 
+Ans. a
+
+
+26  To obtain a scrollable or updateable result set, you must first create a statement using the following syntax:
+A. Statement statement = connection.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY); 
+B. Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE); 
+C. Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY); 
+D. Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE); 
+Ans. b
+
+27  In a scrollable and updateable result set, you can use ___________ methods on a result set.
+A. updateRow() 
+B. first() 
+C. deleteRow() 
+D. insertRow() 
+E. last() 
+Ans. a b c d e
+
+28  RowSet is an extension of _______.
+A. Statement 
+B. CLOB 
+C. ResultSet 
+D. Connection 
+Ans. c
+
+29  Invoking executeBatch() returns ________.
+A. an int value indicating how many SQL statements in the batch have been executed succefully. 
+B. an int value indicating how many rows are effected by the batch execution. 
+C. a ResultSet 
+D. an array of counts, each of which counts the number of the rows affected by the SQL command. 
+Ans. d
+
+30  You can store images in a database using data type _______.
+A. BLOB 
+B. varchar2 
+C. CLOB 
+D. varchar 
+Ans. a
+
+
+Keys:
+1. AB 2. BD 3. ABD 4. AB 5. A 6. ABCD 7. BCD 8. A 9. C
+10. C 11. ABD 12. C 13. B 14. C 15. AB 16. B 17. A 18. B 19. B 20. D 21. D 22. A 23. AC 24. ABCD 25. A 26. B 27. ABCDE 28. C 29. D 30. A
+
+

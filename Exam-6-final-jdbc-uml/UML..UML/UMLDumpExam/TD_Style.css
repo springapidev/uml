@@ -1,0 +1,48 @@
+BODY, P, TD, TH, TR, A, LI
+{
+	font-family:Verdana,Arial;
+	font-size:12px;
+}
+
+BODY {
+	margin-left:20px;
+	margin-right:20px; }
+
+A {
+	font-weight: bold;
+	color: #0040A0;
+	text-decoration: none;
+}
+
+A:hover {
+	color: #009A00;
+	text-decoration: underline;
+}
+
+TH {	text-align:  left;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+TR.Header {
+	background-image: url(./images/BlackBG.gif);
+	vertical-align: middle;
+}
+
+TD.Small {
+	font-size:11px;
+	font-weight:normal;
+}
+
+BUTTON {
+	width:100px;
+	height:30px;
+	font-weight: bold;
+	font-size:   10px;
+	text-align:  center;
+}
+
+.MustRead {
+	color:#00A030;
+	font-weight: bold;
+}

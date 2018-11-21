@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<state xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="4/11/2011 6:50:48 PM" g="3aa5188d-254e-4c9f-bd3e-fb8aae6500a9" context="0" flags="7" type="1" w="720" h="540" fontname="Articulate">
+	<components>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Player.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Frames\ccSmoothFrame.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Windows\ccSmoothWindow.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Windows\ccAudioWindow.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Text\ccText.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Buttons\ccSmoothWndButton.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\ImageObject\ccSmoothImage.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Radio Buttons\ccSmoothRadio.swf</component>
+		<component>C:\Program Files\Common Files\Articulate\Shared\1.0\Check Boxes\ccSmoothCheckbox.swf</component>
+		<component>C:\Documents and Settings\Administrator\Desktop\JAVA\UML_Quiz1 - Quizmaker output\text.swf</component>
+	</components>
+</state>

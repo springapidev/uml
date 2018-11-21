@@ -1,0 +1,73 @@
+TranDumper 3.1 (May 25, 2003 by Synvox)
+=======================================
+  - minor graphic change
+  - bugfix: Start From Question X now also works for Learning mode
+
+TranDumper 3.0 (Feb 23, 2003 by Bouchi & Synvox)
+=================================================
+  - Remind the Random mode of Question and Multiple-Choice (Random or Sequential mode)
+  - Localization for German language
+  - fixed: no longer crash if the dump file contain character " in the first paragraph
+  - Redesigned Review screen
+  - Redisigned user interface: new graphics, quick access key (via Alt-Letter), doubleclick event
+  - Remove the clock, remove seconds in elapsed time
+  - Redesigned Score bar (Answers status, %Error)
+  - Replaced 1000 points score value by % of Error (= sum questions already worked / nb wrong answers)
+  - Redesigned Exam selection screen (lists more exams in one page)
+  - More flexible way to start a test (Subset, Jump to Ques# or Entire Test)
+  - Make Javascript lighter (slightly reduced init time to start test)
+
+TranDumper 2.23 (Jan 27, 2003 by Synvox)
+========================================
+  - Remind the Random mode of Question and Multiple-Choice (Random or Sequential mode)
+  - Replace score value by % of Error (= sum questions already worked / nb wrong answers)
+
+TranDumper 2.22 (Jan 14, 2003 by Synvox)
+========================================
+Changes in Readme.htm:
+  - added links to www.trandumper.net 
+  
+Changes in TranDumper.htm:
+  - Added number of question at the left side of the question box
+  - Multiple Choice ABCDEF letters are displayed in bold
+  - Improved contrast of the blue Question box
+  - Improved general visual style (Homepage(), FirstPage(), SecondPage(), Review())
+  - Greatly enhanced HTML4 compatibility: almost all tags are closed, replaced legacy font tags by CSS
+
+TranDumper 2.21 (Dec 14, 2002 by Synvox)
+========================================
+Changes in Readme.htm:
+  - Added my email to receive reviewer's feedbacks
+  - Added link to read ChangeLog
+
+Changes in TranDumper.htm:
+  - The answers choosen are hilighted with different colors: green if correct, red if incorrect.
+  - Correct some minor spelling mistakes.
+
+TranDumper 2.2 (Dec 8, 2002 by Synvox)
+======================================
+
+Changes in Readme.htm:
+  - Start Exam button moved to the top for easier access (I guess that the only thing that old timers care about this page)
+  - Corrected some spelling mistakes
+  - Add short explanation why TranDump must run only with IE 5+
+  - Improved xhtml compatibility (remove all <font>, close <br/>, use CSS). I didn't too far, the copyright section of previous author is unchanged.
+
+Changes in TranDumper.htm:
+  - added CSS to make the display nicier: each section of a question has it own color. Question in blue box, multi-choices like before with smaller font, answer in red box. Explanation in green box.
+  - general display are set via CSS
+  - removed most of unclosed <font> tags and replace with paired <span> or <div>.
+  - Unclosed <td> are now closed as well. Not all tags are closed. I fixed the most obvious ones.
+
+
+History maintained before before Dec 8, 2002
+============================================
+  Version 2.1  - Delphi has made code revision, instalation revision, and introduced random answers.
+  Version 2.02 - Delphi has introduced variable length question sets.
+  Version 2.01 - Delphi has made lite modifications for better performance.
+  Version 2.0  - Delphi has included support Internet Explorer 5.5 and greater, and has introduced sequencial question sets.
+  Version 1.1  - JT has made some restyling.
+  Version 1.0  - Initially developed by Peter Pan.
+
+
+===(end of ChangeLog)====

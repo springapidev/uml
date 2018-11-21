@@ -1,0 +1,221 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22 1. what is the disadvantage of tire-4 native protocol driver?\par
+Ans. At client side, a separate driver is needed for each database.\par
+2. BLOB, CLOB, ARRAY and REF columns can be updated in\par
+Ans. JDBC 3.0\par
+3.which of the following methods finds the maximum number of connections that a specific driver can obtain?\par
+Ans. DatabaseMetaData.getMaxConnections\par
+4. which of the following allows non repeatable read in JDBC Connection?\par
+Ans. TRANSACTION_REPEATABLE_READ\par
+5.the class java.sql.Timestamp has its supper class as\par
+Ans. java.util.Date\par
+6.which is the false as far as type 4 driver is concern?\par
+Ans.  Type 4 drivers can not be used with Netscape\par
+7. which of the following methods are needed for loading a database driver in JDBC?\par
+Ans. registerDriver() method And Class.forName()\par
+8. which driver is efficient and always preferable for using JDBC applications?\par
+Ans. Type-4\par
+9.which is the false as far as type 4 driver is concern in JDBC?\par
+Ans.  Interim Statement\par
+10. The JDBC-ODBC bridge supports multiple concurrent open statements per connection?\par
+Ans. True\par
+11.All raw data types ( including binary documents or images ) should be read and uploaded to the database as an array of\par
+Ans. byte\par
+12. The Jdbc-odbc is------\par
+Ans. Multithreaded\par
+13. which driver is called as thin driver in JDBC?\par
+Ans. Type-4 driver\par
+14. To execute a stored procedure "totalstock" in a database server, which of the folllowing code snipet is used?\par
+Ans.CallableStatement clbstmnt = con.prepareCall("\{call totalStock\}");cs.executeQuery();\par
+15. When the message "No suitable driver " occurs?\par
+Ans.  When the JDBC database URL passed is not constructed properly\par
+16. Are prepared statements actually compiled?\par
+Ans.  Yes, they compiled\par
+17.How many transaction isolation levels are defined in java.sql.Connection interface?\par
+Ans.5\par
+18. JDBC facilities to store the java objectives by using which of the methods of prepared statement 1. setObject() 2. setBlob() 3.setClob\par
+Ans. all of the above\par
+19. which statement is static and syncronized in JDBC API?\par
+Ans. getConnection()\par
+20. which of the following methods are needed for loading a database driver in JDBC?\par
+Ans. registerDriver() method and Class.forName()\par
+\par
+21.1. Which statements about JDBC are true? (2 answers)\par
+[_] [a] JDBC is an API to connect to relational-, object- and XML data sources\par
+[_] [b] JDBC stands for Java DataBase Connectivity\par
+[_] [c] JDBC is an API to access relational databases, spreadsheets and flat files\par
+[_] [d] JDBC is an API to bridge the object-relational mismatch between OO programs and relational\par
+databases\par
+Ans.b, c\par
+22. Which packages contain the JDBC classes?\par
+O (a) java.jdbc and javax.jdbc\par
+O (b) java.jdbc and java.jdbc.sql\par
+O (c) java.sql and javax.sql\par
+O (d) java.rdb and javax.rdb\par
+Ans. c\par
+\par
+23. Which type of driver converts JDBC calls into the network protocol used by the database management\par
+system directly?\par
+O (a) Type 1 driver\par
+O (b) Type 2 driver\par
+O (c) Type 3 driver\par
+O (d) Type 4 driver\par
+Ans. d\par
+\par
+24. Which type of Statement can execute parameterized queries?\par
+O (a) PreparedStatement\par
+O (b) ParameterizedStatement\par
+O (c) ParameterizedStatement and CallableStatement\par
+O (d) All kinds of Statements (i.e. which implement a sub interface of Statement)\par
+Ans. a\par
+\par
+25. How can you retrieve information from a ResultSet?\par
+O (a) By invoking the method get(..., String type) on the ResultSet, where type is the\par
+database type\par
+O (b) By invoking the method get(..., Type type) on the ResultSet, where Type is an object\par
+which represents a database type\par
+O (c) By invoking the method getValue(...), and cast the result to the desired Java type.\par
+O (d) By invoking the special getter methods on the ResultSet: getString(...),\par
+getBoolean (...), getClob(...),...\par
+Ans. d\par
+\par
+26. How can you execute DML statements (i.e. insert, delete, update) in the database?\par
+O (a) By making use of the InsertStatement, DeleteStatement or UpdateStatement classes\par
+O (b) By invoking the execute(...) or executeUpdate(...) method of a normal Statement\par
+object or a sub-interface object thereof\par
+O (c) By invoking the executeInsert(...), executeDelete(...) or executeUpdate(...)\par
+methods of the DataModificationStatement object\par
+O (d) By making use of the execute(...) statement of the DataModificationStatement object\par
+Ans. b\par
+\par
+27. How do you know in your Java program that a SQL warning is generated as a result of executing\par
+a SQL statement in the database?\par
+O (a) You must catch the checked SQLException which is thrown by the method which executes\par
+the statement\par
+O (b) You must catch the unchecked SQLWarningException which is thrown by the method\par
+which executes the statement\par
+O (c) You must invoke the getWarnings() method on the Statement object (or a sub interface\par
+thereof)\par
+O (d) You must query the ResultSet object about possible warnings generated by the database\par
+Ans. c\par
+\par
+28. What is, in terms of JDBC, a DataSource?\par
+O (a) A DataSource is the basic service for managing a set of JDBC drivers\par
+O (b) A DataSource is the Java representation of a physical data source\par
+O (c) A DataSource is a registry point for JNDI-services\par
+O (d) A DataSource is a factory of connections to a physical data source\par
+Ans. d\par
+\par
+29. What is the meaning of ResultSet.TYPE_SCROLL_INSENSITIVE\par
+O (a) This means that the ResultSet is insensitive to scrolling\par
+O (b) This means that the Resultset is sensitive to scrolling, but insensitive to updates, i.e. not\par
+updateable\par
+O (c) This means that the ResultSet is sensitive to scrolling, but insensitive to changes made\par
+by others\par
+O (d) The meaning depends on the type of data source, and the type and version of the driver\par
+you use with this data source\par
+Ans.c\par
+\par
+30. Are ResultSets updateable?\par
+O (a) Yes, but only if you call the method openCursor() on the ResultSet, and if the driver and\par
+database support this option\par
+O (b) Yes, but only if you indicate a concurrency strategy when executing the statement, and\par
+if the driver and database support this option\par
+O (c) Yes, but only if the ResultSet is an object of class UpdateableResultSet, and if the driver\par
+and database support this option\par
+O (d) No, ResultSets are never updateable. You must explicitly execute DML statements (i.e.\par
+insert, delete and update) to change the data in the underlying database\par
+Ans.b\par
+\par
+31. What statements are correct about JDBC transactions (2 correct answers)?\par
+[_] [a] A transaction is a set of successfully executed statements in the database\par
+[_] [b] A transaction is finished when commit() or rollback() is called on the Connection\par
+object,\par
+[_] [c] A transaction is finished when commit() or rollback() is called on the Transaction\par
+object\par
+[_] [d] A transaction is finished when close() is called on the Connection object.\par
+Ans.b,d\par
+\par
+32. How can you start a database transaction in the database?\par
+O (a) By asking a Transaction object to your Connection, and calling the method begin() on it\par
+O (b) By asking a Transaction object to your Connection, and setting the autoCommit property\par
+of the Transaction to false\par
+O (c) By calling the method beginTransaction() on the Connection object\par
+O (d) By setting the autoCommit property of the Connection to false, and execute a statement\par
+in the database\par
+Ans.d\par
+\par
+33. What is the meaning of the transaction isolation level TRANSACTION_REPEATABLE_READ\par
+O (a) Dirty reads, non-repeatable reads and phantom reads can occur\par
+O (b) Dirty reads are prevented; non-repeatable reads and phantom reads can occur\par
+O (c) Dirty reads and non-repeatable reads are prevented; phantom reads can occur\par
+O (d) Dirty reads, non-repeatable reads and phantom reads are prevented\par
+Ans. c\par
+\par
+34. How do you use a savepoint?\par
+O (a) A savepoint is realised by calling setAutoCommit(true) on the connection\par
+O (b) A savepoint is activated by the method setSavePoint(\ldblquote mysavepoint\rdblquote ) on the transaction\par
+O (c) A savepoint is used to mark intermediate points inside a transaction, in order to get a\par
+more fine-grained control. Transactions can be rolled back to a previous savepoint without\par
+affecting preceding work.\par
+O (d) A savepoint triggers an automatic synchronisation with the database.\par
+Ans. c\par
+\par
+35. What statements are correct about positioned updates (i.e. cursor updates) in ResultSets? (2\par
+correct answers)\par
+[_] [a] Using the cursor technique is currently the only possible way to change the data in the\par
+current row of a ResultSet\par
+[_] [b] Insert statements are only supported when using scrollable cursors.\par
+[_] [c] Only scrollable updateable ResultSets can use this approach to change the data in the\par
+current row of a ResultSet\par
+[_] [d] The name of the cursor is specified by the setCursorName(String name) method the\par
+Statement object.\par
+Ans.b, d\par
+\par
+36. How can you execute a stored procedure in the database?\par
+O (a) Call method execute() on a CallableStatement object\par
+O (b) Call method executeProcedure() on a Statement object\par
+O (c) Call method execute() on a StoredProcedure object\par
+O (d) Call method run() on a ProcedureCommand object\par
+Ans. a\par
+\par
+37. What happens if you call the method close() on a ResultSet object?\par
+O (a) the method close() does not exist for a ResultSet. Only Connections can be closed.\par
+O (b) the database and JDBC resources are released\par
+O (c) you will get a SQLException, because only Statement objects can close ResultSets\par
+O (d) the ResultSet, together with the Statement which created it and the Connection from\par
+which the Statement was retrieved, will be closed and release all database and JDBC\par
+resources\par
+Ans. b\par
+\par
+\par
+38. What happens if you call deleteRow() on a ResultSet object?\par
+O (a) The row you are positioned on is deleted from the ResultSet, but not from the database.\par
+O (b) The row you are positioned on is deleted from the ResultSet and from the database\par
+O (c) The result depends on whether the property synchronizeWithDataSource is set to true or\par
+false\par
+O (d) You will get a compile error: the method does not exist because you can not delete rows\par
+from a ResultSet\par
+Ans. b\par
+\par
+39. What statements are correct about batched insert and updates? (2 answers)\par
+[_] [a] To create a batch of insert and update statements, you create an object of type Batch,\par
+and call the method addStatement(String statement) for each statement you want to\par
+execute in the batch\par
+[_] [b] Batch insert and updates are only possible when making use of parameterized queries.\par
+[_] [c] To do a batched update/insert, you call addBatch(String statement) on a Statement\par
+object for each statement you want to execute in the batch\par
+[_] [d] To execute a batched update/insert, you call the executeBatch() method on a Statement\par
+object\par
+Ans. c, d\par
+\par
+40. What is correct about DDL statements (create, grant,...)?\par
+O (a) DDL statements are treated as normal SQL statements, and are executed by calling the\par
+execute() method on a Statement (or a sub interface thereof) object\par
+O (b) To execute DDL statements, you have to install additional support files\par
+O (c) DDL statements can not be executed by making use of JDBC, you should use the native\par
+database tools for this.\par
+O (d) Support for DDL statements will be a feature of a future release of JDBC\par
+Ans. a\par
+}
+ 

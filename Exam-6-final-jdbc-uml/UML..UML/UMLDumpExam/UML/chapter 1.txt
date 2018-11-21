@@ -1,0 +1,195 @@
+CHAPTER-1
+------------------
+
+1. [CHAPTER-1-1] Which of the following is not a primary concern in the academic field of information systems?
+
+a) How to establish the business requirements for a new system.
+b) What effects a new system will have on the organization.
+c) How to configure the hardware of a new system for greatest efficiency.
+
+Answer: c
+
+2. [CHAPTER-1-2] Which of the following is least likely to serve as information from the perspective of your teacher?
+
+a) Your score for this multiple choice test.
+b) Your height on your 10th birthday.
+c) Which class you belong to.
+
+Answer: b
+
+3. [CHAPTER-1-3] Which of the following is a good reason for considering a railway signalman as an information worker?
+
+a) His job depends on knowledge and communication.
+b) His job could be easily automated.
+c) His job affects the safety of people he doesn’t know.
+
+Answer: a
+
+4. [CHAPTER-1-4] Which of the following is a characteristic of all systems?
+
+ 
+A)	A limitation.
+B)	A boundary.
+C)	A threshold.
+
+Answer: B
+
+5. [CHAPTER-1-5] Which of the following statements is not true?
+
+ 
+A)	No useful information system could exist without modern information technology.
+B)	Many information systems existed in a different form before the invention of modern information technology.
+C)	Some information systems are only possible because of modern information technology.
+
+Answer: A
+
+6. [CHAPTER-1-6] Which of the following is the best description of emergent properties?
+  
+A)	Properties that emerge over time as a system matures, but are not there at the beginning.
+B)	Properties that emerge as soon as a system is switched on, but are not there when it is switched off.
+C)	Properties that are shown only by the system as a whole, but are not shown by its parts.
+
+Answer: C
+
+
+7. [CHAPTER-1-7] Which of the following is an example of positive feedback?
+  
+A)	Rewarding a student for passing an assignment.
+B)	Telling a student how to pass an assignment.
+C)	Punishing a student for failing an assignment.
+
+Answer: A
+
+
+8. [CHAPTER-1-8] Which of the following statements best describes negative feedback?
+  
+A)	Control signals that act to maintain a pre-determined level of output.
+B)	Control signals that act to reduce overall output.
+C)	Control signals that act to oppose hostile forces in the environment.
+
+Answer: A
+
+
+9. [CHAPTER-1-9] Which of the following is a reasonable definition of ‘subsystem’?
+  
+A)	Something that is controlled by another system.
+B)	Something that provides an input to a system.
+C)	A part of a system that can be regarded as a system in its own right.
+
+Answer: C
+
+
+
+10. [CHAPTER-1-10] Which of these diagrams illustrates a feedback control loop?
+
+A)  <img src="./OOSAD/Ch1F10a.JPG" />
+B)  <img src="./OOSAD/Ch1F10a.JPG" />
+C)  <img src="./OOSAD/Ch1F10a.JPG" />
+
+Answer: B
+
+
+11. [CHAPTER-1-11] Which of the following statements gives the best general description of the purpose of control subsystems?
+  
+A)	To switch a system on or off so that a constant level of output is achieved.
+B)	To adjust the functioning of a system so that it produces the maximum possible quantity of output.
+C)	To adjust the functioning of a system so as to keep some measurement of its performance or of its outputs within a predetermined range.
+
+Answer: C
+
+12. [CHAPTER-1-12] Systems analysis often begins by defining the boundary of the system that is under investigation. This is so that:
+  
+A)	The analyst does not waste time or effort on matters that are not relevant to the present study.
+B)	The analyst does not get into fights with the managers of other departments.
+C)	The analyst does not get out of his or her depth by studying things that are too hard to understand.
+
+Answer: A
+
+
+
+13. [CHAPTER-1-13] Which of the following best describes the views of Peter Checkland?
+  
+A)	Systems are a mental construct and do not exist in the real world.
+B)	Regardless of whether or not a system is real, it is often useful to think about a problem situation as if it were a system.
+C)	Systems are out there in the real world waiting to be discovered.
+
+Answer: B
+
+
+
+14. [CHAPTER-1-14] Which of the following statements best describes an interface in General Systems Theory?
+  
+A)	A screen that allows users to perform functions and to access the data within a system.
+B)	An electronic connection between two systems that are located in different places.
+C)	Any form of communication between different systems or subsystems.
+
+Answer: C
+
+15. [CHAPTER-1-15] Which of the following is not an example of purposeful control in a system?
+  
+A)	An alteration in the Bank of England base lending (interest) rate.
+B)	A sudden change in the weather that damages a crop just before it becomes ready for harvest.
+C)	A change in the tactics of a football team when a successful goal takes them into the lead.
+
+Answer: B
+
+
+
+16. [CHAPTER-1-16] Which of the following statements correctly distinguishes information from data?
+  
+A)	Information is directly relevant to an action or decision in some situation, whereas data has no specific must first be organised in some way to make it useful.
+B)	Information is quite rare whereas there is always a lot of data available.
+C)	Information is sorted into alphanumerical sequence whereas data is random.
+
+Answer: A
+
+
+
+17. [CHAPTER-1-17] What is the main purpose of an operational system?
+  
+A)	To assist a surgeon in carrying out an operation such as keyhole surgery.
+B)	To help tactical managers to make decisions about current operations.
+C)	To automate the routine tasks and activities in an organization.
+
+Answer: C
+
+
+
+18. [CHAPTER-1-18] Which of the following best describes the primary purpose of a management support system?
+  
+A)	To relieve managers of work.
+B)	To replace managers.
+C)	To help managers to do their work.
+
+Answer: C
+
+
+
+19. [CHAPTER-1-19] Which of the following statements best agrees with the approach taken by the authors of this book?
+  
+A)	Managers should always make sure that their organization has information systems that make the best use of the very latest in information technology.
+B)	Managers should only install information technology that is needed to implement information systems that their organization really needs.
+C)	Managers should make sure that the information systems and information technology in their organization are always at the leading edge of their industry.
+
+
+Answer: B
+
+
+
+20. [CHAPTER-1-20] Which of the following statements best describes business strategy?
+  
+A)	A business strategy identifies the long-term business goals and the main steps that will help to achieve them.
+B)	A business strategy identifies the strengths and weaknesses of the business and what can be done about them.
+C)	A business strategy identifies the steps that add value to the business and how to carry them out most profitably.
+
+
+Answer: A
+
+
+21. [CHAPTER-1-21] Which of the following does not describe a legitimate concern in the relationship between business and information strategies?
+  
+A)	A clear business strategy identifies how much the organization can afford to spend on software and IT.
+B)	A clear business strategy helps IS managers to persuade business managers to support leading edge IT projects.
+C)	A clear business strategy helps managers to understand what kinds of IS and IT will help the business to fulfil its goals.
+
+Answer: C
