@@ -1,0 +1,27 @@
+public class SavingsAccount
+{
+	public decimal InterestRate
+	{
+		Get;
+	}
+	public string AccountNumber
+	{
+		Get; 
+	}
+	protected decimal Banance
+	{
+		Get;
+	}
+	public bool Deposit( double amount)
+	{
+		//
+	}
+	public bool Withdraw( double amount)
+	{
+		//
+	}
+	private bool UpdateBalance()
+	{
+		//
+	}
+}

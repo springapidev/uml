@@ -1,0 +1,44 @@
+create table product(
+
+product_id varchar(10) primary key,
+product_name varchar(15),
+brand varchar(10),
+stock int,
+price int
+
+);
+
+
+create table sales(
+
+emp_id varchar(10) primary key,
+emp_name varchar(10),
+sales_qty int,
+address varchar(10),
+mobile int,
+sdate varchar(15)
+);
+
+
+create table salesreport(
+
+sl_no varchar(10) primary key,
+product_id varchar(10) references product(product_id),
+product_name varchar(15),
+stock int,
+price int,
+emp_id varchar(10) references sales(emp_id),
+emp_name varchar(10),
+sales_qty int
+
+);
+
+
+insert into product values('K100','N18','Nokia',50,5000);
+insert into product values('K101','S20','Samsung',15,2000);
+insert into product values('K102','S44','Simence',25,4000);
+
+
+insert into sales values('E200','Rana',5,'Dhanmondi',1075114,'15-10-2001');
+insert into sales values('E201','habib',10,'Mirpur',1145224,'15-11-2010');
+insert into sales values('E202','mamun',11,'Azimpur',1075114,'15-08-2008');

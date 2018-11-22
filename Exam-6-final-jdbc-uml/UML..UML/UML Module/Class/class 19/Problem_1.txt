@@ -1,0 +1,45 @@
+an abstract class "Control"  has three mustoverride (polymorphic) methods with following contact
+name: Render
+parameters
+g of type Graphic
+return type: void
+scope: public
+
+name: Invalidate
+parameters
+clip of Type Rectangle under System.Windows.Drawing
+return type: void
+scope: public
+
+name: Paint
+parameters
+g of type Graphic
+return type: void
+scope: private
+
+Two attributes
+name: Name
+type: string
+scope: public
+unique 
+name: Controls
+type: ControlC Collection
+
+
+one concrete method:
+name: Load
+return type : void
+Class dependency: uses System.Windows.Forms and System.Windows.Drawing package
+
+create an implementation class Button derived from "Control"  
+that has properties
+public scoped Text of string
+public scoped Size of type Rectangle
+public scoped Location of type Point
+
+one operation
+Name:MoveTo
+:return type: void
+parameters
+here of type Point
+there of type Point

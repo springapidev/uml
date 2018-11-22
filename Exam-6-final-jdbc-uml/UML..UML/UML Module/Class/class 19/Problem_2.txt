@@ -1,0 +1,8 @@
+an interface IPrintable has one method
+
+Method name: Paint
+return type: void
+Parameters
+doc of type Document defined in BITL.Printing package
+
+A class Reports implemts IPrintable interface

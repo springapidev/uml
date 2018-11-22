@@ -1,0 +1,414 @@
+CHAPTER-7
+=============================================
+
+126. [CHAPTER-7-1] Which of the following is not a good reason for constructing a requirements model?
+
+A)	It can show the business situation in enough detail to check that the requirements have been captured fully and correctly.
+B)	It can demonstrate that all the use cases have been drawn using the correct notation.
+C)	It can be organized in such a way that it will be useful later for designing the software.
+
+Answer: B
+
+127. [CHAPTER-7-2] Which of the following statements best describes what a class diagram can include?
+
+A)	Only classes.
+B)	Only classes and their relationships.
+C)	Classes, instances and their relationships.
+
+Answer: C
+
+128. [CHAPTER-7-3] Which is the correct name for "a possible set of classes, together with an understanding of how those classes might interact to deliver the functionality of a use case"?
+
+A)	A use case class diagram.
+B)	A realization.
+C)	A collaboration.
+
+Answer: C
+
+129.  [CHAPTER-7-4] What is the significance of the dependency arrow in this diagram? 
+  <br/><img src="./OOSAD/Ch7F4.JPG" />
+A)	It shows that elements within the collaboration (the dotted ellipse) may reference elements within the use case (the solid ellipse).
+B)	It shows that the collaboration (the dotted ellipse) cannot be implemented until the use case (the solid ellipse) has been implemented.
+C)	It shows the direction of the flow of control when the software executes.
+
+Answer: A
+
+130. [CHAPTER-7-5] One of the following is not a difference between a class diagram and a collaboration diagram. Which one?
+
+A)	A collaboration diagram shows object interaction, while a class diagram ignores this.
+B)	A class diagram shows more of the structural details than the collaboration diagram.
+C)	A class diagram shows the names of the classes, while the collaboration ignores these.
+
+Answer: C
+
+131. [CHAPTER-7-6] Which of these figures is a collaboration diagram?
+
+A)  <img src="./OOSAD/Ch7F6a.JPG" />
+B)  <img src="./OOSAD/Ch7F6b.JPG" />
+C)  <img src="./OOSAD/Ch7F6c.JPG" />
+Answer: B
+
+132. [CHAPTER-7-7] Which of these is the correct set of analysis class stereotypes in standard UML?
+
+A) Interface, control and entity.
+B) Boundary, control and entity.
+C) Interface, sequence and entity.
+
+Answer: B
+
+133. [CHAPTER-7-8] One of the following is not an advantage of stereotyping analysis classes. Which one?
+
+A) The resulting packages can form a basis for the system's architecture.
+B) It can be useful to differentiate classes that have broad similarities in the way that they behave.
+C) Once a class is stereotyped, its behaviour is likely to become more predictable.
+
+Answer: C
+
+134. [CHAPTER-7-9] What do boundary classes represent?
+
+A) Customers and suppliers of the business.
+B) People who will use the system.
+C) Interaction between the system and its actors.
+
+Answer: C
+
+135. [CHAPTER-7-10] What is the significance of the double colon in the class name: User Interface::AddAdvertUI?
+
+A) The class called AddAdvertUI is in the package called User Interface.
+B) User Interface is the stereotype of a class called AddAdvertUI.
+C) User Interface and AddAdvertUI are two alternative names for the same class.
+
+Answer: A
+
+136. [CHAPTER-7-11] Which one of these is not a permitted symbol for a boundary class?
+
+A) <img src="./OOSAD/Ch7F11a.JPG" />
+B) <img src="./OOSAD/Ch7F11b.JPG" />
+C) <img src="./OOSAD/Ch7F11c.JPG" /> 
+Answer: A
+
+137. [CHAPTER-7-12] What are entity classes?
+
+A)	Classes that contain data.
+B)	Classes that contain persistent data.
+C)	Classes that represent something or some concept in the application domain.
+
+Answer: C
+
+138. [CHAPTER-7-13] One of these is not a permitted symbol for an entity class. Which one?
+
+A)  <img src="./OOSAD/Ch7F13a.JPG" />
+B)  <img src="./OOSAD/Ch7F13b.JPG" />
+C)  <img src="./OOSAD/Ch7F13c.JPG" />
+Answer: B
+
+139. [CHAPTER-7-14] What do control classes represent?
+
+A)	The calculation and scheduling aspects of the logic of the use case.
+B)	Classes that interact with the users of the system.
+C)	Classes that control the storage of persistent data.
+
+Answer: A
+
+140. [CHAPTER-7-15] One of the following cannot directly affect the state of an object. Which one?
+
+A)	A change in the value of one of its attributes.
+B)	The creation or destruction of another object of the same class.
+C)	The creation or destruction of a link with another object.
+
+Answer: B
+
+141. [CHAPTER-7-16] What is the difference between a link and an association?
+
+A)	A link connects two instances, while an association connects two classes.
+B)	A link is a transient association.
+C)	A link is an association between two entity classes.
+
+Answer: A
+
+142. [CHAPTER-7-17] What is the significance of the directional arrow indicated on this diagram? 
+  <br/><img src="./OOSAD/Ch7F17.JPG" />
+A)	It shows the direction in which you should read the name of the association.
+B)	It shows the direction in which messages can be sent along the association.
+C)	It shows the order in which the objects will be connected when a link is created.
+
+Answer: C
+
+143. [CHAPTER-7-18] What is the significance of the multiplicity of an association?
+
+A)	It denotes the number of different classes that can be linked together.
+B)	It constrains the number of objects of one participating class that can be linked to an object of the other class.
+C)	It constrains the number of times that an object of one participating class can be linked during its lifetime.
+
+Answer: B
+
+144. [CHAPTER-7-19] Which of the following answers is the correct interpretation of the association multiplicities shown on this diagram? 
+  <br/><img src="./OOSAD/Ch7F19.JPG" /> 
+
+A)	A staff member need not be associated with any grades, or it can be associated with an indeterminate number of grades; a grade must be associated with one or more staff members.
+B)	A grade cannot be associated with a staff member but a staff member can be associated with a grade.
+C)	A grade need not be associated with any staff members, or it can be associated with an indeterminate number of staff members; a staff member must be associated with one or more grades.
+
+Answer: C
+
+145. [CHAPTER-7-20] How do operations differ from methods?
+
+A)	A method is a particular implementation of an operation.
+B)	An operation is a particular implementation of a method.
+C)	Some object-oriented programming languages have methods, while other have operations.
+
+Answer: A
+
+146. [CHAPTER-7-21] When do we not need to represent the whole system as a class in the analysis model?
+
+A)	When the users have not stated that this is a requirement.
+B)	When the system does not need to interact directly with other systems.
+C)	When the system does not need to encapsulate data or behaviour that applies only to the system as a whole.
+
+Answer: C
+
+147. [CHAPTER-7-22] What is a domain class model?
+
+A)	A class model that does not include either boundary or control classes.
+B)	An analysis class model that is independent of any particular use cases.
+C)	A class model that has been implemented in a particular domain.
+
+Answer: B
+
+148. [CHAPTER-7-23] One of the following is a bad guideline for deciding the class where an operation should be located. Which one?
+
+A)	The operation represents a service that objects of that class should provide to objects of other classes.
+B)	The operation needs to access or update data that is stored in another class that has an association with that class.
+C)	The operation needs to access or update data that is stored in an attribute of that class.
+
+Answer: B
+
+149. [CHAPTER-7-24] What is the main purpose of the Class-Responsibility-Collaboration technique?
+
+A)	To decide which team members will be responsible for developing each part of the software.
+B)	To decide which classes of the system should be responsible for each use case.
+C)	To decide how responsibilities should be distributed among the classes of the system.
+
+Answer: A (NS)
+
+150. [CHAPTER-7-25] Why is it often difficult to determine the most appropriate choice of responsibilities for each class?
+
+A)	Because there may be several alternatives that appear equally justified.
+B)	Because the developers may not know enough about how the users want the system to be designed.
+C)	Because members of the development team are often lazy and avoid responsibility as much as they can.
+
+Answer: A
+
+151. [CHAPTER-7-26] The requirements of different use cases may suggest different operations for the same class. How do we resolve this?
+
+A)	We split the class so that there is one for each use case, and model each class with the particular operations required for its use case.
+B)	We include in the class all the operations that are suggested by all the use cases.
+C)	We model the class with only that subset of operations that applies to all use cases.
+
+Answer: B
+
+152. [CHAPTER-7-27] Which of the following is an advantage of the use of a control class in realizing a use case?
+
+A)	A control class prevents users from being able to change the way that the entity classes work.
+B)	A control class reduces the need for entity classes to know anything about other entity classes unless this is directly relevant to their own responsibilities.
+C)	A control class allows the system to communicate with other systems on different networks.
+
+Answer: B
+
+CHAPTER-8
+=============================================
+
+153. [CHAPTER-8-1] Which of the following best describes the advantages of using software components, assuming that suitable components are available?
+
+A)	The users are more likely to get what they want.
+B)	The project is more likely to be completed in less time and at a lower cost.
+C)	The software is more likely to be capable of running on different hardware platforms.
+
+Answer: B
+
+154. [CHAPTER-8-2] What is meant by the NIH syndrome?
+
+A)	Some software developers are not inclined to trust software that was written elsewhere.
+B)	Some project managers are not inclined to trust programmers who were trained elsewhere.
+C)	Many users are not inclined to trust software that was written elsewhere.
+
+Answer: A
+
+155. [CHAPTER-8-3] One of the following is not a reason why object-oriented approaches support software reuse. Which one?
+
+A)	Object-oriented development encourages the encapsulation of the internal details of components.
+B)	Object-oriented models are organized in a way that makes it easier to find suitable components.
+C)	Object-oriented development encourages developers to share ideas with developers in other teams.
+
+Answer: C
+
+156. [CHAPTER-8-4] Which of the following best describes composition?
+
+A)	A package of model elements.	 
+B)	A set of realizations for a single use case.
+C)	A relationship between a whole and its parts.
+
+Answer: C
+
+157. [CHAPTER-8-5] Which of the following best describes how composition differs from aggregation?
+
+A)	A part cannot be removed from a composition, whereas a part can be removed from an aggregation.
+B)	A part can belong to only one composition, whereas a part can belong to more than one aggregation.
+C)	A part that belongs to a composition cannot have associations with any other classes, whereas a part that belongs to an aggregation can have associations with other classes.
+
+Answer: B
+
+158. [CHAPTER-8-6] How does generalization increase the opportunities for software reuse?
+
+A)	A generalization hierarchy can be extended to include new subclasses with minimal effort.
+B)	Generalization aids the encapsulation of software components.
+C)	Generalization allows a group of software components to be treated as a single whole.
+
+Answer: A
+
+159. [CHAPTER-8-7] What does it mean to say that an operation has been redefined?
+
+A)	The definition of the operation in a subclass overrides the superclass definition of the same operation.
+B)	The definition of the operation has been changed because users have changed their minds about the requirements.
+C)	The method that implements the operation does not follow the original definition of the operation.
+
+Answer: A
+
+160. [CHAPTER-8-8] How do abstract and concrete classes differ from each other?
+
+A)	Abstract classes represent intangible concepts in the application domain, whereas concrete classes represent physical things.
+B)	Abstract classes are superclasses, whereas concrete classes are subclasses.
+C)	Abstract classes have no instances, whereas concrete classes have instances.
+
+Answer: C
+
+161. [CHAPTER-8-9] Which of the following best describes multiple inheritance?
+
+A)	Multiple inheritance occurs when a subclass is removed from one generalization hierarchy and added to another.
+B)	Multiple inheritance occurs when a subclass inherits from more than one generalization hierarchy.
+C)	Multiple inheritance occurs when a subclass inherits characteristics from more than one level of superclass.
+
+Answer: B
+
+162. [CHAPTER-8-10] Which of the following is the best description of a software development pattern?
+
+A)	The way that a particular software developer tends to solve problems.
+B)	The core of a solution to a software development problem that occurs over and over again.
+C)	A particular approach to software development, such as the object-oriented approach or the structured approach.
+
+Answer: B
+
+163. [CHAPTER-8-11] What is the role of encapsulation in reuse?
+
+A)	Encapsulation means that it is not necessary for other developers to know how a software component works internally.
+B)	Encapsulation means that software components can work more efficiently.
+C)	Encapsulation means that there is no need for software developers to document their work.
+
+Answer: A
+
+164. [CHAPTER-8-12] How does composition support software reuse?
+
+A)	A composite structure is capable of performing more than one task, and thus it is useful in more than one context.
+B)	Composition structures are easy to extend with minimal effort.
+C)	Composite structures encapsulate their sub-components, making it easy to treat the composite as a single whole.
+
+Answer: C
+
+
+CHAPTER-9
+=============================================
+
+165. [CHAPTER-9-1] Which of the following is true?
+
+A)	Identifying what messages are passed between objects is a straightforward process.B)	Message passing is a metaphor used to describe object interaction.
+C)	Message passing is only concerned with query operations.
+
+Answer: B
+
+166. [CHAPTER-9-2] Which of the following is true about boundary objects?
+
+A)	The identification and specification of boundary objects is purely a design activity.
+B)	The identification and specification of boundary objects is part of requirements specification.
+C)	The identification and specification of boundary objects is considered in both analysis and design but in different ways. 
+Answer: C
+
+167. [CHAPTER-9-3] Which is the correct UML definition of a collaboration?
+
+A)	A collaboration describes the messages between objects.
+B)	A collaboration describes objects that share functionality.
+C)	A collaboration describes the structure of instances playing roles in a behaviour and their relationships.
+
+Answer: C
+
+168. [CHAPTER-9-4] An interaction sequence diagram drawn during analysis differs from one drawn during design which of the following ways?
+
+A)	It normally does not include design objects or detailed specifications of message signatures.
+B)	It does not include boundary objects.
+C)	It does not include control objects.
+
+Answer: A
+
+169. [CHAPTER-9-5] On the following figure which symbol represents a process activation on a sequence diagram? 
+  <br/><img src="./OOSAD/Ch9F5.JPG" />
+A)	1
+B)	2
+C)	3
+
+Answer: B
+
+170. [CHAPTER-9-6] Which of the labelled symbols in the following diagram represents a synchronous message? 
+  <br/><img src="./OOSAD/Ch9F6.JPG" />
+A)	1
+B)	2
+C)	3
+
+Answer: A
+
+171. [CHAPTER-9-7] What is meant by the term ‘thread of control’ in the context of concurrent behaviour?
+
+A)	A thread of control is a weak part of the control system.
+B)	A thread of control is the mechanism that controls concurrent behaviour.
+C)	A thread of control is an execution pathway that may occur simultaneously with other execution pathways.
+
+Answer: C
+
+172. [CHAPTER-9-8] Which of the following is an appropriate way of managing complex behaviour on an interaction sequence diagram?
+
+A)	A group of objects can be represented by a single lifeline.
+B)	Some messages are omitted to reduce the complexity.
+C)	Some objects are omitted from the diagram to reduce the complexity.
+
+Answer: A
+
+173. [CHAPTER-9-9] Collaboration diagrams differ from interaction sequence diagrams in the following way?
+
+A)	Collaboration diagrams cannot show the design detail that can be shown on a sequence diagram.
+B)	Collaboration diagrams only show the collaboration and not the sequence in which the messages are sent.
+C)	Collaboration diagrams show the links between the objects.
+
+Answer: C
+
+174. [CHAPTER-9-10] In a collaboration diagram one message has the sequence number 5.1.1. Which of the following sequence numbers indicates the message that must be the immediate successor?
+
+A)	A message with the sequence number 5.1.2.
+B)	A message with the sequence number 5.1.1.1.
+C)	A message with the sequence number 5.2.1.
+
+Answer: B
+
+175. [CHAPTER-9-11] Which of the following is a disadvantage of collaboration diagrams?
+
+A)	A collaboration diagram can only be used during analysis.
+B)	A collaboration diagram cannot include guard conditions.
+C)	A collaboration diagram is difficult to read if there are many messages between two objects.
+
+Answer: C
+
+176. [CHAPTER-9-12] An interaction diagram should be consistent with the associated class diagram in various ways. Which of the following statements is true?
+
+A)	It is always correct to show a message between two objects if there is an association between their classes.
+B)	The sending object must have the object reference of the receiving object before sending an object-scope message.
+C)	A message should not be shown between two objects if there is no association between their classes.
+
+Answer: B
+

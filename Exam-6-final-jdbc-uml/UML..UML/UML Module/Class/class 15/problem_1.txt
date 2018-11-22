@@ -1,0 +1,15 @@
+/*
+A warehouse sells products to pre-enlisted retailers.
+A retailer sends order request to the warehouse,
+order staff prepare order delivery demand if oustanding credit of the retailers less than $1000 
+and updates outsatnding dues
+if oustanding due of the retailers  $1000 or more, sends payement notification
+order delivery demand is sent to Delivery department.
+
+Delivery department processes order delivery demand. They plan packing list and sends to despatch
+officer.
+Depatch officer schedule and delivers orders.
+
+
+Draw the ordering process in activity diagram
+*/

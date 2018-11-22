@@ -1,0 +1,43 @@
+create table product(
+
+productid varchar(10) primary key,
+productname varchar(20),
+brand varchar(15),
+productqty int,
+price int
+
+
+);
+
+
+create table sales(
+
+empid varchar(10) primary key,
+empname varchar(20),
+salesqty int,
+address varchar(15),
+mobile int,
+edate varchar(20)
+
+
+);
+
+
+
+create table salesreport(
+slno varchar(10) primary key,
+
+productid varchar(10) references product(productid), 
+productname varchar(15),
+productqty int,
+price int,
+
+empid varchar(10) references sales(empid),
+empname varchar(20),
+salesqty int,
+address varchar(15),
+
+sdate varchar(20)
+
+
+);

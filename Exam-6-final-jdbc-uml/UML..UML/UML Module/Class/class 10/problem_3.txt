@@ -1,0 +1,10 @@
+In a online technical resource site users can:
+Register for membership
+Browse for resource
+Download resource but three downloads per day
+Administrator:
+Uploads resources
+Monitors users' acitivities and produces report
+Block users' for illegal activities
+
+Draw a USE CASE UML diagram based on facts.

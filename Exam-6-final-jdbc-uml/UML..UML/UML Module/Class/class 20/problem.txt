@@ -1,0 +1,8 @@
+/*
+A module is constructed of 5 tasks
+show in class association and object link
+*/
+/*
+Show acivity in a diagram of the following
+IDB-BISEW trainee withdrwal for absense
+*/

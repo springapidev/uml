@@ -1,0 +1,91 @@
+This is an enhanced dump, having images & clickable buttons. Popup windows are used to display exhibit or HTML case studies. The first paragraph in a dump text is used as introduction. This text is optional but it is strongly recommended to put a short and friendly blurb here.
+
+
+1. This question has an image
+
+<img src="0-Sample/Resources/Case1Q1.jpg">
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4
+E. <img src="0-Sample/Resources/Case1Q1.jpg">
+
+ANSWER: D,E
+
+Any comments that you like
+
+
+2. This question has an exhibit (with an exhibit pop-up)
+
+<br><button onClick="window.open('0-Sample/Resources/Case1Q2.jpg','Exhibit','height=200,width=400,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes')">Exhibit</button>
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4
+
+ANSWER: D
+
+Any comments that you like
+
+
+3. This question has button to another htm file (good for Case Study)
+
+<br><button onClick="window.open('0-Sample/Resources/Case1.html')">Case Study</button>
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4
+E. Answer 5
+F. Answer 6
+G. Answer 7
+H. Answer 8
+I. Answer 9
+J. Answer 10
+K. Answer 11
+L. Answer 12
+M. Answer 13
+
+ANSWER: D,E,F,H,I,K,M
+
+Any comments you like
+
+
+4. This question has button to another text file (good for Case Study)
+
+<br><button onClick="window.open('0-Sample/Resources/sample.txt')">Case Study</button>
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4
+E. Answer 5
+F. Answer 6
+
+ANSWER: A,B
+
+Any comments you like
+
+
+5. This question has a combination of images and a button
+
+<img src="0-Sample/Resources/Case1Q1.jpg">
+
+<br><button onClick="window.open('0-Sample/Resources/Case1.html')">Case Study</button>
+
+<br><button onClick="window.open('0-Sample/Resources/Case1Q2.jpg','Exhibit','height=200,width=400,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes')">Exhibit</button>
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. <img src="0-Sample/Resources/Case1Q1.jpg">
+E. Answer 5
+F. Answer 6
+
+ANSWER: D
+
+See 70-219 for a finalized quesitonset, including Case Studies.
+
+

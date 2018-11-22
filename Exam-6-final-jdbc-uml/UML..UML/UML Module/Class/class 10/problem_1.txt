@@ -1,0 +1,24 @@
+You are a member of a system development project.
+You are responsisble for developing model of the database. You have the following facts
+Entities:
+Book and author
+A book is written by one or more authors and a author writes one or more books
+The attributes of the entities are
+Entity: Book
+Attribute		Description
+=======		==========
+name		name of the book
+coverprice	price for retail sales
+commercialprice	price for the sales centers
+isbn		isbn of the book
+publishdate	date of publish
+
+Entity: Author
+Attribute		Description
+=======		==========
+name		name of author
+contact		phone contact
+email		eamil of author
+writinglanguage	primary language author uses to write
+
+Develop the model using MS visio

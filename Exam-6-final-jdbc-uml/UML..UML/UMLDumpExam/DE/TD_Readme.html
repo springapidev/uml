@@ -1,0 +1,138 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>TranDumper v3.0 (Readme -de-)</title>
+	<meta name="Date" content="2003-02-25">
+	<meta name="Generator" content="vi.exe">
+	<link href="../TD_Style.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
+	BODY {
+		background-color: darkblue;
+		background-image: url(../images/bg2.gif);
+	}
+
+	TABLE {
+		background-color: grey;
+		width: 90%;
+	}
+
+	TR.Candy {
+		background-image: url(../images/BlackBG.gif);
+		vertical-align:middle;
+	}
+
+	TH.Title {
+		color:#FFFFFF;
+		font-size: 14px;
+	}
+
+	.TxtBox {
+		color:#000000;
+		font-weight: normal;
+		background-color: #FFFFFF;
+		border-width:1px; border-style:solid; border-color:#B0B0B0;
+		padding:10px;
+		width: 90%;
+	}
+
+	</style>
+</head>
+
+<body>
+<br/>
+<a name="WhatIs"></a>
+<table border="1" cellpadding="5" cellspacing="0">
+	<tr class="Candy">
+		<th class="Title">Was ist TranDumper?</th>
+	</tr>
+</table>
+<div class="TxtBox">
+	<span class="MustRead">TranDumper</span> ist ein<span class="MustRead">FREEWARE</span>-Parser der Braindumps und andere Multiple-Choice Dateien als Prüfung darstellt.
+<br/>
+	This program konvertiert Braindumps (und andere .txt-Dateien) in offline Prüfungssimulationen. Any modification or derived works made from TranDumper (code or dump text file) must be released as <b>freeware</b>.<br/>
+	<br/>
+	You can help to localize the user interface of TranDumper. Localized files (TD_Readme.html, Trandumper.html) must be located in a country 2-letters code folder.<br/>
+	For now, Trandumper is ready to receive: <b>DE, FR, SP, IT</b>.<br/>
+	<br/>
+	The 3.0x version is released along with a German version translated by <a href="mailto:Bouchi@gmx.net">Bouchi</a>. Please inspire from his template to make your own localized version.<br/>
+	<br/>
+	Thank you for using TranDumper.
+</div>
+
+<br/><br/>
+<a name="HowToFormat"></a>
+<table border="1" cellpadding="5" cellspacing="0">
+	<tr class="Candy">
+		<th class="Title">How to format text file for TranDumper?</th>
+	</tr>
+</table>
+<div class="TxtBox">
+	For examples of how to use TranDumper, you can see the sample directory. You can read braindumps with little or no modifications to the dumps. See <b>sample_plain.txt</b> for a plain dump file, or see <b>sample_enhanced.txt</b> that explains the use of enhanced features.<br/>
+	<br/>
+	You should only have to make minor formatting changes to your dumps to be sure that TranDumper will read them properly. You simply need to save the dump web page as plain text (*.txt) and then check your dump file format as follow:
+	<ol>
+		<li>Subject must begin with a number and a dot on a new line.<br/>
+		EXAMPLES:&nbsp;<span class="MustRead">1.</span>&nbsp;&nbsp;or&nbsp;&nbsp;<span class="MustRead">99.</span> (Maximum number of questions: <b>400</b>)<br/><br/></li>
+		<li>A blank line is <b>mandatory</b> between the question text and the multiple-choice answers<br/><br/></li>
+		<li>Select options must begin with English Alpha and a dot or a ")".<br/>
+		EXAMPLES:&nbsp;<span class="MustRead">a.&nbsp;&nbsp;a)&nbsp;&nbsp;A.</span>
+		(Maximum number of answers: <b>15</b>)<br/><br/></li>
+		<li><b>ANSWER MUST BE ON ONE LINE.</b><br/>
+		The Answer format must be written as follows to be properly recognized.<br/>
+		EXAMPLES:&nbsp;<span class="MustRead">Ans:a,c&nbsp;&nbsp;&nbsp;Answer: b&nbsp;&nbsp;&nbsp;&nbsp;Ans : bc&nbsp;&nbsp;&nbsp;Answer: b,c and d</span><br/><br/></li>
+		<li>If there is any comment or explanation for the answer, a blank line is <b>mandatory</b> between the "Answer:" line and the explanation.<br/><br/></li>
+		<li>All the Selection options and answer are <span class="MustRead">case-insensitive</span>. That is, both <span class="MustRead">Ans:</span> and <span class="MustRead">ANS:</span> are legal syntax.</li>
+	</ol>
+</div>
+
+<br/><br/>
+<a name="MiniReq"></a>
+<table border="1" cellpadding="5" cellspacing="0">
+	<tr class="Candy">
+		<th class="Title">Minimum Requirements</th>
+	</tr>
+</table>
+<div class="TxtBox">
+	Windows 95, 98, NT, 2000, Internet Explorer 5.0 or greater and screen resolution of 800x600.<br/>
+	TranDumper can <b>only</b> be run on IE compatible browser. It uses an ActiveX (File System object of scripting engine to open local file). And also because Trandumper.html contains many VBscripts.
+	<ol>
+	<li>Be sure that you have <span class="MustRead">Internet Explorer 5.0 or greater</span> installed. TranDumper <span class="MustRead" style="color:#FF0000">CANNOT</span> run on Internet Explorer 3.x OR 4.x.
+	<li>Because it must open local files, it's recomended that the security settings in your browser should be set to medium or below.
+	<li>It can occur that <b>Internet Explorer ask to confirm the trust of the ActiveX</b> that is running. You should confirm by clicking &quot;Yes&quot; to proceed
+	<li>Don't use PWS or IIS to run this program!
+	<li>The install diretory shouldn't be any "virtual" PWS or IIS directory. For example use the default instalation directory!
+	</ol>
+</div>
+
+
+
+<br/><br/>
+<a name="Credits"></a>
+<table border="1" cellpadding="5" cellspacing="0">
+	<tr class="Candy">
+		<th class="Title">Credits</th>
+	</tr>
+</table>
+<div class="TxtBox">
+	<span class="MustRead">Has contributed to the developement of TranDumper:</span><br/>
+	<ul>
+	<li><b>Version 1.0:</b> Created by <b>Peter Pan</b>, the greatest version. The core logic of 3.0x is still based on his original design.<br/><br/></li>
+	<li><b>Version 1.1:</b> <b>JT</b> has made some restyling.<br/><br/></li>
+	<li><b>Version 2.1x:</b> <a href="mailto:delphi@ip.pt">Delphi</a> improved performance and added new features: sequential question sets, random answers, subsets of questions.<br/><br/></li>
+	<li><b>Version 2.2x:</b> <a href="mailto:TrandumpFeedback@yahoo.com">Synvox</a> introduced CSS, visual improvements: colored question elements, red/green colored feedback, cleaned up code for better HTML4 compatibility.<br/><br/></li>
+	<li><b>Version 3.0x:</b> <a href="mailto:TrandumpFeedback@yahoo.com">Synvox</a> and <a href="mailto:Bouchi@gmx.net">Bouchi</a>: complete redesign of the user interface, better navigation, review screen completely rewritten, replaced 1000 points score by %Error, code optimization. German translation, structure ready to welcome other localizations.<br/><br/><hr/><br/></li>
+	<li>Chrome graphics: <a href="http://themes.521.2ya.com/">Project 521</a><br/><br/></li>
+	<li>Graphical elements inspired from: <a href="http://www.psplinks.com/content/Backgrounds.html">PSP Tutorial Links</a><br/><br/></li>
+	<li>Country flags: <a href="http://lwtchost.ctc.edu/Offices/registration/international/flags.html">Lake Washington Technical College</a></li>
+	</ul>
+</div>
+
+<p>
+	<button style="width:150px;" onClick="document.location='../Start.html'"><b>Zur&uuml;ck zu 'Start.html'</b></button>
+</p>
+
+</body>
+</html>
+

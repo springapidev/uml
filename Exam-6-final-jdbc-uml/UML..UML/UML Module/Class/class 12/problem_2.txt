@@ -1,0 +1,47 @@
+class ParmanetEmployee
+{
+	public string Name
+	{
+		Get;
+		Set;
+	}
+	public Date JoiningDate()
+	{
+		Get;
+	}
+	public string Grade
+	{
+		Get; Set;
+	}
+
+	public decimal Basic
+	{
+		Get;
+	}
+	public decimal CalculateBenifits()
+	{
+	}
+	public decimal CalculateSalary
+	{
+	}
+}
+
+public class ProbetinaryEmployee
+{
+	public string Name
+	{
+		Get;
+		Set;
+	}
+	public Date JoiningDate()
+	{
+		Get;
+	}
+	public decimal Basic
+	{
+		Get;
+	}
+	public decimal CalculateSalary
+	{
+	}
+}

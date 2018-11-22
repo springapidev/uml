@@ -1,0 +1,3442 @@
+
+
+
+
+
+1. You are a database developer for the A. Datum Corporation. You are creating a database that will store statistics for 15 different high school sports. This information will be used by 50 companies that publish sports information on their Web sites.<br /> 
+
+Each company's Web site arranges and displays the statistics in a different format. You need to package the data for delivery to the companies.<br /> 
+
+What should you do? 
+
+A. Extract the data by using SELECT statements that include the FOR XML clause. 
+B. Use the <b>sp_makewebtask</b> system stored procedure to generate HTML from the data returned by SELECT statements. 
+C. Create Data Transformation Services packages that export the data from the database and place the data into tab-delimited text files. 
+D. Create an application that uses SQL_DMO to extract the data from the database and transform the data into standard electronic data interchange (EDI) files. 
+
+Ans:A 
+
+2. You are a database developer for a mail order company. The company has two SQL Server 2000 computers named CORP1 and CORP2. CORP1 is the online transaction processing server. CORP2 stores historical sales data. CORP2 has been added as a linked server to CORP1.<br /> 
+
+The manager of the sales department asks you to create a list of customers who have purchased floppy disks. This lists will be generated each month for promotional mailings. Floppy disks are representatives in the database with a category ID of 21.<br /> 
+
+You must retrieve this information from a table named SalesHistory. This table is located in the Archive database, which resides on CORP2. You need to execute this query from CORP1. 
+<br />
+Which script should you use? 
+
+A. EXEC sp_addlinkedserver 'CORP2', 'SQL Server' </br>
+GO </br>
+SELECT CustomerID FROM CORP2. Archive.dbo.SalesHistory<br /> 
+WHERE CategoryID = 21 
+
+B. SELECT CusomerID FROM OPENROWSET ('SQLOLEDB', 'CORP2'; 'p*word', 'SELECT CustomerID FROM Archive.dbo.SalesHistory WHERE CategoryID = 21') 
+
+C. SELECT CustomerID FROM CORP2.Archive.dbo.SalesHistory  <br />
+WHERE CategoryID = 21 
+
+D. EXEC sp_addserver 'CORP2' <br />
+GO <br />
+SELECT CustomerID FROM CORP2.Archive.dbo.SalesHistory <br />
+WHERE CategoryID = 21 
+
+Ans:C 
+
+
+3. You are a database developer for Trey Research. You create two transactions to support the data entry of employee information into the company's database. One transaction inserts employee name and address information into 
+the database. The other transaction inserts employee demographics information into the database. This transaction is less important than the first transaction. <br />
+<br />
+The database administrator has notified you that the database server occasionally encounters errors during periods of high usage. Each time this occurs, the database server randomly terminates one of the transactions. <br/>
+<br/>
+You must ensure that when the database server terminates one of these transactions, it never terminates the more important transaction.<br /> 
+
+What should you do? 
+
+A. Set the DEADLOCK_PRIORITY to LOW for the transaction that inserts the employee name and address information. 
+
+B. Set the DEADLOCK_PRIORITY to LOW for the transaction that inserts the employee demographics information. 
+
+C. Add conditional code that checks for server error 1205 on the transaction that inserts the employee name and address information. If this error is encountered, restart the transaction. 
+
+D. Add the ROWLOCK optimizer hint to the data manipulation SQL statements within the transactions. 
+
+E. Set the transaction isolation level to SERIALIZABLE for the transaction that inserts the employee name and address information. 
+
+Ans:B
+
+
+4. You are a database developer for your company's SQL Server 2000 online transaction processing database. Many of the tables have 1 million or more rows. All tables have a clustered index. The heavily accessed tables have at least one nonclustered index.<br /> 
+
+Two RAID arrays on the database server will be used to contain the data files. You want to place the tables and indexes to ensure optimal I/O performance.<br />
+
+You create one filegroup on each RAID array.<br /> 
+
+What should you do next? 
+
+
+A. Place tables that are frequently joined together on the same filegroup. Place heavily accessed tables and all indexes belonging to those tables on different filegroups. 
+
+B. Place tables that are frequently joined together on the same filegroup. Place heavily accessed tables and the nonclustered indexes belonging to those tables on the same filegroup. 
+
+C. Place tables that are frequently joined together on different filegroups. Place heavily accessed tables and the nonclustered indexes belonging to those tables on different filegroups. 
+
+D. Place tables that are frequently joined together on different filegroups. Place heavily accessed tables and the nonclustered indexes belonging to those tables on the same filegroup. 
+
+Ans:C 
+
+
+5. You are a database developer for your company's SQL Server 2000 database.You update several stored procedures in the database that create new end-of-month reports for the sales department.<br /> 
+
+The stored procedures contain complex queries that retrieve data from three or more tables. All tables in the database have at least one index. <br />
+
+Users have reported that the new end-of-month reports are running much slower than the previous version of the reports.<br />
+ 
+You want to improve the performance of the reports.<br /> 
+
+What should you do? 
+
+A. Create a script that contains the Data Definition Language of each stored procedure. Use this script as a workload file for the Index Tuning Wizard. 
+
+B. Capture the execution of each stored procedure in a SQL Profiler trace. Use the trace file as a workload file for the Index Tuning Wizard. 
+
+C. Update the index statistics for the tables used in the stored procedures. 
+
+D. Execute each stored procedure in SQL Query Analyzer, and use the Show Execution Plan option. 
+
+E. Execute each stored procedure in SQL Query Analyzer, and use the show Server Trace option. 
+
+Ans:E 
+
+
+6. You are a database developer for Wide World Importers. You are creating a database that will store order information. Orders will be entered in a client/server application. Each time a new order is entered, a unique order number must be assigned.<br /> 
+
+Order numbers must be assigned in ascending order. An average of 10,000 orders will be entered each day. <br />
+
+You create a new table named Orders and add an OrderNumber column to this table.<br /> 
+
+What should you do next? 
+
+A. Set the data type of the column to UniqueIdentifier. 
+
+B. Set the data type of the column to int, and set the IDENTITY property for the column. 
+
+C. Set the data type of the column to int. Create a user-defined function that selects the maximum order number in the table. 
+
+D. Set the data type of the column to int. Create a NextKey table, and add a NextOrder column to the table. Set the data type of the NextOrder column to int. Create a stored procedure to retrieve and update the value held in the NextKey 
+
+Ans:B 
+
+
+7. You are a database developer for a technical training center. Currently, administrative employees keep records of students, instructors, courses, and classroom assignments only on paper.<br /> 
+
+The training center wants to eliminate the use of paper to keep records by developing a database to record this information. You design the tables for this database.<br /> 
+
+Your design is shown in the exhibit: <br />
+
+<button
+onClick="window.open('./70-229/imageT3.jpg','Exhibit','height=313,width=525,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to promote quick response times for queries and minimize redundant data. What should you do? 
+
+A. Create a new table named Instructors. Include an InstructorID column, and InstructorName column, and an OfficePhone column. Add an InstructorID column to the Courses table. 
+
+B. Move all the columns from the Classroom table to the Courses table, and drop the Classroom table. 
+
+C. Remove the PRIMARY KEY constraint from the Courses table, and replace the PRIMARY KEY constraint with a composite PRIMARY KEY constraint based on the CourseID and CourseTitle. 
+
+D. Remove the ClassroomID column, and base the PRIMARY KEY constraint on the ClassroomNumber and ClassTime columns. 
+
+Ans:A 
+
+
+8. You are designing a database that will contain customer orders. Customers will be able to order multiple products each time they place an order.<br /> 
+
+You review the database design in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT4.jpg','Exhibit','height=165,width=625,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to promote quick response times for queries and minimize redundant data.<br /> 
+
+What should you do? (Each correct answer presents part of the solution. Choose two) 
+
+A. Create a new order table named OrdersDetail. Add OrderID, ProductID, and Quantity columns to this table. 
+
+B. Create a composite PRIMARY KEY constraint on the OrderID and ProductID columns of the Orders table 
+
+C. Remove the ProductID and Quantity columns from the Orders table 
+
+D. Create a UNIQUE constraint on the OrderID column of the Orders table. 
+
+E. Move the UnitPrice column from the Products table to the Orders table. 
+
+Ans:A,C 
+
+
+9. You are the database developer for a publishing company.<br /> 
+
+You create the following stored procedure to report the year-to-date sales for a particular book title: 
+
+<br />
+CREATE PROCEDURE get_sales_for_title <br />
+%title varchar(80), @ytd_sales int OUTPUT <br />
+AS <br />
+SELECT @ytd_sales = ytd_sales <br />
+FROM titles <br />
+WHERE title = @title <br /> 
+IF @@ROWCOUNT = 0 <br />
+RETURN(-1) <br />
+ELSE <br />
+RETURN(0) <br />
+<br />
+You are creating a script that will execute this stored procedure. If the stored procedure executes successfully, it should report the year-to-date sales for the book title.<br /> 
+
+If the stored procedure fails to execute, it should report the following message: 
+<br />
+</b>"No Sales Found" <br />
+<br />
+How should you create the script? 
+
+A. DECLARE @retval int <br /> 
+DECLARE @ytd int <br /> 
+EXEC get_sales_for_title 'Net Etiquette', @ytd <br /> 
+IF @retval < 0<br /> 
+PRINT 'No sales found'<br /> 
+ELSE<br /> 
+PRINT 'Year to date sales: ' + STR (@ytd)<br /> 
+GO 
+
+B. DECLARE @retval int <br /> 
+DECLARE @ytd int <br /> 
+EXEC get_sales_for_title 'Net Etiquette', @ytd OUTPUT <br /> 
+IF @retval < 0 <br /> 
+PRINT 'No sales found' <br /> 
+ELSE <br /> 
+PRINT 'Year to date sales: ' + STR (@ytd) <br /> 
+GO 
+
+C. DECLARE @retval int <br /> 
+DECLARE @ytd int <br /> 
+EXEC get_sales_for_title 'Net Etiquette',@retval OUTPUT <br /> 
+IF @retval < 0 <br /> 
+PRINT 'No sales found' <br /> 
+ELSE <br /> 
+PRINT 'Year to date sales: ' + STR (@ytd) <br /> 
+GO 
+
+D. DECLARE @retval int <br /> 
+DECLARE @ytd int<br /> 
+EXEC @retval = get_sales_for_title 'Net Etiquette', @ytd OUTPUT <br /> 
+IF @retval < 0 <br /> 
+PRINT 'No sales found' <br /> 
+ELSE <br /> 
+PRINT 'Year to date sales: ' + STR (@ytd) <br /> 
+GO 
+
+Ans:D 
+
+
+10. You are a database developer for a container manufacturing company. The containers produced by your company are  a number of different sizes and shapes.<br /> 
+
+The tables that store the container information are shown in the exhibit:  
+
+<button
+onClick="window.open('./70-229/imageT5.jpg','Exhibit','height=138,width=635,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+A sample of the data stored in the tables is shown in this exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT6.jpg','Exhibit','height=232,width=625,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Periodically, the dimensions of the containers change. Frequently, the database users require the volume of a container. The volume of a container is calculated based on information in the shape and size tables.<br /> 
+
+You need to hide the details of the calculation so that the volume can be easily accessed in a SELECT query with the rest of the container information.<br /> 
+
+What should you do? 
+
+A. Create a user-defined function that requires ContainerID as an argument and returns the volume of the container. 
+
+B. Create a stored procedure that requires ContainerID as an argument and returns the volume of the container. 
+
+C. Add a column named volume to the container table. Create a trigger that calculates and stores volume in this column when a new container is inserted into the table. 
+
+D. Add a computed column to the container table that calculates the volume of the container. 
+
+Ans: A 
+
+
+11. You are a database developer for a hospital. There are four supply rooms on each floor of the hospital, and the hospital has 26 floors. You are designing an inventory control database for disposable equipment.<br /> 
+
+Certain disposable items must be kept stored at all times. As each item is used, a barcode is scanned to reduce the inventory count in the database.<br /> 
+
+The supply manager should be paged as soon as a supply room has less than the minimum quantity of an item.<br />
+
+What should you do? 
+
+A. Create a stored procedure that will be called to update the inventory table. If the resulting quantity is less than the restocking quantity, use the <b>xp_logevent</b> system stored procedure to page the supply manager. 
+
+B. Create an <b>INSTEAD OF UPDATE</b> trigger on the inventory table. If the quantity in the inserted table is less than the restocking quantity, use SQLAgentMail to send an e-mail message to the supply manager's pager. 
+
+C. Create a <b>FOR UPDATE</b> trigger on the inventory table. If the quantity in the inserted table is less than the restocking quantity, use the <b>xp_sendmail</b> system stored procedure to page the supply manager. 
+
+D. Schedule the SQL server job to run at four-hour intervals. Configure the job to use the <b>@notify_level_page = 2</b> argument. Configure the job so that it tests each item's quantity against the restocking quantity. Configure the job so that it returns a false value if the item requires restocking. This will trigger the paging of the supply manager. 
+
+Ans: C 
+
+
+12. You are the developer of a database that supports time reporting for your company. Usually there is an average of five users accessing this database at one time, and query response times are less than one second.<br /> 
+
+However, on Friday afternoons and Monday mornings, when most employees enter their timesheet data, the database usage increases to an average of 50 users at one time.<br /> 
+
+During these times, the query response times increase to an average of 15 to 20 seconds.<br />
+
+You need to find the source of the slow query response times and correct the problem.<br /> 
+
+What should you do? 
+
+A. Use the <b>sp_lock</b> and <b>sp_who</b> system stored procedures to find locked resources and to identify processes that are holding locks. Use this information to identify and redesign the transactions that are causing the locks. 
+
+B. Query the <b>sysprocesses</b> and <b>sysobjects</b> system tables to find deadlocked resources and to identify which processes are accessing those resources. Set a shorter lock timeout for the processes that are accessing the deadlock resources. 
+
+C. Query the <b>sysprocesses</b> system table to find which resources are being accessed. Add clustered indexes on the primary keys of all of the tables that are being accessed. 
+
+D. Use the <b>sp_monitor</b> system stored procedure to identify which processes are being affected by the increased query response times. Set a less restrictive transaction isolation level for these processes. 
+
+Ans: A 
+
+
+13. You are a database developer for an insurance company. The insurance company has a multi-tier application that is used to enter data about its policies and the owners of the policies.<br /> 
+
+The policy owner information is stored in a table named Owners.<br /> 
+
+The script that was used to create this table is shown: 
+
+CREATE TABLE Owners <br />
+( <br />
+OwnerID int IDENTITY (1, 1) NOT NULL<br />
+FirstName char(20) NULL <br />
+LastName char(30) NULL <br />
+BirthDate date NULL <br />
+CONSTRAINT PK_Owners PRIMARY KEY (Owner ID) <br />
+)<br /> 
+<br />
+When information about policy owners is entered, the owner's birth date is not included; the database needs to produce a customized error message that can be displayed by the data entry application.<br /> 
+
+You need to design a way for the database to validate that the birth date is supplied and to produce the error message if it is not.<br />
+
+What should you do? 
+
+A. Add a <b>CHECK</b> constraint on the <b>BirthDate</b> column. 
+
+B. Create a rule, and bind the rule to the <b>BirthDate</b> column. 
+
+C. Alter the <b>Owners</b> table so that the <b>BirthDate</b> column does not allow null. 
+
+D. Create a trigger on the <b>Owners</b> table that validates the <b>BirthDate</b> column 
+
+Ans:D 
+
+
+14. You are the database developer for a large brewery. Information about each of the brewery's plants and the equipment located at each plant is stored in a database named Equipment.<br /> 
+
+The plant information is stored in a table named Location, and the equipment information is stored in a table named Parts.<br /> 
+
+The scripts that were used to create these tables are shown: 
+
+CREATE TABLE Location <br />
+( <br />
+LocationID int NOT NULL <br />
+LocationName char (30) NOT NULL UNIQUE <br />
+CONSTRAINT PK_Location PRIMARY KEY (LocationID) <br />
+) <br />
+<br />
+CREATE TABLE Parts <br />
+( <br />
+PartID int NOT NULL <br /> 
+LocationID int NOT NULL <br /> 
+PartName char (30) NOT NULL <br /> 
+CONSTRAINT PK_Parts PRIMARY KEY (PartID) <br />
+CONSTRAINT FK_PartsLocation FOREIGN KEY (Location ID) <br />
+REFERENCES Location (LocationID) <br />
+) <br />
+<br />
+
+The brewery is in the process of closing several existing plants and opening several new parts. When a plant is closed, the information about the plant and all of the equipment at that plant must be deleted from the database.<br /> 
+
+You have created a stored procedure to perform this operation.<br /> 
+
+The stored procedure is shown below: 
+
+<br />
+CREATE PROCEDURE sp_DeleteLocation @LocName char(30) AS <br />
+BEGIN <br />
+DECLARE @PartID int <br />
+DECLARE crs_Parts CURSOR FOR <br />
+SELECT p.PartID <br />
+FROM Parts AS p INNER JOIN Location AS 1 <br />
+ON p.LocationID = @LocName <br />
+WHERE 1.LocationName = @LocName <br />
+OPEN crs_Parts <br />
+FETCH NEXT FROM crs_Parts INTO @PartID <br />
+WHILE (@@FETCH_STATUS <> -1) <br />
+BEGIN <br />
+DELETE Parts WHERE CURRENT OF crs_Parts <br />
+FETCH NEXT FROM crs_Parts INTO @PartID <br />
+END <br />
+CLOSE crs_Parts <br />
+DEALLOCATE crs_Parts <br />
+DELETE Location WHERE LocatioName = @LocName <br />
+END <br />
+<br />
+
+This procedure is taking longer than expected to execute. You need to reduce the execution time of the procedure.<br />
+
+What should you do? 
+
+A. Add the <b>WITH RECOMPILE</b> option to the procedure definition. 
+
+B. Replace the cursor operation with a single <b>DELETE</b> statement. 
+
+C. Add a <b>BEGIN TRAN</b> statement to the beginning of the procedure, and add a <b>COMMIT TRAN</b> statement to the end of the procedure. 
+
+D. Set the transaction isolation level to <b>READ UNCOMMITTED</b> for the procedure. 
+
+E. Add a nonclustered index on the <b>PartID</b> column of the parts table. 
+
+Ans: B 
+
+15. You are a database developer for an insurance company. Information about the company's insurance policies is stored in a SQL Server 2000 database.<br /> 
+
+You create a table named policy for this database by using the script shown:
+ 
+<br />
+CREATE TABLE Policy <br />
+(  <br />
+PolicyNumber int NOT NULL DEFAULT (0) <br /> 
+InsuredLastName char (30) NOT NULL <br /> 
+InsuredFirstName char (20) NOT NULL  <br /> 
+InsuredBirthDate dattime NOT NULL  <br /> 
+PolicyDate datetime NOT NULL  <br /> 
+FaceAmount money NOT NULL  <br /> 
+CONSTRAINT PK_Policy PRIMARY KEY (PolicyNumber)  <br />
+)  <br />
+ <br />
+
+Each time the company sells a new policy, the policy must be assigned a unique policy number. The database must assign a new policy number when a new policy is entered.<br />
+
+What should you do? 
+
+A. Create an INSTEAD OF INSERT trigger to generate a new policy number, and include the policy number in the data inserted into the table. 
+
+B. Create an INSTEAD OF UPDATE trigger to generate a new policy number, and include the policy number in the data inserted into the table. 
+
+C. Create an AFTER UPDATE trigger to generate a new policy number, and include the policy number in the data inserted into the table. 
+
+D. Replace the DEFAULT constraint with a AFTER INSERT trigger that generates a new policy number and includes the policy number in the data inserted into the table. 
+
+Ans:A 
+
+
+16. You are a member of a database development team for a telecommunications company.<br /> 
+
+Another developer on the team, Marc, has created a table named Customers in the Corporate database. Because the table contains confidential information, he has granted SELECT permissions on the table only to the other members of your team.<br />
+
+You are developing an application that will allow employees in the marketing department to view some of the information in the Customers table. These employees are all members of the Marketing database role. 
+
+To support this application, you create a view named vwCustomers on the Customers table. After creating the view, you grant SELECT permissions on the view to the Marketing role. 
+
+When members of the Marketing role attempt to retrieve data from the view, they receive the following error message: 
+
+<b>SELECT permission denied on object 'Customers', database 'Corporate', owner 'Mare'</b><br />
+
+You must ensure that the members of the Marketing role can only use the vwCustomers view to access the data in the Customers table.<br />
+
+What should you do? 
+
+A. Add the <b>marketing</b> role to the <b>sysadmin</b> fixed server role. 
+
+B. Transfer the ownership of the <b>vwCustomers</b> view to the <b>marketing</b> role. 
+
+C. Instruct Marc to transfer the ownership of the <b>Customers</b> table to each member of the <b>marketing</b> role. 
+
+D. Instruct Marc to grant the users SELECT permissions on the <b>Customers</b> table. 
+
+E. Drop the <b>vwcustomers</b> view. Instruct Marc to re-create the view and to grant SELECT permissions on the view to the marketing role. 
+
+Ans:E 
+
+
+17. You are designing your Company's SQL Server 2000 sales database, which will be accessed by a custom application. Customer service and marketing employees require SELECT, INSERT, and UPDATE permissions on all tables in the Sales database.<br /> 
+
+In addition to using the custom application, the marketing employees will use Microsoft Excel to retrieve data from the sales database to create charts.<br />
+
+Customer service employees belong to Microsoft Windows 2000 group named CSR, and marketing employees belong to a Windows 2000 group named Marketing. You want the customer service employees to access the sales database only from within the custom application.<br /> 
+
+You want to allow the marketing employees to use both the custom application and Excel to access the sales database. No permissions have been granted in the database.<br /> 
+
+What should you do? 
+
+A. Create a database role named Marketing for the marketing employees and a database role named customer service for the customer service employees. Add the Windows 2000 groups to the user-defined database roles. Grant SELECT permissions on all tables in the database to the marketing database role. Grant SELECT, INSERT, and UPDATE permissions on all tables in the database to the Customer Service database role.<br /> 
+
+B. Create one application role to be used by both the customer service and marketing employees. Grant SELECT permissions on all tables in the database to the Windows 2000 marketing group. Grant SELECT, INSERT, and UPDATE permissions on all tables in the database to the Windows 2000 CSR group.<br /> 
+
+C. Create an application role for the custom application. Grant SELECT, INSERT and UPDATE permissions to the application role. Create a database role named Marketing for the marketing employees. Add the Windows 2000 Marketing group to the Marketing database role. Grant SELECT permissions on all tables in the database to the marketing database role.<br /> 
+
+D. Create one application role for the customer service employees. Create a second application role for the marketing employees. Grant SELECT permissions on all tables in the database to the application role to be used by the marketing employees. Grant SELECT, INSERT, and UPDATE permissions on all tables in the database to the application role to be used by the customer service employees.<br /> 
+
+E. Create one application role for the customer service employees. Create a second application role for the marketing employees to access the sales database by using the custom application. Create a third application role for the marketing employees to use when retrieving data from Excel. Grant SELECT permissions on all tables in the database to both application roles to be used by the marketing employees. Grant SELECT, INSERT, and UPDATE permissions on all tables in the database to the application role to be used buy the customer service employees. 
+
+Ans:C 
+
+
+18. You are a database developer for an online book retailer. Customers use the company's web site to place orders for books. As orders are entered, they are inserted into a database named BookOrders.<br /> 
+
+During a nightly batch process, the order information is transferred to a database named Reports.<br />
+
+The Reports database includes a table named orders and a table named LineItem. The Order table contains basic information about the orders. The LineItem table contains information about the individual items in the orders.<br /> 
+
+The order and LineItem tables are shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT7.jpg','Exhibit','height=174,width=475,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Customers must be able to use the Company's web site to view orders stored in the Reports database. Customers should be able to see only their own orders. Customers should not be able to modify the orders.<br /> 
+
+The primary key values of the orders are not relevant to the customers and should not be visible.<br />
+
+What should you do? 
+
+A. Create a view that displays the order information for a customer. 
+
+B. Create a stored procedure that retrieves the order information for a customer. 
+
+C. Create a scalar user-defined function that retrieves the order information for a customer. 
+
+D. Grant SELECT permissions on the Order and LineItem tables to the customers. 
+
+Ans:B 
+
+
+19. You are a database developer for a large travel company. Information about each of the company's departments is stored in a table named Department. Data about each of the company's travel agents and department managers is stored in a table named Employees.<br /> 
+
+The SQLLogin column of the Employees table contains the database login for the travel agent or department manager.  
+<br />
+The department and employees table are shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT8.jpg','Exhibit','height=175,width=575,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Each department manager has been added to the managers database role. You need to allow members of this database role to view all of the data in the department table. Members of this role should be able to insert or update only the row that pertains to their department.<br /> 
+
+You grant the managers database role SELECT permissions on the department table.<br />
+
+What should you do next? 
+
+A. Create a trigger on the department table that checks whether the database login of the user performing the insert or update operation belongs to a member of that department. 
+
+B. Create a view that includes all columns in the department table and the SQLLogin column from the employees table (Include the WITH CHECK OPTION clause in the view definition). 
+
+C. Grant INSERT and UPDATE permissions on the department table. 
+
+D. Grant INSERT and UPDATE permissions on the SQLLogin column of the employees table. 
+
+Ans:B
+
+
+20. You are a database developer for your company's database named sales. The database contains a table named Orders. <br />
+
+The script that was used to create the table is shown:
+ 
+<br />
+CREATE TABLE Orders <br />
+( <br />
+OrderID int NOT NULL <br />
+CustomerID char (5) NOT NULL <br /> 
+OrderDate datetime DEFAULT GETDATE ( ) NULL <br /> 
+ShippedDate datetime NULL <br /> 
+Freight money NULL <br /> 
+ShipName varchar (40) NULL <br /> 
+) <br />
+GO <br />
+CREATE CLUSTERED INDEX IX_OrderID ON Orders (OrderID) <br />
+GO <br />
+CREATE NONCLUSTERED INDEX IX_CustomerID ON Orders (CustonmerID) <br />
+<br />
+
+An application will execute queries like the following to retrieve orders for a customer: 
+
+<br />
+SELECT OrderID, CustomerID, OrderDate <br />
+FROM Orders WHERE CustomerID = 'WHITC' <br />
+ORDER BY OrderDate DESC <br />
+<br />
+
+The query execution plan that is generated is shown in the Query Execution Plan exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT9.jpg','Exhibit','height=140,width=694,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want this query to execute as quickly as possible.<br /> 
+
+What should you do? 
+
+A. Create a nonclustered index on the OrderDate column. 
+
+B. Create a clustered index on the OrderDate column. 
+
+C. Change the clustered index on the OrderID column to a nonclustered index. 
+
+D. Change the nonclustered index on the CustomerID column to include the OrderDate column. 
+
+Ans:D 
+
+
+21. You are database developer for your company's SQL Server 2000 database named Sales. The company has several custom Web-based applications that retrieve data from the Sales database.<br /> 
+
+Some of these applications use the EXECUTE statement to allow users to issue administrator ad hoc queries. As the use of the Web-based applications increases, queries are taking longer to execute.<br />
+
+You want to discover which applications are sending a high number of these queries to the database server.<br /> 
+
+What should you do? 
+
+A. Use SQL profiler to capture the RPC:Completed event. Group the trace by the HostName data column 
+
+B. Use SQL profiler to capture the SQL:StmtCompleted event. Group the trace by the ApplicationName data column 
+
+C. Use system monitor to monitor the SQLServer:Database counter. Select all counters for the sales database 
+
+D. Use system monitor to monitor the SQLServer:General Statistics counter. Select all counters for the sales database 
+
+Ans: B
+
+
+22. You are a database developer for a multinational corporation. The Company has a centralized online transaction processing database located on a SQL Server 2000 computer.<br /> 
+
+This database has a table named Sales, which contains consolidated sales information from the Company's offices.<br />
+
+During the last year, more than 150,000 rows have been added to the sales table. Users of the database report that performance during the course of the year has steadily decreased.<br /> 
+
+You need to improve the performance of queries against the Sales table.<br />
+
+In the SQL Query Analyzer, which script should you execute? 
+
+A. EXEC sp_updatestatics 'resample' 
+
+B. CREATE STATISTICS Sales WITH FULLSCAN 
+
+C. Sp_autostats 'Sales' 
+
+D. UPDATE STATISTICS Sales WITH FULLSCAN ALL 
+
+Ans: A
+
+WARNING: This was wrong in the orig razor, D looked:<br>
+UPDATE STATISTIC_Sales WITH FULLSCAN, ALL<br>
+But the real D was that you see up there, with the missing comma as syntax error making D incorrect!
+
+
+23. You are a database developer for your company's SQL Server 2000 online transaction processing database. You have written several stored procedures that will produce critical sales reports.<br /> 
+
+The stored procedures access existing tables, which are indexed.<br /> 
+
+Before you put the stored procedures in the production environment, you want to ensure optimal performance of the new stored procedures. You also want to ensure that daily operations in the database are not adversely affected.<br />
+
+What should you do? 
+
+A. Create a covering index for each query contained in the stored procedures. 
+
+B. For each query in the stored procedures, create an index that includes each column contained in the WHERE clause 
+
+C. Use output from the Index Tuning Wizard to identify whether indexes should be added. 
+
+D. Create statistics on all columns in the SELECT and WHERE clauses of each query 
+
+Ans: C
+
+
+24. You are a database developer for an insurance company. You are informed that database operations such as selects, inserts, and updates, are taking much longer than they were when the database was created a year ago.<br /> 
+
+The previous developer added necessary indexes on the tables when the database was created. Since that time, additional tables and stored procedures have been added to the database. In addition, many of the queries are no longer used.<br />
+
+You want to improve the response time of the database operations as quickly as possible.<br /> 
+
+What should you do? 
+
+A. Execute the DBCC UPDATEUSAGE statement against the database to update the sysindexes system table 
+
+B. Execute the DBCC SHOW_STATISTICS statement to find high-density indexes. Drop the high-density indexes. 
+
+C. Run the Index Tuning Wizard against a workload file to suggest indexes to create and drop the suggested indexes. 
+
+D. Use SQL profiler to find table scans. Add indexes to tables that were found to have table scans. 
+
+Ans: C
+
+WARNING: In the orig razor the C option was:<br>
+C Run the Index Drop Tuning Wizard against a workload file to suggest indexes to create and drop the suggested indexes.<br>
+But there is no such thing as Index Drop Tuning Wizard.
+
+
+25. You are a database developer for a sporting goods company. The company has one main office and many regional offices across the United States. A 56-Kbps frame relay network connects the offices.<br /> 
+
+Each office has a SQL Server 2000 database that contains information about the company's products. The main office SQL Server database is used to process incremental updates to the regional office databases.<br /> 
+
+Transactional replication is used to perform these updates.<br />
+
+Each quarter, you create a new snapshot file. You use this snapshot file to replace the regional office databases with the latest product information. This snapshot file is now more than 800MB in size.<br /> 
+
+You need to apply the snapshot file to the regional office databases. You want to accomplish this by using the least amount of expense.<br />
+
+What should you do? 
+
+A. Use transactional replication. Mark all subscriptions for reinitialization. 
+
+B. Copy the snapshot to an NTFS compressed share. Create a CD from that share. Distribute the CD to the regional office. 
+
+C. Create a compressed snapshot in the default snapshot folder on the Distributor. Create a CD from that folder. Distribute the CD to the regional offices. 
+
+D. Create a compressed snapshot in the alternative snapshot folder on the network. Create a CD from that folder. Distribute the CD to the regional offices. 
+
+E. Create a compressed snapshot in an alternative snapshot folder on the network. Use FTP to distribute the snapshot to the regional offices. 
+
+Ans: D
+
+
+26. You are a database developer for your Company's SQL Server 2000 database. This database contains a table named Sales, which has 2 million rows. The sales table contains sales information for all departments in the company.<br /> 
+
+Each department is identified in the table by the DepartmentID column. Most queries against the table are used to find sales for a single department.<br />
+
+You want to increase the I/O performance of these queries. However, you do not want to affect the applications that access the table.<br />
+
+What should you do? 
+
+A. Create a new table, and move the columns that are most frequently queried to this table. Retain the DepartmentID column in both tables. Create a view on the original table and on the new table. Add a FOREIGN KEY constraint on the join columns of the new table. 
+
+B. Create a new table, and move the columns that are most frequently queried to this table. Retain the DepartmentID column in both tables. Create a view on the original table and on the new table. Add a CHECK constraint on the DepartmentID columns of both tables. 
+
+C. Create one new table for each department, and move the sales information for each department to that department's table. Add a CHECK constraint on the DepartmentID columns of the new tables. Create a view on the new tables. 
+
+D. Create one new table for each department, and move the sales information for each department to that department's table. Create a view on the new tables. Add a CHECK constraint on the DepartmentID column in the view. 
+
+E. Create a stored procedure that accepts an input parameter for the department. Use the stored procedure to return from the sales table. 
+
+Ans: C
+
+
+27. You are a database developer for your Company's SQL Server 2000 database. You are deleting objects in the database that are no longer used. You are unable to drop the 1997 Sales view.<br /> 
+
+After investigation, you find that the view has the following characteristics: 
+
+<br />
+� There is a clustered index on the view. <br />
+� The sales database role has permissions on the view. <br /> 
+� The view uses the WITH SCHEMABINDING option. <br />
+� A schema-bound inline function references the view. <br />
+� An INSTEAD OF trigger is defined on the view. <br />
+<br />
+What should you do before you can drop the view? 
+
+A. Drop the clustered index on the view.
+
+B. Remove all permissions from the view. 
+
+C. Remove the WITH SCHEMABINDING option from the view. 
+
+D. Remove the WITH SCHEMABINDING option from the function that is referencing the view. 
+
+E. Disable the INSTEAD OF trigger on the view. 
+
+Ans: D 
+
+
+28. You are a database developer for Proseware Inc. You are creating a database named Human Resources for the company. This database will contain all employee records and demographics information.<br /> 
+
+The company has 2,000 employees and experiences a yearly turnover rate of about 2 percent. When employees leave the company, all of their records must be retained for auditing purposes.<br />
+
+Employee demographics information changes at a yearly rate of about 9 percent. You do not need to maintain a history of demographics changes.<br />
+ 
+The schema for the human resources database is shown in the human resources schema exhibit, and the scripts that will be used to create the indexes are shown in the Index Scripts: 
+
+<button
+onClick="window.open('./70-229/imageT10.jpg','Exhibit','height=225,width=675,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+ALTER TABLE [dbo].[Employee] WITH NOCHECK ADD
+CONSTRAINT [pk_Employee] PRIMARY KEY CLUSTERED
+([EmployeeID])
+WITH FILLFACTOR = 90
+GO
+ALTER TABLE [dbo].[EmployeeDemographics] WITH NOCHECK ADD
+CONSTRAINT [dbo].[EmployeeDemographics] PRIMARY KEY CLUSTERED
+([EmployeeID])
+WITH FILLFACTOR = 90
+GO<br />
+
+You want to conserve disk space and minimize the number of times that expansion of the database files needs to occur. All varchar columns are 50 percent full.<br />
+
+Which two parameters should you specify for the CREATE DATABASE statement? (Each correct answer presents part of the solution. Choose two) 
+
+A. SIZE = 1GB 
+
+B. SIZE = 1MB 
+
+C. SIZE= 2048KB 
+
+D. FILEGROWTH = 20 
+
+E. FILEGROWTH = 5% 
+
+F. FILEGROWTH = 0 
+
+Ans: C,E 
+
+
+29. You are a database developer for your company's SQL Server 2000 database. This database contains a table named products and a table named companies.<br /> 
+
+You want to insert new product information from a linked server into the products table. The products table has a FOREIGN KEY constraint that references the companies table. An UPDATE trigger is defined on the products table. 
+<br />
+
+You want to load the data as quickly as possible.<br /> 
+
+What should you do? 
+
+A. Use the ALTER TABLE statement and the ON UPDATE clause to modify the <b>products</b> table. 
+
+B. Use the ALTER TABLE statement and the DISABLE TRIGGER ALL option to modify the <b>Products</b> table. 
+
+C. Use the ALTER TABLE statement and the DISABLE TRIGGER ALL option to modify the <b>Companies</b> table. 
+
+D. Use the ALTER TABLE statement and the NOCHECK CONSTRAINT option to modify the <b>Companies</b> table 
+
+E. Use the ALTER TABLE statement and the NOCHECK CONSTRAINT option to modify the <b>Products</b> table. 
+
+Ans:E 
+
+
+30. You are the database developer for your company's Accounting database. The database contains a table named Employees.<br /> 
+
+Tom is a member of the Accounting department. Tom's database user account has been denied SELECT permissions on the salary and BonusPercentage columns of the Employees table. Tom has been granted SELECT permissions on all other columns in the table.<br /> 
+
+Tom now requires access to all the data in the Employees table.<br />
+
+What should you do? 
+
+A. Revoke <b>SELECT</b> permissions on the Salary and BonusPercentage columns of the employees table for Tom's database user account. 
+
+B. Add Tom to the <b>db_datareader</b> database role. 
+
+C. Add Tom to the <b>db_accessadmin</b> database role. 
+
+D. Grant <b>SELECT</b> permissions on the Salary and BonusPercentage columns of the Employees table for Tom's database user account. 
+
+Ans:D
+
+
+31. You are a database developer for a toy manufacturer. Each employee of the company is assigned to either an executive, administrative, or labor position. The home page of the company intranet displays company news that is customized for each position type.<br /> 
+
+When an employee logs on to the company intranet, the home page identifies the employee's position type and displays the appropriate company news. Company news is stored in a table named News, which is located in the corporate database.
+<br />
+
+The script that was used to create the News table is shown: 
+<br />
+
+CREATE TABLE News <br />
+( <br />
+NewsID int NOT NULL <br />
+NewsText varchar (8000) NOT NULL <br />
+EmployeePositionType char (15) NOT NULL <br /> 
+DisplayUntil datetime NOT NULL <br />
+DateAdded datetime NOT NULL DEFAULT (getdate( )) <br />
+CONSTRAINT PK_News PRIMARY KEY (NewsID) <br />
+) <br />
+<br />
+
+Users of the intranet need to view data in the news table, but do not need to insert, update, or delete data in the table. 
+<br />
+
+You need to deliver only the appropriate data to the intranet, based on the employee's position type.<br /> 
+
+What should you do?
+
+A. Create a view that is defined to return the rows that apply to a specified position type. 
+
+B. Create a stored procedure that returns the rows that apply to a specified position type. 
+
+C. Grant <b>SELECT</b> permissions on the <b>EmployeePositionType</b> column for each position type. 
+
+D. Grant permission on the <b>News</b> table for each position type. 
+
+Ans:B 
+
+
+32. You are a database developer for a Company that produces an online telephone directory.<br /> 
+
+A table named PhoneNumbers is shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT11.jpg','Exhibit','height=280,width=235,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+After loading 100,000 names into the table, you create indexes by using the following script: 
+
+<br />
+ALTER TABLE [dbo]. [phonenumbers] WITH NOCHECK ADD <br />
+CONSTRAINT[PK_PhoneNumbers]PRIMARY KEY CLUSTERED ( <br />
+[FirstName], <br /> 
+[LastName], <br />
+) ON [PRIMARY] <br />
+GO <br />
+CREATE UNIQUE INDEX <br />
+[IX_PhoneNumbers] ON [dbo].[phonenumbers]( <br />
+[PhoneNumberID] <br />
+) ON [PRIMARY] <br />
+GO <br />
+<br />
+
+You are testing the performance of the database. You notice that queries such as the following take a long time to execute:
+<br />
+
+<b>Return all names and phone numbers for persons who live in a certain city and whose last name begin with 'W'</b> <br />
+
+How should you improve the processing performance of these types of queries? (Each correct answer presents part of the solution. Choose two) 
+
+A. Change the <b>PRIMARY KEY</b> constraint to use the LastName column followed by the FirstName column. 
+
+B. Add a nonclustered index on the City column. 
+
+C. Add a nonclustered index on the AreaCode, Exchange, and Number columns. 
+
+D. Remove the unique index from the PhoneNumberID column. 
+
+E. Change the <b>PRIMARY KEY</b> constraints to a nonclustered index. 
+
+F. Execute an <b>UPDATE STATISTICS FULLSCAN ALL</b> statement in SQL Query Analyzer. 
+
+ANS: A,B 
+
+
+33. You are a database developer for an insurance company. You are tuning the performance of queries in SQL Query Analyzer.<br /> 
+
+In the query pane, you create the following query: 
+
+<br />
+SELECT P.PolicyNumber, P.IssueState, AP.Agent <br />
+FROM Policy AS P JOIN AgentPolicy AS AP <br />
+ON (P.PolicyNUmber = AP.PolicyNumber) <br />
+WHERE IssueState = 'IL' <br />
+AND PolicyDate BETWEEN '1/1/2000' AND '3/1/2000'<br /> 
+AND FaceAmount > 1000000 <br />
+<br />
+
+You choose display estimated execution plan from the query menu and execute the query.<br /> 
+
+The query execution plan that generated is shown below: 
+
+<button
+onClick="window.open('./70-229/imageT12.jpg','Exhibit','height=275,width=610,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+What should you do?
+
+A. Rewrite the query to eliminate BETWEEN keyword 
+
+B. Add a join hint that includes the HASH option to the query 
+
+C. Add the WITH (INDEX(0)) table hint to the policy table 
+
+D. Update statistics on the Policy table 
+
+E. Execute the DBCC DBREINDEX statement on the policy table. 
+
+Ans:D 
+
+
+34. You are a database developer for an SQL Server 2000 database. You are planning to add new indexes, drop some indexes, and change other indexes to composite and covering indexes.<br /> 
+
+For documentation purposes, you must create a report that shows the indexes used by queries before and after you make changes.<br />
+
+What should you do? 
+
+A. Execute each query in SQL Query Analyzer, and use the <b>SHOWPLAN_TEXT</b> option. Use the output for the report. 
+
+B. Execute each query in SQL Query Analyzer, and use the <b>Show Execution Plan</b> option. Use the output for the report 
+
+C. Run the Index Tuning Wizard against a Workload file. Use the output for the report 
+
+D. Execute the <b>DBCC SHOW_STATISTICS</b> statement. Use the output for the report 
+
+Ans:A
+
+
+35. You are a database developer for a hospital. You are designing a SQL Server 2000 database that will contain physician and patient information. This database will contain a table named Physicians and a table named Patients.<br />
+
+Physicians treat multiple patients. Patients have a primary physician and usually have a secondary physician. The primary physician must be identified as the primary physician. The Patients table will contain no more than 2 million rows.<br /> 
+
+You want to increase I/O performance when data is selected from the tables. The database should be normalized to the third normal form.<br /> 
+
+Which script should you use to create the tables? 
+
+<br />
+A. CREATE TABLE Physicians <br />
+( <br />
+Physicians ID int NOT NULL CONSTRAINT PK_Physician PRIMARY KEY CLUSTERED <br />
+LastName_varchar(25) NOT NULL<br /> 
+) <br />
+GO <br />
+CRETAE TABLE Patient <br />
+( <br />
+PatientID bigint NOT NULL CONSTRAINT PK_Patients PRIMARY KEY CLUSTERED, <br />
+LastName varchar (25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+PrimaryPhysician int NOT NULL, <br />
+SecondaryPhysician int NOT NULL, <br />
+CONSTRAINT PK_Patients_Physicians1 FOREIGN KEY (PrimaryPhysician) REFERENCES Physicians (PhysicianID), <br />
+CONSTRAINT PK_Patients_Physicians2 FOREIGN KEY (SecondaryPhysician) REFERENCES Physicians (PhysicianID) <br />
+) 
+
+B. CREATE TABLE Patient <br />
+( <br />
+Patient ID smallint NOT NULL CONSTRAINT PK_Patient PRIMARY KEY CLUSTERED, <br />
+LastName_varchar(25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+PrimaryPhysician int NOT NULL, <br />
+SecondaryPhysician int NOT NULL, <br />
+) <br />
+GO <br />
+CRETAE TABLE Physicians <br />
+( <br />
+PhysicianID smallint NOT NULL CONSTRAINT PK_Physician PRIMARY KEY CLUSTERED, <br />
+LastName varchar (25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+CONSTRAINT PK_Physicians_Patients FOREIGN KEY (PhysicianID) REFERENCES Patients (PatientID) <br />
+) <br />
+
+C. CREATE TABLE Patients <br />
+( <br />
+PatientID bigint NOT NULL CONSTRAINT PK_Patients PRIMARY KEY CLUSTERED, <br />
+LastName varchar (25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+) <br />
+GO <br />
+CREATE TABLE Physicians <br />
+( <br />
+PhysicianID int NOT NULL CONSTRAINT PK_Physician PRIMARY KEY CLUSTERED, <br />
+LastName varchar (25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+) <br />
+GO <br />
+CREATE TABLE PatientPhysician <br />
+( <br />
+PatientPhysicianID bigint NOT NULL CONSTRAINT PK_PatientsPhysician PRIMARY KEY CLUSTERED, <br />
+PhysicianID int NOT NULL, <br />
+PatientID int NOT NULL, <br />
+PrimaryPhysician bit NOT NULL,<br /> 
+FOREIGN KEY (PhysicianID) REFERENCES Physicians (PhysicianID), <br />
+FOREIGN KEY (PatientID) REFERENCES Patients (PatientID) <br />
+) 
+
+D. CREATE TABLE Patients <br />
+( <br />
+PatientID int NOT NULL PRIMARY KEY, <br />
+LastName varchar (25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+) <br />
+GO <br />
+CREATE TABLE Physicians <br />
+( <br />
+PhysicianID int NOT NULL PRIMARY KEY, <br />
+LastName varchar (25) NOT NULL, <br />
+FirstName varchar (25) NOT NULL, <br />
+) <br />
+GO <br />
+CREATE TABLE PatientPhysician <br />
+( <br />
+PhysicianID int NOT NULL REFERENCES Physicians (PhysicianID), <br />
+PatientID int NOT NULL REFERENCES Patients (PatientID), PrimaryPhysician bit NOT NULL, <br />
+CONSTRAINT PK_PatientsPhysician PRIMARY KEY (PhysicianID, PatientID) <br />
+) <br />
+
+Ans:D
+
+36. You are the database developer for your company's SQL Server 2000 database. This database contains a table named Invoices. You are a member of the db_owner role.<br /> 
+
+Eric, a member of the HR database role, created the Trey_Research_Updateinvoices trigger on the Invoices table. Eric is out of the office, and the trigger is no longer needed.<br /> 
+
+You execute the following statement in the sales database to drop the trigger: 
+
+<br />
+DROP TRIGGER Trey Research_UpdateInvoices <br />
+<br />
+
+You receive the following error message: 
+
+<br />
+<b>Cannot drop the trigger 'Trey Research_UpdateInvoices', because it does not exist in the system catalog.</b><br />
+
+What should you do before you can drop the trigger? 
+
+A. Add your login name to the HR database role. 
+
+B. Qualify the trigger name with the trigger owner in the DROP TRIGGER statement. 
+
+C. Disable the trigger before executing the DROP TRIGGER statement. 
+
+D. Define the trigger number in the DROP TRIGGER statement. 
+
+E. Remove the text of the trigger from the sysobjects and syscomments system tables. 
+
+Ans:B 
+
+
+37. You have designed the database for a Web site that is used to purchase concert tickets. During a ticket purchase, a buyer views a list of available tickets, decides whether to buy the tickets, and then attempts to purchase the tickets. This list of available tickets is retrieved in a cursor.<br />
+
+For popular concerts, thousands of buyers might attempt to purchase tickets at the same time.<br />
+
+Because of the potentially high number of buyers at any one time, you must allow the highest possible level of concurrent access to the data.<br /> 
+
+How should you design the cursor? 
+
+A. Create a cursor within an explicit transaction, and set the transaction isolation level to REPEATABLE READ. 
+
+B. Create a cursor that uses optimistic concurrency and positioned updates. In the cursor, place the positioned UPDATE statements within an explicit transaction. 
+
+C. Create a cursor that uses optimistic concurrency. In the cursor, use UPDATE statements that specify the key value of the row to be updated in the WHERE clause, and place the UPDATE statements within an implicit transaction. 
+
+D. Create a cursor that uses positioned updates. Include the SCROLL_LOCKS argument in the cursor definition to enforce pessimistic concurrency. In the cursor, place the positioned UPDATE statements within an implicit transaction. 
+
+Ans: B
+
+
+38. You are a database developer for a company that conducts telephone surveys of consumer music preferences. As the survey responses are received from the survey participants, they are inserted into a table named SurveyData.<br /> 
+
+After all of the responses to a survey are received, summaries of the results are produced.<br />
+
+You have been asked to create a summary by sampling every fifth row of responses for a survey. You need to produce the summary as quickly as possible.<br /> 
+
+What should you do? 
+
+A. Use a cursor to retrieve all of the data for the survey. Use the FETCH RELATIVE 5 statement to select the summary data from the cursor. 
+
+B. Use a SELECT INTO statement to retrieve the data for the survey into a temporary table. Use a SELECT TOP 1 statement to retrieve the first row from the temporary table. 
+
+C. Set the query rowcount to five. Use a SELECT statement to retrieve and summarize the survey data. 
+
+D. Use a SELECT TOP 5 statement to retrieve and summarize the survey data. 
+
+Ans: A 
+
+
+39. You are a database developer for a lumber company. You are performing a one-time migration from a flat-file database to SQL Server 2000. You export the flat-file database to a text file in comma-delimited format.<br /> 
+
+The text file is shown in the Import file below: 
+
+<br />
+1111, '*4 Interior', 4, 'Interior Lumber', 1.12 <br />
+1112, '2*4 Exterior', 5, 'Exterior Lumber', 1.87 <br />
+2001, '16d galvanized',2, 'Bulk Nails', 2.02 <br />
+2221, '8d Finishing brads',3, 'Nails', 0.01 <br />
+<br />
+
+You need to import this file into SQL Server tables named Product and Category.<br /> 
+
+The product and category tables are shown in the product and Category Tables exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT13.jpg','Exhibit','height=150,width=505,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to import the data using the least amount of administrative effort.<br /> 
+
+What should you do? 
+
+A. Use the bcp utility, and specify the -t option. 
+
+B. Use the BULK INSERT statement, and specify the FIRE_TRIGGERS argument. 
+
+C. Use the SQL-DMO BulkCopy2 object and set the TableLock property to TRUE. 
+
+D. Use data transformation services to create two Transform Data tasks. For each task, map the text file columns to the database columns. 
+
+Ans:D 
+
+
+40. You are a database developer for a database named Accounts at Woodgrove Bank. A developer is creating a multi-tier application for the bank. Bank employees will use the application to manage customer accounts.<br /> 
+
+The developer needs to retrieve customer names from the accounts database to populate a drop-down list box in the application. A user of the application will use the list box to locate a customer account.<br /> 
+
+The database contains more than 50,000 customer accounts. Therefore, the developer wants to retrieve only 25 rows as the user scrolls through the list box. The most current list of customers must be available to the application at all times. <br />
+
+You need to recommend a strategy for the developer to use when implementing the drop-down list box.<br /> 
+
+What should you recommend?
+ 
+A. Create a stored procedure to retrieve all of the data that is loaded into the list box. 
+
+B. Use an API server-side cursor to retrieve the data that is loaded into list box. 
+
+C. Retrieve all of the data at once by using a SELECT statement, and then load the data into the list box. 
+
+D. Use a Transact-SQL server-side cursor to retrieve the data is loaded into the list box. 
+
+Ans: B 
+
+
+41. You are a database developer for Litware,Inc. You are restructuring the company's sales database. The database contains customer information in a table named customers.<br /> 
+
+This table includes a character field named country that contains the name of the country in which the customer is located. You have created a new table named country.<br /> 
+
+The scripts that were used to create the customers and country tables are shown below: 
+
+<br />
+CREATE TABLE dbo.Country <br />
+( <br />
+CountryID int IDENTITY(1,1) NOT NULL, <br />
+CountryName char(20) NOT NULL, <br />
+CONSTRAINT PK_Country PRIMARY KEY CLUSTERED (CountryID) <br />
+) <br />
+CREATE TABLE dbo.Customers <br />
+( <br />
+CustomerID int NOT NULL, <br />
+CustomerName char(30) NOT NULL,<br /> 
+Country char(20) NULL, <br />
+CONSTRAINT PK_Customers PRIMARY KEY CLUSTERED (CustomersID) <br />
+) <br />
+
+You must move the country information from the customers table into the new country tables as quickly as possible.<br /> 
+
+Which script should you use? 
+
+A. INSERT INTO Country (CountryName) <br />
+SELECT DISTINCT Country <br />
+FROM Customers 
+
+B. SELECT (*) AS ColID, cl.Country <br />
+INTO Country <br />
+FROM(SELECT DISTINCT Country FROM Customers)AS c1, <br />
+(SELECT DISTINCT Country FROM Customers) AS c2, <br />
+WHERE c1.Country >=c2.Country <br />
+GROUP BY c1.Country ORDER BY 1 
+
+C. DECLARE @Country char (20) <br /><br />
+DECLARE cursor_country CURSOR <br />
+FOR SELECT Country FROM Customers <br />
+OPEN cursor_country <br />
+FETCH NEXT FROM cursor_country INTO @Country <br /><br />
+WHILE (@@FETCH_STATUS <> -1) <br />
+BEGIN <br />
+If NOT EXISTS ( SELECT countryID <br />
+FROM Country <br />
+WHERE CountryName = @Country) <br />
+INSERT INTO Country (CountryName) VALUES (@Country) <br />
+FETCH NEXT FROM cursor_country INTO @Country <br />
+END<br /><br />
+CLOSE cursor_country<br /> 
+DEALLOCATE cursor_country
+
+D. DECLARE @SQL varchar (225) <br />
+SELECT @SQL = 'bcp "SELECT ColID = COUNT(*), c1. Country' + <br />
+'FROM (SELECT DISTINCT Country FROM Sales..Customers) AS <br />
+cl,'+ <br />
+WHERE c1.Country >= c2.Country' + <br />
+'GROUP BY c1.Country ORDER BY 1" ' + <br />
+'query out c:\country.txt -c' <br />
+EXEC master..xp_cmdshell @SQL, no_output <br />
+EXEC master..xp_cmdshell 'bcp Sales..country in c:\country. Txt-c', no_output 
+
+Ans: C 
+
+WARNING!<br>
+The answer B fourth row had a typo with c1 incorrectly, should be c2 (corrected).
+
+42. You are a database developer for Contoso, Ltd. The company has a database named Human Resources that contains information about all employees and office locations.<br /> 
+
+The database also contains information about potential employees and office locations.<br /> 
+
+The tables that contain this information are shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT14.jpg','Exhibit','height=150,width=499,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Current employees are assigned to a location, and current locations have one or more employees assigned to them. Potential employees are not assigned to a location, and potential office locations do not have any employees assigned to them.<br />
+
+You need to create a report to display all current and potential employees and office locations. The report should list each current and potential location, followed by any employees who have been assigned to that location. Potential employees should be listed together.<br />
+
+Which script should you use? 
+
+A. SELECT l.LocationName, e.FirstName, e.LastName <br />
+FROM Employee AS e LEFT OUTER JOIN Location AS l <br />
+ON e.LocationID= l.LocationID <br />
+ORDER BY l.LocationName, e.LastName, e.FirstName 
+
+B. SELECT l.LocationName, e.FirstName, e.LastName <br />
+FROM Location AS l LEFT OUTER JOIN EMPLOYEE AS l <br />
+ON e.LocationID= l.LocationID <br />
+ORDER BY l.LocationName, e.LastName, e.FirstName 
+
+C. SELECT l.LocationName, e.FirstName, e.LastName <br />
+FROM Employee AS e FULL OUTER JOIN Location AS l <br />
+ON e.LocationID= l.LocationID <br />
+ORDER BY 1.LocationName, e.LastName, e.FirstName 
+
+D. SELECT l.LocationName, e.FirstName, e.LastName <br />
+FROM Employee AS e CROSS JOIN Location AS l <br />
+ORDER BY l.LocationName, e.LastName, e.FirstName 
+
+E. SELECT l.LocationName, e.FirstName, e.LastName <br />
+FROM Employee AS e, Location AS l <br />
+ORDER BY l.LocationName, e.LastName, e.FirstName 
+
+
+Ans: C 
+
+WARNING: in the orig razor the answer "E" was missing.
+
+43.  You are designing a database for a Web-based ticket reservation application. There might be 500 or more tickets available for any single event. Most users of the application will view fewer than 50 of the available tickets before purchasing tickets. However, it must be possible for a user to view the entire list of available tickets.<br /> 
+
+As the user scrolls through the list, the list should be updated to reflect tickets that have been sold to other users. The user should be able to select tickets from the list and purchase the tickets.<br /> 
+
+You need to design a way for the user to view and purchase available tickets.<br /> 
+
+What should you do? 
+
+A. Use a scrollable static cursor to retrieve the list of tickets. Use positioned updates within the cursor to make purchases. 
+
+B. Use a scrollable dynamic cursor to retrieve the list of tickets. Use positioned updates within the cursor to make purchases. 
+
+C. Use stored procedures to retrieve the list of tickets. Use a second stored procedure to make purchase. 
+
+D. Use a user-defined function to retrieve the list of tickets. Use a second stored procedure to make purchase. 
+
+Ans: B 
+
+
+44. You are a database consultant. You have been hired by a local dog breeder to develop a database. This database will be used to store information about the breeder's dogs.<br /> 
+
+You create a table named Dogs by using the following script: 
+
+<br />
+CREATE TABLE[dbo].[Dogs] <br />
+( <br />
+[DogID] [int] NOT NULL, <br />
+[BreedID] [int] NOT NULL, <br />
+[Date of Birth] [datetime] NOT NULL, <br />
+[WeightAtBirth] [decimal] (5, 2) NOT NULL, <br />
+[NumberOfSiblings] [int] NULL, <br />
+[MotherID] [int] NOT NULL, <br />
+[FatherID] [int] NOT NULL <br />
+)_on [PRIMARY] <br />
+GO <br />
+ALTER TABLE [dbo].[Dogs] WITH NOCHECK ADD <br />
+CONSTRAINT [PK_Dogs]PRIMARY KEY CLUSTERED <br />
+( <br />
+[DogID] <br />
+) ON [PRIMARY]<br /> 
+GO<br /> 
+<br />
+
+You must ensure that each dog has a valid value for the MotherID and FatherID columns. You want to enforce this rule while minimizing disk I/O.<br /> 
+
+What should you do? 
+
+A. Create an ALTER INSERT trigger on the dogs table that rolls back the transaction if the MotherID or FatherID column is not valid. 
+
+B. Create a table-level CHECK constraint on the MotherID and FatherID columns. 
+
+C. Create two FOREIGN KEY constraints,  one constraint on the MotherID column and one constraint on the FatherID column. Specify that each constraint reference the DogID column. 
+
+D. Create a rule and bind it to the MotherID. Bind the same rule to the FatherID column. 
+
+Ans:C 
+
+
+45. You are the database developer for a company that provides consulting services. The company maintains data about its employees in a table named Employee.<br /> 
+
+The script that was used to create the employee table is shown below: 
+
+<br />
+CREATE TABLE Employee <br />
+( <br />
+EmployeeID int NOT NULL, <br />
+EmpType char (1) NOT NULL, <br />
+EmployeeName char (50) NOT NULL, <br />
+Address char (50) NULL,<br /> 
+Phone char (20) NULL, <br />
+CONSTRAINT PK_Employee PRMARY KEY (Employee ID) <br />
+) <br />
+<br />
+
+The Emp type column in this table is used to identify employees as Executive, Administrative, or Consultants. You need to ensure that the administrative employees can Add, Update, or Delete data for non-executive employees only.<br /> 
+
+What should you do? 
+
+A. Create a view, and include the WITH ENCRYPTION clause. 
+
+B. Create a view, and include the WITH CHECK OPTION clause. 
+
+C. Create a view, and include the SCHEMABINDING clause. 
+
+D. Create a view, and build a covering index on the view. 
+
+E. Create a user-defined function that returns a table containing the non-executive employees. 
+
+Ans:B 
+
+
+46. You are a database developer for an electric utility company. When customers fail to pay the balance on a billing statement before the statement due date, the balance of the billing statement needs to be increased by 1 percent each day until the balance is paid.<br /> 
+
+The company needs to track the number of overdue billing statements. You create a stored procedure to update the balances and to report the number of billing statements that are overdue.<br /> 
+
+The stored procedure is shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT15.jpg','Exhibit','height=475,width=554,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Each time the stored procedure executes without error, it reports that zero billing statements are overdue. However, you observe that balances are being updated by the procedure.<br /> 
+
+What should you do to correct the problem? 
+
+
+A. Replace the lines 12-17 of the stored procedure with the following: Return @@ROWCOUNT 
+
+B. Replace line 5-6 of the stored procedure with the following: <br />
+DECLARE @count int <br />
+Replace lines 12-17 with the following: <br />
+SET@Count = @ROWCOUNT <br />
+If @@ERROR = 0 <br />
+Return @Count <br />
+Else <br />
+Return -1 
+
+C. Replace line 5 of the stored procedure with the following: <br />
+DECLARE @Err int, @Count int <br /><br />
+Replace lines 12-17 with the following: <br />
+SELECT @Err = @@ERROR, @Count = @@ROWCOUNT <br />
+IF @Err = 0 <br />
+Return @Count <br />
+Else <br />
+Return @Err 
+
+D. Replace line 5 of the stored procedure with the following: Return @@Error 
+
+E. Replace line 5 of the stored procedure with the following <br />
+DECLARE @Err int, @Count int <br />
+Replace line 9 with the following: <br />
+SET Balance = Balance 1.01, @Count = Count (*) <br />
+Replace line 15 with the following: <br />
+Return @Count 
+
+Ans:C 
+
+
+47. You are a database developer for an online electronics company. The company's product catalog is contained in a table named Products.<br /> 
+
+The Products table is frequently accessed during normal business hours. Modifications to the Products table are written to a table named PendingProductUpdate.<br /> 
+
+The tables are shown in the exhibit: 
+ 
+<button
+onClick="window.open('./70-229/imageT16.jpg','Exhibit','height=150,width=501,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+The PendingProductUpdate table will be used to update the Products table after business hours. The database server runs SQL Server 2000 and is set to 8.0 compatibility mode.<br /> 
+
+You need to create a script that will be used to update the products table.<br />
+
+Which script should you use? 
+
+A. UPDATE Products <br />
+SET p1.[Description]=p2.[Description], p1.UnitPrice = <br />
+P2.UnitPrice <br />
+FROM Product p1, PendingProductUpdate p2 <br />
+WHERE p1.ProductID= p2.ProductID <br />
+GO <br />
+TRUNCATE TABLE PendingProductUpdate <br />
+GO 
+
+B. UPDATE Products p1 
+SET [Description]=p2.[Description], UnitPrice=P2.UnitPrice 
+FROM Product, PendingProductUpdate p2 
+WHERE p1.ProductID= p2.ProductID 
+GO 
+TRUNCATE TABLE PendingProductUpdate 
+GO 
+
+C. UPDATE Products p1 <br />
+SET p1.[Description]=p2.[Description], p1.UnitPrice = <br />
+P2.UnitPrice <br />
+FROM (SELECT [Description], UnitPrice <br />
+FROM PendingProductUpdate p2 <br />
+WHERE p1.ProductID= p2.ProductID <br />
+GO <br />
+TRUNCATE TABLE PendingProductUpdate <br />
+GO 
+
+D. UPDATE p1 <br />
+SET p1.[Description]=p2.[Description], p1.UnitPrice = p2.UnitPrice<br />
+FROM Products p1, PendingProductUpdate p2<br /> 
+WHERE p1.ProductID= p2.ProductID <br />
+GO <br />
+TRUNCATE TABLE PendingProductUpdate <br />
+ 
+
+Ans: D
+
+
+48. You are the database developer for a sporting goods company that exports products to customers worldwide. The company stores its sales information in a database named sales. Customer names are stored in a table named Customer in this database.<br /> 
+
+The script that was used to create this table is shown below: 
+
+<br />
+CREATE TABLE customers ( <br />
+CustmerID int NOT NULL, <br />
+CustomerName varchar(30) NOT NULL, <br />
+ContactName varchar(30) NULL,<br /> 
+Phone varchar(20) NULL,<br /> 
+Country varchar(30) NOT NULL, <br />
+CONSTRAINT PK_Customers PRIMARY KEY (CustomerID) <br />
+) <br />
+<br />
+
+There are usually only one or two customers per country. However, some countries have as many as 20 customers. Your company's marketing department wants to target its advertising to countries that have more than 10 customers.<br /> 
+
+You need to create a list of these countries for the marketing department.<br /> 
+
+Which script(s) should you use? 
+
+A. SELECT Country FROM Customers<br /> 
+GROUP BY Country HAVING COUNT (Country)>10 
+
+B. SELECT TOP 10 Country FROM Customers 
+
+C. SELECT TOP 10 Country FROM Customers <br />
+FROM (SELECT DISTINCT Country FROM Customers) AS X <br />
+GROUP BY Country HAVING COUNT(*)> 10 <br />
+
+D. SELECT Country, COUNT (*) as "NumCountries" <br />
+FROM Customers <br />
+GROUP BY Country ORDER BY NumCountries Desc 
+
+Ans: A 
+
+WARNING! Answer D had here a "SET ROWCOUNT 10" as the first line, in the real exam it is NOT there!
+
+49. You are a database developer for a sales organization. Your database has a table named Sales that contains summary information regarding the sales orders from salespeople.<br /> 
+
+The sales manager asks you to create a report of the salespeople who had the 20 highest total sales.<br /> 
+
+Which query should you use to accomplish this? 
+
+A. SELECT TOP 20 PERCENT LastName, FirstName, SUM (OrderAmount) AS ytd <br />
+FROM sales <br />
+GROUP BY LastName, FirstName <br />
+ORDER BY 3 DESC 
+
+B. SELECT LastName, FirstName, COUNT(*) AS sales <br />
+FROM sales <br />
+GROUP BY LastName, FirstName <br />
+HAVING COUNT (*) > 20 <br />
+ORDER BY 3 DESC 
+
+C. SELECT TOP 20 LastName, FirstName, MAX(OrderAmount) AS ytd <br />
+FROM sales <br />
+GROUP BY LastName, FirstName <br />
+ORDER BY 3 DESC 
+
+D. SELECT TOP 20 LastName, FirstName, SUM (OrderAmount) AS ytd <br />
+FROM sales <br />
+GROUP BY LastName, FirstName <br />
+ORDER BY 3 DESC 
+
+E. SELECT TOP 20 WITH TIES LastName, FirstName, SUM (OrderAmount) AS ytd <br />
+FROM sales <br />
+GROUP BY LastName, FirstName <br />
+ORDER BY 3 DESC 
+
+Ans: E 
+
+
+
+50. You are a database developer for a travel agency. A table named FlightTimes in the Airlines database contains flight information for all airlines.<br /> 
+
+The travel agency uses an intranet-based application to manage travel reservations. This application retrieves flight information for each airline from the FlightTimes table. Your company primarily works with one particular airline. In the Airlines database, the unique identifier for this airline is 101.<br />
+
+The application must be able to request flight times without having to specify a value for the airline. The application should be required to specify a value for the airline only if a different airline's flight times are needed.<br />
+
+What should you do? 
+
+A. Create two stored procedures, and specify that one of the stored procedures should accept a parameter and that the other should not. 
+
+B. Create a user-defined function that accepts a parameter with a default value of 101. 
+
+C. Create a stored procedure that accepts a parameter with a default value of 101. 
+
+D. Create a view that filters the FlightTimes table on a value of 101. 
+
+E. Create a default of 101 on the FlightTimes table. 
+
+Ans: C
+
+
+51. You are a database developer for Wingtip Toys.<br /> 
+
+You have created an order entry database that includes two tables, as shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT17.jpg','Exhibit','height=150,width=469,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Users enter orders into the entry application. When a new order is entered, the data is saved to the Order and LineItem tables in the order entry database.<br /> 
+
+You must ensure that the entire order is saved successfully.<br />
+
+Which script should you use? 
+
+A. BEGIN TRANSACTION Order  <br />
+INSERT INTO Order VALUES (@ID, @CustomerID, @OrderDate)  <br />
+INSERT INTO LineItem VALUES (@ItemID, @ID, @ProductID, @Price)  <br />
+SAVE TRANSACTION Order 
+
+B. INSERT INTO Order VALUES (@ID, @CustomerID, @OrderDate)  <br />
+INSERT INTO LineItem VALUES (@ItemID, @ID, @ProductID, @Price)  <br />
+IF (@@Error = 0)  <br />
+COMMIT TRANSACTION  <br />
+ELSE  <br />
+ROLLBACK TRANSACTION 
+
+C. BEGIN TRANSACTION  <br />
+INSERT INTO Order VALUES (@ID, @CustomerID, @OrderDate)  <br />
+IF (@@Error = 0)  <br />
+BEGIN  <br />
+INSERT INTO LineItem  <br />
+VALUES (@ItemID, @ID, @ProductID, @Price)  <br />
+ <br />
+IF (@@Error = 0)  <br />
+COMMIT TRANSACTION  <br />
+ELSE  <br />
+ROLLBACK TRANSACTION  <br />
+END <br />
+ELSE <br />
+ROLLBACK TRANSACTION <br />
+END
+
+D. BEGIN TRANSACTION  <br />
+INSERT INTO Order VALUES (@ID, @CustomerID, @OrderDate)  <br />
+IF (@@Error = 0)  <br />
+COMMIT TRANSACTION  <br />
+ELSE  <br />
+ROLLBACK TRANSACTION  <br />
+BEGIN TRANSACTION  <br />
+INSERT INTO LineItem VALUES (@ItemID, @ID, @ProductID, @Price)  <br />
+IF (@@Error = 0)  <br />
+COMMIT TRANSACTION  <br />
+ELSE  <br />
+ROLLBACK TRANSACTION  
+
+Ans:C 
+
+
+52. You are a database developer for a vacuum sales company. The company has a database named Sales that contains tables named VacuumSales and Employee.<br /> 
+
+Sales information is stored in the VacuumSales table. Employee information is stored in the Employee table. The Employee table has a bit column named IsActive. This column indicates whether an employee is currently employed. 
+<br />
+
+The Employee table also has a column named EmployeeID that uniquely identifies each employee. All sales entered into the VacuumSales table must contain an employee ID of a currently employed employee.<br />
+
+How should you enforce this requirement? 
+
+A. Use the Distributed Transaction Coordinator to enlist the employee table in a distributed transaction that will roll back the entire transaction if the employee ID is not active. 
+
+B. Add a CHECK constraint on the EmployeeID column of the VacuumSales table. 
+
+C. Add a Foreign KEY constraint on the EmployeeID column of the VacuumSales table that references the EmployeeID column in the Employee table. 
+
+D. Add a FOR INSERT trigger on the Vacuumsales table. In the trigger, join the Employee table with the inserted table based on the EmployeeID column, and test the IsActive column. 
+
+Ans: D 
+
+
+53. You are a database developer for an online brokerage firm. The prices of the stocks owned by customers are maintained in a SQL Server 2000 database.<br /> 
+
+To allow tracking of the stock price history, all updates of stock prices must be logged. To help correct problems regarding price updates, any error that occurs during an update must also be logged.<br />
+
+When errors are logged, a message that identifies the stock producing the error must be returned to the client application. <br />
+
+You must ensure that the appropriate conditions are logged and that the appropriate messages are generated.<br /> 
+
+Which procedure should you use? 
+
+A. CREATE PROCEDURE UpdateStockPrice @StockID int, @Price decimal  <br />
+AS BEGIN  <br />
+DECLARE @Msg varchar(50)  <br />
+UPDATE Stocks SET CurrentPrice = @Price  <br />
+WHERE STockID = @ StockID  <br />
+AND CurrentPrice <> @ Price  <br />
+IF @@ERROR <> 0  <br />
+RAISERROR ('Error %d occurred updating Stock %d.', 10, 1, @@ERROR, @StockID) WITH LOG  <br />
+IF @@ROWCOUNT > 0  <br />
+BEGIN  <br />
+SELECT @Msg = 'Stock' + STR (@StockID) + 'updated to' + STR (@Price) + '.'  <br />
+EXEC master. . xp_LOGEVENT 50001, @Msg  <br />
+END  <br />
+END 
+
+B. CREATE PROCEDURE UpdateStockPrice @StockID int, @Price decimal  <br />
+AS BEGIN  <br />
+UPDATE Stocks SET CurrentPrice = @Price  <br />
+WHERE STockID = @ StockID  <br />
+AND CurrentPrice <> @ Price  <br />
+IF @@ERROR <> 0  <br />
+PRINT 'ERROR' + STR(@@ERROR) + 'occurred updating Stock' +STR (@StockID)+ '.'  <br />
+IF @@ROWCOUNT > 0  <br />
+PRINT 'Stock' + STR (@StockID) + 'updated to' + STR (@Price) + '.'  <br />
+END 
+
+C. CREATE PROCEDURE UpdateStockPrice @StockID int, @Price decimal  <br />
+AS BEGIN  <br />
+DECLARE @Err int, @RCount int, @Msg varchar(50)  <br />
+UPDATE Stocks SET CurrentPrice = @Price  <br />
+WHERE STockID = @ StockID  <br />
+AND CurrentPrice <> @ Price  <br />
+SELECT @Err = @@ERROR, @RCount = @@ROWCOUNT  <br />
+IF @Err <> 0  <br />
+BEGIN  <br />
+SELECT @Mag = 'Error' + STR(@Err) + 'occurred updating Stock' + STR (@StockID) + '.'  <br />
+EXEC master..xp_logevent 50001, @Msg  <br />
+END  <br />
+IF @RCOUNT > 0  <br />
+BEGIN  <br />
+SELECT @Msg = 'Stock' + STR (@StockID) + 'updated to' + STR (@Price) + '.'  <br />
+EXEC master. . xp_LOGEVENT 50001, @Msg  <br />
+END  <br />
+END 
+
+D. CREATE PROCEDURE UpdateStockPrice @StockID int, @Price decimal AS BEGIN <br />
+<br />
+DECLARE @Err int, @RCount int, @Msg varchar (50) <br />
+<br />
+UPDATE Stocks SET CurrentPrice = @Price  <br />
+WHERE STockID = @StockID  <br />
+AND CurrentPrice <> @Price  <br />
+<br />
+SELECT @Err = @@ERROR, @RCount = @@ROWCOUNT  <br />
+If @Err <> 0  <br />
+RAISEERROR ('Error %d occurred updating Stock %d.', 10, 1, @Err, @StockID) WITH LOG  <br />
+If @RCount > 0  <br />
+BEGIN  <br />
+SELECT @Msg = 'Stock' + STR (@StockID) + 'update to' + STR (@Price) + '.'  <br />
+EXEC master. . xp_logevent 50001, @Msg  <br />
+END  <br />
+<br />
+END  <br />
+
+Ans: D 
+
+
+54. You are a database developer for a loan servicing company. You are designing database transactions to support a new data entry application.<br /> 
+
+Users of the new database entry application will retrieve loan information from a database. Users will make any necessary changes to the information and save the updated information to the database.<br /> 
+
+How should you design these transactions? (see Exhibit, Drag and Drop style)<br />
+
+<button
+onClick="window.open('./70-229/imageT1.jpg','Exhibit','height=355,width=625,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+ 
+A. Retrive loan information from the database. 
+
+B. The user reviews and modifies one piece of loan information. 
+
+C. Begin a transaction.
+
+D. Save the update information in the database.
+
+E. Commit the transaction.
+
+F. Repeat the modify and update process for each piece of loan information.
+
+G. The user reviews and modifies all of the loan information. 
+
+H. Roll back the transaction.     
+  
+Ans: A,B,C,D,E,F
+
+<button
+onClick="window.open('./70-229/imageT2.jpg','Exhibit','height=325,width=625,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+
+55. You are a developer for a company that leases trucks. The company has created a Web site that customer can be used to reserve trucks. You are designing the SQL server 2000 database to support the Web site.<br />
+
+New truck reservations are inserted into a table named Reservations. Customers who have reserved a truck can return to the Web site and update their reservation. When a reservation is updated, the entire existing reservation must be copied to a table named History.<br />
+
+Occasionally, customers will save an existing reservation without actually changing any of the information about the reservation. In this case, the existing reservation should not be copied to the History table.<br /> 
+
+You need to develop a way to create the appropriate entries in the History table.<br /> 
+
+What should you do? 
+
+A. Create a trigger on the reservations table to create the History table entries. 
+
+B. Create a cascading referential integrity constraint on the reservations table to create the History table entries. 
+
+C. Create a view on the reservations table. Include the <b>WITH SCHEMA BINDING</b> option in the view definition. 
+
+D. Create a view on the Reservations table. Include the <b>WITH CHECK OPTION</b> clause in the view definition. 
+
+Ans:A 
+
+
+56. You are a database developer for Proseware,Inc. The company has a database that contains information about companies located within specific postal codes. This information is contained in the Company table within this database.<br /> 
+
+Currently, the database contains company data for five different postal codes. The number of companies in a specific postal code currently ranges from 10 to 5,000. More companies and postal codes will be added to the database over time. <br />
+
+You are creating a query to retrieve information from the database. You need to accommodate new data by making only minimal changes to the database. The performance of your query must not be affected by the number of companies returned.<br />
+
+You want to create a query that performs consistently and minimizes future maintenance.<br />
+
+What should you do? 
+
+A. Create a stored procedure that requires a postal code as a parameter. Include the WITH RECOMPILE option when the procedure is created. 
+
+B. Create one stored procedure for each postal code. 
+
+C. Create one view for each postal code. 
+
+D. Split the company table into multiple tables so that each table contains one postal code. Build a partitioned view on the tables so that the data can still be viewed as a single table. 
+
+Ans: A
+
+
+57. You are a database developer for Woodgrove Bank. You are implementing a process that loads data into a SQL Server 2000 database. As a part of this process, data is temporarily loaded into a table named Staging.<br /> 
+
+When the data load process is complete, the data is deleted from this table. You will never need to recover this deleted data.<br /> 
+
+You need to ensure that the data from the Staging table is deleted as quickly as possible.<br />
+
+What should you do? 
+
+A. Use a DELETE statement to remove the data from the table. 
+
+B. Use a TRUNCATE TABLE statement to remove the data from the table. 
+
+C. Use a DROP TABLE statements to remove the data from the table. 
+
+D. Use an updatable cursor to access and remove each row of data from the table. 
+
+Ans:B 
+
+
+58. You are a database developer for an automobile dealership. You are designing a database to support a Web site that will be used for purchasing automobiles. A person purchasing an automobile from the Web site will be able to customize his or her order by selecting the model and color.<br />
+
+The manufacturer makes four different models of automobiles. The models can be ordered in any one of five colors. A default color is assigned to each model.<br /> 
+
+The models are stored in a table named Models, and the colors are stored in a table named Colors.<br /> 
+
+These tables are shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT18.jpg','Exhibit','height=135,width=488,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You need to create a list of all possible model and color combinations.<br /> 
+
+Which script should you use? 
+
+A. SELECT m.ModelName, c.ColorName <br />
+FROM Colors AS c FULL OUTER JOIN Models AS m <br />
+ON c.ColorID = m.ColorID <br />
+ORDER BY m.ModelName, c.ColorName 
+
+B. SELECT m.ModelName, c.ColorName <br />
+FROM Colors AS c CROSS JOIN Models AS m <br />
+ORDER BY m.ModelName, c.ColorName 
+
+C. SELECT m.ModelName, c.ColorName <br />
+FROM Colors AS m INNER JOIN Colors AS c <br />
+ON m.ColorID = c.ColorID <br />
+ORDER BY m.ModelName, c.ColorName 
+
+D. SELECT m.ModelName, c.ColorName <br />
+FROM Colors AS c LEFT OUTER JOIN Models AS m <br />
+ON c.ColorID = m.ColorID <br />
+UNION <br />
+SELECT m.ModelName, c.ColorName <br />
+FROM Colors AS c RIGHT OUTER JOIN Models AS m <br />
+ON c.ColorID = m.ColorID <br />
+ORDER BY m.ModelName, c.ColorName <br />
+
+E. SELECT m.ModelName <br />
+FROM Models AS m <br />
+UNION <br />
+SELECT c.ColorName <br />
+FROM Colors AS c <br />
+ORDER BY m.ModelName 
+
+Ans:B 
+
+
+59. You are a database developer for Adventure Works. A large amount of data has been exported from a human resources application to a text file.<br /> 
+
+The format file that was used to export the human resources data is shown below:  
+
+<br /></b>
+1 SQLINT 0 4 "," 1 EmployeeID "" <br />
+2 SQLCHAR 0 50 "," 2 FirstName SQL.Latin1_Gen... <br />
+3 SQLCHAR 0 50 "," 3 LastName SQL.Latin1_Gen... <br />
+4 SQLCHAR 0 10 "," 4 SSN SQL.Latin1_Gen... <br />
+5 SQLDATETIME 0 8 "," 5 Hire_Date "" <br />
+<br />
+
+
+You need to import that data programmatically into a table named Employee.<br /> 
+
+The Employee table is shown in the exhibit table:
+
+<button
+onClick="window.open('./70-229/imageT19.jpg','Exhibit','height=170,width=210,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You need to run this import as quickly as possible.<br /> 
+
+What should you do? 
+
+A. Use SQL-DMO and Microsoft Visual Basic Scripting Edition to create a table object. Use the ImportData method of the table object to load the table. 
+
+B. Use SQL-DMO and Microsoft Visual Basic Scripting Edition to create a database object. Use the CopyData property of the database object to load the table. 
+
+C. Use data transformation services and Microsoft Visual Basic Scripting edition to create a Package object. Create a connection object for the text file. Add a BulkInsertTask object to the Package object. Use the Execute method of the package object to load the data. 
+
+D. Use data transformation services and Microsoft Visual Basic Scripting edition to create a Package object. Create a connection object for the text file. Add a BulkInsertTask2 object to the Package object. Use the Execute method of the ExecuteSQLTask2 object to load the data. 
+
+Ans: C 
+
+
+60. You are a database developer for an insurance company. The company has a database named Policies. You have designed stored procedures for this database that will use cursors to process large result sets.<br /> 
+
+Analysts who use the stored procedures report that there is a long initial delay before data is displayed to them. After the delay, performance is adequate. Only data analysts, who perform data analysis, use the Policies database.<br />
+
+You want to improve the performance of the stored procedures.<br /> 
+
+Which script should you use? 
+
+A. EXEC sp_configure 'cursor threshold', 0 
+
+B. EXEC sp_dboption 'Policies' SET CURSOR_CLOSE_ON_COMMIT ON 
+
+C. SET TRANSACTION ISOLATION LEVEL SERIALIZABLE 
+
+D. ALTER DATABASE Policies SET CURSOR_DEFAULT LOCAL 
+
+Ans:A 
+
+
+61. You are a database developer for a bookstore. You are designing a stored procedure to process XML documents. 
+<br />
+
+You use the following script to create the stored procedure: 
+
+<br />
+CREATE PROCEDURE spParseXML (@xmlDocument varchar(1000)) AS <br />
+DECLARE @dochandle int <br />
+EXEC sp_xml_preparedocument @docHandle OUTPUT, @xmlDocument <br />
+<br />
+SELECT * <br />
+FROM OPENXML (@docHandle, '/ROOT/Category/Product',2) <br />
+WITH (ProductID int, <br />
+	CategoryID int, <br />
+	CategoryName varchar (50), <br />
+	[Description] varchar (50)) <br />
+<br />
+EXEC sp_xml_removedocument @docHandle <br />
+<br />
+
+You execute this stored procedure and use an XML documents as the input document.<br /> 
+
+The XML document is shown in the XML Document exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT20.jpg','Exhibit','height=420,width=700,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You receive the output as shown in this exhibit : 
+
+<button
+onClick="window.open('./70-229/imageT21.jpg','Exhibit','height=190,width=641,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You need to replace the body of the stored procedure.<br /> 
+
+Which script should you use? 
+
+A. SELECT * <br />
+FROM OPENXML (@docHandle, '/ROOT/category/Product', 1) <br />
+WITH (ProductID int, <br />
+CategoryID int, <br />
+CategoryName varchar(50), <br />
+[Description] varchar (50)) 
+
+B. SELECT * <br />
+FROM OPENXML (@docHandle, '/ROOT/category/Product', 8) <br />
+WITH (ProductID int, <br />
+CategoryID int, <br />
+CategoryName varchar(50), <br />
+[Description] varchar (50)) 
+
+C. SELECT * <br />
+FROM OPENXML (@docHandle, '/ROOT/category/Product', 1) <br />
+WITH (ProductID int, <br />
+CategoryID int, <br />
+CategoryName varchar(50), '@CategoryName', <br />
+[Description] varchar (50)) 
+
+D. SELECT * <br />
+FROM OPENXML (@docHandle, '/ROOT/category/Product', 1) <br />
+WITH (ProductID int, <br />
+CategoryID int '../@CategoryID', <br />
+CategoryName varchar(50), '../@CategoryName', <br />
+[Description] varchar (50)) 
+
+Ans:D 
+
+
+62. You are a database developer for Adventure Works. You are designing a script for the human resources department that will report yearly wage information.<br /> 
+
+There are three types of employee. Some employees earn an hourly wage, some are salaried, and some are paid commission on each sale that they make.<br /> 
+
+This data is recorded in a table named Wages, which was created by using the following script: 
+
+<br />
+CREATE TABLE Wages <br />
+( <br />
+emp_id tinyint identity, <br />
+hourly_wage decimal NULL, <br />
+salary decimal NULL, <br />
+commission decimal NULL, <br />
+num_sales tinyint NULL <br />
+) <br />
+<br />
+
+An employee can have only one type of wage information.<br /> 
+
+You must correctly report each employee's yearly wage information.<br /> 
+
+Which script should you use? 
+
+A. SELECT CAST (hourly_wage +40 * 52 + <br />
+salary + <br />
+commission * num_sales AS MONEY)as YearlyWages <br />
+FROM Wages 
+
+B. SELECT CAST (COALESCE(hourly_wage +40 * 52, <br />
+salary, <br />
+commission * num_sales)AS MONEY)as YearlyWages <br />
+FROM Wages 
+
+C. SELECT CAST (CASE <br />
+WHEN((hourly_wage,) IS NOTNULL) THEN hourly_wage * 40 * 52 <br />
+WHEN(NULLIF(salary,NULL)IS NULL)THEN salary <br />
+ELSE commission * num_sales <br />
+END <br />
+AS MONEY) <br />
+As_yearlyWages <br />
+FROM Wages 
+
+D. SELECT CAST(CASE <br />
+WHEN (hourly_wage IS NULL)THEN salary <br />
+WHEN (salary IS NULL)THEN commission*num_sales <br />
+ELSE commission * num_sales <br />
+END <br />
+AS MONEY) <br />
+As YearlyWages <br />
+FROM Wages 
+
+Ans: B 
+ 
+
+63. You are a database developer for an insurance company. The company's regional offices transmit their sales information to the company's main office in an XML document. The XML documents are then stored in a table named SalesXML, which is located in a SQL Server 2000 database.<br /> 
+
+The data contained in the XML documents includes the names of insurance agents, the names of insurance policy owners, information about insurance policy beneficiaries, and other detailed information about the insurance policies.<br /> 
+
+You have created tables to store information extracted from the XML documents.<br /> 
+
+You need to extract this information from the XML documents and store it in the tables.<br />
+
+What should you do? 
+
+A. Use SELECT statements that include the FOR XML AUTO clause to copy the data from the XML documents into the appropriate tables. 
+
+B. Use SELECT statements that include the FOR XML EXPLICIT clause to copy the data from the XML documents into the appropriate tables. 
+
+C. Use the OPENXML function to access the data and to insert it into the appropriate tables. 
+
+D. Build a view on the SalesXML table that displays the contents of the XML documents. Use SELECT INTO statements to extract the data from this view into the appropriate tables. 
+
+Ans: C
+
+
+64. You are a database developer for an insurance company. You create a table named Insured, which will contain information about persons covered by insurance policies.<br /> 
+
+You use the script shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT22.jpg','Exhibit','height=340,width=654,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+A person covered by an insurance policy is uniquely identified by his or her name and birth date. An insurance policy can cover more than one person. A person cannot be covered more than once by the same insurance policy.<br />
+ 
+You must ensure that the database correctly enforces the relationship between insurance policies and the persons covered by insurance policies.<br />
+
+What should you do? 
+
+A. Add the PolicyID, InsuredName, and InsuredBirthDate columns to the primary key. 
+
+B. Add a UNIQUE constraint to enforce the uniqueness of the combination of the PolicyID, InsuredName, and InsuredBirthDate columns. 
+
+C. Add a CHECK constraint to enforce the uniqueness of the combination of the PolicyID, InsuredName, and InsuredBirthDate columns. 
+
+D. Create a clustered index on the PolicyID, InsuredName, and InsuredBirthDate columns. 
+
+Ans: B 
+
+
+65. You are designing a database for Tailspin Toys.<br /> 
+
+You review the database design,  shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT23.jpg','Exhibit','height=285,width=577,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to promote quick response times for queries and minimize redundant data.<br />
+
+What should you do? 
+
+A. Create a new table named CustomerContact. Add CustomerID, ContactName, and Phone columns to this table. 
+
+B. Create a new composite PRIMARY KEY constraint on the OrderDetails table. Include the OrderID, ProductID, and CustomerID columns in the constraint. 
+
+C. Remove the PRIMARY KEY constraint from the OrderDetails table. Use an IDENTITY column to create a surrogate key for the OrderDetails table. 
+
+D. Remove the CustomerID column from the OrderDetails table. 
+
+E. Remove the Quantity column from the OrderDetails table. Add a Quantity column to the Orders table. 
+
+Ans: D 
+
+
+66. You are a database developer for an automobile dealership. The company stores its automobile inventory data in a SQL Server 2000 database.<br /> 
+
+Many of the critical queries in the database join three tables named Make, Model, and Manufacturer. These tables are updated infrequently.<br /> 
+
+You want to improve the response time of the critical queries.<br />
+ 
+What should you do? 
+
+A. Create an indexed view on the tables. 
+
+B. Create a stored procedures that returns data from the tables. 
+
+C. Create a scalar user-defined function that returns data from the tables. 
+
+D. Create a table-valued user-defined function that returns data from the tables. 
+
+Ans:A 
+
+
+67. You are a database developer for an insurance company. The company has one main office and 18 regional offices.  <br />
+
+Each office has one SQL Server 2000 database. The regional offices are connected to the main office by a high-speed network.<br />
+
+The main office database is used to consolidate information from the regional office databases. The table in the main office database are partitioned horizontally.<br /> 
+
+The regional office location is used as part of the primary key for the main office database.<br />
+
+You are designing the physical replication model.<br /> 
+
+What should you do? 
+
+A. Configure the main office as a publishing Subscriber. 
+
+B. Configure the main office as a publisher with a remote distributor. 
+
+C. Configure the main office as a central publisher and the regional offices as Subscribers. 
+
+D. Configure the regional offices as Publishers and the man office as a central Subscriber. 
+
+Ans:D 
+
+
+68. You are a database developer for a clothing retailer. The company has a database named Sales. This database contains a table named Inventory.<br /> 
+
+The Inventory table contains the list of items for sale and the quantity available for each of those items.<br /> 
+
+When sales information is inserted into the database, this table is updated.<br /> 
+
+The stored procedure that updates the inventory table is shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT24.jpg','Exhibit','height=385,width=632,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+When this procedure executes, the database server occasionally returns the following error message: 
+
+<b>Transaction (Process ID 53) was deadlock on {lock} resources with another process and has been chosen as the deadlock victim. Rerun the transaction. </b><br />
+
+You need to prevent the error message from occurring while maintaining data integrity.<br /> 
+
+What should you do? 
+
+A. Remove the table hint. 
+
+B. Change the table hint to <b>UPDLOCK</b>. 
+
+C. Change the table hint to <b>REPEATABLEREAD</b>. 
+
+D. Set the transaction isolation level to <b>SERIALIZABLE</b>. 
+
+E. Set the transaction isolation level to <b>REPEATABLE READ</b>. 
+
+Ans:B 
+
+
+69. You are a database developer for wide world importers. The company tracks its order information in a SQL Server 2000 database. The database includes two tables that contain order details. The tables are named Order and LineItem. 
+<br />
+
+This is the script used to create the two tables:
+
+<br />
+<font color='green'>
+Create table Order<br />
+(<br />
+order_id int not null,<br />
+customer_id int not null, <br />
+order_date datetime not null, <br />
+contsraint DF_datetime default (getdate()) for order_date,<br />
+constraint PK_order primary key clustered (order_id)<br />
+)<br />
+<br />
+go
+<br /><br />
+Create table LineItem<br />
+(<br />
+item_id int primary key, <br />
+order_id int not null references Order(order_id), <br />
+product_id int not null, <br />
+price money not null<br />
+)
+<br />
+<br />
+go
+<br /><br />
+</font>
+
+The company's auditors have discovered that every item that was ordered on June 1, 2000 was entered with a price that was $10 more than its actual price.<br /> 
+
+You need to correct the data in the database as quickly as possible.<br />
+
+Which script should you use? 
+
+A. UPDATE 1 <br />
+SET Price = Price - 10 <br />
+FROM LineItem AS 1 INNER JOIN [Order] AS o <br />
+ON 1.OrderID = o.OrderID <br />
+WHERE o.OrderDate >= '6/1/2000'<br /> 
+AND o.OrderDate < '6/2/2000' 
+
+B. UPDATE 1 <br />
+SET Price = Price - 10 <br />
+FROM LineItem AS 1 INER JOIN [Order] AS o <br />
+ON 1.OrderID = o.OrderID <br />
+WHERE o.OrderDate = '6/1/2000' 
+
+C. DECLARE @ItemID int <br />
+DECLARE items_ursor CUSOR FOR <br /> 
+SELECT 1_ItemID <br />
+FROM LineItem AS 1 INNER JOIN [Order] AS o <br />
+ON l.OrderID = o.OrderID <br />
+WHERE o.OrderDate >= '6/1/2000' <br />
+AND o.OrderDate < '6/2/2000' <br />
+FOR UPDATE <br />
+OPEN items_cursor <br /> 
+FETCH NEXT FROM Items_cursor INTO @ItemID <br />
+WHILE @@FETCH_STATUS = 0 <br />
+BEGIN <br />
+UPDATE LineItem SET Price = Price - 10 <br />
+WHERE CURRENT OF items_cursor <br />
+FETCH NEXT FROM items_cursor INTO @ItemID <br />
+END <br />
+CLOSE items_cursor <br />
+DEALLOCATE items_cursor 
+
+D. DECLARE @OrderID int <br />
+DECLARE order_cursor CURSOR FOR <br /> 
+SELECT ordered FROM [Order] <br />
+WHERE OrderDate = '6/1/2000' <br />
+OPEN order_cursor <br />
+FETCH NEXT FROM order_cursor INTO @OrdeID <br />
+WHILE @@FETCH_STATUS = 0 <br />
+BEGIN <br />
+UPDATE LineItem SET Price = Price - 10 <br />
+WHERE OrderID= @OrderID <br />
+FETCH NEXT FROM order_cursor INTO @OrderID <br />
+END <br />
+CLOSE order_cursor <br />
+DEALLOCATE order_cursor 
+
+Ans:A 
+
+
+70. You are a database developer for a bookstore. Each month, you receive new supply information from your vendors in the form of an XML document.<br /> 
+
+The XML document is shown in the XML Document exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT25.jpg','Exhibit','height=290,width=675,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You are designing a stored procedure to read the XML document and to insert the data into a table named Products.<br />
+
+ The Products table is shown in the Product Table exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT26.jpg','Exhibit','height=175,width=295,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Which script should you use to create this stored procedure? 
+
+A. CREATE PROCEDURE spAddCatalogItems ( <br />
+@xmlDocument varchar (8000)) <br />
+AS <br />
+BEGIN <br />
+DECLARE @docHandle int <br />
+EXEC sp_xml_preparedocument @docHandle OUTPUT, @xmlDocument <br />
+INSERT INTO Products <br />
+EXEC sp_xml_preparedocument @docHandle OUTPUT, @xmlDocument <br />
+INSERT INTO Products <br />
+SELECT * FROM <br />
+OPENXML (@docHandle, '/ROOT/Category/Product', 1) <br />
+WITH Products <br />
+EXEC sp_xml_removedocument @docHandle <br />
+END 
+
+B. CREATE PROCEDURE spAddCatalogItems ( <br />
+@xmlDocument varchar (8000)) <br />
+AS <br />
+BEGIN <br />
+DECLARE @docHandle int <br />
+EXEC sp_xml_preparedocument @docHandle OUTPUT, @xmlDocument <br />
+INSERT INTO Products <br />
+SELECT * FROM OPENXML (@docHandle, '/ROOT/Category/Product', 1) <br />
+WITH (ProductID int './@ProductID', <br />
+CategoryID int '../@CategoryID', <br />
+[Description] varchar (100) './@Description') <br />
+EXEC sp_xml_removedocument @docHandle <br />
+END 
+
+C. CREATE PROCEDURE spAddCatalogItems ( <br />
+@xmlDocument varchar (8000)) <br />
+AS <br />
+BEGIN <br />
+INSERT IN|TO Products <br />
+SELECT * FROM OPENXML ( <br />
+@docHandle, '/ROOT/Category/Product', 1) <br />
+WITH (ProductID int, Description varchar (50)) <br />
+END 
+
+D. CREATE PROCEDURE spAddCatalogItems ( <br />
+@xmlDocument varchar (8000)) <br />
+AS <br />
+BEGIN <br />
+INSERT INTO Products <br />
+SELECT* FROM <br />
+OPENXML (@xmlDocument, '/ROOT/Category/Product',1) <br />
+WITH Products <br />
+END 
+
+Ans:B 
+
+
+71. You are a database developer for Trey Research. You are designing a SQL Server 2000 database that will be distributed with an application to numerous companies.<br /> 
+
+You create several stored procedures in the database that contain confidential information.<br /> 
+
+You want to prevent the companies from viewing this confidential information.<br />
+
+What should you do? 
+
+A. Remove the text of the stored procedures from the syscomments system table. 
+
+B. Encrypt the text of the stored procedures. 
+
+C. Deny SELECT permissions on the syscomments system table to the public role. 
+
+D. Deny SELECT permissions on the sysobjects system table to the public role. 
+
+Ans: B 
+
+
+72. You are a database developer for Southridge Video. The company stores its sales information in a SQL Server 2000 database.<br /> 
+
+You are asked to delete order records from this database that are more than five years old.<br /> 
+
+To delete the records, you execute the following statement in SQL Query Analyzer: 
+
+<br />
+DELETE FROM Orders WHERE OrderDate &lt; (dateadd(year, -5, getdate()))<br />
+<br />
+You close SQL Query Analyzer after you receive the following message: 
+
+<br /><b>
+(29979 row(s) affected) </b>
+<br />
+
+You examine the table and find that the old records are still in the table.<br /> 
+
+The Current Connection properties are shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT27.jpg','Exhibit','height=475,width=568,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+What should you do? 
+
+A. Delete records in the tables that reference the Orders table. 
+
+B. Disable triggers on the Orders table. 
+
+C. Execute a SET IMPLICIT_TRANSACTIONS OFF statement. 
+
+D. Execute a SET CURSOR_CLOSE_ON_COMMIT ON statement. 
+
+E. Change the logic in the DELETE statement. 
+
+Ans:C 
+
+
+73. You are a database developer for a telemarketing company. You are designing a database named CustomerContacts. This database will be updated frequently. The database will be about 1 GB in size.<br /> 
+
+You want to achieve the best possible performance for the database. You have 5 GB of free space on drive C.<br />
+
+Which script should you use to create the database? 
+
+A. CREATE DATABASE CustomerContacts <br />
+ON <br />
+(NAME = Contacts_database, <br />
+FILENAME = 'c:\data\contacts.mdf', <br />
+SIZE = 10, <br />
+MAXSIZE = 1GB <br />
+FILEGROWTH= 5) 
+
+B. CREATE DATABASE CustomerContacts <br />
+ON <br />
+(NAME = Contacts_dat, <br />
+FILENAME = 'c:\data\contacts.mdf', <br />
+SIZE = 10, <br />
+MAXSIZE = 1GB <br />
+FILEGROWTH= 10%) 
+
+C. CREATE DATABASE CustomerContacts <br />
+ON <br />
+(NAME = Contacts_dat, <br />
+FILENAME = 'c:\data\contacts.mdf', <br />
+SIZE = 100, <br />
+MAXSIZE = UNLIMITED) 
+
+D. CREATE DATABASE CustomerContacts <br />
+ON <br />
+(NAME = Contacts_dat, <br />
+FILENAME = 'c:\data\contacts.mdf', <br />
+SIZE = 1GB) 
+
+Ans:D 
+
+
+74. You are a database developer for WoodGrove Bank. The company stores its sales data in a SQL Server 2000 database.<br /> 
+
+You want to create an indexed view in this database.<br /> 
+
+To accomplish this, you execute the script shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT28.jpg','Exhibit','height=275,width=628,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+The index creation fails, and you receive an error message.<br /> 
+
+You want to eliminate the error message and create the index.<br /> 
+
+What should you do? 
+
+A. Add an ORDER BY clause to the view. 
+
+B. Add a HAVING clause to the view. 
+
+C. Change the NUMERIC_ROUNDABORT option to ON. 
+
+D. Change the index to a unique, nonclustered index. 
+
+E. Add the WITH SCHEMABINDING option to the view. 
+
+Ans:E
+
+
+75. You are a database developer for your company's SQL Server 2000 database. Another database developer named Andrea needs to be able to alter several existing views in the database. However, you want to prevent her from viewing or changing any of the data in the tables.<br /> 
+
+Currently, Andrea belongs only to the Public database role.<br />
+
+What should you do? 
+
+A. Add Andrea to the db_owner database role 
+
+B. Add Andrea to the db_ddladmin database role 
+
+C. Grant Andrea CREATE VIEW permissions. 
+
+D. Grant Andrea ALTER VIEW permissions 
+
+E. Grant Andrea REFERENCES permissions on the tables. 
+
+Ans: B 
+
+
+76. You are a database developer for a rapidly growing company. The company is expanding into new sales regions each month.<br /> 
+
+As each new sales region is added, one or more sales associates are assigned to the new region. Sales data is inserted into a table named RegionSales, which is located in the Corporate database.<br /> 
+
+The RegionSales table is shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT29.jpg','Exhibit','height=175,width=235,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Each sales associate should be able to view and modify only the information in the RegionSales table that pertains to his or her regions.<br /> 
+
+It must be as easy as possible to extend the solution as new regions and sales associates are added.<br />
+
+What should you do? 
+
+A. Use GRANT, REVOKE and DENY statements to assign permission to the sales associates. 
+
+B. Use SQL Server Enterprise Manager to assign permission on the RegionSales table. 
+
+C. Create one view on the RegionSales table for each sales region. Grant the sales associates permission to access the views that correspond to the sales region to which they have been assigned. 
+
+D. Create a new table named Security to hold combinations of sales associates and sales regions. Create stored procedures that allow or disallow modifications of the data in the RegionSales table by validating the user of the procedures against the security table. Grant EXECUTE permissions on the stored procedures to all sales associates. 
+
+E. Create a new table named Security to hold combinations of sales associates and sales regions. Create user-defined functions that allow or disallow modifications of the data in the RegionSales table by validating the user of the function against the security table. Grant EXECUTE permissions on the functions to all sales associates. 
+
+Ans:D
+
+
+77. You are a database developer for a toy company. Another developer, Marie, has created a table named ToySales. Neither you nor Marie is a member of the sysadmin fixed server role, but you are both members of db_owner database role.<br /> 
+
+The ToySales table stored the sales information for all departments in the company.<br /> 
+
+This table is shown in the exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT30.jpg','Exhibit','height=175,width=230,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You have created a view under your database login named vwDollSales to display only the information from the ToySales table that pertains to sales of dolls.<br /> 
+
+Employees in the dolls department should be given full access to the data. You have also created a view named vwActionFigureSales to display only the information that pertains to sales of action figures.<br /> 
+
+Employees in the action figures department should be given full access each other's data. The two departments currently have no access to the data.<br />
+
+Employees in the doll department are associated with the Doll database role. Employees in the action figures department are associated with the ActionFigure database role.<br /> 
+
+You must ensure that the two departments can view only their own data.<br /> 
+
+Which three actions should you take? (Each correct answer presents part of the solution. Choose three)<br /> 
+
+A. Transfer the ownership of the table and the views to the database owner. 
+
+B. Grant SELECT permissions on the ToySales table to your login. 
+
+C. Grant SELECT permissions on the vwDollSales view to the Doll database role. 
+
+D. Grant SELECT permission on the vwActionFigureSales view to the ActionFigure database role. 
+
+E. Deny SELECT permission on the ToySales table for the Doll database role. 
+
+F. Deny SELECT permissions on the ToySales table for the ActionFigure database role. 
+
+Ans:A,C,D 
+
+
+78. You are a database developer for your company's SQL Server 2000 database. The database is installed on a Microsoft Windows 2000 server computer. The database is in the default configuration.<br /> 
+
+All tables in the database have at least one index. SQL Server is the only application running on the server.<br />
+
+Database activity peaks during the day, when sales representatives enter and update sales transactions. Batch reporting is performed after business hours.<br /> 
+
+The sales representatives report slow updates and inserts.<br />
+
+What should you do? 
+
+A. Run System Monitor on the SQL Server:Access Methods counter during the day. Use the output from System Monitor to identify which tables need indexes. 
+
+B. Use the sp_configure system stored procedure to increase the number of locks that can be used by SQL Server. 
+
+C. Run SQL Profiler during the day. Select the SQL:BatchCompleted and RPC:Completed events and the EventClass and TextData data columns. Use the output from SQL Profiler as input to the index Tuning Wizard. 
+
+D. Increase the value of the min server memory option. 
+
+E. Rebuild indexes, and use a FILLFACTOR of 100. 
+
+Ans:C 
+
+
+79. You are a database developer for a shipping company. You have a SQL Server 2000 database that stores order information. The database contains tables named Order and OrderDetails.<br /> 
+
+The database resides on a computer that has four 9-GB disk drives available for data storage. The computer has two disk controllers. Each disk controller controls two of the drives. The Order and OrderDetail tables are often joined in queries.<br />
+
+You need to tune the performance of the database.<br /> 
+
+What should you do? (Each correct answer presents part of the solution. Choose two.)<br /> 
+
+A. Create a new filegroup on each of the four disk drives. 
+
+B. Create the clustered index for the <b>Order</b> table on a separate filegroup from the non-clustered indexes 
+
+C. Store the data and the clustered index for the <b>OrderDetail</b> table on one filegroup, and create the non-clustered indexes on another filegroup 
+
+D. Create the <b>order</b> table and its indexes on one filegroup, and create the <b>OrderDetail</b> table and its indexes on another filegroup 
+
+E. Create two filegroups that each consist of two disk drives connected to the same controller. 
+
+Ans: D,E 
+
+
+80. You are the database developer for a brokerage firm. The database contains a tablenamed Trades.<br /> 
+
+The script that was used to create this table is shown in the Script for Trades Table exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT31.jpg','Exhibit','height=260,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+The Trades table has frequent inserts and updates during the day. Reports are run against the table each night.<br /> 
+
+You execute the following statement in the SQL Query Analyzer: 
+
+<br /> 
+<b>DBCC SHOWCONTIG (Trades)</b><br />
+
+<button
+onClick="window.open('./70-229/imageT32.jpg','Exhibit','height=291,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to ensure optional performance for the insert and select operations on the Trades table.<br /> 
+
+What should you do? 
+
+A. Execute the DBCC DBREINDEX statement on the table. 
+
+B. Execute the UPDATE STATISTICS statement on the table. 
+
+C. Execute the DROP STATISTICS statement on the clustered index. 
+
+D. Execute the DBCC INDEXDEFRAG statement on the primary key index. 
+
+E. Execute the DROP INDEX and CREATE INDEX statements on the primary key index. 
+
+Ans: A 
+
+
+81. You are the developer of a database named Inventory. You have a list of reports that you must create. These reports will be run at the same time. You write queries to create each report. Based on the queries, you design and create the indexes for the database tables.<br /> 
+
+You want to ensure that you have created useful indexes.<br />
+
+What should you do? 
+
+A. Run sql trace, and use the Objects event classes. 
+
+B. Run the Index Tuning Wizard against a workload file that contains the queries used in the reports. 
+
+C. Run System Monitor, and use the SQLServer:Access Methods counter. 
+
+D. Execute the queries against the tables in SQL Query Analyzer, and use the SHOWPLAN_TEXT option. 
+
+Ans: B
+
+
+82. You are a database developer for your company's SQL server 2000 database.<br /> 
+
+You use the following script to create a view named Employee in the database: 
+
+<br />
+CREATE VIEW Employee AS  <br />
+SELECT 	P.SSN, P.LastName, P.FirstName, P. Address, P.city, P.State, P.Birthdate, E.EmployeeID, E.Department, E.Salary <br /> 
+FROM Person AS P JOIN Employees AS E ON (P.SSN = E.SSN)  <br />
+ <br />
+
+The view will be used by an application that inserts records in both the Person and Employees tables.<br /> 
+
+The script that was used to create these tables is shown in the exhibit:  
+
+<button
+onClick="window.open('./70-229/imageT33.jpg','Exhibit','height=361,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to enable the application to issue INSERT statements against the view.<br /> 
+
+What should you do? 
+
+A. Create an AFTER trigger on the view. 
+
+B. Create an INSTEAD OF trigger on the view. 
+
+C. Create an INSTEAD OF trigger on the Person and Employees tables. 
+
+D. Alter the view to include the WITH CHECK option. 
+
+E. Alter the view to include the WITH SCHEMA BINDING option. 
+
+Ans: B 
+
+
+83. You are a database developer for Wide World Importers. You are creating a table named Orders for the company's SQL Server 2000 database. Each order contains an order ID, an order date, a customer ID, a shipper ID, and a ship date. <br />
+
+Customer services representatives who take the orders must enter the order date, customer ID, and shipper ID when the order is taken. The order ID must be generated automatically by the database and must be unique.<br /> 
+
+Orders can be taken from existing customers only. Shippers can be selected only from an existing set of shippers. After the customer service representatives complete the order, the order is send to the shipping department for final processing. <br />
+
+The shipping department enters the ship date when the order is shipped.<br />
+
+Which script should you use to create the Orders table? 
+
+A. CREATE TABLE Orders  <br />
+(  <br />
+Order ID uniqueidenfitier PRIMARY KEY NOT NULL,  <br />
+OrderDate, datetime NULL,  <br />
+CustomerID char(5) NOT NULL FOREIGN KEY REFERENCES Customer (Customer ID),  <br />
+ShipperID int NOT NULL FOREIGN KEY REFERENCES Shippers(shipperID),  <br />
+ShipDate datetime Null  <br />
+) 
+
+B. CREATE TABLE Orders  <br />
+(  <br />
+Order ID int identity (1, 1)PRIMARY KEY NOT NULL,  <br />
+OrderDate, datetime NOT NULL,  <br />
+CustomerID char(5) NOT NULL FOREIGN KEY REFERENCES Customer (Customer ID),  <br />
+ShipperID int NOT NULL FOREIGN KEY REFERENCES Shippers(shipperID),  <br />
+ShipDate datetime Null  <br />
+) 
+
+C. CREATE TABLE Orders  <br />
+(  <br />
+Order ID int identity (1, 1)PRIMARY KEY NOT NULL,  <br />
+OrderDate, datetime NULL,  <br />
+CustomerID char(5) NOT NULL FOREIGN KEY REFERENCES Customer (Customer ID),  <br />
+ShipperID int NULL  <br />
+ShipDate datetime Null  <br />
+) 
+
+D. CREATE TABLE Orders  <br />
+(  <br />
+Order ID uniqueidenfitier PRIMARY KEY NOT NULL,  <br />
+OrderDate, datetime NOT NULL,  <br />
+CustomerID char(5) NOT NULL FOREIGN KEY REFERENCES Customer (Customer ID),  <br />
+ShipperID int NOT NULL FOREIGN KEY REFERENCES Shippers(shipperID),  <br />
+ShipDate datetime Null  <br />
+) 
+
+Ans:B 
+
+
+84. You are a database developer for Luce Publishing. The company stores its sales data in a SQL Server 2000 database. This database contains a table named Orders.<br /> 
+
+There is currently a clustered index on the table, which is generated by using a customer's name and the current date. The Orders table currently contains 750,000 rows, and the number of rows increased by 5 percent each week.<br /> 
+
+The company plans to launch a promotion next week that will increase the volume of inserts to the Orders table by 50 percent.<br />
+
+You want to optimize inserts to the Orders table during the promotion.<br /> 
+
+What should you do? 
+
+A. Create a job that rebuilds the clustered index each night by using the default FILLFACTOR. 
+
+B. Add additional indexes to the <b>Orders</b> table. 
+
+C. Partition the <b>Orders</b> table vertically. 
+
+D. Rebuild the clustered index with a FILLFACTOR of 50. 
+
+E. Execute the UPDATE STATISTICS statement on the <b>Orders</b> table. 
+
+Ans:D 
+
+
+85. You are designing your company's Sales database. The database will be used by three custom applications. Users who require access to the database are currently members of Microsoft Windows 2000 groups.<br /> 
+
+Users were placed in the Windows 2000 groups according to their database access requirements. The custom applications will connect to the sales database through application roles that exist for each application.<br /> 
+
+Each application role was assigned a password.<br />
+
+All users should have access to the Sales database only through the custom applications. No permissions have been granted in the database.<br /> 
+
+What should you do? 
+
+A. Assign appropriate permissions to each Windows 2000 group. 
+
+B. Assign appropriate permissions to each application role. 
+
+C. Assign the Windows 2000 groups to the appropriate application role. 
+
+D. Provide users with the password to the application role 
+
+Ans:B 
+
+
+86. You are a database developer for your company's database named Insurance.<br /> 
+
+You execute the following script in SQL Query Analyzer to retrieve agent and policy information: 
+
+<br />
+SELECT A.LastName, A.FirstName, A.CompanyName, P.PolicyNumber <br />
+FROM Policy AS P JOIN AgentPolicy AS AP <br />
+ON (P.PolicyNumber = AP.PolicyNumber) <br />
+JOIN Agents AS A ON (A.AgentID= AP.AgentID)  <br />
+ <br />
+
+The query execution plan that is generated is shown below:  
+
+<button
+onClick="window.open('./70-229/imageT34.jpg','Exhibit','height=285,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+The information received when you move the pointer over the Table Scan icon is shown below:  
+
+<button
+onClick="window.open('./70-229/imageT35.jpg','Exhibit','height=288,width=350,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to improve the performance of this query.<br /> 
+
+What should you do? 
+
+A. Change the order of the tables in the FROM clause to list the Agent table first 
+
+B. Use a hash join hint to join the Agent table in the query. 
+
+C. Create a clustered index on the AgentID column of the Agent table. 
+
+D. Create a nonclustered index on the AgentID column of the Agent table. 
+
+Ans: C 
+
+
+87. You are a database consultant. One of your customers reports slow query response times for a SQL Server 2000 database, particularly when table joins are required.<br /> 
+
+Which steps should you take to analyze this performance problem?
+<br />
+
+To answer, Simulate the Drag and Drop style and list in steps for the appropriate transaction order choices beside the appropriate transaction steps. (Use only order choices that apply)<br /> 
+
+<button
+onClick="window.open('./70-229/imageT36.jpg','Exhibit','height=380,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+
+A. Use SQL Profiler to create a trace based on the SQL Profiler Tuning template.
+
+B. Specify that the trace data be saved to a file, and specify a maximum file size. 
+
+C. Specify a stop time for the trace.
+ 
+D. Run the trace. 
+
+E. Use the trace file as an input to the Index Tuning Wizard. 
+
+F. Replay the trace and examine the output.
+
+G. Use SQL Profiler to create a trace based on the SQL Profiler Standard Template. 
+
+
+Ans: A,B,C,D,E,F
+
+Step 1 Use SQL Profiler to create a trace based on the SQL Profiler Tuning Template
+Step 2 Specify that the trace data be saved to a file, and specify a maximum file size.
+Step 3 Specify a stop time for the trace.
+Step 4 Run the trace.
+Step 5 Use the trace file as an input to the Index Tuning Wizard.
+Step 6 Replay the trace, and examine the output.
+Step 7 (none)
+
+The answer (G) is Wrong and is Not used.
+
+88. You are a database developer for Wingtip Toys. The company stores its sales information in a SQL Server 2000 database. This database contains a table named Orders. You want to move old data from the orders table to an archive table.<br /> 
+
+Before implementing this process, you want to identify how the query optimizer will process the INSERT statement.
+<br /> 
+
+You execute the following script in SQL Query Analyzer:  
+
+<br />
+SET SHOWPLAN_TEXT ON  <br />
+GO  <br />
+CREATE TABLE Archived_Orders_1995_1999  <br />
+(  <br />
+OrderID int,  <br />
+CustomerID char (5), <br /> 
+EmployeeID int,  <br />
+OrderDate datetime,  <br />
+ShippedDate datetime  <br />
+)  <br />
+ <br />
+INSERT INTO Archived_Orders_1995_1999  <br />
+SELECT OrderID, CustomerID, EmployeeID, OrderDate, ShippedDate  <br />
+FROM SalesOrders  <br />
+WHERE ShippedDate < DATEADD (year, -1, getdate())  <br />
+ <br />
+
+You receive the following error message: 
+
+<br /><b>
+Invalid object name 'Archived_Orders_1995_1999.'  </b><br />
+
+What should you do to resolve the problem? 
+
+A. Query the Archived_Orders_1995_1999 table name with the owner name. 
+
+B. Request CREATE TABLE permissions. 
+
+C. Create the Archived_Orders_1995_1999 table before you execute the SET SHOWPLAN_TEXT ON statement. 
+
+D. Change the table name to ArchivedOrders. 
+
+Ans:C 
+
+
+89. You are a database developer for WoodGrove Bank. The company has a database that contains human resources information. You are designing transactions to support data entry into this database.<br /> 
+
+The script for two of the transactions that you designed are shown in the exhibit: 
+<br />
+
+<button
+onClick="window.open('./70-229/imageT37.jpg','Exhibit','height=376,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+While testing these scripts, you discover that the database server occasionally detects a deadlock condition.<br /> 
+
+What should you do? 
+
+A. In Transaction 2, move the UPDATE Customer statement before the UPDATE CustomerPhone statement 
+
+B. Add the SET DEADLOCK_PRIORITY LOW statement to both transactions 
+
+C. Add code that checks for server error 1205 to each script. If this error is encountered, restart the transaction in which it occurred. 
+
+D. Add the SET LOCK_TIMEOUT 0 statement to both transactions 
+
+Ans: A 
+
+
+90. You are a database developer for a company that compiles statistics for baseball teams. These statistics are stored in a database named Statistics.<br /> 
+
+The Players of each team are entered in a table named Rosters in the Statistics database.<br /> 
+
+The script that was used to create the Rosters table is shown in the exhibit: 
+<br />
+
+<button
+onClick="window.open('./70-229/imageT38.jpg','Exhibit','height=234,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Each baseball team can have a maximum of 24 players on the roster at any one time.<br /> 
+
+You need to ensure that the number of players on the team never exceeds the maximum.<br /> 
+
+What should you do? 
+
+A. Create a trigger on the Rosters table that validates the data 
+
+B. Create a rule that validates the data 
+
+C. Create an update view that includes the WITH CHECK OPTION clause in its definition 
+
+D. Add a CHECK constraint on the Rosters table to validate the data 
+
+Ans:A 
+
+
+91. You are a database developer for a consulting company. You are creating a database named Reporting.<br />
+ Customer names and IDs from two other databases, named Training and consulting, must be loaded into the Reporting database. You create a table named Customers in the Reporting database.<br /> 
+
+The script that was used to create this table is shown in the Script for Customers Table exhibit here:
+<br /> 
+
+<button
+onClick="window.open('./70-229/imageT39.jpg','Exhibit','height=148,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Data must be transferred into the Customers table from the Students table in the training database and from the Clients table in the Consulting database.<br /> 
+
+The Students and Clients tables are shown in the Students and Clients tables exibit here: 
+
+<button
+onClick="window.open('./70-229/imageT40.jpg','Exhibit','height=155,width=453,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You must create a script to transfer the data into the Customers table.<br /> 
+
+The first part of the script is shown in the exhibit here: 
+
+<button
+onClick="window.open('./70-229/imageT41.jpg','Exhibit','height=370,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button>  SCRIPT<br />
+
+To complete the script look at the following exibit (Drag and Drop style)<br/> 
+
+<button
+onClick="window.open('./70-229/imageT42.jpg','Exhibit','height=471,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br /> 
+
+Place the following possible script lines in their appropriate order. (Use only the script lines that apply)<br />
+
+
+A. Insert INTO Customers <br />
+(CustomerKey, SourceID, CustomerName) <br />
+SELECT CustomerID, SourceID, CustomerName <br />
+FROM #tmpCustomers 
+
+B. IF @@ERROR = 0 RETURN 
+
+C. IF @@ERROR <> 0 <br />
+BEGIN ROLLBACK TRAN <br />
+RETURN <br />
+END 
+
+D. SAVE TRAN Customers 
+
+E. COMMIT TRAN 
+
+F. SELECT CustomerID, SourceID, CustomerNAme <br />
+INTO Customers <br />
+FROM #tmpCustomers 
+
+G. BEGIN TRAN 
+
+Ans:G,A,C,E 
+
+<button
+onClick="window.open('./70-229/imageT43.jpg','Exhibit','height=444,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br /> 
+
+Explanation:
+
+Line 1 BEGIN TRAN
+
+Line 2 Insert INTO CustomerID
+(CustomerKey, SourceID, CustomerName)
+SELECT CustomerID, SourceID, CustomerName
+FROM #tmpCustomers
+
+Line 3 IF @@ERROR <> 0
+BEGIN ROLLBACK TRAN
+RETURN
+END
+
+Line 4 COMMIT TRAN
+
+
+92. You are a database developer for an investment brokerage company. The company has a database named Stocks that contains tables named CurrentPrice and PastPrice.<br /> 
+
+The current prices of investment stocks are stored in the CurrentPrice table.<br /> 
+
+Previous stock prices are stored in the PastPrice table.<br /> 
+
+These tables are shown in the CurrentPrice and PastPrice Tables exhibit here: 
+<br/>
+
+<button
+onClick="window.open('./70-229/imageT44.jpg','Exhibit','height=150,width=448,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+
+A sample of the data contained in thee tables is shown in this Sample Data exhibit: 
+<br />
+
+<button
+onClick="window.open('./70-229/imageT45.jpg','Exhibit','height=235,width=546,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+
+All of the rows in the CurrentPrice table are updated at the end of the business day, even if the price of the stock has not changed since the previous update.<br /> 
+
+If the stock price has changed since the previous update, then a row must also be inserted into the PastPrice table.
+<br />
+ 
+You need to design a way for the database to execute this action automatically.<br /> 
+
+What should you do? 
+
+A. Create an <b>AFTER</b> trigger on the <b>CurrentPrice</b> table that compares the values of the <b>StockPrice</b> column in the <b>inserted</b> and <b>deleted</b> tables. If the values are different, then the trigger will insert a row into the <b>PastPrice</b> table. 
+
+B. Create an <b>AFTER</b> trigger on the <b>CurrentPrice</b> table that compares the values of the <b>StockPrice</b> column in the <b>inserted</b> table with the <b>StockPrice</b> column in the <b>CurrentPrice</b> table. If the values are different, then the trigger will insert a row into the <b>PastPrice</b> table. 
+
+C. Create a cascading update constraint on the <b>CurrentPrice</b> table that updates a row in the <b>PastPrice</b> table. 
+
+D. Create a stored procedure that compares the new value of the <b>StockPrice</b> column in the <b>CurrentPrice</b> table with the old value. If the values are different, then the procedure will insert a row into the <b>PastPrice</b> table. 
+
+Ans:A 
+
+
+93. You are a database developer for Wingtip Toys. The company tracks its inventory in an SQL Server 2000 database. You have several queries and stored procedures that are executed on the database indexes to support the queries that have been created.<br /> 
+
+As the number of cataloged inventory items has increased, the execution time of some of the stored procedures has increased significantly.<br /> 
+
+Other queries and procedures that access the same information in the database have not experienced an increase in execution time.<br />
+
+You must restore the performance of the slow-running stored procedures to their original execution times.<br /> 
+
+What should you do? 
+
+A. Always use the WITH RECOMPILE option to execute the slow-running stored procedures. 
+
+B. Execute the UPDATE STATISTICS statement for each of the tables accessed by the slow-running stored procedures. 
+
+C. Execute the sp_recompile system stored procedure for each of the slow-running procedures. 
+
+D. Execute the DBCC REINDEX statement for each of the tables accessed by the slow-running stored procedures. 
+
+Ans:C 
+
+
+94. You are a database developer for a marketing firm. You have designed a quarterly sales view. This view joins several tables and calculates aggregate information.<br /> 
+
+You create a unique index on the view. You want to provide a parameterised query to access the data contained in your indexed view.<br /> 
+
+The output will be used in other SELECT lists.<br />
+
+How should you accomplish this goal? 
+
+A. Use an ALTER VIEW statement to add the parameter value to the view definition. 
+
+B. Create a stored procedure that accepts the parameter as input and returns a rowset with the result set. 
+
+C. Create a scalar user-defined function that accepts the parameter as input. 
+
+D. Create an inline user-defined function that accepts the parameter as input. 
+
+Answer:C 
+
+
+95. You a database developer for a large grocery store chain. The partial database schema is shown in the Partial Database Schema exhibit (hmmmm, I guess it is still under construction).<br /> 
+
+The script that was used to create the Customers table is shown in the Script for Customers Table exhibit (still under constuction as well I think).<br /> 
+
+The store managers want to track customer demographics so they can target advertisements and coupon promotions to customers.<br />
+
+These advertisements and promotions will be based on the past purchases of existing customers.<br /> 
+
+The advertisements and promotions will target buying patterns by one or more of these demographics: gender, age, postal code, and region.<br /> 
+
+Most of the promotions will be based on gender and age. Queries will be used to retrieve the customer demographics information.<br />
+
+You want the query response time to be as fast as possible.<br /> 
+
+What should you do? 
+
+A. Add indexes on the PostalCode, State, and DateOfBirth columns of the Customers table. 
+
+B. Denormalize the customers table. 
+
+C. Create a view on the Customers, SalesLineItem, State, and Product tables. 
+
+D. Create a function to return the required data from the Customers table. 
+
+Ans:B 
+
+
+96. You are a database developer for Lucerne Publishing. You are designing a HR database that contains tables named Employee and Salary.<br />
+
+You interview users and discover the following information:
+
+<br />
+<ul>
+<li>The employee table will often be joined with the Salary table on the EmployeeID column.</li>
+<li>Individual records in the Employee table will be selected by social security number (SSN)</li>
+<li>A list of employees will be created. The list will be produced in alphabetical order by last name, and then followed by first name.</li>
+</ul>
+
+You need to design the indexes for the tables while optimizing the performance of the indexes.<br /> 
+
+Which three scripts should you use? (Each correct answer presents part of the solution. Choose three)<br />
+
+A. CREATE CLUSTERED INDEX [IX_EmployeeName] ON [dbo].[Employee]([LastName],[FirstName])
+
+B. CREATE INDEX [IX_EmployeeFirstName] ON [dbo].[Employee] ([First Name])<br />
+   CREATE INDEX [IX_EmployeeLastName] ON [dbo].[Employee] ([Last Name])
+
+C. CREATE UNIQUE INDEX [IX_EmployeeEmployeeID] ON [dbo].[Employee] ([EmployeeID])
+
+D. CREATE UNIQUE INDEX [IX_EmployeeSSN] ON [dbo].[Employee] ([SSN])
+
+E. CREATE CLUSTERED INDEX [IX_EmployeeEmployeeID] ON [dbo].[Employee] ([EmployeeID])
+
+F. CREATE CLUSTERED INDEX [IX_EmployeeESSN] ON [dbo].[Employee] ([SSN])
+
+Ans:A,C,D 
+
+
+97. You are a database developer for a large electric company. The company is divided into many departments, and each employee of the company is assigned to a department. You create a table named Employee that contains information about all employees, including the department to which they belong.<br /> 
+
+The script that was used to create the Employee table is shown in this exhibit:
+<br/>
+
+<button
+onClick="window.open('./70-229/imageT46.jpg','Exhibit','height=207,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Each department manager should be able to view only the information in the Employee table that pertains to his or her department.<br /> 
+
+What should you do?
+
+A. Use GRANT, REVOKE, and DENY statements to assign permissions to each department manager.
+
+B. Add the database login of each department manager to the <b>db_datareader</b> fixed database role.
+
+C. Build tables and views that enforce row-level security on the <b>Employee</b> table.
+
+D. USE SQL Server Enterprise Manager to assign permissions on the <b>Employee</b> table.
+
+Ans:C
+
+
+98. You are a database developer for your company's Human Resources database. This database includes a table named Employee that contains confidential ID numbers and salaries. The table also includes non-confidential information, such as employee names and addresses.<br /> 
+
+You need to make all the non-confidential information in the Employee table available in XML format to an external application. The external application should be able to specify the exact format of the XML data.<br /> 
+
+You also need to hide the existence of the confidential information from the external application.<br />
+
+What should you do? 
+
+A. Create a stored procedure that returns the non-confidential information from the Employee table formatted as XML. 
+
+B. Create a user-defined function that returns the non-confidential information from the Employee table in a rowset that is formatted as XML. 
+
+C. Create a view that includes only the non-confidential information from the Employee table. Give the external application permission to submit queries against the view. 
+
+D. Set column-level permissions on the Employee table to prevent the external application from viewing the confidential columns. Give the external application permissions to submit queries against the table. 
+
+Ans:C 
+
+
+99. You are a database developer for Tailspin Toys. You have two SQL Server 2000 computers named CORP1 and CORP2. Both of these computers use SQL Server authentication.<br /> 
+
+CORP2 stores data that has been archived from CORP1.<br /> 
+
+At the end of each month, data is removed from CORP1 and transferred to CORP2.<br />
+
+You are designing quarterly reports that will include data from both CORP1 and CORP2. You want the distributed queries to execute as quickly as possible.<br /> 
+
+Which three actions should you take? (Each correct answer presents part of the solution. Choose Three)<br /> 
+
+A. Create a stored procedure that will use the OPENROWSET statement to retrieve the data. 
+
+B. Create a stored procedure that will use the fully qualified table name on CORP2 to retrieve the data. 
+
+C. Create a script that uses the OPENQUERY statement to retrieve the data. 
+
+D. On CORP1, execute the sp_addlinkedserver system stored procedure. 
+
+E. On CORP1, execute the sp_addlinkedsrvlogin system stored procedure. 
+
+F. On CORP2, execute the sp_serveroption system stored procedure and set the collation compatible to ON. 
+
+Ans:B,D,E 
+
+
+100. You are a database developer for an IT consulting company. You are designing a database to record information about potential consultants. You create a table named CandidateSkills for the database.<br /> 
+
+The table is shown in this exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT47.jpg','Exhibit','height=160,width=239,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+How should you uniquely identify the skills for each consultant? 
+
+A. Create a PRIMARY KEY constraint on the CandidateID column. 
+
+B. Create a PRIMARY KEY constraint on the CandidateID and DateLastUsed columns. 
+
+C. Create a PRIMARY KEY constraint on the CandidateID and SkillID columns. 
+
+D. Create a PRIMARY KEY constraint on the CandidateID, SkillID, and DateLastUsed columns. 
+
+Ans: C 
+
+
+101. You are a database developer for Proseware,Inc. You are implementing a database for the database of the company's human resources department.<br /> 
+
+This database will store employee information.<br /> 
+
+You create the following table: 
+<br />
+<b>EmployeeContact</b><br />
+HomePhone<br />
+BusinessPhone<br />
+FaxNumber<br />
+E-mailAddress. <br />
+<br />
+
+You must ensure that each record contains a value for either the HomePhone column or the BusinessPhone column.
+<br /> 
+
+What should you do? 
+
+A. Create a rule that disallows null values. 
+Bind the rule to both the <b>HomePhone</b> and <b>BusinessPhone</b> columns. 
+
+B. Create a rule that prevents null values from being entered into both the
+ <b>HomePhone</b> and <b>BusinessPhone</b> columns. Bind the rule to the table. 
+
+C. Add CHECK constraints on the HomePhone and BusinessPhone columns that prevent null values from being entered into the columns. 
+
+D. Add CHECK constraint on the table to validate that a least one of the values entered into theHomePhone and BusinessPhone columns is no-null. 
+
+E. Create a trigger that counts the number of items entered without a value in the HomePhone column and then counts the number of items entered without a value in the BusinessPhone column.Configure the trigger so that if one or more rows are found that meet these conditions, the trigger will cancel the data modification. 
+
+Ans: D 
+
+
+102. You are designing an inventory and shipping database for Contoso,Ltd.<br /> 
+
+You create the logical database design shown in this exhibit: 
+
+<button
+onClick="window.open('./70-229/imageT48.jpg','Exhibit','height=245,width=660,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You must ensure that the referential integrity of the database is maintained.<br /> 
+
+Which three types of constraints should you apply to your design? (Each correct answer presents part of the solution. Choose three)<br /> 
+
+A. Create a FOREIGN KEY constraint on the Products table that references the Order Details table 
+
+B. Create a FOREIGN KEY constraint on the Products table that references the Suppliers table 
+
+C. Create a FOREIGN KEY constraint on the Orders table that references the Order Details table 
+
+D. Create a FOREIGN KEY constraint on the Order Details table that references the Order table 
+
+E. Create a FOREIGN KEY constraint on the Order Details table that references the Products table 
+
+F. Create a FOREIGN KEY constraint on the Suppliers table that references the Products table 
+
+Ans:B,D,E
+
+
+103. You are a database developer for a SQL Server 2000 database. You have created a stored procedure to produce the EndOfMonthSales report for the sales department.<br /> 
+
+You issue the following statement to assign permissions to the EndOfMonthSales report: 
+
+<br />
+GRANT EXECUTE ON EndOfMonthSales TO SalesDept <br />
+<br />
+
+Andrea has just joined the sales department and is a member of the SalesDept role. Andrea is also a member of marketing role, which has been denied access to the EndOfMonthSales report.<br /> 
+
+Andrea is unable to execute the stored procedure. No other sales department employees are experiencing this problem. <br />
+
+What should you do? 
+
+A. Add Andrea to the Db_datareader database role. Grant REFERENCES permissions to the public role. 
+
+B. Remove Andrea from the Marketing database role. 
+
+C. Grant Andrea's database user account SELECT permissions on the tables referenced in the stored procedure. 
+
+D. Grant Andrea's database user account REFERENCES permissions on the tables referenced in the stored procedure. 
+
+Ans:B 
+
+
+104. You are a database developer for a large travel company. You have been granted CREATE VIEW permissions in the Reservations database.<br /> 
+
+Your company's-worker, Eric, has been granted CREATE TABLE permissions. Neither of you have been given database owner or system permissions, nor have you been added to any fixed server roles.<br />
+
+Eric has created a table named Traveler that holds information about your company's customers.<br /> 
+
+This table is shown in the exhibit (where it is I am not sure): 
+
+Travel agents will connect to the database and view the information stored in this table. The database logins for the travel agents have been assigned to the Agent database role.<br /> 
+
+You want the travel agents to be able to view the name and address information from the Traveler table in two columns instead of six. One column should contain the traveler name and the other column should contain the address.<br /> 
+
+Which three actions should you take? (Each correct answer presents part of the solution. Choose three)<br /> 
+
+A. Grant the Agent role SELECT permissions on the Traveler table. 
+
+B. Instruct Eric to grant the Agent role SELECT permissions on the Traveler table. 
+
+C. Instruct Eric to grant you REFERENCE permissions of needed columns on the Traveler table. 
+
+D. Instruct Eric to create a view named vwTravelers that displays the data in the desired format. 
+
+E. Create a view named vwTravelers that displays the data in the desired format. 
+
+F. Grant the Agent role SELECT permissions on the vwTravelers view. 
+
+Ans:C,E,F 
+
+WARNING: Razorig had in the C option SELECT permissions to grant by Eric. In the real exam it was REFERENCE Permission (is  mre logical, too - why should I be able to select, Reference is enough to create the view)
+
+105. You a a database developer for a food wholesaler. Each week, the company fulfills orders from various customers. Normally, each customer orders the same quantity of certain items each week. Occasionally, the quantity of an item that a customer orders is significantly less than the customer's usual quantity.<br /> 
+
+The information about each order is stored in a table named Invoice, which is located in a SQL server 2000 database. <br />
+
+The script that was used to create this table is shown in the exhibit:
+
+<button
+onClick="window.open('./70-229/imageT49.jpg','Exhibit','height=211,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+You want to identify any pattern to these unusual orders.<br /> 
+
+To do this, you need to produce a list of the invoices for each customer that are for a lesser amount than average invoice amount for that customer.<br />
+
+Which query should you use?
+
+A. SELECT i1.InvoiceNumber,i1.CustomerName,i1.InvoiceAmount<br />
+FROM Invoice AS i1, Invoice AS i2<br />
+GROUP BY i1.InvoiceNumber,i1.CustomerName,i1.InvoiceAmount<br />
+HAVING i1.InvoiceAmount < AVG (i2.InvoiceAmount)
+
+B. SELECT i1.InvoiceNumber,i1.CustomerName,i1.InvoiceAmount<br /> 
+FROM Invoice as i1 <br />
+WHERE i1.InvoiceAmount < <br />
+	(SELECT AVG(i2.InvoiceAmount) <br />
+	FROM Invoice AS i2 <br />
+	WHERE i2.CustomerName=i1.CustomerName) <br />
+ORDER BY i1.CustomerName,i1.InvoiceNumber
+
+C. SELECT i1.InvoiceNumber,i1.CustomerName,i1.InvoiceAmount <br />
+FROM Invoice AS i1 <br />
+WHERE i1.InvoiceAmount< <br />
+	(SELECT AVG(i2.InvoiceAmount) <br />
+	FROM Invoice AS i2) <br />
+ORDER BY i1.CustomerName,i1.InvoiceNumber
+
+D. SELECT i1.InvoiceNumber,i1.CustomerName,i1.InvoiceAmount, <br />
+	CASE WHEN i1.InvoiceAmount<AVG(i2.InvoiceAmount) <br />
+	THEN i1.InvoiceAmount ELSE 0 END <br />
+FROM Invoice AS i1 INNER JOIN Invoice AS i2 <br />
+ON i1.CustomerName = i2.CustomerName <br />
+GROUP BY i1.InvoiceNumber,i1.CustomerName,i1.InvoiceAmoount <br />
+ORDER BY i1.CustomerName,i1.InvoiceNumber
+
+Ans: B
+
+
+106. You are a database developer for Contoso, Ltd. The company stores its sales data in a SQL Server 2000 database. The database contains a table named Customers, which has 500,000 rows.<br /> 
+
+The script that was used to create the Customers table is shown in the exhibit below: 
+<br />
+
+<button
+onClick="window.open('./70-229/imageT50.jpg','Exhibit','height=325,width=645,status=no,toolbar=no,menubar=no,location=no,titlebar=no,scrollbars=no,alwaysRaised=1,resizable=yes,alwaysontop=yes')">Exhibit</button><br />
+
+Many critical queries are executed against the table, which select customer records based on the City and Region columns.<br /> 
+
+Very few customers live in the same city as each other, but many live in the same region.<br /> 
+
+How should you optimize the performance of these queries? 
+
+A. Create a view on the Customers table. 
+
+B. Create a function that returns data from the Customers table. 
+
+C. Create a composite, nonclustered index on the City and Region columns, and use City as the first column in the index. 
+
+D. Create a composite, nonclustered index on the City and Region columns, and use Region as the first column in the index. 
+
+E. Add the City and Region columns to the clustered index, and use Region as the first column in the index. 
+
+Ans: C
+
+
+107. You are a database developer for a SQL Server 2000 database. The database is in the default configuration. The number of users accessing the database has increased from 100 to 1,000 in the last month.<br /> 
+
+Users inform you that they are receiving error messages frequently.<br /> 
+
+The following is an example of an error message that was received: 
+
+<br /><b>
+"Transaction (Process ID 56) was deadlocked on [lock] resources with another process and has been chosen as the deadlock victim. Rerun the transaction." </b><br />
+<br />
+
+What should you do? 
+
+A. Use a higher transaction isolation level for transactions used in the database. 
+
+B. Use SQL Profiler to capture deadlock events. 
+
+C. Use System Monitor to monitor lock requests and deadlocks. 
+
+D. Execute the sp_configure system stored procedure to increase the number of simultaneous user connections allowed to SQL Server. 
+
+Ans:B 

@@ -1,0 +1,1016 @@
+<html>
+<script Language="JavaScript">
+function openwindow(href) {
+	window.open(href)
+}
+
+function ShowHint() {
+	if (parent.up.JJ.indexOf('['+parent.up.II+']')<0)
+	{
+		parent.up.JJ=parent.up.JJ + '[' + parent.up.II + ']';
+	}
+	var cssClassname, bHaveWrongAns;
+	bHaveWrongAns = false;
+	for (i=0; i<parent.side.myChkbx.length; i++)
+	{
+		parent.side.myChkbx(i).disabled = true;
+		if (parent.up.Ans(parent.up.II).indexOf(parent.up.Opti(parent.up.II, i+1))>=0)
+		{
+			if (parent.side.myChkbx(i).checked == true) {
+				cssClassname = "MCGoodAns";
+			}
+			else {
+			  cssClassname = "MCWrong";
+				bHaveWrongAns = true;
+			}
+
+			parent.side.SELE(i).innerHTML='<span id="' + cssClassname + '">' + parent.up.Opti(parent.up.II,i+1) + '. </span>';
+			parent.side.ENGL(i).innerHTML='<span id="' + cssClassname + '">' + parent.up.Body(parent.up.II,i+1) + '</span>';
+		}
+	}
+
+	if (top.hid.learnmode == 0) {
+		if (bHaveWrongAns) {
+			parent.down.AnsResultTxt.innerHTML=':-(';
+			parent.down.AnsResultTxt.className='Red';
+			parent.down.AnsResultImg.setAttribute('src', '../images/LedRed.gif');
+		} else {
+			parent.down.AnsResultTxt.innerHTML=':-)';
+			parent.down.AnsResultTxt.className='Green';
+			parent.down.AnsResultImg.setAttribute('src', '../images/LedGreen.gif');
+		}
+	}
+
+	if (parent.up.WRIGHTS + parent.up.WRONGS > 0) {
+		parent.up.PercentError = parseInt(100 * parent.up.WRONGS / (parent.up.WRIGHTS + parent.up.WRONGS)) ;
+		parent.down.PercentError.innerHTML = parent.up.PercentError + '%';
+	}
+	parent.down.TotalQuesSofar.innerHTML = parent.up.WRIGHTS + parent.up.WRONGS;
+
+	parent.down.HintAns.innerHTML = parent.up.Ans(parent.up.II);
+
+  if (parent.up.randomans == 0 && parent.up.Desc(parent.up.II) != "")
+	{
+	  parent.side.COMM.innerHTML = parent.side.COMM.innerHTML + '<div class="Explanation">' + parent.up.Desc(parent.up.II) + '</div>' ;
+	}
+}
+
+var intHours, intMinutes, intSeconds;
+intHours = 0;
+intMinutes = 0;
+intSeconds = 0;
+
+function tick() {
+  var hours, minutes; //, seconds;
+  var today;
+  today = new Date();
+  intSeconds++;
+  if (intSeconds>=60) {
+	intSeconds -= 60;
+	intMinutes++;
+  }
+  if (intMinutes>=60) {
+	intMinutes -= 60;
+	intHours++;
+  }
+  if (intHours < 10) {
+     hours = "0"+intHours+":";
+  } else {
+     hours = intHours+":";
+  }
+  if (intMinutes < 10) {
+     minutes = "0"+intMinutes;
+  } else {
+     minutes = intMinutes;
+  }
+/*
+  //Removed Feb 08,2003 by Synvox: Seconds is annoying
+  if (intSeconds < 10) {
+     seconds = "0"+intSeconds+" ";
+  } else {
+     seconds = intSeconds+" ";
+  }
+*/
+
+  var timeString = hours + minutes; //+seconds;
+
+  parent.topp.ElapsedTime.innerHTML = timeString;
+
+  window.setTimeout("tick();", 1000);
+}
+</script>
+
+<script Language="VBScript" >
+Dim Subject(400)
+Dim Body(400,15)
+Dim Opti(400,15)
+Dim Usr(400)
+Dim Ans(400)
+Dim Markk(400)
+Dim Desc(400)
+Dim II, MM, JJ, DISAB
+Dim MAXIMI, MAXIMJ
+Dim AA, FOLDER, PAScore, WRIGHTS, WRONGS, PercentError, learnmode, randomquest, randomans
+Dim R(), S()
+Dim filesys
+
+WRIGHTS=0
+WRONGS=0
+PercentError=0
+PAScore = 800
+DISAB = ""
+II=0
+JJ=""
+MM=0
+MAXIMI=400
+MAXIMJ=15
+
+Sub ReadFile()
+	Dim a
+	Dim i, j, k, kk, strTmp, arrTmp, blnSubj, blnBody, pre
+	Dim PATH
+
+	For i = 1 To MAXIMI
+	  Markk(i) = 0
+	Next
+
+	i = 0
+	j = 0
+	Set a = top.hid.filesys.OpenTextFile(top.hid.FOLDER & top.hid.AA, 1, False)
+	strTmp = "a"
+	pre = false
+	Do While a.AtEndOfStream <> True
+		If i >= MAXIMI Then Exit Do
+		strBak = Trim(strTmp)
+		If i = 0 Then strBak = ""
+		strTmp = a.ReadLine
+		If strTmp <> "" and strBak = "" Then
+			strTmp = Trim(join(split(strTmp, Chr(9)),""))
+			strStar = ""
+			Do While Left(strTmp, 1) = "*"
+				strTmp = Trim(Right(strTmp, Len(strTmp)-1))
+				strStar = strStar & "*"
+			Loop
+			arrTmp = Split(strTmp, ".")
+			If UBound(arrTmp) <=0 Then
+				ReDim arrTmp(1)
+			End If
+			If NOT IsNumeric(arrTmp(0)) Then arrTmp(0) = 0
+			If arrTmp(0)> 0 and arrTmp(0) < 999 and Len(arrTmp(1)) >4 Then i=i+1
+		End If
+	Loop
+	a.Close
+	MM = i
+	ReDim R(MM), S(MM)
+	For i = 1 to MM
+		R(i) = i
+	Next
+
+	If top.hid.randomquest = 1 Then
+		Randomize
+		For i = 1 To MM
+			j = Int(MM*Rnd)+1
+			tmp = R(j)
+			R(j) = R(i)
+			R(i) = tmp
+		Next
+	End If
+
+	For i = 1 To MM
+		For j = 1 To MM
+			If R(j) = i Then
+				S(i) = j
+				Exit For
+			End If
+		Next
+	Next
+
+	i = 0
+	j = 0
+	blnSubj = False
+	Set a = top.hid.filesys.OpenTextFile(top.hid.FOLDER & top.hid.AA, 1, False)
+	strTmp = "<br/>"
+
+	Do While a.AtEndOfStream <> True
+		If i >= MAXIMI Then Exit Do
+		strBak = strTmp
+		strTmp = a.ReadLine
+		If InStr(strTmp, "<pre>") > 0 Then pre = True
+		If pre=False Then
+			strTmp = Trim(join(split(strTmp, Chr(9)),""))
+		End If
+		If InStr(strTmp, "</pre>") > 0 Then pre = False
+		strStar = ""
+		Do While Left(strTmp, 1) = "*"
+			strTmp = Trim(Right(strTmp, Len(strTmp)-1))
+			strStar = strStar & "*"
+		Loop
+		arrTmp = Split(strTmp, ".")
+		If UBound(arrTmp) <=0 Then
+			ReDim arrTmp(1)
+		End If
+		If NOT IsNumeric(arrTmp(0)) Then arrTmp(0) = 0
+		If (strBak = "<br/>" or strBak="") and blnSubj=False and arrTmp(0)> 0 and arrTmp(0) < 999 and Len(arrTmp(1)) >4 Then
+			i = i + 1
+			K = R(i)
+			j = 0
+			Subject(K) = strStar & Right(strTmp, Len(strTmp)-Len(arrTmp(0))-1) & vbCrLf
+			Ans(K) = ""
+			Usr(K) = ""
+			Desc(K) = ""
+			strONE = Right(Subject(K),1)
+			If strONE = "." or strONE = ":" or strONE = "" or strONE = "?" or strONE = "%" or (strONE >="0" and strONE <="9") Then Subject(K) = Subject(K) & "<br/>"
+			blnSubj = True
+			blnBody = False
+		ElseIf (Mid(strTmp, 2, 1) = ")" or  Mid(strTmp, 2, 1) = ".") and UCase(Left(strTmp,1))>="A" Then
+		'-- Bugfix, not tested yet - has to be tested for negative side-effects   (by Bouchi)
+		'ElseIf (Mid(strTmp, 2, 1) = ")" or  Mid(strTmp, 2, 1) = ".") and UCase(Left(strTmp,1))>="A" and UCase(Left(strTmp,1)) = ( Mid("ABCDEFGHIJKLMNOP", (j+1), 1) ) Then
+			j = j + 1
+			blnSubj = False
+			blnBody = True
+			Body(K, j) = Right(strTmp, Len(strTmp) - 2)
+			Opti(K, j) = UCase(Left(strTmp, 1))
+			If UCase(Right(Body(K,j),8)) = "(ANSWER)" Then
+				If InStr(Ans(K), Opti(K,j))<=0 Then Ans(K)=Ans(K) & Opti(K,j)
+				Body(K,j) = Left(Body(K,j), Len(Body(K,j))-8)
+			End If
+		ElseIf UCase(Left(strTmp, 7)) = "ANSWER:" Then
+			blnSubj = False
+			blnBody = False
+			Ans(K) = UCase(Trim(Right(strTmp, Len(strTmp) - 7)))
+			Ans(K) = join(split(Ans(K), "AND "), "")
+			Ans(K) = join(split(Ans(K), ","), "")
+			Ans(K) = join(split(Ans(K), " "), "")
+			Ans(K) = join(split(Ans(K), "."), "")
+		ElseIf UCase(Left(strTmp, 8)) = "ANSWER :" Then
+			blnSubj = False
+			blnBody = False
+			Ans(K) = UCase(Trim(Right(strTmp, Len(strTmp) - 8)))
+			Ans(K) = join(split(Ans(K), "AND "), "")
+			Ans(K) = join(split(Ans(K), ","), "")
+			Ans(K) = join(split(Ans(K), " "), "")
+		ElseIf UCase(Left(strTmp, 8)) = "ANTWORT:" Then
+			blnSubj = False
+			blnBody = False
+			Ans(K) = UCase(Trim(Right(strTmp, Len(strTmp) - 8)))
+			Ans(K) = join(split(Ans(K), "AND "), "")
+			Ans(K) = join(split(Ans(K), "UND "), "")
+			Ans(K) = join(split(Ans(K), ","), "")
+			Ans(K) = join(split(Ans(K), " "), "")
+			Ans(K) = join(split(Ans(K), "."), "")
+		ElseIf UCase(Left(strTmp, 9)) = "ANTWORT :" Then
+			blnSubj = False
+			blnBody = False
+			Ans(K) = UCase(Trim(Right(strTmp, Len(strTmp) - 9)))
+			Ans(K) = join(split(Ans(K), "AND "), "")
+			Ans(K) = join(split(Ans(K), "UND "), "")
+			Ans(K) = join(split(Ans(K), ","), "")
+			Ans(K) = join(split(Ans(K), " "), "")
+		ElseIf UCase(Left(strTmp, 4)) = "ANS:" Then
+			blnSubj = False
+			blnBody = False
+			Ans(K) = UCase(Trim(Right(strTmp, Len(strTmp) - 4)))
+			Ans(K) = join(split(Ans(K), "AND "), "")
+			Ans(K) = join(split(Ans(K), ","), "")
+			Ans(K) = join(split(Ans(K), " "), "")
+		ElseIf UCase(Left(strTmp, 5)) = "ANS :" Then
+			blnSubj = False
+			blnBody = False
+			Ans(K) = UCase(Trim(Right(strTmp, Len(strTmp) - 5)))
+			Ans(K) = join(split(Ans(K), "AND "), "")
+			Ans(K) = join(split(Ans(K), ","), "")
+			Ans(K) = join(split(Ans(K), " "), "")
+		Else
+			If blnBody = True Then
+				If Len(strTmp) = 0 Then
+					blnBody = False
+				Else
+					Body(K,j) = Body(K,j) & " " & strTmp
+					If UCase(Right(Body(K,j),8)) = "(ANSWER)" Then
+						If InStr(Ans(K), Opti(K,j))<=0 Then Ans(K)=Ans(K) & Opti(K,j)
+						Body(K,j) = Left(Body(K,j), Len(Body(K,j))-8)
+					End If
+				End If
+			ElseIf blnSubj = True Then
+				If Left(strTmp, 1) = "-" and Right(Subject(K),4) <> "<br/>" Then strTmp = "<br/>" & strTmp
+				Subject(K) = Subject(K) & " " & strTmp & vbCrLf
+				strONE = Right(strTmp,1)
+				If strONE = "." or strONE = ":" or strONE = "" or strONE = "?" or strONE = "%" or (strONE >="0" and strONE <="9") Then Subject(K) = Subject(K) & "<br/>"
+			ElseIf not blnSubj and not blnBody Then
+				If Left(strTmp, 1) = "-" Then strTmp = "<br/>" & strTmp
+				strONE = Right(strTmp,1)
+				If strONE = "" or strONE = "." or strONE = ":" or strONE = "" or strONE = "?" or strONE = "%" or (strONE >="0" and strONE <="9") then strTmp = strTmp & "<br/>"
+				Desc(K) = Desc(K) & " " & strTmp & vbCrLf
+			End If
+		End If
+	Loop
+	a.Close
+	MM = i
+
+	If top.hid.randomans = 1 Then
+		Randomize
+		For i = 1 To MM
+			MMAns = 0
+			Do
+ 				MMAns = MMAns + 1
+			Loop Until Len(Body(i, MMAns)) <= 0 or MMAns > MAXIMJ
+			MMAns = MMAns - 1
+			For j = 1 to MMAns
+				newj1 = Int(j*Rnd) + 1
+				tmp = Body(i, j)
+				Body(i, j) = Body(i, newj1)
+				Body(i, newj1) = tmp
+				Ans(i) = SwitchOnStr(Ans(i), Opti(i, j), Opti(i, newj1))
+			Next
+		Next
+	End If
+End Sub
+
+Function SwitchOnStr(s, c1, c2)
+Dim p1, p2, tmp1, tmp2, s1, s2
+
+
+p1 = InStr(s, c1)
+p2 = InStr(s, c2)
+If c1 = c2 or len(s) < 1 or (p1 = 0 and p2 = 0) then
+ SwitchOnStr = s
+ Exit Function
+End If
+If p1 = 0 then
+  SwitchOnStr = Replace(s, c2, c1)
+  Exit Function
+End if
+If p2 = 0 then
+  SwitchOnStr = Replace(s, c1, c2)
+  Exit Function
+End if
+
+If p1 < p2 then
+ s1 = Left(s, p1-1) & c2
+ tmp1 = Right(s, len(s)-p1)
+else
+ s1 = Left(s, p2-1) & c1
+ tmp1 = Right(s, len(s)-p2)
+End If
+
+p1 = InStr(tmp1, c1)
+p2 = InStr(tmp1, c2)
+
+If len(tmp1) < 1 or (p1 = 0 and p2 = 0) then
+ SwitchOnStr = s1
+ Exit Function
+End If
+If p1 = 0 then
+  SwitchOnStr = s1 & Replace(tmp1, c2, c1)
+  Exit Function
+End if
+If p2 = 0 then
+  SwitchOnStr = s1 & Replace(tmp1, c1, c2)
+  Exit Function
+End if
+If p1 < p2 then
+ s2 = Left(tmp1, p1-1) & c2
+ tmp2 = Right(tmp1, len(tmp1)-p1)
+else
+ s2 = Left(tmp1, p2-1) & c1
+ tmp2 = Right(tmp1, len(tmp1)-p2)
+End If
+SwitchOnStr = s1 & s2 & tmp2
+End function
+
+
+Sub window_onLoad()
+	If location.search = "" Then
+		InvalidLoad()
+	ElseIf location.search = "?index" Then
+		IndexFrame()
+	ElseIf location.search = "?hid" Then
+		Set filesys = Nothing
+		learnmode = 0
+		randomquest = 0
+		randomans = 0
+		AA = "DEFAULT"
+		FOLDER = ""
+	ElseIf location.search = "?first" Then
+		FirstPage()
+	ElseIf location.search = "?second" Then
+		SecondPage()
+	ElseIf location.search = "?review" Then
+		Review()
+	ElseIf location.search = "?frame" Then
+		WriteFrame()
+	ElseIf location.search = "?up" Then
+		learnmode = top.hid.learnmode
+		randomquest = top.hid.randomquest
+		randomans = top.hid.randomans
+		ReadFile()
+	ElseIf location.search = "?topp" Then
+		WriteTopp()
+	ElseIf location.search = "?left" Then
+		document.write "<html><body  background='../images/bg1.gif' leftmargin=0>&nbsp;<p>&nbsp;<p>&nbsp;<p><img id=GIF src='../images/blank.gif'></body></html>"
+	ElseIf location.search= "?right" Then
+		document.write "<html><body  background='../images/bg1.gif'></body></html>"
+	ElseIf location.search= "?0" Then
+		parent.up.II=0
+		HomePage()
+	ElseIf location.search= "?1" Then
+		If top.hid.learnmode=1 Then
+			parent.up.JJ = ""
+			For i = 1 To parent.up.MM
+				parent.up.JJ = parent.up.JJ & "[" & i & "]"
+			Next
+		End If
+		parent.up.II = parent.up.II + 1
+		If InStr(parent.up.JJ, "[" & parent.up.II & "]") > 0 Then
+			parent.up.DISAB = "DISABLED"
+		Else
+			parent.up.DISAB = ""
+		End If
+		If parent.up.II = 1 Then
+			parent.topp.Marked.disabled = False
+			parent.down.prev.disabled = True
+			parent.down.nextt.disabled = False
+			parent.down.answ.disabled = False
+			parent.down.review.disabled = False
+		Else
+			parent.down.prev.disabled = False
+		End If
+
+		If parent.up.II = parent.up.MM Then parent.down.nextt.disabled = True
+		If parent.up.Markk(parent.up.II) = 1 then
+			parent.topp.Marked.checked = True
+		Else
+			parent.topp.Marked.checked = False
+		End If
+		WriteSide()
+	ElseIf location.search= "?2" Then
+		If parent.up.II > 1 Then parent.up.II = parent.up.II - 1
+		If InStr(parent.up.JJ, "[" & parent.up.II & "]") > 0 Then
+			parent.up.DISAB = "DISABLED"
+		Else
+			parent.up.DISAB = ""
+		End If
+		If parent.up.II = 1 Then parent.down.prev.disabled = True
+		If parent.up.II < parent.up.MM Then parent.down.nextt.disabled = False
+		If parent.up.Markk(parent.up.II) = 1 then
+			parent.topp.Marked.checked = True
+		Else
+			parent.topp.Marked.checked = False
+		End If
+		WriteSide()
+	ElseIf location.search= "?down" Then
+		WriteDown()
+	Else
+	End If
+End Sub
+
+Sub InvalidLoad()
+	document.write "<html><head><style type='text/css'> BODY,TR,TD,TH,P,A,BUTTON {font-family:Verdana,Arial; font-size:12px; font-weight:bold} </style><title>TranDumper</title></head>"
+	document.write "<body background='../images/bg1.gif'><center><br/><img src='../images/logo.gif' width='362' height='53' border='0' ALT='T r a n D u m p e r'></center><br/>" &_
+		"<center><br/><br/><h1>Starten Sie TranDumper mit Hilfe von ""Start.html""!</h1><br/><br/><br/><button onClick=document.location.href='../Start.html'>TranDumper-Startseite</button></center></body></html>"
+End Sub
+
+
+Sub Review()
+	Dim intHI
+	Dim myII, sCssClass, nbColumns
+	nbColumns = 5
+	myII = 0
+	intHI = Int(parent.up.MM / nbColumns)
+	If (parent.up.MM mod nbColumns > 0) Then
+		intHI = intHI + 1
+	End If
+
+	top.document.title="ÜBERSICHT - " & Left(top.hid.AA, Len(top.hid.AA)-4)
+
+	document.write "<html><head><style type=""text/css""> BODY,TR,TD,TH,P,A,BUTTON {font-family:Verdana,Arial; font-size:11px;} TH {font-weight:normal; text-align:left; color:#FFFFFF;} .RealQNum {font-size:9px; color:#A0A0A0;} .GoodAns {color:#008000;} .WrongAns {color:#FF0000;} .Gray {color:#C0C0C0; } A {color: #0040A0; font-weight:bold; text-decoration:none;} A:hover {color:#FFFFFF; background-color:#FF0060;} Button {font-family:Tahoma; font-size:11px; font-weight:bold; height:25px; width:130px; cursor:hand}</style></head>"
+	document.write "<body background='../images/bg2.gif'><center><table border='5' cellspacing='0' cellpadding='5' bgcolor='#FFFFFF'><tr valign='top'>"
+
+	For j = 1 To nbColumns
+		document.write "<td><table cellspacing='0' cellpadding='2'>"
+		document.write "<tr style='background-image: url(../images/BlackBG.gif); height:16px; vertical-align:middle;'><th>M</th><th>Nr</th><th>Q#</th><th>Antw</th></tr>"
+		For i = 1 To intHI
+			myII = myII + 1
+			If myII > parent.up.MM Then
+			  Exit For
+			End if
+
+			document.write "<tr>"
+			if parent.up.Markk(myII) = 1 Then
+				document.write "<td><img src='../images/starGreen.gif' width='15' height='15' /></td>"
+			else
+				document.write "<td>&nbsp;</td>"
+			end if
+
+			document.write "<td align='right'><a href='Trandumper.html?1' onClick='parent.up.II=" & myII -1 & "';>" & myII & "</a></td>"
+
+			'---Random mode: display real Ques#
+			If myII = parent.up.S(myII) Then
+				document.write "<td align='right' width='20'>-</td>"
+			else
+				document.write "<td class='RealQNum'>&nbsp;(Q" & parent.up.S(myII) & ")</td>"
+			end if
+
+			If (parent.up.Usr(myII) <> "" and InStr(parent.up.JJ, "[" & myII & "]") > 0) Then
+				If ChkAnswer(myII) = True Then
+					sCssClass = "GoodAns"
+				Else
+					sCssClass = "WrongAns"
+				End If
+				document.write "<td class='" & sCssClass & "'>" & parent.up.Usr(myII) & "</td>"
+			Else
+				document.write "<td class='Gray'>"
+				If parent.up.Usr(myII) <> "" Then
+					document.write parent.up.Usr(myII)
+				Else
+					document.write "&nbsp;?&nbsp;"
+				End If
+				document.write "</td>"
+			End If
+			document.write "</tr>"
+		Next 'i
+		document.write "</table></td>"
+	Next 'j
+	document.write "</tr><tr><td colspan='10'><img src='../images/starGreen.gif' width='15' height='15' align='absmiddle' />: Markiert&nbsp;-&nbsp;<b>Nr:</b> Fragen-Nr&nbsp;-&nbsp;<b>Q#:</b> ECHTE Fragen-Nr (Zufall-Modus)&nbsp;-&nbsp;<b>Antw:</b> DEINE Antwort</td></tr></table><br/>" &_
+		"<table border='0' cellspacing='0' cellpadding='2'><tr>" &_
+		"<td><button accesskey='S' onClick=""if (WRONG.value.length>0) {parent.up.SaveWrong();}"">Falsche <u>S</u>peichern als:</button>" &_
+		"&nbsp;&nbsp;<input type=text ID='WRONG' NAME='WRONG' size='25' maxlength='30' value='Wiederholen.txt'></td>" &_
+		"<td width='50'>&nbsp;</td><td><button accesskey='C' onClick=""parent.up.II = parent.up.II-1; parent.side.location.href='Trandumper.html?1'"">S<u>c</u>hliessen</button></td></tr></table>" &_
+		"</center></body></html>"
+End Sub
+
+
+Sub IndexFrame()
+	document.write "<title>TranDumper V2.30 de - Falls die ActiveX-Warnung erscheint, ""Ja"" klicken um zu starten...</title>" &_
+		"<frameset framespacing='0' rows='0,*' frameborder='NO'>" &_
+			"<frame src='./Trandumper.html?hid' name='hid' marginwidth='0' frameborder='NO' scrolling='NO' NORESIZE>" &_
+			"<frame src='./Trandumper.html?first' name='main' marginwidth='0' frameborder='NO' scrolling='AUTO' NORESIZE>" &_
+		"</frameset>"
+End Sub
+
+Sub FirstPage()
+	Dim f, fc, PATH, iSlash
+	Dim iCol, iRow, nbRows, nbColumns, iCount, subfldCount, subfld, subFold_()
+	Dim ignoreFolders
+
+	'folder name must be enclosed in [], space allowed, case-insensitive
+	ignoreFolders = "[IMAGES][DE][FR][IT][SP]"
+
+  iCount = InStrRev(location.pathname, "\")
+	PATH = Replace(mid(location.pathname, 2, iCount -4), "%20", " ")
+    '-- Activate for debugging:  document.write "PATH: " & PATH
+  If Typename(top.hid.filesys) = "Nothing" then
+ 		Set top.hid.filesys = CreateObject("Scripting.FileSystemObject")
+	End If
+
+ 	Set f = top.hid.filesys.GetFolder(PATH)
+	Set fc = f.SubFolders
+
+	subfldCount = 0
+	For Each subfld in fc
+		subfld = Right(subfld, Len(subfld) - Len(PATH))
+
+		If InStr(1, ignoreFolders, "[" & UCase(subfld) & "]", 1) = 0 then
+			Redim Preserve subFold_(subfldCount)
+			subFold_(subfldCount) = subfld
+			subfldCount = subfldCount +1
+		end if
+	Next
+
+	nbColumns = 4
+	nbRows = Int(subfldCount / nbColumns)
+	If (subfldCount mod nbColumns > 0) Then
+		nbRows = nbRows + 1
+	End If
+
+	top.document.title = "Hauptmenü: Exam Selection"
+
+	document.write "<html><head><style type='text/css'> BODY,TR,TD,TH,P,A {font-family:Verdana,Arial; font-size:12px; font-weight: bold} A {color:#0040A0; cursor:hand; text-decoration:none; padding:2px; height:18px; border-style:solid; border-width:1px; border-color:#FFFFFF;} A:hover {color:#0040A0; background-color:#E0F0FF; border-color:#0040A0;} TD.White {color:#FFFFFF;} TD.V {font-size:11px; font-weight:normal;} Button {font-family:Tahoma; font-size:11px; font-weight:bold; height:24px; width:100px; cursor:hand}</style></head>"
+	document.write "<body background='../images/bg1.gif'><br/><center><table><tr><td><img src='../images/logo.gif' width='362' height='53' border='0' ALT='T r a n D u m p e r'></td></tr><tr><td align='right' class='V'>~German Edition~ Version 3.0 de</td></tr></table></center><br/>"
+	document.write "<center><table border='2' cellspacing='0' cellpadding='5' bgcolor='#FFFFFF'>" &_
+		"<tr><td colspan='10' background='../images/BlackBG.gif' class='White'>W&auml;hle ein Examen aus:</td></tr><tr valign='top'>"
+
+	iCount = 0
+	For iCol = 1 To nbColumns
+		If iCount >= subfldCount Then
+		  Exit For
+		End if
+		document.write "<td><table cellspacing='0' cellpadding='2'>"
+		For iRow = 1 To nbRows
+			document.write "<tr><td>" &_
+				"<img src='../images/arrow.gif' width='20' height='20' align='absmiddle' />&nbsp;" &_
+				"<a href='Trandumper.html?second' OnClick=""VBSCript:top.hid.FOLDER='" & PATH & subFold_(iCount) & "\'"">" & subFold_(iCount) & "</a>" &_
+				"</td></tr>"
+
+			iCount = iCount + 1
+			If iCount >= subfldCount Then
+			  Exit For
+			End if
+		Next 'iRow
+		document.write "</table></td>"
+	Next 'iCol
+	document.write "</tr>" &_
+		"<tr bgcolor='#D3E9FF'><td colspan='10'>" &_
+		"<center><button accesskey='E' onClick=""javascript:top.window.close();""><u>E</u>nde</button></center>" &_
+		"</td></tr></table></center></body></html>"
+End Sub
+
+Sub SecondPage()
+	Dim f, fc, f1, s, a, strTmp, isEnd
+	Dim PATH, i, ignoreFiles
+
+	'file name must be enclosed in [], space allowed, case-insensitive
+	ignoreFiles = "[Start.html][Trandumper.html][TD_Readme.html]"
+
+	Set f = top.hid.filesys.GetFolder(top.hid.FOLDER)
+	Set fc = f.Files
+	FILES=""
+	i = 0
+	For Each f1 in fc
+		If UCase(Right(f1.name,3)) = "TXT" OR ( UCase(right(f1.name,3)) = "HTM" AND InStr(1, ignoreFiles, "[" & f1.name & "]" , 1) = 0 ) THEN
+			Set a = top.hid.filesys.OpenTextFile(top.hid.FOLDER & f1.name, 1, False)
+			MEMO = MEMO & "<input type='hidden' name='MEMO' value="""
+			Do While a.AtEndOfStream <> True
+				strTmp = Trim(join(split(a.ReadLine, Chr(9)),""))
+				strTmp = Replace(strTmp, """", "'")   '-- Bugfix: no more crashing if there is a " in a file
+				arrTmp = Split(strTmp, ".")
+				If UBound(arrTmp) = -1 Then
+					ReDim arrTmp(0)
+				End If
+				If NOT IsNumeric(arrTmp(0)) Then arrTmp(0) = 0
+				If arrTmp(0)> 0 and arrTmp(0) < 999 Then  ' O Subject
+					Exit Do
+				Else
+					If Len(strTmp) > 0 Then
+						'MEMO = MEMO & " " & strTmp
+						MEMO = MEMO & strTmp & vbCrLf  '-- looks nicer to me   by Bouchi
+					Else
+						MEMO = MEMO & vbCrLf
+					End If
+				End If
+			Loop
+			MEMO = MEMO & """>"
+			a.Close
+			Set a = Nothing
+			i = i + 1
+			FILES = FILES & "<option value='" & f1.name & "'>" & Left(f1.name, Len(f1.name)-4)
+		End If
+	Next
+	MEMO = MEMO & "<input type='hidden' name='MEMO' value=''>"
+	Set fc = Nothing
+	Set f = Nothing
+
+	top.document.title="Auswahl von Braindumps"
+
+	document.write "<html><head><style type='text/css'> BODY,TR,TD,TH,P,A {font-family:Verdana,Arial; font-size:12px; font-weight: bold} TD {color:#000000; text-align:center} TD.V2 {font-size:11px; color:#FFFFFF; font-weight:normal; text-align:right;} select.myChoice {width:520px;} textarea.Descrip {width:520px; background-color:#D0E8FF;} Button {font-family:Verdana,Arial; font-size:11px; width:100px; height:26px; font-weight:bold; cursor:hand;}</style></head>"
+	document.write "<body background='../images/bg2.gif'>" &_
+	"<br/><center><table cellpadding='0' cellspacing='0' border='0' width='520px'>" &_
+	"<tr><td colspan='5'><table align='center'><tr><td><img src='../images/logo.gif' width='362' height='53' border='0' ALT='T r a n D u m p e r'></td></tr><tr><td class='V2'>~German Edition~ Version 3.0 de</td></tr></table></td></tr>" &_
+	"<tr><td colspan='5'>&nbsp;</td></tr>" &_
+	"<tr style='background-image: url(../images/candyBG.gif); height:30px; vertical-align:middle;'>" &_
+	"<td style='width=140px'><input type='checkbox' name='learnmode'   accesskey='A' onClick=""if (learnmode.checked==true)   { top.hid.learnmode=1}   else { top.hid.learnmode=0}  ""><u>A</u>ntwort Modus</td>" &_
+	"<td style='width=140px'><input type='checkbox' name='randomquest' accesskey='Z' onClick=""if (randomquest.checked==true) { top.hid.randomquest=1} else { top.hid.randomquest=0}""><u>Z</u>uf&auml;llige Fragen</td>" &_
+	"<td><input type='checkbox' name='randomans'   accesskey='r' onClick=""if (randomans.checked==true)   { top.hid.randomans=1}   else { top.hid.randomans=0}  "">Zuf&auml;llige Antworten<u>r</u>eihenfolge</td></tr>" &_
+	"<tr><td colspan='5'>" & MEMO & "</td></tr>" &_
+	"<tr><td colspan='5' style='color:#DDDDDD;'><br/>W&auml;hle eine <u>P</u>rüfung:</td></tr>" &_
+	"<tr><td colspan='5'><select class='myChoice' name='myChoice' size='6' accesskey='P' onDblClick=""document.location.href='Trandumper.html?frame'""" &_
+	"  onClick=""if((myChoice.selectedIndex)<0) return(0); if (myChoice(myChoice.selectedIndex).value == '') btnStart.disabled = true; if(myChoice(myChoice.selectedIndex).value != '') btnStart.disabled = false; area.value=top.main.MEMO(myChoice.selectedIndex).value; top.hid.AA=myChoice(myChoice.selectedIndex).value"">" & FILES & "</select></td></tr>" &_
+	"<tr><td colspan='5' style='color:#DDDDDD;'><br/>Beschreibung:</td></tr>" &_
+	"<tr><td colspan='5'><textarea class='Descrip' rows='10' cols='80' name='area' readonly></textarea></td></tr>" &_
+	"<tr><td colspan='5'><br/><br/><button name='btnStart' accesskey='S' disabled onClick=""document.location.href='Trandumper.html?frame'""><b><u>S</u>tarten</b></button>&nbsp;&nbsp;&nbsp;" &_
+	"<button accesskey='H' onClick=""document.location.href='Trandumper.html?first'""><u>H</u>auptmen&uuml;</button></td></tr>" &_
+	"</table></center><br/><br/></body></html>"
+End Sub
+
+
+Sub HomePage()
+	Dim sQuesOrderMode
+	Dim sMCOrderMode
+
+	if top.hid.randomquest = 0 then
+		sQuesOrderMode = "normal"
+	else
+		sQuesOrderMode = "zufällig"
+	end if
+	if top.hid.randomans = 0 then
+		sMCOrderMode = "normal"
+	else
+		sMCOrderMode = "zufällig"
+	end if
+
+	top.document.title="TranDumper v2.30 de"
+
+	document.write "<html><head><style type=""text/css""> BODY,TR,TD,TH,LI,P,A,BUTTON {font-family:Verdana,Arial; font-size:12px;} TD.Title {font-size:18px; color:#FFFFFF; background-color:#0040A0; font-weight: bold;} TD.C1 {color:#000000;  background-color:#E8FFE8; font-size:16px;} TD.C2 {color:#008000; background-color:#D0F0D0; font-size:18px; font-weight:bold;} Button {font-family:Tahoma; font-size:11px; font-weight:bold; width:150px; height:24px; background-color:#D3E9FF; border-bottom:1px solid #003399; border-right:1px solid #003399; border-left:1px solid #B4C9DC; border-top:1px solid #B4C9DC; color:#003399; cursor: hand}</style></head>" &_
+		"<body><center><br/><table cellpadding='3' cellspacing='0' border='1'>" &_
+		"<tr><td class='Title' colspan='2'>" & Left(top.hid.AA, Len(top.hid.AA)-4) & "</td></tr>" &_
+		"<tr><td class='C1'>Gesamtanzahl der Fragen</td><td class='C2'>" & CStr(parent.up.MM) & "</td></tr>" &_
+		"<tr><td class='C1'>Reihenfolge der Fragen</td><td class='C2'>" & sQuesOrderMode & "</td></tr>" &_
+		"<tr><td class='C1'>MC-Antwortfolge</td><td class='C2'>" & sMCOrderMode & "</td></tr>" &_
+		"</table><br/><br/><br/><br/>" &_
+		"<table cellpadding='10' cellspacing='0' border='0' bgcolor='#E0E0E0'>" &_
+		"<tr><td>Select a Subset of N Questions</td><td><input type='text' name='NbQuesSlt' size='3' maxlength='3' value='0' /></td><td><button accesskey='S' OnClick=""parent.up.SubSetQues(NbQuesSlt.value); parent.up.tick(); document.location.href='./Trandumper.html?1'"">Start <u>S</u>ubset</button></td></tr>" &_
+		"<tr><td>Direkt zur Frage springen: Jump directly to Question No.</td><td><input type='text' name='FromQuesX' size='3' maxlength='3' value='0' /></td><td><button accesskey='X' OnClick=""parent.up.StartFromQuesX(FromQuesX.value); parent.up.tick(); document.location.href='./Trandumper.html?1'"">Start From Ques. <u>X</u></button></td></tr>" &_
+		"<tr><td>&nbsp;</td><td>&nbsp;</td><td><button accesskey='G' OnClick=""parent.up.tick(); document.location.href='./Trandumper.html?1'"">Start <u>G</u>anzen Test</button></td></tr>" &_
+		"</table></center></body></html>"
+
+End Sub
+
+Sub WriteFrame()
+	document.write "<frameset framespacing='0' rows='0,20,*,70' frameborder='NO'>" &_
+		"<frame src='./Trandumper.html?up' name='up' marginwidth='0' frameborder='NO' scrolling='NO' NORESIZE>" &_
+		"<frame src='./Trandumper.html?topp' name='topp' marginwidth='0' frameborder='NO' scrolling='NO' NORESIZE>" &_
+		"<frameset framespacing='0' cols='20,*,20' frameborder='NO'>" &_
+			"<frame src='./Trandumper.html?left' name='left' frameborder='NO' bordercolor='white' scrolling='NO' NORESIZE>" &_
+			"<frame src='./Trandumper.html?0' name='side' frameborder='YES' bordercolor='black' scrolling='AUTO'>" &_
+			"<frame src='./Trandumper.html?right' name='right' frameborder='NO' bordercolor='white' scrolling='NO' NORESIZE>" &_
+		"</frameset>" &_
+		"<frame src='./Trandumper.html?down' name='down' marginwidth='0' frameborder='NO' scrolling='NO' NORESIZE>" &_
+	"</frameset>"
+End Sub
+
+
+
+Sub WriteTopp()
+ 	Dim sQuesOrderMode
+	Dim sMCOrderMode
+
+	if top.hid.randomquest = 0 then
+		sQuesOrderMode = "normal"
+	else
+		sQuesOrderMode = "zufällig"
+	end if
+	if top.hid.randomans = 0 then
+		sMCOrderMode = "normal"
+	else
+		sMCOrderMode = "zufällig"
+	end if
+
+	TOPP = "<html><head><style type=""text/css"">BODY {margin-left:22px; margin-right:23px;} BODY,TD {font-family:Verdana,Arial; font-size:12px;} .Blue {color:#0000FF;} </style></head>" &_
+  	"<body background='../images/bg1.gif'><center><table border='0' width='100%' cellspacing='0' cellpadding='0' background='../images/candy2BG.gif'>" &_
+		"<tr><td><input type='checkbox' name='Marked' accesskey='m' disabled onClick=""if (Marked.checked) parent.up.Markk(parent.up.II)=1; else parent.up.Markk(parent.up.II)=0;""><b><u>m</u>arkieren</b></td>" &_
+		"<td>Fragenfolge: <span class='Blue'>" & sQuesOrderMode & "</span></td>" &_
+		"<td>Antwortfolge: <span class='Blue'>" & sMCOrderMode & "</span></td>" &_
+		"<td align='right'>verstrichene Zeit: <span ID='ElapsedTime' class='Blue'>00:00</span>&nbsp;</td>" &_
+		"</tr></table></body></html>"
+
+ document.write TOPP
+End Sub
+
+
+Function WriteRadio(ByVal item1, ByVal english)
+	Dim strChecked
+	If item1 = parent.up.Usr(parent.up.II) Then
+		strChecked = "CHECKED"
+	Else
+		strChecked = ""
+	End If
+
+	WriteRadio = "<tr><td class=""MCLetter"">" & vbCrlf &_
+		"<input type=radio name=myChkbx " & strChecked & " value='" & item1 & "' " & parent.up.DISAB & vbCrlf &_
+		" onClick=""parent.up.Usr(parent.up.II)=this.value; " & vbCrlf &_
+		"for(i=0;i<myChkbx.length;i++){myChkbx(i).disabled=true;} " & vbCrlf &_
+		"if(this.value==parent.up.Ans(parent.up.II)) { " & vbCrlf &_
+		"  parent.up.WRIGHTS= parent.up.WRIGHTS + 1;" & vbCrlf &_
+		"  parent.down.right.innerHTML=parent.up.WRIGHTS;" & vbCrlf &_
+		"  myResult='Gratuliere!&nbsp;&nbsp;';" & vbCrlf &_
+		"} else {" & vbCrlf &_
+		"  parent.up.WRONGS= parent.up.WRONGS + 1;" & vbCrlf &_
+		"  parent.down.wrong.innerHTML=parent.up.WRONGS;" & vbCrlf &_
+		"  myResult='Leider falsch!&nbsp;&nbsp;';"  & vbCrlf &_
+		"} "  & vbCrlf &_
+		"parent.up.ShowHint();"">" &_
+		"<span ID=SELE>"
+
+	Dim sCSSspan
+	sCSSspan = "MCNeutral"
+	If (parent.up.DISAB<>"" and InStr(parent.up.Ans(parent.up.II), item1)>0) Then
+		if strChecked = "CHECKED" then
+			sCSSspan = "MCGoodAns"
+		else
+			sCSSspan = "MCWrong"
+		end if
+	End if
+
+	WriteRadio = WriteRadio & "<span id=""" & sCSSspan & """><b>" & item1 & "</b>.</span></span></td>" & vbCrLf &_
+	  "<td class=""MCText""><span ID=ENGL>" &_
+	  "<span id=""" & sCSSspan & """>" & english &_
+	  "</span></span></td></tr>" & vbCrlf & vbCrlf
+End Function
+
+Function WriteChkbx(ByVal j, item1, ByVal english)
+	Dim strChecked
+	If InStr(parent.up.Usr(parent.up.II), item1) > 0 Then
+		strChecked = "CHECKED"
+	Else
+		strChecked = ""
+	End If
+
+	WriteChkbx = "<tr><td class=""MCLetter"">" & vbCrlf &_
+	  "<input type=checkbox name=myChkbx " & strChecked & " value='" & item1 & "'  " & parent.up.DISAB &_
+	  " onClick=""if( myChkbx(" & j & ").checked && parent.up.Usr(parent.up.II).indexOf(myChkbx(" & j & ").value)<0) {" & vbCrlf &_
+	  "   parent.up.Usr(parent.up.II) = parent.up.Usr(parent.up.II) + '" & item1 & "';} " & vbCrlf &_
+	  "if (! myChkbx(" & j & ").checked && parent.up.Usr(parent.up.II).indexOf(myChkbx(" & j & ").value)>=0) {" & vbCrlf &_
+	  "   parent.up.Usr(parent.up.II) = parent.up.Usr(parent.up.II).slice(0,parent.up.Usr(parent.up.II).indexOf('" & item1 & "')) + parent.up.Usr(parent.up.II).slice(parent.up.Usr(parent.up.II).indexOf('" & item1 & "')+1, parent.up.Usr(parent.up.II).length); " & vbCrlf &_
+	  "}" & vbCrlf &_
+	  "if(parent.up.Usr(parent.up.II).length==parent.up.Ans(parent.up.II).length) {" & vbCrlf &_
+	  "  parent.up.JJ=parent.up.JJ + '[' + parent.up.II + ']';" & vbCrlf &_
+	  "  for(i=0;i<myChkbx.length;i++) { myChkbx(i).disabled=true; }" & vbCrlf &_
+	  "  j=0;" & vbCrlf &_
+	  "  for(i=0;i<parent.up.Usr(parent.up.II).length;i++) { " & vbCrlf &_
+	  "    if (parent.up.Ans(parent.up.II).indexOf(parent.up.Usr(parent.up.II).slice(i,i+1))>=0) {j=j+1;}" & vbCrlf &_
+	  "  }" & vbCrlf &_
+	  "  if (j==parent.up.Ans(parent.up.II).length) {" & vbCrlf &_
+	  "    parent.up.WRIGHTS= parent.up.WRIGHTS + 1;" & vbCrlf &_
+	  "    parent.down.right.innerHTML=parent.up.WRIGHTS;" & vbCrlf &_
+	  "    myResult='Gratuliere!&nbsp;&nbsp;';" & vbCrlf &_
+	  "  }" & vbCrlf &_
+	  "  else {	" & vbCrlf &_
+	  "    parent.up.WRONGS = parent.up.WRONGS + 1;" & vbCrlf &_
+	  "    parent.down.wrong.innerHTML=parent.up.WRONGS;" & vbCrlf &_
+	  "  } " & vbCrlf &_
+	  "  parent.up.ShowHint();" & vbCrlf &_
+	  "}"">" &_
+	  "<span ID=SELE>"
+
+	Dim sCSSspan
+	sCSSspan = "MCNeutral"
+	If (parent.up.DISAB<>"" and InStr(parent.up.Ans(parent.up.II), item1)>0) Then sCSSspan = "MCWrong"
+
+	WriteChkbx = WriteChkbx & "<span id=""" & sCSSspan & """><b>" & item1 & "</b>.</span></span></td>" &_
+	  "<td class=""MCText""><span ID=ENGL>" &_
+	  "<span id=""" & sCSSspan & """>" & english & "</span></span></td></tr>"
+End Function
+
+Sub WriteSide()
+	Dim HEAD, ITEMS
+	'top.document.title="Item " & parent.up.II & " (" & Left(top.hid.AA,1) & parent.up.S(parent.up.II) & ") of " &  parent.up.MM & "  [" & Left(top.hid.AA, Len(top.hid.AA)-4) & "]"
+	top.document.title="Q" & parent.up.II & " / " &  parent.up.MM & " - " & Left(top.hid.AA, Len(top.hid.AA)-4)
+
+	HEAD = "<HTML><head><style type=""text/css"">BODY,TR,TD,TH,LI,P,A {font-family:Verdana,Arial; font-size:12px;} .Ques {font-size:12px; color:#000000; background-color:#E0F0FF; border-style:solid; border-width:1px; border-style:solid; border-color:#1060C0; padding:6px;} .NumQues1 {color:#FFFFFF; background-color:#1060C0; padding:4px; font-weight:bold; text-align:center; } .NumQues2 {color:#1060C0;} .RealNumQ {color:#B0B0B0; font-size:9px;} .Explanation { color:#000000; background-color:#E8FFE8; border-width:1px; border-style:solid; border-color:#008000; padding:4px; margin-top:10px;} TD.MCLetter {font-size:11px; vertical-align:top;} TD.MCText {font-size:11px; vertical-align:top; padding-top:4px; } #MCNeutral {color:#000000;} #MCWrong {color:#F00060; font-weight:bold;} #MCGoodAns {color:#209020; font-weight:bold;} </style></head>" &_
+		"<body bgcolor='white'>" &_
+		"<table border='0' cellspacing='10' cellpadding='0' width='100%'>" &_
+		"<tr><td valign=top width=3%><center><div class=""NumQues1"">" & parent.up.II & "</div><span class='NumQues2'>von<br/><b>" & parent.up.MM & "</b></span>"
+
+	'---Random mode: display real Ques#
+	if top.hid.randomquest = 1 then
+		HEAD = HEAD & "<br/><span class='RealNumQ'>Normal<br/>Q" & parent.up.S(parent.up.II) & "</span></center></td>"
+	else
+		HEAD = HEAD & "</center></td>"
+	end if
+
+	SUBJ = "<td width=97%><div class=""Ques"">" & parent.up.Subject(parent.up.II) & "</div></td></tr>"
+	ITEMS = ""
+
+	Dim nbAnsExpec
+	If Len(parent.up.Ans(parent.up.II)) > 1 Then
+		nbAnsExpec = join(split(parent.up.Ans(parent.up.II), ","), "")
+		nbAnsExpec = join(split(nbAnsExpec, " "), "")
+		nbAnsExpec = len(nbAnsExpec)
+	Else
+		nbAnsExpec = 1
+	End If
+
+	For j = 1 to parent.up.MAXIMJ
+		If parent.up.Body(parent.up.II, j) <> "" Then
+			If Len(parent.up.Ans(parent.up.II)) > 1 Then
+				ITEMS = ITEMS & WriteChkbx(j-1, parent.up.Opti(parent.up.II,j), parent.up.Body(parent.up.II, j))
+			Else
+				ITEMS = ITEMS & WriteRadio(parent.up.Opti(parent.up.II,j), parent.up.Body(parent.up.II, j))
+			End If
+		ELSE
+			Exit For
+		End If
+	Next
+	TAIL = "<tr><td>&nbsp;</td><td><b><span ID='MYRESULT'></span></b><span ID='COMM'>"
+
+	parent.down.AnsResultTxt.innerHTML = "(" & nbAnsExpec & " ans.)"
+	parent.down.AnsResultTxt.className = "Gray"
+	call parent.down.AnsResultImg.setAttribute("src", "../images/blank.gif")
+
+	If (parent.up.DISAB <> "") Then
+		parent.down.HintAns.innerHTML = parent.up.Ans(parent.up.II)
+    'If top.hid.randomans = 0 then
+	  '	TAIL = TAIL & "<div class='Explanation'>" & parent.up.Desc(parent.up.II) & "</div>"
+		'End If
+  else
+		parent.down.HintAns.innerHTML = ""
+  End If
+	TAIL = TAIL & "&nbsp;<br/></span></td></tr></table></body></html><span ID='SELE'></span><span ID='ENGL'></span><input type='hidden' name='myChkbx'>"
+	document.write HEAD & SUBJ & "<P>" & ITEMS & TAIL
+	If (InStr(parent.up.JJ, "[" & parent.up.II & "]")>0) Then
+		parent.up.ShowHint()
+	End If
+End Sub
+
+Sub WriteDown()
+	document.write "<html><head><style type=""text/css"">BODY,TD {font-family:Verdana,Arial; font-size:12px; font-weight:bold; color:#FFFFFF} BODY {margin-left:22px; margin-right:23px;} TD {height:26px; vertical-align:middle;} .Blue {color:#40B0FF;} .Red {color:#FF4040; } .Gray {color:#C0C0C0; font-weight:normal;} .Green {color:#20FF80;} Button {font-family:Verdana,Arial; font-size:11px; width:90px; height:25px; font-weight:bold; cursor:hand; } </style></head>" &_
+		"<body background='../images/bg1.gif' leftmargin='0' topmargin='0' rightmargin='0'>" &_
+		"<table background='../images/BlackBG.gif' border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td width='180'>&nbsp;Ergebnis:&nbsp;<img ID='AnsResultImg' src='../images/LedGreen.gif' align='absmiddle' width='16' height='16' />&nbsp;<span ID='AnsResultTxt' class='Green'>&nbsp;</span></td><td width='150'>Antwort:&nbsp;<span ID='HintAns' class='Green'>&nbsp;</span></td><td>Richtige:&nbsp;<span ID='right' class='Blue'>0</span></td><td>Falsche:&nbsp;<span ID='wrong' class='Red'>0</span></td><td>Gesamt:&nbsp;<span ID='TotalQuesSofar' class='Green'>0</span></td><td align='right'>%Fehler:&nbsp;<span ID='PercentError' class='Red'>0</span>&nbsp;</td></tr></table>" &_
+		"<table style='margin-top:8px;' border='0' width='100%'><tr>" &_
+		"<td><button name='prev' accesskey='Z' onClick=""parent.side.location.href='Trandumper.html?2'"" disabled>&lt;&lt;&nbsp;<u>Z</u>ur&uuml;ck</button></td>" &_
+		"<td><button name='nextt' accesskey='W' onClick=""parent.side.location.href='Trandumper.html?1'"" disabled>&nbsp;&nbsp;&nbsp;<u>W</u>eiter&nbsp;&gt;&gt;&nbsp;</button></td>" &_
+		"<td><button name=answ accesskey='A' onClick=""if(parent.up.JJ.indexOf('['+parent.up.II+']')<0){ parent.up.JJ=parent.up.JJ + '[' + parent.up.II + ']'; parent.up.WRONGS= parent.up.WRONGS + 1; 	parent.down.wrong.innerHTML=parent.up.WRONGS; } parent.up.ShowHint();"" disabled><u>A</u>ntwort</button></td>" &_
+		"<td><button disabled name='review' accesskey='Ü' onClick=""parent.side.location.href='Trandumper.html?review'""><u>&Uuml;</u>bersicht</button></td>" &_
+		"<td align='right'><button name='exitt' accesskey='E' onClick=""if(confirm('Pr&uuml;fung wirklich beenden?')) { top.hid.learnmode=0; top.hid.randomquest=0; top.hid.randomans=0; parent.location.href='Trandumper.html?second';}""><u>E</u>nde</button></td>" &_
+		"</tr></table></body></html>"
+End Sub
+
+Function ChkAnswer(ITEM)
+	Dim j, i
+	j=0
+	For i=1 To Len(parent.up.Usr(ITEM))
+		If (InStr(parent.up.Ans(ITEM), Mid(parent.up.Usr(ITEM),i,1)) >0) Then
+			j=j+1
+		End If
+	Next
+	If (j=Len(parent.up.Ans(ITEM))) Then
+		ChkAnswer = True
+	Else
+		ChkAnswer = False
+	End If
+End Function
+
+
+Sub SubSetQues(sSubsetCount)
+	Dim newMM
+
+	newMM = 0
+	If top.hid.learnmode=0 then
+		if sSubsetCount = "0" or not isNumeric(sSubsetCount) then
+			sSubsetCount = InputBox("Geben Sie eine Zahl zwischen 1 und " & CStr(parent.up.MM) & " ein :", "Fragenanzahl festlegen:")
+		End if
+	End If
+
+	If isNumeric(sSubsetCount) then
+		newMM = CInt(sSubsetCount)
+		If newMM < 1 or newMM > parent.up.MM then
+			MsgBox "Ungültiger Zahlenwert für Fragenanzahl eingegeben. Die Standardanzahl wird verwendet!"
+		else
+			parent.up.MM = newMM
+		End If
+	Else
+		MsgBox "Ung&uuml;ltiger Wert. Die standard Fragenanzahl wird verwendet!"
+	End If
+End Sub
+
+Sub StartFromQuesX(sOrder)
+	If top.hid.learnmode=0 then
+		if isNumeric(sOrder) then
+			Dim iOrder
+			iOrder = Cint(sOrder)
+			If iOrder > 0 and iOrder <= parent.up.MM then
+				parent.up.II = iOrder -1
+				parent.topp.Marked.disabled = False
+				parent.down.nextt.disabled = False
+				parent.down.answ.disabled = False
+				parent.down.review.disabled = False
+			end if
+		End if
+	End If
+End Sub
+
+
+Sub SaveWrong()
+	Dim a, tmpStr
+	Dim i, j
+	ForAppending = 8
+	TristateFalse = 0
+	i = 0
+	j = 0
+	If Not top.hid.filesys.FileExists(top.hid.FOLDER & parent.side.WRONG.value) Then
+		Set a = top.hid.filesys.CreateTextFile(top.hid.FOLDER & parent.side.WRONG.value, True)
+		SaveType = "gespeichert !"
+	Else
+		Set a = top.hid.filesys.OpenTextFile(top.hid.FOLDER & parent.side.WRONG.value, ForAppending,TristateFalse)
+		SaveType = "angehängt !"
+	End If
+	For i = 1 To parent.up.MM
+		If (InStr(parent.up.JJ, "[" & i & "]") > 0) Then
+			If (Not ChkAnswer(i)) Then
+				tmpStr=parent.up.Subject(i)
+				tmpStr=Join(Split(tmpStr,"<br/>"),Chr(13) & Chr(10))
+				a.WriteLine i & ". (" & Left(top.hid.AA,1) & parent.up.S(i) & ")" &	tmpStr
+				For j = 1 To MAXIMJ
+					If parent.up.Opti(i,j) <> "" Then
+						a.WriteLine parent.up.Opti(i,j) & ". " & parent.up.Body(i,j)
+					Else
+						Exit For
+					End If
+				Next
+				a.WriteLine	""
+				a.WriteLine "Antwort: " & parent.up.Ans(i)
+				If parent.up.randomans = 0 then
+ 				  tmpStr=parent.up.Desc(i)
+				  tmpStr=Join(Split(tmpStr,"<br/>"),Chr(13) & Chr(10))
+				  a.WriteLine tmpStr
+				End If
+				a.WriteLine ""
+				a.WriteLine ""
+			End If
+		End If
+	Next
+	a.Close
+	MsgBox parent.side.WRONG.value & " wurde " & SaveType
+End Sub
+</script>
+</html>

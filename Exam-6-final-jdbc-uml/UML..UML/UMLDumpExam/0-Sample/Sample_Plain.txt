@@ -1,0 +1,51 @@
+This is an all-text dump. No image, no HTML cas study. The first paragraph in a dump text is used as introduction. This text is optional but it is strongly recommended to put a short and friendly blurb here.
+
+
+1. Question 1
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4 
+E. Answer 5
+F. Answer 6
+
+ANSWER: D
+
+Any comments you like
+
+
+
+2. Questions 2
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4
+E. Answer 5
+
+ANSWER: D,E
+
+Any comments that you like
+
+
+3. Question 3
+
+A. Answer 1
+B. Answer 2
+C. Answer 3 
+D. Answer 4
+E. Answer 5
+F. Answer 6
+G. Answer 7
+H. Answer 8
+I. Answer 9
+J. Answer 10
+K. Answer 11
+L. Answer 12
+M. Answer 13
+
+ANSWER: D,E,F,H,I,K,M
+
+Any comments you like
+
